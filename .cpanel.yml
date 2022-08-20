@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/grupo059/public_html/app-palermo/
+    - /bin/rsync -av public/ $DEPLOYPATH
