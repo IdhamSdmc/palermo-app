@@ -2,6 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/grupo059/public_html/app-palermo/
-    - /bin/rsync -av public/.htaccess $DEPLOYPATH
-    - /bin/rsync -av public/favicon.ico $DEPLOYPATH
-    - /bin/rsync -av public/robots.txt $DEPLOYPATH
+    - /bin/rsync -av public/ $DEPLOYPATH
