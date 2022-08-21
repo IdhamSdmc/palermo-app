@@ -79,19 +79,19 @@
 
 
                     <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/imgs/clients/client-3.png" class="img-fluid" alt="">
+                        <img src="assets/imgs/socios/dell.svg" class="img-fluid" alt="">
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/imgs/clients/client-2.png" class="img-fluid" alt="">
+                        <img src="assets/imgs/socios/zebra.svg" class="img-fluid" alt="">
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/imgs/clients/client-5.png" class="img-fluid" alt="">
+                        <img src="assets/imgs/socios/ricoh.svg" class="img-fluid" alt="">
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="assets/imgs/clients/client-6.png" class="img-fluid" alt="">
+                        <img src="assets/imgs/socios/logitech.svg" class="img-fluid" alt="">
                     </div>
 
                 </div>
@@ -205,13 +205,12 @@
                         </div>
 
                         <button class="carousel-control-prev cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
+
+                            <img src="assets/imgs/left-slider.png" class="w-50" alt="">
                         </button>
 
                         <button class="carousel-control-next cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                            <img src="assets/imgs/right-slider.png" class="w-50" alt="">
                         </button>
                     </div>
                 </div>

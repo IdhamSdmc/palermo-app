@@ -4,9 +4,12 @@
         <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 2.jpg')">
             <div class="carousel-container">
                 <div class="container">
-                    <P class="animate__animated animate__fadeInDown">MÁS DE 25 AÑOS DE EXPERIENCIA</P>
-                    <h2 class="animate__animated animate__fadeInUp col-4">TECNOLOGÍA PARA CRECER</h2></h2>
-                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">CONTÁCTANOS</a>
+                    <h2 class="animate__animated animate__fadeInUp col">Somos Grupo Palermo</h2>
+                    <P class="animate__animated animate__fadeInDown">Más de 25 años en el mercado tecnológico nos respaldan.
+                        Nuestra amplia experiencia y capacidad nos permiten brindar, las
+                        mejores soluciones empresariales y verdaderas oportunidades de
+                        mejora.</P>
+
                 </div>
             </div>
         </div>
