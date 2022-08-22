@@ -29,10 +29,9 @@
                             <span class="focus-input2" data-placeholder="TELEFONO"></span>
                         </div>
                         <button class="btn-enviar">ENVIAR</button>
-                        <br>
-                        <br>
-                        <input type="checkbox" name="term_cond" id="term_cond">
-                        <label for="term_cond">Acepto términos y condiciones</label>
+                        <br><br>
+                        <input class="term" type="checkbox" name="term_cond" id="term_cond">
+                        <label class="term" for="term_cond">Acepto términos y condiciones</label>
                     </form>
 
 
@@ -66,10 +65,9 @@
     </div>
 
     <div class="container">
-        <div class="copyright">
+        <div class="copyright der">
             Grupo Palermo
             Todos los derechos reservador &copy; 2022
         </div>
-
     </div>
 </footer><!-- End Footer -->

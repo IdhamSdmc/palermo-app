@@ -10,7 +10,9 @@
                 </div>
             </div>
         </div>
+
     </section>
+
     <main id="main">
 
         <!-- ======= About Section ======= -->
@@ -206,12 +208,15 @@
 
                         <button class="carousel-control-prev cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
 
-                            <img src="assets/imgs/left-slider.png" class="w-50" alt="">
+                            <img src="assets/imgs/whaaa.png" class="w-50" alt="">
                         </button>
 
                         <button class="carousel-control-next cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                             <img src="assets/imgs/right-slider.png" class="w-50" alt="">
                         </button>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25%" aria-valuemin="25%" aria-valuemax="100"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -220,4 +225,5 @@
 
 
     </main><!-- End #main -->
+
 @endsection
