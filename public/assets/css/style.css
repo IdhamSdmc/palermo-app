@@ -164,9 +164,9 @@ h6 {
     white-space: nowrap;
     transition: 0.3s;
 }
-.navbar .container{
-    padding-left: 120px;
-    padding-right: 120px;
+#header .container-fluid {
+    padding-left: 120px !important;
+    padding-right: 120px !important;
 }
 .navbar a i,
 .navbar a:focus i {
