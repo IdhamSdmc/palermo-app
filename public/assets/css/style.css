@@ -267,12 +267,18 @@ h6 {
 * Mobile Navigation
 */
 .mobile-nav-toggle {
-    color: #556270;
+    color: #009fdd;
     font-size: 28px;
     cursor: pointer;
     display: none;
     line-height: 0;
     transition: 0.5s;
+    padding: 3px;
+    border: 1.5px solid;
+    border-radius: 10px;
+}
+.mobile-nav-toggle .bi::before , [class^="bi-"]::before, [class*=" bi-"]::before{
+    font-weight: bolder !important;
 }
 
 .mobile-nav-toggle.bi-x {
@@ -319,7 +325,7 @@ h6 {
     bottom: 15px;
     left: 15px;
     padding: 10px 0;
-    background-color: #fff;
+    background-color: #20208e;
     overflow-y: auto;
     transition: 0.3s;
 }
@@ -328,18 +334,40 @@ h6 {
 .navbar-mobile a:focus {
     padding: 10px 20px;
     font-size: 15px;
-    color: #556270;
+    color: #ffffff;
+    text-transform: lowercase;
+    border-bottom: 1.5px solid white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.navbar-mobile a::before{
+
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-    color: #d9232d;
+    color: #ffffff;
+    text-transform: lowercase;
+    border-bottom: 1.5px solid white;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .navbar-mobile .getstarted,
 .navbar-mobile .getstarted:focus {
     margin: 15px;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.navbar-mobile .soporte::before {
+
+    content: "Soporte Tecnico";
+
+}
+.navbar-mobile .soporte .img-soporte{
+    display: none;
 }
 
 .navbar-mobile .dropdown ul {
@@ -379,6 +407,7 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 #hero {
     width: 100%;
     height: 75vh;
@@ -508,13 +537,13 @@ h6 {
 }
 
 #hero .btn-get-started {
-    font-family: "Goldplay Alt Medium", sans-serif;
+    font-family: "Goldplay Medium", sans-serif;
     font-weight: 600;
     font-size: 20px;
     letter-spacing: 1px;
     display: inline-block;
     padding: 14px 32px;
-    border-radius: 10px;
+    border-radius: 25px;
     transition: 0.5s;
     line-height: 1;
     color: #fff;
@@ -534,13 +563,32 @@ h6 {
 
     #hero .carousel-container {
         top: 8px;
+        left: 15px;
+        right: 15px;
     }
+    #hero .btn-get-started {
+        font-family: "Goldplay Medium", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 14px 32px;
+        border-radius: 25px;
+        transition: 0.5s;
+        line-height: 1;
+        color: #fff;
+        -webkit-animation-delay: 0.8s;
+        animation-delay: 0.8s;
+        background: #009fdd;
+    }
+
 }
 
 @media (max-width: 768px) {
     #hero h2 {
-        font-size: 28px;
+        font-size: 40px;
     }
+
 }
 
 @media (min-width: 1024px) {
