@@ -88,11 +88,11 @@
                         <img src="assets/imgs/socios/zebra.svg" class="img-fluid" alt="">
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-6 d-none d-sm-none d-md-block d-flex align-items-center justify-content-center">
                         <img src="assets/imgs/socios/ricoh.svg" class="img-fluid" alt="">
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <div class="col-lg-3 col-md-4 col-6 d-none d-sm-none d-md-block d-flex align-items-center justify-content-center">
                         <img src="assets/imgs/socios/logitech.svg" class="img-fluid" alt="">
                     </div>
 
@@ -107,15 +107,15 @@
                 <div class="row">
                     <h2>HISTORIAS DE ÉXITO</h2>
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
+                        {{--<div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
+                        </div>--}}
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
                                         <div class="detalle">
                                             <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
                                             <h5>EL RETO</h5>
@@ -136,7 +136,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
                                         <div class="img-he">
                                             <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
                                         </div>
@@ -146,7 +146,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
                                         <div class="detalle">
                                             <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
                                             <h5>EL RETO</h5>
@@ -167,7 +167,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
                                         <div class="img-he">
                                             <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
                                         </div>
@@ -176,7 +176,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
                                         <div class="detalle">
                                             <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
                                             <h5>EL RETO</h5>
@@ -197,7 +197,7 @@
                                         </div>
 
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
                                         <div class="img-he">
                                             <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
                                         </div>
@@ -207,16 +207,13 @@
                         </div>
 
                         <button class="carousel-control-prev cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-
-                            <img src="assets/imgs/whaaa.png" class="w-50" alt="">
+                            <img src="assets/imgs/left-slider.png" class="w-50" alt="">
                         </button>
 
                         <button class="carousel-control-next cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                             <img src="assets/imgs/right-slider.png" class="w-50" alt="">
                         </button>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25%" aria-valuemin="25%" aria-valuemax="100"></div>
-                        </div>
+
                     </div>
                 </div>
             </div>

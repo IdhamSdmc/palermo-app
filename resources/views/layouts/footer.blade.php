@@ -6,9 +6,9 @@
 
                 <div class="col-lg-5 col-md-5 ">
                     <div class="footer-info ">
-                        <h3>Palermo</h3>
+                        <img src="{{asset('assets/imgs/logo_white.svg')}}" class="img-fluid w-50 mb-2" alt="">
                         <h3 class="f-left">EL SIGUIENTE PASO HACIA LA TRANSFORMACIÓN DIGITAL</h3>
-                        <h4>Llena el formulario y nos pondremos en contacto</h4>
+                        <h4 class="col-6">Llena el formulario y nos pondremos en contacto</h4>
                     </div>
 
                     <form action="#">
@@ -37,7 +37,7 @@
 
                 </div>
 
-                <div class="col-lg-3 col-md-3 d-flex align-items-center justify-content-right">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-12 d-flex align-items-center justify-content-right">
                     <div class="footer-info2 text-right">
                         <h3>REDES SOCIALES</h3>
                         <div class="social-links mt-3">

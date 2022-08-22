@@ -165,8 +165,8 @@ h6 {
     transition: 0.3s;
 }
 #header .container-fluid {
-    padding-left: 120px !important;
-    padding-right: 120px !important;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 .navbar a i,
 .navbar a:focus i {
@@ -286,6 +286,10 @@ h6 {
 
     .navbar ul {
         display: none;
+    }
+    #header .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -730,7 +734,15 @@ section {
     height: 20vh;
     width: 100%;
 }
+@media (max-width: 991px) {
+    .about .container {
+        text-align: center;
+    }
+    .about .col{
 
+        margin-bottom: 30px;
+    }
+}
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
@@ -774,10 +786,35 @@ section {
     filter: none;
     transform: scale(1.15);
 }
+@media (max-width: 991px) {
+    .socios h2 {
+        background-color: transparent;
+        color: #009fdd;
+        font-family: "Goldplay Medium","Poppins", sans-serif;
+        padding: 0px 5px 20px 5px;
+        border-radius: 0;
+        margin-bottom: 0px;
 
+        font-weight: 600;
+    }
+    .clients {
+        padding: 0;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 30px;
+        background-color: white;
+
+        box-shadow: -5px 5px 20px 5px rgb(226, 222, 222);
+
+
+}
+}
 @media (max-width: 768px) {
+
     .clients img {
-        max-width: 40%;
+        max-width: 80%;
+
     }
 }
 
@@ -2267,6 +2304,86 @@ input {
 #footer .credits a:hover {
     color: white;
 }
+@media (max-width: 991px) {
+    #footer .footer-top .footer-info h4{
+        font-family: "Goldplay Regular","Poppins", sans-serif;
+        font-size: 13px;
+        font-weight: normal;
+    }
+    #footer .footer-top .footer-info h3 {
+        font-size: 20px;
+        font-family: "Goldplay Medium","Poppins", sans-serif;
+        margin: 0 0 20px 0;
+        padding: 2px 0 2px 0;
+        line-height: 1;
+        font-weight: 700;
+    }
+
+    .wrap-input2 {
+        width: 100%;
+        position: relative;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+        margin-bottom: 20px;
+    }
+
+    input.input2 {
+        height: 30px;
+    }
+    .input2 {
+        display: block;
+        width: 100%;
+        font-family: "Goldplay Regular","Poppins", sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        color: #e7e4e4;
+        line-height: 1.2;
+        background-color: #09218d;
+    }
+    .input2::placeholder {
+        color: #ffffff !important;
+        opacity: 1;
+    }
+    .btn-enviar{
+        padding: 5px 20px 5px 20px;
+        background-color: #009fdd;
+        border-radius: 10px;
+        font-family: "Goldplay Regular","Poppins", sans-serif;
+        color: white;
+        border: none;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+    /*Redes Sociales*/
+    #footer .footer-top .footer-info2 {
+        margin-top: 40px;
+    }
+    #footer .footer-top .footer-info2 h3{
+        font-family: "Goldplay Regular","Poppins", sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-align: right;
+    }
+    #footer .footer-top .footer-info2 ul{
+        font-family: "Goldplay Medium","Poppins", sans-serif;
+        font-size: 13px;
+        list-style: none;
+        color: #009fdd;
+        line-height: 30px;
+        text-align: right;
+    }
+    #footer .footer-top .footer-info2 ul a{
+        text-decoration: none;
+        color: #009fdd;
+        font-weight: 500;
+    }
+    #footer .footer-top .footer-info h3 {
+        font-size: 24px;
+        margin: 0 0 20px 0;
+        padding: 2px 0 2px 0;
+        line-height: 1;
+        font-weight: 700;
+    }
+}
 
 /* HISTORIAS DE EXTIO */
 .historias-exito .detalle{
@@ -2329,6 +2446,50 @@ input {
     border-radius: 80px;
     width: 100%;
     height: 65vh;
+}
+@media (max-width: 991px) {
+    .historias-exito .detalle{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .historias-exito .detalle h3{
+        font-family: "Goldplay Medium","Poppins", sans-serif;
+        font-size: 16px;
+        color: #009fdd;
+        line-height: 30px;
+        text-align: left;
+        font-weight: 600;
+        margin-bottom: 25px;
+    }
+    .historias-exito .detalle h5{
+        font-family: "Goldplay Medium","Poppins", sans-serif;
+        font-size: 15px;
+        color: #09218d;
+        text-align: left;
+        font-weight: 600;
+    }
+    .historias-exito h2{
+        font-weight: 700;
+        font-size: 25px;
+        font-family: "Goldplay Medium","Poppins", sans-serif;
+        line-height: 60px;
+        font-weight: 700;
+        color: #20208e;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .historias-exito .detalle button{
+        font-family: "Goldplay Medium","Poppins", sans-serif;
+        font-size: 15px;
+        color: white;
+        border: none;
+        background-color: #009fdd;
+        border-radius: 50px;
+        padding: 5px 30px 5px 30px;
+        text-align: center;
+        font-weight: 700;
+    }
 }
 .div-ccbutton{
     display: flex;
