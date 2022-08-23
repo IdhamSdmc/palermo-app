@@ -2594,10 +2594,21 @@ input {
     font-family: "Goldplay Alt Medium","Poppins", sans-serif;
     text-align: center;
 }
+@media (max-width: 991px) {
+    .nosotros h2{
+        font-size: 30px !important;
+    }
+    .nosotros p {
+        font-family: "Goldplay Regular","Poppins", sans-serif;
+        font-size: 18px !important;
+    }
+}
 
 .sobre-nosotros h2{
+    font-weight: 700;
+    font-size: 40px;
     font-family: "Goldplay Medium","Poppins", sans-serif;
-    font-size: 30px;
+    color: #20208e;
 }
 .sobre-nosotros .cuadro {
 
@@ -2609,3 +2620,335 @@ input {
     font-weight: bold;
     color: #09218d;
 }
+
+/*Nuestra Historia*/
+.nuestra-historia{
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+.nuestra-historia h2{
+    font-weight: 700;
+    font-size: 40px;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
+    line-height: 60px;
+    color: #20208e;
+}
+
+
+/*Linea de Tiempo*/
+.nuestra-historia *,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nuestra-historia button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.nuestra-historia body {
+    font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+    background: #456990;
+    color: #fff;
+}
+
+
+/* .section SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.nuestra-historia .section {
+    background: #F45B69;
+    padding: 50px 0;
+}
+
+.nuestra-historia .section .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nuestra-historia .section h1 {
+    font-size: 2.5rem;
+}
+
+.nuestra-historia .section h2 {
+    font-size: 1.3rem;
+}
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.nuestra-historia .timeline {
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.nuestra-historia .timeline ol {
+    font-size: 0;
+    width: 100vw;
+    padding: 250px 0;
+    transition: all 1s;
+}
+
+.nuestra-historia .timeline ol li {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    width: 160px;
+    height: 3px;
+    background: #fff;
+}
+
+.nuestra-historia .nuestra-historia .timeline ol li:last-child {
+    width: 280px;
+}
+
+.nuestra-historia .nuestra-historia .timeline ol li:not(:first-child) {
+    margin-left: 14px;
+}
+
+.nuestra-historia .nuestra-historia .timeline ol li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px);
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #F45B69;
+}
+
+.nuestra-historia .nuestra-historia .timeline ol li div {
+    position: absolute;
+    left: calc(100% + 7px);
+    width: 280px;
+    padding: 15px;
+    font-size: 1rem;
+    white-space: normal;
+    color: black;
+    background: white;
+}
+
+.nuestra-historia .timeline ol li div::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.nuestra-historia .timeline ol li:nth-child(odd) div {
+    top: -16px;
+    transform: translateY(-100%);
+}
+
+.nuestra-historia .timeline ol li:nth-child(odd) div::before {
+    top: 100%;
+    border-width: 8px 8px 0 0;
+    border-color: white transparent transparent transparent;
+}
+
+.nuestra-historia .timeline ol li:nth-child(even) div {
+    top: calc(100% + 16px);
+}
+
+.nuestra-historia .timeline ol li:nth-child(even) div::before {
+    top: -8px;
+    border-width: 8px 0 0 8px;
+    border-color: transparent transparent transparent white;
+}
+
+.nuestra-historia .timeline time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+/* TIMELINE ARROWS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.nuestra-historia .timeline .arrows {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nuestra-historia .timeline .arrows .arrow__prev {
+    margin-right: 20px;
+}
+/*SOLUCIONES*/
+#hero .soluciones p{
+    font-size: 25px;
+    font-weight: normal;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
+}
+
+/*SERVICIOS*/
+@media (max-width: 991px) {
+    .soluciones .btn-get-started {
+        font-size: 15px !important;
+        padding: 10px 28px !important;
+    }
+}
+.ejemplos .card-title{
+    font-weight: 700;
+    font-size: 25px;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
+    color: #20208e;
+}
+.ejemplos .card{
+    border: none;
+}
+.ejemplos .card img{
+    height: 450px;
+    border-radius: 50px 50px 0px 0px;
+
+}
+.ejemplos .card p{
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 22px;
+}
+.ejemplos .card li{
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 22px;
+    color: #009fdd;
+}
+.ejemplos .card li p{
+    color: #000000;
+}
+
+/*COLABORACION*/
+#hero .colaboracion h2{
+    font-size: 40px;
+
+}
+#hero .colaboracion p{
+    font-size: 25px;
+    font-weight: normal;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
+}
+/*REUNIONES*/
+.reuniones .card-title{
+    font-weight: 700;
+    font-size: 25px;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
+    color: #20208e;
+}
+.reuniones .card{
+    border: none;
+}
+.reuniones .card img{
+    height: 300px;
+    border-radius: 50px 50px 0px 0px;
+
+}
+.reuniones .card p{
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 22px;
+}
+.reuniones .card li{
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 22px;
+    color: #009fdd;
+}
+.reuniones .card li p{
+    color: #000000;
+}
+/*DIGITALIZACION*/
+#hero .digitalizacion h2{
+    font-size: 40px;
+
+}
+#hero .digitalizacion p{
+    font-size: 25px;
+    font-weight: normal;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
+}
+/*EJEMPLOS DIGITALIZACION*/
+.dig-ejemplos .card-title{
+    font-weight: 700;
+    font-size: 25px;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
+    color: #20208e;
+}
+.dig-ejemplos .card{
+    border: none;
+}
+.dig-ejemplos .card img{
+    height: 450px;
+    border-radius: 50px 50px 0px 0px;
+
+}
+.dig-ejemplos .card p{
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 22px;
+}
+.dig-ejemplos .card li{
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 22px;
+    color: #009fdd;
+}
+.dig-ejemplos .card li p{
+    color: #000000;
+}
+/*PRODUCTOS PRESENTACION*/
+#hero .presentacion p{
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 30px;
+}
+/*ITEMS PRODUCTOS*/
+.productos {
+    text-align: center;
+}
+.productos .cuadro{
+    border: 1.8px solid #009fdd;
+    border-radius: 60px;
+    padding: 15px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.productos .cuadro img{
+    height: 300px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.productos .cuadro h4{
+    text-align: left;
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    color: #20208e;
+    font-size: 25px;
+}
+.productos .cuadro p{
+    text-align: left;
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    color: #000;
+    font-size: 20px;
+}
+.productos a {
+    color: #fff;
+    background-color: #009fdd;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    margin-top: auto;
+    max-width: 10rem;
+
+}
+

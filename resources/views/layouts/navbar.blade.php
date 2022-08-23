@@ -7,34 +7,10 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a href="{{url('/nosotros')}}" class="active">NOSOTROS</a></li>
-
-                <!-- <li class="dropdown"><a href="#"><span>SERVICIOS</span> <i class="bi bi-chevron-down"></i></a>
-                  <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-
-                    <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                      <ul>
-                        <li><a href="#">Deep Drop Down 1</a></li>
-                        <li><a href="#">Deep Drop Down 2</a></li>
-                        <li><a href="#">Deep Drop Down 3</a></li>
-                        <li><a href="#">Deep Drop Down 4</a></li>
-                        <li><a href="#">Deep Drop Down 5</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li> -->
-                <!-- <li><a href="services.html">NOSOTROS</a></li>
-                <li><a href="services.html">PRODUCTOS</a></li>
-                <li><a href="portfolio.html">BLOG</a></li> -->
                 <li><a href="{{url('/servicios')}}">SERVICIOS</a></li>
                 <li><a href="{{url('/productos')}}">PRODUCTOS</a></li>
                 <li><a href="{{url('/blog')}}">BLOG</a></li>
-                <!-- <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="blog.html">Blog</a></li>
 
-                <li><a href="contact.html">Contact</a></li> -->
                 <li><a href="{{url('/contactanos')}}" class="getstarted">CONTÁCTANOS</a></li>
                 <li><a target="_blank" href="{{url('https://grupopalermo.pe')}}" class="soporte"><img src="{{asset('assets/imgs/soporte técnico.svg')}}" class="img-soporte"  alt=""></a></li>
             </ul>
