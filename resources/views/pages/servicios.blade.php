@@ -73,7 +73,7 @@
     <section class="reuniones">
         <div class="container">
             <div class="row justify-content-center align-content-center">
-                <div class="col align-items-center">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 align-items-center">
                     <div class="card" >
                         <img src="{{asset('assets/imgs/recursos/reuniones1.jpg')}}" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col align-items-center">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 align-items-center">
                     <div class="card" >
                         <img src="{{asset('assets/imgs/recursos/reuniones2.jpg')}}" class="card-img-top img-fluid" alt="...">
                         <div class="card-body">
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col align-items-center">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 align-items-center">
                     <div class="card" >
                         <img src="{{asset('assets/imgs/recursos/reuniones3.jpg')}}" class="card-img-top" alt="...">
                         <div class="card-body">
