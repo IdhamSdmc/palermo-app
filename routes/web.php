@@ -45,7 +45,7 @@ Route::get('/admin/login', array(
 
         return view('/admin/backend/auth/login');
     }, ));
-    Route::group(array('prefix' => LaravelLocalization::getCurrentLocale()), function () {
+    /*Route::group(array('prefix' => LaravelLocalization::getCurrentLocale()), function () {
 
         Route::group(array('prefix' => '/admin',
         'namespace' => 'Admin'), function () {
@@ -93,7 +93,7 @@ Route::get('page/{id}/delete', array('as' => 'admin.page.delete',
                                      'uses' => 'PageController@confirmDestroy', ))->where('id', '[0-9]+');
 
     });
-    });
+    });*/
  Route::group(['namespace'=>'Admin'], function () {
 
         // admin auth
