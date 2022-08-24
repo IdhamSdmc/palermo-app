@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('pages.inicio');
 });
 
+
 Route::get('/nosotros', function () {
 return view('pages.nosotros');
 });
