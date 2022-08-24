@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <article class="position-relative">
     <section id="hero">
         <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio.jpg')">
             <div class="carousel-container">
@@ -10,16 +11,69 @@
                 </div>
             </div>
         </div>
-
     </section>
+        <a href="https://wa.me/+5116206065" target="_blank" class="btn-whatsapp">
+            <img src="{{asset('assets/imgs/resources/whatsapp.svg')}}" alt="">
+        </a>
+    </article>
 
     <main id="main">
 
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container">
-
-                <div class="row content">
+               <div class="about-content">
+                   <div class="about-text">
+                       <h2>SOLUCIONES</h2>
+                       <h3 class="mb-4">Enfocados en la <strong>optimizacion de procesos</strong> y <strong>recursos</strong></h3>
+                       <h5>Implementamos los mejores servicios tecnológicos</h5>
+                   </div>
+                   <div class="about-flex">
+                       <div class="about-item">
+                           <div class="header">
+                               <img src="assets/imgs/recursos/soluciones 1.jpg" class="card-img-top " alt="...">
+                           </div>
+                           <div class="body">
+                               <div class="content">
+                                   <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">Servicios & infraestructura de TI</h3>
+                                   <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde el dimensionamiento hasta la implementación.</p>
+                               </div>
+                               <div class="action">
+                                   <a href="#" class="btn btn-info">VER MÁS</a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="about-item">
+                           <div class="header">
+                               <img src="assets/imgs/recursos/soluciones 2.jpg" class="card-img-top " alt="...">
+                           </div>
+                           <div class="body">
+                               <div class="content">
+                                   <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">Colaboración & videoconferencia</h3>
+                                   <p class="card-text">Adáptate al trabajo híbrido y mantente conectado desde cualquier lugar y dispositivo.</p>
+                               </div>
+                               <div class="action">
+                                   <a href="#" class="btn btn-info">VER MÁS</a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="about-item">
+                           <div class="header">
+                               <img src="assets/imgs/recursos/soluciones 3.jpg" class="card-img-top " alt="...">
+                           </div>
+                           <div class="body">
+                               <div class="content">
+                                   <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">Digitalización y Ge documental</h3>
+                                   <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde el dimensionamiento hasta la implementación.</p>
+                               </div>
+                               <div class="action">
+                                   <a href="#" class="btn btn-info">VER MÁS</a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+                {{--<div class="row content">
                     <div class="col-lg-3">
                         <h2>SOLUCIONES</h2>
                         <h3 class="mb-4">Enfocados en la <strong>optimizacion de procesos</strong> y <strong>recursos</strong></h3>
@@ -65,7 +119,7 @@
 
 
                     </div>
-                </div>
+                </div>--}}
 
             </div>
         </section><!-- End About Section -->
@@ -224,3 +278,6 @@
     </main><!-- End #main -->
 
 @endsection
+@push('css')
+    <link rel="stylesheet" href="{{ asset('assets/css/inicio.css') }}">
+@endpush

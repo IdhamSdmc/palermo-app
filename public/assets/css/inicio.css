@@ -1,0 +1,121 @@
+:root {
+    --bg-primary: #20208E;
+    --bg-info: #009FDD;
+    --font-bold: 'Goldplay SemiBold';
+    --font-medium: 'Goldplay Medium';
+    --font-regular: 'Goldplay Regular';
+}
+.btn-whatsapp {
+    height: 6rem;
+    width: 6rem;
+    padding: 1.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    bottom: -3rem;
+    right: 3rem;
+    z-index: 9;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn-whatsapp img {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 960px) {
+    .btn-whatsapp {
+        width: 4rem;
+        height: 4rem;
+        bottom: -2rem;
+        padding: 0.8rem;
+    }
+}
+
+/*** About ***/
+.about-content {
+    display: flex;
+}
+
+.about-text {
+    flex-shrink: 0;
+    width: 24rem;
+    padding: 0 2rem;
+}
+
+.about-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.about-flex .about-item:first-child {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.about-flex .about-item:first-child .body {
+    border-color: transparent;
+}
+
+.about-item {
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.about-item .header {
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    height: 16rem;
+}
+
+.about-item .body {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    overflow: hidden;
+    height: 100%;
+    padding: 1rem 2rem 4rem 2rem;
+    border: 1px solid var(--bg-info);
+    border-top: 0;
+}
+
+.about-item .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-item .content h3 {
+    color: var(--bg-info);
+    font-family: var(--font-medium);
+}
+
+.about-item .content p {
+    color: var(--bg-primary);
+    font-family: var(--font-regular);
+}
+
+.about-item .header img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.about-item .action {
+    /*margin-top: auto;*/
+}
+
+.about-item .action .btn {
+    height: 2.25rem;
+    border-radius: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #fff;
+}
