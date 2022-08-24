@@ -35,3 +35,6 @@ Route::get('/blog', function () {
 Route::get('/contactanos', function () {
     return view('pages.contactanos');
 });
+Route::get('/articulos', function () {
+    return view('pages.articulos');
+});
