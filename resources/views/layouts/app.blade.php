@@ -32,7 +32,7 @@
             @include('layouts.navbar')
 
             <div class="layout-content">
-                <div class="container-fluid flex-grow-1 container-p-y pt-5">
+                <div class="container-fluid  flex-grow-1 container-p-y pt-5 " style="padding-left: 0; padding-right: 0">
                     @yield('content')
                 </div>
             </div>
