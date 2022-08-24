@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +47,7 @@ Route::get('/admin/login', array(
         return view('/admin/backend/auth/login');
     }, ));
     Route::group(array('prefix' => LaravelLocalization::getCurrentLocale()), function () {
-    
+
         Route::group(array('prefix' => '/admin',
         'namespace' => 'Admin'), function () {
         Route::get('/', array('as' => 'admin.dashboard', 'uses' => 'DashboardController@index'));
@@ -100,13 +101,13 @@ Route::get('page/{id}/delete', array('as' => 'admin.page.delete',
         Route::get('admin/logout', array('as' => 'admin.logout', 'uses' => 'AuthController@getLogout'));
         Route::get('admin/login', array('as' => 'admin.login', 'uses' => 'AuthController@getLogin'));
         Route::post('admin/login', array('as' => 'admin.login.post', 'uses' => 'AuthController@postLogin'));
-    
+
         // admin password reminder
         Route::get('admin/forgot-password', array('as' => 'admin.forgot.password',
                                                   'uses' => 'AuthController@getForgotPassword', ));
         Route::post('admin/forgot-password', array('as' => 'admin.forgot.password.post',
                                                    'uses' => 'AuthController@postForgotPassword', ));
-    
+
         Route::get('admin/{id}/reset/{code}', array('as' => 'admin.reset.password',
                                                     'uses' => 'AuthController@getResetPassword', ))->where('id', '[0-9]+');
         Route::post('admin/reset-password', array('as' => 'admin.reset.password.post',
