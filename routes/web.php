@@ -45,6 +45,8 @@ Route::get('/admin/login', array(
 
         return view('/admin/backend/auth/login');
     }, ));
+
+
     /*Route::group(array('prefix' => LaravelLocalization::getCurrentLocale()), function () {
 
         Route::group(array('prefix' => '/admin',
