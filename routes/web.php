@@ -38,7 +38,8 @@ Route::get('/contactanos', function () {
 Route::get('/articulos', function () {
     return view('pages.articulos');
 });
-oute::get('/admin/login', array(
+
+Route::get('/admin/login', array(
     'as' => 'admin.login',
     function () {
 
