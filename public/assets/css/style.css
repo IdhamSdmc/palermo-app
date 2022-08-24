@@ -2,36 +2,18 @@
 # General
 --------------------------------------------------------------*/
 @font-face {
-    font-family: Goldplay;
-    src:
-        url("../fonts/Goldplay Alt Black.otf"),
-        url("../fonts/Goldplay Alt Black It.otf"),
-        url("../fonts/Goldplay Alt Bold.otf"),
-        url("../fonts/Goldplay Alt Bold It.otf"),
-        url("../fonts/Goldplay Alt It.otf"),
-        url("../fonts/Goldplay Alt Light.otf"),
-        url("../fonts/Goldplay Alt Light It.otf"),
-        url("../fonts/Goldplay Alt Medium.otf"),
-        url("../fonts/Goldplay Alt Medium It.otf"),
-        url("../fonts/Goldplay Alt Regular.otf"),
-        url("../fonts/Goldplay Alt SemiBold.otf"),
-        url("../fonts/Goldplay Alt SemiBold It.otf"),
-        url("../fonts/Goldplay Alt Thin.otf"),
-        url("../fonts/Goldplay Alt Thin It.otf"),
-        url("../fonts/Goldplay Black.otf"),
-        url("../fonts/Goldplay Black It.otf"),
-        url("../fonts/Goldplay Bold.otf"),
-        url("../fonts/Goldplay Bold It.otf"),
-        url("../fonts/Goldplay Light.otf"),
-        url("../fonts/Goldplay Light It.otf"),
-        url("../fonts/Goldplay Medium.otf"),
-        url("../fonts/Goldplay Medium It.otf"),
-        url("../fonts/Goldplay Regular.otf"),
-        url("../fonts/Goldplay Regular It.otf"),
-        url("../fonts/Goldplay SemiBold.otf"),
-        url("../fonts/Goldplay SemiBold It.otf"),
-        url("../fonts/Goldplay Thin.otf"),
-        url("../fonts/Goldplay Thin It.otf");
+    font-family: "Goldplay Regular";
+    src: url("../fonts/Goldplay Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Goldplay Medium";
+    src: url("../fonts/Goldplay Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Goldplay SemiBold";
+    src: url("../fonts/Goldplay SemiBold.otf") format("opentype");
 }
 body {
     font-family: Goldplay, sans-serif;
