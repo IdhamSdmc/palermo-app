@@ -35,8 +35,10 @@ Route::get('/blog', function () {
 Route::get('/contactanos', function () {
     return view('pages.contactanos');
 });
-
-Route::get('/admin/login', array(
+Route::get('/articulos', function () {
+    return view('pages.articulos');
+});
+oute::get('/admin/login', array(
     'as' => 'admin.login',
     function () {
 

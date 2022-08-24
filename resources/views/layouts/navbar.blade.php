@@ -9,7 +9,7 @@
                 <li><a href="{{url('/nosotros')}}" class="active">NOSOTROS</a></li>
                 <li><a href="{{url('/servicios')}}">SERVICIOS</a></li>
                 <li><a href="{{url('/productos')}}">PRODUCTOS</a></li>
-                <li><a href="{{url('/blog')}}">BLOG</a></li>
+                <li><a href="{{url('/articulos')}}">BLOG</a></li>
 
                 <li><a href="{{url('/contactanos')}}" class="getstarted">CONTÁCTANOS</a></li>
                 <li><a target="_blank" href="{{url('https://grupopalermo.pe')}}" class="soporte"><img src="{{asset('assets/imgs/soporte técnico.svg')}}" class="img-soporte"  alt=""></a></li>

@@ -586,8 +586,9 @@ h6 {
 
 @media (max-width: 768px) {
     #hero h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
+
 
 }
 
@@ -779,8 +780,9 @@ section {
 }
 .about .card img {
     border-radius: 50px 50px 0px 0px;
-    height: 20vh;
+
     width: 100%;
+    height: 20vh;
 }
 @media (max-width: 991px) {
     .about .container {
@@ -2792,7 +2794,7 @@ input {
 }
 /*SOLUCIONES*/
 #hero .soluciones p{
-    font-size: 25px;
+    font-size: 18px;
     font-weight: normal;
     font-family: "Goldplay Medium","Poppins", sans-serif;
 }
@@ -2951,4 +2953,167 @@ input {
     max-width: 10rem;
 
 }
+
+/*ARTICULOS*/
+#hero .articulos h2{
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    font-size: 55px;
+}
+#hero .articulos p{
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 28px;
+}
+@media (max-width: 992px) {
+    #hero .articulos h2{
+        font-family: "Goldplay SemiBold","Poppins", sans-serif;
+        font-size: 35px;
+    }
+    #hero .articulos p{
+        font-family: "Goldplay Regular","Poppins", sans-serif;
+        font-size: 18px;
+    }
+}
+
+.posts .container-article {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.posts .card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+.posts .card-article {
+    position: relative;
+    background: #FFF;
+    max-width: 325px;
+    width: 325px;
+    height: auto;
+    /*box-shadow: 0 5px 25px rgb(1 1 1 / 20%);*/
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+    margin: 25px;
+}
+.posts .card-image{
+    /*max-height: 250px;*/
+}
+.posts .card-image img{
+    max-width: 100%;
+    height: auto;
+}
+.posts .card-info{
+    position: relative;
+    color: #222;
+    padding: 10px 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.posts .card-info h3{
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+.posts .card-info h4{
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #cdcdcd;
+}
+.posts .card-info p{
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #9d9d9d;
+}
+.posts .card-info a{
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    background-color: #009fdd;
+    font-size: 1.2em;
+    border: none;
+    padding: 8px 15px 8px 15px;
+    border-radius: 15px;
+    color: #fff;
+    max-width: 10rem;
+    text-align: center;
+    margin-top: auto;
+}
+/*BLOG*/
+.blog h2{
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    font-size: 45px;
+    color: #20208e;
+}
+.blog h4{
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    color: #96a2af;
+}
+.blog h5{
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    color: #000;
+    font-size: 25px;
+}
+.blog p{
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 28px;
+}
+.blog img{
+    max-height: 500px;
+    width: 100%;
+    border-radius: 50px;
+}
+@media (max-width: 992px) {
+    .blog h2{
+        font-family: "Goldplay SemiBold","Poppins", sans-serif;
+        font-size: 35px;
+        color: #20208e;
+    }
+    .blog h4{
+        font-family: "Goldplay SemiBold","Poppins", sans-serif;
+        color: #96a2af;
+    }
+    .blog h5{
+        font-family: "Goldplay SemiBold","Poppins", sans-serif;
+        color: #000;
+        font-size: 18px;
+    }
+    .blog p{
+        font-family: "Goldplay Regular","Poppins", sans-serif;
+        font-size: 18px;
+    }
+    .blog img{
+        max-height: 500px;
+        width: 100%;
+        border-radius: 50px;
+    }
+    #hero {
+        height: 500px;
+    }
+}
+
+/*CONTACTANOS*/
+.form-contacto{
+    background-color: rgba(157,157,157,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-contacto h2{
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    color: #009fdd;
+    font-size: 45px;
+}
+/*FORM TRABAJO*/
+.trabajo{
+    background-color: #009fdd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
