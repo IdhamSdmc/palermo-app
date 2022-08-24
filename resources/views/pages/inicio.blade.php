@@ -12,7 +12,7 @@
             </div>
         </div>
     </section>
-        <a href="https://wa.me/+5116206065" target="_blank" class="btn-whatsapp">
+        <a href="https://wa.me/+5116206065?text=ascasdcasc" target="_blank" class="btn-whatsapp">
             <img src="{{asset('assets/imgs/resources/whatsapp.svg')}}" alt="">
         </a>
     </article>
