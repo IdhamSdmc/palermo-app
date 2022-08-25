@@ -18,7 +18,8 @@
     <section class="sobre-nosotros">
         <h2>SOBRE NOSOTROS</h2>
         <div class="container">
-            <div class="row justify-content-center align-content-center">
+
+            {{--<div class="row justify-content-center align-content-center">
 
                 <div class="col cuadro-front m-5 ">
                     <h4>Propósito de la marca</h4>
@@ -54,61 +55,61 @@
                         soluciones tecnológicas
                         integradas.</p>
                 </div>
-            </div>
+            </div>--}}
+
+            <div class="row">
                 <div class="list-tarjetas">
-                <div class="tarjeta-box">
-                    <div class="tarjeta">
-                        <div class="front">
-                            <h4>¿Por qué elegir Palermo?</h4>
-                            <img src="assets/imgs/resources/Grupo 891.svg" class="img-fluid" alt="">
-                        </div>
-                        <div class="front back">
-                            <h4>¿Por qué elegir Palermo?</h4>
-                            <img src="assets/imgs/nosotros/Grupo 696.svg" class="img-fluid" alt="">
-                            <p class="mt-2"><strong>Más de 25 años</strong> en el mercado
-                                peruano nos <strong>respaldan</strong> para brindar
-                                <strong>soluciones</strong> que <strong>optimizan y mejoran</strong>
-                                la Infraestructura de TI, los procesos
-                                de flujos de documentos y la
-                                colaboración en tu empresa.</p>
+
+                    <div class="tarjeta-box">
+                        <div class="tarjeta">
+                            <div class="front">
+                                <h4>Propósito de la marca</h4>
+                                <img src="assets/imgs/resources/Grupo 891.svg" class="img-fluid" alt="">
+
+                            </div>
+                            <div class="front back">
+                                <h4>Propósito de la marca</h4>
+                                <img src="assets/imgs/nosotros/Grupo 697.svg" class="img-fluid" alt="">
+                                <p class="mt-2">Transformamos digitalmente tu
+                                    empresa para crecer con
+                                    soluciones tecnológicas
+                                    integradas.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="tarjeta-box">
-                    <div class="tarjeta">
-                        <div class="front">
-                            <h4>¿Por qué elegir Palermo?</h4>
-                            <img src="assets/imgs/resources/Grupo 891.svg" class="img-fluid" alt="">
-
-                        </div>
-                        <div class="front back">
-                            <h4>¿Por qué elegir Palermo?</h4>
-                            <img src="assets/imgs/nosotros/Grupo 696.svg" class="img-fluid" alt="">
-                            <p class="mt-2"><strong>Más de 25 años</strong> en el mercado
-                                peruano nos <strong>respaldan</strong> para brindar
-                                <strong>soluciones</strong> que <strong>optimizan y mejoran</strong>
-                                la Infraestructura de TI, los procesos
-                                de flujos de documentos y la
-                                colaboración en tu empresa.</p>
+                    <div class="tarjeta-box">
+                        <div class="tarjeta">
+                            <div class="front">
+                                <h4>¿Por qué elegir Palermo?</h4>
+                                <img src="assets/imgs/resources/Grupo 890.svg" class="img-fluid" alt="">
+                            </div>
+                            <div class="front back">
+                                <h4>¿Por qué elegir Palermo?</h4>
+                                <img src="assets/imgs/nosotros/Grupo 696.svg" class="img-fluid" alt="">
+                                <p class="mt-2"><strong>Más de 25 años</strong> en el mercado
+                                    peruano nos <strong>respaldan</strong> para brindar
+                                    <strong>soluciones</strong> que <strong>optimizan y mejoran</strong>
+                                    la Infraestructura de TI, los procesos
+                                    de flujos de documentos y la
+                                    colaboración en tu empresa.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="tarjeta-box">
-                    <div class="tarjeta">
-                        <div class="front">
-                            <h4>¿Por qué elegir Palermo?</h4>
-                            <img src="assets/imgs/resources/Grupo 891.svg" class="img-fluid" alt="">
+                    <div class="tarjeta-box">
+                        <div class="tarjeta">
+                            <div class="front">
+                                <h4>¿Cómo lo hacemos?</h4>
+                                <img src="assets/imgs/resources/Trazado 1186.svg" class="img-fluid" alt="">
 
-                        </div>
-                        <div class="front back">
-                            <h4>¿Por qué elegir Palermo?</h4>
-                            <img src="assets/imgs/nosotros/Grupo 696.svg" class="img-fluid" alt="">
-                            <p class="mt-2"><strong>Más de 25 años</strong> en el mercado
-                                peruano nos <strong>respaldan</strong> para brindar
-                                <strong>soluciones</strong> que <strong>optimizan y mejoran</strong>
-                                la Infraestructura de TI, los procesos
-                                de flujos de documentos y la
-                                colaboración en tu empresa.</p>
+                            </div>
+                            <div class="front back">
+                                <h4>¿Cómo lo hacemos?</h4>
+                                <img src="assets/imgs/nosotros/Trazado 915.svg" class="img-fluid" alt="">
+                                <p class="mt-2">A través de Servicios integrados
+                                    de Infraestructura TI, Digitalización
+                                    y gestión Documental,
+                                    Videoconferencia y Colaboración.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

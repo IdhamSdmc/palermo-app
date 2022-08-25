@@ -1,6 +1,6 @@
 <!-- ======= Footer ======= -->
 <footer id="footer" style="margin-top: 3%;">
-    <div class="footer-top " style="background-image: url('assets/imgs/resources/patron derecho.svg'); background-repeat: no-repeat;background-position: right; background-size: 20%; background-position-y: 100%">
+    <div class="footer-top " style="background-image: url('assets/imgs/resources/patron derecho.svg'); background-repeat: no-repeat;background-position: right center; background-size: 20%; background-position-y: 100%">
         <div class="container-fluid" style="background-image: url('assets/imgs/resources/patron izquierdo.svg'); background-repeat: no-repeat;background-position-x: 5%; background-size: contain">
             <div class="row justify-content-center">
 
@@ -41,9 +41,10 @@
                     <div class="footer-info2 text-right m-auto">
                         <div class="redes">
                             <h3>REDES SOCIALES</h3>
-                            <div class="social-links mt-3 mb-5">
-                                <a href="https://www.facebook.com/grupopalermope" class="facebook"><i class="bx bxl-facebook"></i></a>
-                                <a href="https://www.linkedin.com/company/grupo-palermo-peru/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <div class=" mt-3 mb-5">
+                                <a href="https://www.facebook.com/grupopalermope" class="facebook ml-2"><img src="assets/imgs/resources/facebook.svg" alt=""></a>
+                                <a href="https://www.linkedin.com/company/grupo-palermo-peru/" class="linkedin"><img
+                                        src="assets/imgs/resources/in.svg" alt=""></a>
                             </div>
                         </div>
 

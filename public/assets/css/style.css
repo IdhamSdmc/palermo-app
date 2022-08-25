@@ -2151,6 +2151,12 @@ section {
 }
 
 /* Inpust */
+.footer-info2 .redes div{
+    text-align: end;
+}
+.footer-info2 .redes div a{
+    margin-left: 10px;
+}
 @media (max-width: 992px) {
     .footer-top .container{
         background-image: none !important;
