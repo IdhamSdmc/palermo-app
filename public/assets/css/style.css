@@ -396,7 +396,7 @@ h6 {
     background-color: rgba(63, 73, 83, 0.8);
     overflow: hidden;
     position: relative;
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
 }
 
 #hero .carousel,
@@ -441,7 +441,7 @@ h6 {
     margin-bottom: 20px;
     font-size: 52px;
     font-weight: 700;
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
 }
 
 #hero p {
@@ -632,7 +632,7 @@ section {
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Goldplay Alt Medium", sans-serif;
+    font-family: "Goldplay Medium", sans-serif;
     color: #556270;
 }
 
@@ -782,13 +782,13 @@ section {
 .socios{
     display: flex;
     justify-content: center;
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
 
 }
 .socios h2{
     background-color: #009fdd;
     color: white;
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
     padding: 10px 70px 10px 70px;
     border-radius: 40px 40px 0px 0px;
     margin-bottom: 0px;
@@ -1183,7 +1183,7 @@ section {
     text-transform: uppercase;
     display: block;
     font-weight: 600;
-    font-family: "Goldplay Alt Medium", sans-serif;
+    font-family: "Goldplay Medium", sans-serif;
     color: #556270;
 }
 
@@ -1293,7 +1293,7 @@ section {
     font-size: 36px;
     color: #d9232d;
     font-weight: 600;
-    font-family: "Goldplay Alt Medium", sans-serif;
+    font-family: "Goldplay Medium", sans-serif;
     margin-bottom: 20px;
 }
 
@@ -1349,7 +1349,7 @@ section {
     transition: none;
     font-size: 14px;
     font-weight: 400;
-    font-family: "Goldplay Alt Medium", sans-serif;
+    font-family: "Goldplay Medium", sans-serif;
     font-weight: 600;
     transition: 0.3s;
 }
@@ -1399,7 +1399,7 @@ section {
     line-height: 26px;
     font-weight: 500;
     margin: 0 0 10px 28px;
-    font-family: "Goldplay Alt Medium", sans-serif;
+    font-family: "Goldplay Medium", sans-serif;
 }
 
 .faq .faq-item p {
@@ -2423,7 +2423,7 @@ input {
     padding-right: 40px;
 }
 .historias-exito .detalle h3{
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
     font-size: 25px;
     color: #009fdd;
     line-height: 30px;
@@ -2432,14 +2432,14 @@ input {
     margin-bottom: 25px;
 }
 .historias-exito .detalle h5{
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
     font-size: 17px;
     color: #09218d;
     text-align: left;
     font-weight: 600;
 }
 .historias-exito .detalle p{
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
     font-size: 15px;
     color: #000000;
     text-align: left;
@@ -2450,7 +2450,7 @@ input {
     justify-content: center;
 }
 .historias-exito .detalle button{
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
     font-size: 22px;
     color: white;
     border: none;
@@ -2463,7 +2463,7 @@ input {
 .historias-exito h2{
     font-weight: 700;
     font-size: 40px;
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
     line-height: 60px;
     color: #20208e;
     margin-bottom: 20px;
@@ -2563,7 +2563,7 @@ input {
 
 /*NOSOTROS*/
 .nosotros {
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
 }
 .nosotros h2{
     font-size: 40px !important;
@@ -2575,7 +2575,7 @@ input {
 
 /*Sobre Nosotros*/
 .sobre-nosotros {
-    font-family: "Goldplay Alt Medium","Poppins", sans-serif;
+    font-family: "Goldplay Medium","Poppins", sans-serif;
     text-align: center;
 }
 @media (max-width: 991px) {
