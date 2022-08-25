@@ -1,19 +1,24 @@
 @extends('layouts.app')
 @section('content')
-    <section id="hero">
-        <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 5.jpg')">
-            <div class="carousel-container">
-                <div class="container articulos">
+    <article class="position-relative">
+        <section id="hero">
+            <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 5.jpg')">
+                <div class="carousel-container">
+                    <div class="container articulos">
 
-                    <h2 class="animate__animated animate__fadeInUp col-xl-6 xol-lg-6 col-md-6 col-sm-12 col-12">¿Por qué invertir en
-                        Infraestructura de TI?</h2>
-                    <p class="animate__animated animate__fadeInDown col-xl-6 xol-lg-6 col-md-6 col-sm-12 col-12">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor.</p>
-                    <a href="/blog" class="btn-get-started animate__animated animate__fadeInUp scrollto">VER MÁS</a>
+                        <h2 class="animate__animated animate__fadeInUp col-xl-6 xol-lg-6 col-md-6 col-sm-12 col-12">¿Por qué invertir en
+                            Infraestructura de TI?</h2>
+                        <p class="animate__animated animate__fadeInDown col-xl-6 xol-lg-6 col-md-6 col-sm-12 col-12">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor.</p>
+                        <a href="/blog" class="btn-get-started animate__animated animate__fadeInUp scrollto">VER MÁS</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor" target="_blank" class="btn-whatsapp">
+            <img src="{{asset('assets/imgs/resources/whatsapp.svg')}}" alt="">
+        </a>
+    </article>
     <section class="posts">
         <div class="container-article">
             <div class="card-content">
@@ -120,3 +125,6 @@
         </div>
     </section>
 @endsection
+@push('css')
+    <link rel="stylesheet" href="{{ asset('assets/css/articulos.css') }}">
+@endpush

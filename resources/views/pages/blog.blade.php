@@ -37,3 +37,6 @@
         </div>
     </section>
 @endsection
+@push('css')
+    <link rel="stylesheet" href="{{ asset('assets/css/blog.css') }}">
+@endpush

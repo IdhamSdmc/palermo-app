@@ -1,18 +1,23 @@
 @extends('layouts.app')
 @section('content')
-    <section id="hero">
-        <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position: top">
-            <div class="carousel-container">
-                <div class="container presentacion">
+    <article class="position-relative">
+        <section id="hero">
+            <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position: top">
+                <div class="carousel-container">
+                    <div class="container presentacion">
 
-                    <h2 class="animate__animated animate__fadeInUp col">LAPTOPS Y PANTALLAS</h2></h2>
-                    <p class="animate__animated animate__fadeInDown col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12">Equipa tu empresa con los mejores
-                        equipos tecnológicos.</p>
-                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">VER MÁS</a>
+                        <h2 class="animate__animated animate__fadeInUp col">LAPTOPS Y PANTALLAS</h2></h2>
+                        <p class="animate__animated animate__fadeInDown col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12">Equipa tu empresa con los mejores
+                            equipos tecnológicos.</p>
+                        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">VER MÁS</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor" target="_blank" class="btn-whatsapp">
+            <img src="{{asset('assets/imgs/resources/whatsapp.svg')}}" alt="">
+        </a>
+    </article>
     <section class="productos">
         <div class="container">
             <div class="row justify-content-center align-content-center">
@@ -89,3 +94,6 @@
         </div>
     </section>
 @endsection
+@push('css')
+    <link rel="stylesheet" href="{{ asset('assets/css/productos.css') }}">
+@endpush

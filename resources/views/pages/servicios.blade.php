@@ -1,19 +1,24 @@
 @extends('layouts.app')
 @section('content')
-    <section id="hero">
-        <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 3.jpg')">
-            <div class="carousel-container">
-                <div class="container soluciones">
+    <article class="position-relative">
+        <section id="hero">
+            <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 3.jpg')">
+                <div class="carousel-container">
+                    <div class="container soluciones">
 
-                    <h2 class="animate__animated animate__fadeInUp col">Servicios & Infraestructura de TI</h2>
-                    <p class="animate__animated animate__fadeInDown col-xl-8 col-lg-8 col-md-8 xol-sm-12 col-12">Simplifica y equipa tu organización. Te acompañamos durante
-                        todo el proceso, desde el dimensionamiento, implementación
-                        hasta la adopción de nuevas tecnologías.</p>
-                    <a href="#footer" class="btn-get-started animate__animated animate__fadeInUp scrollto">COTIZA AHORA</a>
+                        <h2 class="animate__animated animate__fadeInUp col">Servicios & Infraestructura de TI</h2>
+                        <p class="animate__animated animate__fadeInDown col-xl-8 col-lg-8 col-md-8 xol-sm-12 col-12">Simplifica y equipa tu organización. Te acompañamos durante
+                            todo el proceso, desde el dimensionamiento, implementación
+                            hasta la adopción de nuevas tecnologías.</p>
+                        <a href="#footer" class="btn-get-started animate__animated animate__fadeInUp scrollto">COTIZA AHORA</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+            <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor" target="_blank" class="btn-whatsapp">
+                <img src="{{asset('assets/imgs/resources/whatsapp.svg')}}" alt="">
+            </a>
+    </article>
     <section class="ejemplos">
         <div class="container">
             <div class="row justify-content-center align-content-center">
@@ -170,3 +175,6 @@
         </div>
     </section>
 @endsection
+@push('css')
+    <link rel="stylesheet" href="{{ asset('assets/css/servicios.css') }}">
+@endpush
