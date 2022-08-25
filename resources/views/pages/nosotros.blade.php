@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <section id="hero">
-        <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 2.jpg')">
+        <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 2.jpg'); background-position-y: 25%">
             <div class="carousel-container">
                 <div class="container nosotros ">
                     <h2 class="animate__animated animate__fadeInUp col">Somos Grupo Palermo</h2>
@@ -19,7 +19,16 @@
         <h2>SOBRE NOSOTROS</h2>
         <div class="container">
             <div class="row justify-content-center align-content-center">
-                <div class="col cuadro m-5 ">
+
+                <div class="col cuadro-front m-5 ">
+                    <h4>Propósito de la marca</h4>
+                    <img src="assets/imgs/nosotros/Grupo 697.svg" class="img-fluid" alt="">
+                    <p class="mt-2"><strong>Transformamos digitalmente</strong> tu
+                        empresa para <strong>crecer</strong> con
+                        soluciones tecnológicas
+                        integradas.</p>
+                </div>
+                <div class="col cuadro-back m-5 visually-hidden">
                     <h4>Propósito de la marca</h4>
                     <img src="assets/imgs/nosotros/Grupo 697.svg" class="img-fluid" alt="">
                     <p class="mt-2"><strong>Transformamos digitalmente</strong> tu
@@ -46,6 +55,8 @@
                         integradas.</p>
                 </div>
             </div>
+
+
         </div>
     </section>
     {{--NUESTRA HISTORIA--}}
@@ -133,3 +144,6 @@
             disabledClass = "disabled";
     </script>
 @endsection
+@push('css')
+    <link rel="stylesheet" href="{{ asset('assets/css/nosotros.css') }}">
+@endpush
