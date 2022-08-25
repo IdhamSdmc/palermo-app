@@ -5,6 +5,7 @@
     --font-medium: 'Goldplay Medium';
     --font-regular: 'Goldplay Regular';
 }
+
 .btn-whatsapp {
     height: 6rem;
     width: 6rem;
@@ -43,19 +44,62 @@
     flex-shrink: 0;
     width: 24rem;
     padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
 }
+
+.about-text h2 {
+    font-family: var(--font-bold);
+    color: var(--bg-primary);
+}
+
+.about-text h3 {
+    font-family: var(--font-medium);
+    color: var(--bg-info);
+}
+
+.about-text h5 {
+    font-family: var(--font-regular);
+}
+
+.about-text .actions {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.about-text .actions .btn-slider {
+    all: unset;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: var(--bg-primary);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.about-text .actions .btn-slider img {
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+}
+
 
 .about-flex {
     display: flex;
     flex-wrap: nowrap;
-    gap: 1rem;
+    gap: 2.5rem;
 }
 
-.about-flex .about-item:first-child {
+.about-flex .about-item.active {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
-.about-flex .about-item:first-child .body {
+.about-flex .about-item.active .body {
     border-color: transparent;
 }
 
@@ -68,8 +112,8 @@
 }
 
 .about-item .header {
-    border-top-left-radius: 3rem;
-    border-top-right-radius: 3rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
     overflow: hidden;
     flex-shrink: 0;
     height: 16rem;

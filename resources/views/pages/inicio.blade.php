@@ -1,19 +1,20 @@
 @extends('layouts.app')
 @section('content')
     <article class="position-relative">
-    <section id="hero">
-        <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio.jpg')">
-            <div class="carousel-container">
-                <div class="container pl-0 pr-0">
-                    <P class="animate__animated animate__fadeInDown">MÁS DE 25 AÑOS DE EXPERIENCIA</P>
-                    <h2 class="animate__animated animate__fadeInUp col-4">TECNOLOGÍA PARA CRECER</h2></h2>
-                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">CONTÁCTANOS</a>
+        <section id="hero">
+            <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio.jpg')">
+                <div class="carousel-container">
+                    <div class="container pl-0 pr-0">
+                        <P class="animate__animated animate__fadeInDown">MÁS DE 25 AÑOS DE EXPERIENCIA</P>
+                        <h2 class="animate__animated animate__fadeInUp col-4">TECNOLOGÍA PARA CRECER</h2>
+                        </h2>
+                        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">CONTÁCTANOS</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
         <a href="https://wa.me/+5116206065?text=ascasdcasc" target="_blank" class="btn-whatsapp">
-            <img src="{{asset('assets/imgs/resources/whatsapp.svg')}}" alt="">
+            <img src="{{ asset('assets/imgs/resources/whatsapp.svg') }}" alt="">
         </a>
     </article>
 
@@ -22,58 +23,76 @@
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container">
-               <div class="about-content">
-                   <div class="about-text">
-                       <h2>SOLUCIONES</h2>
-                       <h3 class="mb-4">Enfocados en la <strong>optimizacion de procesos</strong> y <strong>recursos</strong></h3>
-                       <h5>Implementamos los mejores servicios tecnológicos</h5>
-                   </div>
-                   <div class="about-flex">
-                       <div class="about-item">
-                           <div class="header">
-                               <img src="assets/imgs/recursos/soluciones 1.jpg" class="card-img-top " alt="...">
-                           </div>
-                           <div class="body">
-                               <div class="content">
-                                   <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">Servicios & infraestructura de TI</h3>
-                                   <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde el dimensionamiento hasta la implementación.</p>
-                               </div>
-                               <div class="action">
-                                   <a href="#" class="btn btn-info">VER MÁS</a>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="about-item">
-                           <div class="header">
-                               <img src="assets/imgs/recursos/soluciones 2.jpg" class="card-img-top " alt="...">
-                           </div>
-                           <div class="body">
-                               <div class="content">
-                                   <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">Colaboración & videoconferencia</h3>
-                                   <p class="card-text">Adáptate al trabajo híbrido y mantente conectado desde cualquier lugar y dispositivo.</p>
-                               </div>
-                               <div class="action">
-                                   <a href="#" class="btn btn-info">VER MÁS</a>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="about-item">
-                           <div class="header">
-                               <img src="assets/imgs/recursos/soluciones 3.jpg" class="card-img-top " alt="...">
-                           </div>
-                           <div class="body">
-                               <div class="content">
-                                   <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">Digitalización y Ge documental</h3>
-                                   <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde el dimensionamiento hasta la implementación.</p>
-                               </div>
-                               <div class="action">
-                                   <a href="#" class="btn btn-info">VER MÁS</a>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-                {{--<div class="row content">
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="text">
+                            <h2>SOLUCIONES</h2>
+                            <h3 class="mb-4">Enfocados en la <strong>optimizacion de procesos</strong> y
+                                <strong>recursos</strong>
+                            </h3>
+                            <h5>Implementamos los mejores servicios tecnológicos</h5>
+                        </div>
+                        <div class="actions">
+                            <button type="button" class="btn-slider" id="slider-previous">
+                                <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
+                            </button>
+                            <button type="button" class="btn-slider" id="slider-next">
+                                <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="about-flex" id="slider-container">
+                        <div class="about-item active" data-index="1">
+                            <div class="header">
+                                <img src="assets/imgs/recursos/soluciones 1.jpg" class="card-img-top " alt="...">
+                            </div>
+                            <div class="body">
+                                <div class="content">
+                                    <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
+                                        Servicios & infraestructura de TI</h3>
+                                    <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde el
+                                        dimensionamiento hasta la implementación.</p>
+                                </div>
+                                <div class="action">
+                                    <a href="#" class="btn btn-info">VER MÁS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-item" data-index="2">
+                            <div class="header">
+                                <img src="assets/imgs/recursos/soluciones 2.jpg" class="card-img-top " alt="...">
+                            </div>
+                            <div class="body">
+                                <div class="content">
+                                    <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
+                                        Colaboración & videoconferencia</h3>
+                                    <p class="card-text">Adáptate al trabajo híbrido y mantente conectado desde cualquier
+                                        lugar y dispositivo.</p>
+                                </div>
+                                <div class="action">
+                                    <a href="#" class="btn btn-info">VER MÁS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-item" data-index="3">
+                            <div class="header">
+                                <img src="assets/imgs/recursos/soluciones 3.jpg" class="card-img-top " alt="...">
+                            </div>
+                            <div class="body">
+                                <div class="content">
+                                    <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
+                                        Digitalización y Ge documental</h3>
+                                    <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde el
+                                        dimensionamiento hasta la implementación.</p>
+                                </div>
+                                <div class="action">
+                                    <a href="#" class="btn btn-info">VER MÁS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- <div class="row content">
                     <div class="col-lg-3">
                         <h2>SOLUCIONES</h2>
                         <h3 class="mb-4">Enfocados en la <strong>optimizacion de procesos</strong> y <strong>recursos</strong></h3>
@@ -119,7 +138,7 @@
 
 
                     </div>
-                </div>--}}
+                </div> --}}
 
             </div>
         </section><!-- End About Section -->
@@ -142,11 +161,13 @@
                         <img src="assets/imgs/socios/zebra.svg" class="img-fluid" alt="">
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6 d-none d-sm-none d-md-block d-flex align-items-center justify-content-center">
+                    <div
+                        class="col-lg-3 col-md-4 col-6 d-none d-sm-none d-md-block d-flex align-items-center justify-content-center">
                         <img src="assets/imgs/socios/ricoh.svg" class="img-fluid" alt="">
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6 d-none d-sm-none d-md-block d-flex align-items-center justify-content-center">
+                    <div
+                        class="col-lg-3 col-md-4 col-6 d-none d-sm-none d-md-block d-flex align-items-center justify-content-center">
                         <img src="assets/imgs/socios/logitech.svg" class="img-fluid" alt="">
                     </div>
 
@@ -161,11 +182,11 @@
                 <div class="row">
                     <h2>HISTORIAS DE ÉXITO</h2>
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                        {{--<div class="carousel-indicators">
+                        {{-- <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>--}}
+                        </div> --}}
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
@@ -260,11 +281,13 @@
                             </div>
                         </div>
 
-                        <button class="carousel-control-prev cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <button class="carousel-control-prev cc-button" type="button"
+                            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                             <img src="assets/imgs/left-slider.png" class="w-50" alt="">
                         </button>
 
-                        <button class="carousel-control-next cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <button class="carousel-control-next cc-button" type="button"
+                            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                             <img src="assets/imgs/right-slider.png" class="w-50" alt="">
                         </button>
 
@@ -276,8 +299,11 @@
 
 
     </main><!-- End #main -->
-
 @endsection
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/inicio.css') }}">
+@endpush
+
+@push('js')
+    <script src="{{ asset('assets/js/slider.js') }}"></script>
 @endpush
