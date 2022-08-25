@@ -12,7 +12,7 @@
                 <li><a href="{{url('/articulos')}}">BLOG</a></li>
 
                 <li><a href="{{url('/contactanos')}}" class="getstarted">CONTÁCTANOS</a></li>
-                <li><a target="_blank" href="{{url('https://grupopalermo.pe')}}" class="soporte"><img src="{{asset('assets/imgs/soporte técnico.svg')}}" class="img-soporte"  alt=""></a></li>
+                <li><a target="_blank" href="{{url('https://soporte.grupopalermo.pe')}}" class="soporte"><img src="{{asset('assets/imgs/soporte técnico.svg')}}" class="img-soporte"  alt=""></a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

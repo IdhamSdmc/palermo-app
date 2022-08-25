@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <section id="hero">
-        <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 2.jpg'); background-position-y: 25%">
+        <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 2.jpg'); background-position-y: 15%">
             <div class="carousel-container">
                 <div class="container nosotros ">
                     <h2 class="animate__animated animate__fadeInUp col">Somos Grupo Palermo</h2>

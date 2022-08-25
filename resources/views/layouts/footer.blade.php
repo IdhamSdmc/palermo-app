@@ -1,10 +1,10 @@
 <!-- ======= Footer ======= -->
 <footer id="footer" style="margin-top: 3%;">
-    <div class="footer-top">
-        <div class="container">
+    <div class="footer-top " style="background-image: url('assets/imgs/resources/patron derecho.svg'); background-repeat: no-repeat;background-position: right; background-size: contain; background-size: 25%">
+        <div class="container" style="background-image: url('assets/imgs/resources/patron izquierdo.svg'); background-repeat: no-repeat;background-position: left; background-size: contain">
             <div class="row justify-content-center">
 
-                <div class="col-lg-5 col-md-5 ">
+                <div class="col-lg-5 col-md-5" >
                     <div class="footer-info ">
                         <img src="{{asset('assets/imgs/logo_white.svg')}}" class="img-fluid w-50 mb-2" alt="">
                         <h3 class="f-left">EL SIGUIENTE PASO HACIA LA TRANSFORMACIÓN DIGITAL</h3>
@@ -41,8 +41,8 @@
                     <div class="footer-info2 text-right">
                         <h3>REDES SOCIALES</h3>
                         <div class="social-links mt-3">
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <a href="https://www.facebook.com/grupopalermope" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="https://www.linkedin.com/company/grupo-palermo-peru/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                         </div>
                         <br>
                         <br>
