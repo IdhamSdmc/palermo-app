@@ -38,7 +38,7 @@
             </div>
         </div>
     </section>
-    <section class="form-trabajo">
+    <section id="laboral" class="form-trabajo">
         <div class="container">
             <form action="#">
                 <div class="wrap-input2 validate-input" data-validate="Name is required">

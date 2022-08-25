@@ -1,7 +1,7 @@
 <!-- ======= Footer ======= -->
 <footer id="footer" style="margin-top: 3%;">
-    <div class="footer-top " style="background-image: url('assets/imgs/resources/patron derecho.svg'); background-repeat: no-repeat;background-position: right center; background-size: 25%">
-        <div class="container" style="background-image: url('assets/imgs/resources/patron izquierdo.svg'); background-repeat: no-repeat;background-position: left; background-size: contain">
+    <div class="footer-top " style="background-image: url('assets/imgs/resources/patron derecho.svg'); background-repeat: no-repeat;background-position: right; background-size: 20%; background-position-y: 100%">
+        <div class="container-fluid" style="background-image: url('assets/imgs/resources/patron izquierdo.svg'); background-repeat: no-repeat;background-position-x: 5%; background-size: contain">
             <div class="row justify-content-center">
 
                 <div class="col-lg-5 col-md-5" >
@@ -37,24 +37,28 @@
 
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-12 col-12 d-flex align-items-center justify-content-right">
-                    <div class="footer-info2 text-right">
-                        <h3>REDES SOCIALES</h3>
-                        <div class="social-links mt-3">
-                            <a href="https://www.facebook.com/grupopalermope" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="https://www.linkedin.com/company/grupo-palermo-peru/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-12 d-flex align-items-center justify-content-right flex-column">
+                    <div class="footer-info2 text-right m-auto">
+                        <div class="redes">
+                            <h3>REDES SOCIALES</h3>
+                            <div class="social-links mt-3 mb-5">
+                                <a href="https://www.facebook.com/grupopalermope" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="https://www.linkedin.com/company/grupo-palermo-peru/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
                         </div>
-                        <br>
-                        <br>
-                        <h3>ENLACES DE INTERÉS</h3>
-                        <ul>
-                            <li><a href="">Oportunidad Laboral</a></li>
-                            <li><a href="">contacto@grupopalermo.pe</a></li>
-                            <li><a href="">(01) 620 6025</a></li>
-                            <br>
-                            <li><a href="">Terminos y condiciones</a></li>
-                            <li><a href="">Política de cookies</a></li>
-                        </ul>
+
+                        <div class="footer-flex">
+                            <h3>ENLACES DE INTERÉS</h3>
+                            <div>
+                                <a href="/contactanos/#laboral" target="_blank">Oportunidad Laboral</a>
+                                <a href="">contacto@grupopalermo.pe</a>
+                                <a href="">(01) 620 6025</a>
+                            </div>
+                            <div>
+                                <a href="">Terminos y condiciones</a>
+                                <a href="">Política de cookies</a>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -71,3 +75,6 @@
         </div>
     </div>
 </footer><!-- End Footer -->
+@push('css')
+    <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+@endpush

@@ -2133,6 +2133,23 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+.footer-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.footer-flex div {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-flex div a {
+    text-align: right;
+    color: var(--bg-info);
+}
+
 /* Inpust */
 @media (max-width: 992px) {
     .footer-top .container{
@@ -2140,6 +2157,24 @@ section {
     }
     .footer-top{
         background-size: 15% !important;
+
+    }
+    .footer-flex {
+        flex-direction: row;
+        align-items: center;
+        font-size: 0.7rem;
+    }
+    .footer-flex div a{
+        text-align: left;
+    }
+    .footer-info2 .redes{
+        margin-top: 1.2rem;
+    }
+    .footer-info2 .redes h3{
+        text-align: center !important;
+    }
+    .footer-info2 .redes div{
+        text-align: center !important;
     }
 }
 .validate-input {
@@ -2345,6 +2380,15 @@ input {
     color: white;
 }
 @media (max-width: 991px) {
+    #footer .footer-top {
+        background-image: none !important;
+    }
+    #footer .footer-top .container-fluid{
+        background-image: url("../imgs/resources/patron derecho.svg") !important;
+        background-size: 35% !important;
+        background-position: top right !important;
+    }
+
     #footer .footer-top .footer-info h4{
         font-family: "Goldplay Regular","Poppins", sans-serif;
         font-size: 13px;

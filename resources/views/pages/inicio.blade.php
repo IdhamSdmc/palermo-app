@@ -217,7 +217,7 @@
         <section class="historias-exito">
             <div class="container">
                 <div class="row">
-                    <h2>HISTORIAS DE ÉXITO</h2>
+                    <h2 class="mb-5">HISTORIAS DE ÉXITO</h2>
                     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                         {{--<div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -226,8 +226,8 @@
                         </div>--}}
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                <div class="row ">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
                                         <div class="detalle">
                                             <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
                                             <h5>EL RETO</h5>
@@ -258,7 +258,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
                                         <div class="detalle">
                                             <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
                                             <h5>EL RETO</h5>
@@ -288,7 +288,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
                                         <div class="detalle">
                                             <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
                                             <h5>EL RETO</h5>
