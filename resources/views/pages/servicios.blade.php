@@ -9,7 +9,7 @@
                     <p class="animate__animated animate__fadeInDown col-xl-8 col-lg-8 col-md-8 xol-sm-12 col-12">Simplifica y equipa tu organización. Te acompañamos durante
                         todo el proceso, desde el dimensionamiento, implementación
                         hasta la adopción de nuevas tecnologías.</p>
-                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">COTIZA AHORA</a>
+                    <a href="#footer" class="btn-get-started animate__animated animate__fadeInUp scrollto">COTIZA AHORA</a>
                 </div>
             </div>
         </div>

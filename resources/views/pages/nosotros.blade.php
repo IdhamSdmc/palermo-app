@@ -55,8 +55,65 @@
                         integradas.</p>
                 </div>
             </div>
+                <div class="list-tarjetas">
+                <div class="tarjeta-box">
+                    <div class="tarjeta">
+                        <div class="front">
+                            <h4>¿Por qué elegir Palermo?</h4>
+                            <img src="assets/imgs/resources/Grupo 891.svg" class="img-fluid" alt="">
+                        </div>
+                        <div class="front back">
+                            <h4>¿Por qué elegir Palermo?</h4>
+                            <img src="assets/imgs/nosotros/Grupo 696.svg" class="img-fluid" alt="">
+                            <p class="mt-2"><strong>Más de 25 años</strong> en el mercado
+                                peruano nos <strong>respaldan</strong> para brindar
+                                <strong>soluciones</strong> que <strong>optimizan y mejoran</strong>
+                                la Infraestructura de TI, los procesos
+                                de flujos de documentos y la
+                                colaboración en tu empresa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tarjeta-box">
+                    <div class="tarjeta">
+                        <div class="front">
+                            <h4>¿Por qué elegir Palermo?</h4>
+                            <img src="assets/imgs/resources/Grupo 891.svg" class="img-fluid" alt="">
 
+                        </div>
+                        <div class="front back">
+                            <h4>¿Por qué elegir Palermo?</h4>
+                            <img src="assets/imgs/nosotros/Grupo 696.svg" class="img-fluid" alt="">
+                            <p class="mt-2"><strong>Más de 25 años</strong> en el mercado
+                                peruano nos <strong>respaldan</strong> para brindar
+                                <strong>soluciones</strong> que <strong>optimizan y mejoran</strong>
+                                la Infraestructura de TI, los procesos
+                                de flujos de documentos y la
+                                colaboración en tu empresa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tarjeta-box">
+                    <div class="tarjeta">
+                        <div class="front">
+                            <h4>¿Por qué elegir Palermo?</h4>
+                            <img src="assets/imgs/resources/Grupo 891.svg" class="img-fluid" alt="">
 
+                        </div>
+                        <div class="front back">
+                            <h4>¿Por qué elegir Palermo?</h4>
+                            <img src="assets/imgs/nosotros/Grupo 696.svg" class="img-fluid" alt="">
+                            <p class="mt-2"><strong>Más de 25 años</strong> en el mercado
+                                peruano nos <strong>respaldan</strong> para brindar
+                                <strong>soluciones</strong> que <strong>optimizan y mejoran</strong>
+                                la Infraestructura de TI, los procesos
+                                de flujos de documentos y la
+                                colaboración en tu empresa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     </section>
     {{--NUESTRA HISTORIA--}}

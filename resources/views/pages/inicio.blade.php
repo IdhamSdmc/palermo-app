@@ -13,7 +13,7 @@
                 </div>
             </div>
         </section>
-        <a href="https://wa.me/+5116206065?text=ascasdcasc" target="_blank" class="btn-whatsapp">
+        <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor" target="_blank" class="btn-whatsapp">
             <img src="{{ asset('assets/imgs/resources/whatsapp.svg') }}" alt="">
         </a>
     </article>

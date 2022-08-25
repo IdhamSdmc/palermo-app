@@ -25,7 +25,7 @@
                             satisfacen las necesidades de
                             impresión sin importar el
                             tamaño de su empresa.</p>
-                        <a target="_blank" href="{{url('https://wa.me/+5116206065')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
+                        <a target="_blank" href="{{url('https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
@@ -37,7 +37,7 @@
                             que satisfacen la necesidad de
                             impresión sin importar el tamaño
                             de su empresa.</p>
-                        <a target="_blank" href="{{url('https://wa.me/+5116206065')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
+                        <a target="_blank" href="{{url('https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
@@ -48,7 +48,7 @@
                         <p class="mt-2">Impresoras con una excelente
                             capacidad para grandes
                             volúmenes de producción.</p>
-                        <a target="_blank" href="{{url('https://wa.me/+5116206065')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
+                        <a target="_blank" href="{{url('https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
                     </div>
                 </div>
 
@@ -62,7 +62,7 @@
                             diseñar, tenemos varios modelos
                             con hardware potente y diseño
                             sencillo a un precio razonable.</p>
-                        <a target="_blank" href="{{url('https://wa.me/+5116206065')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
+                        <a target="_blank" href="{{url('https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
@@ -71,7 +71,7 @@
                         <h4>PANTALLAS</h4>
                         <p class="mt-2">Comparte y transmite contenidos
                             con soluciones interactivas.</p>
-                        <a target="_blank" href="{{url('https://wa.me/+5116206065')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
+                        <a target="_blank" href="{{url('https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
@@ -81,7 +81,7 @@
                         <p class="mt-2">Lleva la colaboración al
                             siguiente nivel con: speakers,
                             headsets y cámaras.</p>
-                        <a target="_blank" href="{{url('https://wa.me/+5116206065')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
+                        <a target="_blank" href="{{url('https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor')}}"><i class="bi bi-whatsapp"></i> COTIZAR</a>
                     </div>
                 </div>
 
