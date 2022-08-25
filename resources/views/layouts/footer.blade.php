@@ -66,8 +66,8 @@
 
     <div class="container">
         <div class="copyright der">
-            Grupo Palermo
-            Todos los derechos reservador &copy; 2022
+            <p>Grupo Palermo</p>
+            <p>Todos los derechos reservados &copy; 2022</p>
         </div>
     </div>
 </footer><!-- End Footer -->
