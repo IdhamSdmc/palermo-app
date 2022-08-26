@@ -38,9 +38,9 @@
 }
 
 .sobre-nosotros h2{
-    font-weight: 700;
     font-size: 40px;
-    font-family: "Goldplay Medium","Poppins", sans-serif;
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    font-weight: 800;
     color: #20208e;
 }
 .sobre-nosotros .cuadro {
@@ -83,7 +83,9 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-
+}
+.sobre-nosotros .actions {
+    display: none;
 }
 @media (max-width: 992px) {
     .list-tarjetas{
@@ -91,9 +93,38 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
-
+    }
+    .sobre-nosotros .actions {
+        visibility: visible;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
+    .sobre-nosotros .actions .btn-slider {
+        all: unset;
+        flex-shrink: 0;
+        cursor: pointer;
+        background-color: var(--bg-primary);
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+
+    .sobre-nosotros .actions .btn-slider img {
+        height: 50%;
+        width: 50%;
+        object-fit: contain;
+    }
+    .sobre-nosotros .actions .btn-slider-l {
+        float: left;
+    }
 }
 .tarjeta-box {
     margin: 10px;
@@ -111,15 +142,13 @@
 .tarjeta {
     transform-style: preserve-3d;
     transition: all 0.5s linear;
-
-
 }
 
 .front {
     position: absolute;
     backface-visibility: hidden;
     border-radius: 50px;
-    padding: 50px 30px 50px 30px;
+    padding: 50px 60px 50px 60px;
     background-color: #009FDD;
     color: var(--bg-white);
     width: 100%;
@@ -128,16 +157,31 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-
 }
-
+.front h4{
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    font-size: 1.2rem;
+    padding-bottom: 25px;
+}
+.front.back h4{
+    color: #09218d;
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    font-size: 1.2rem;
+    padding-bottom: 25px;
+}
+.front img {
+    padding-bottom: 25px;
+    width: 30%;
+}
+.front.back img {
+    padding-bottom: 25px;
+}
 .front.back {
     transform: rotateY(180deg);
-    background-color: #009FDD;
     color: var(--bg-black);
     background-color: transparent;
     border: 1px solid var(--bg-info);
+    box-shadow: rgba(0, 0, 0, 0.15) 8px 8px 8px;
     width: 100%;
     height: 600px;
 }
@@ -146,8 +190,19 @@
 }
 
 /*Linea de tiempo*/
+/*Linea de Tiempo*/
+.nuestra-historia *,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.nuestra-historia{
+    text-align: -webkit-center;
 
+}
 
 .timeline {
     --timeline-color: var(--bg-info);
@@ -159,9 +214,10 @@
     margin: 0;
     padding: 0;
     font-family: "Goldplay Regular";
-
+    margin-left: 50px;
+    margin-right: 50px;
     /* set here the height of the timeline */
-    height: 300px;  }
+    height: 400px;  }
 
 /* middle line */
 .timeline:before {
@@ -169,18 +225,18 @@
     position: absolute;
     top: calc(50% - 1px);
     width: 100%;
-    height: 2px;
+    height: 5px;
     background: var(--timeline-color); }
 .timeline li div time{
     font-family: "Goldplay SemiBold";
     font-size: 1.8rem;
 }
 .timeline li {
-    margin: 0 20px;
+
     min-width: 200px;
-    text-align: left
-  ;
-    border-left: 5px var(--timeline-color) dashed;
+    text-align: left;
+
+    border-left: 3px var(--timeline-color) dashed;
     align-self: flex-start; }
 
 /*  event in even position are bottom-aligned */
@@ -192,19 +248,19 @@
 }
 
 /* style for the dot over the timeline */
-/*.timeline li:before {
+.timeline li:before {
     content: "";
     position: absolute;
     top: 50%;
-    margin-left: 100px;
+    margin-left: 0px;
     transform: translate(-50%, -50%);
-    border: 1px #9bc solid;
-    width: 10px;
-    height: 10px;
+    border: 1px var(--timeline-color) solid;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background:  var(--timeline-color);
 
-}*/
+}
 
 /* style for the event arrow */
 /*.timeline div:before {
@@ -231,3 +287,5 @@
     margin-top: -10px;
     border-left: 1px var(--timeline-color) solid;
     border-top: 1px var(--timeline-color) solid; }
+
+

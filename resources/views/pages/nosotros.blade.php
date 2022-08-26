@@ -17,45 +17,7 @@
 {{--    SOBRE NOSOTROS--}}
     <section class="sobre-nosotros">
         <h2>SOBRE NOSOTROS</h2>
-        <div class="container">
-
-            {{--<div class="row justify-content-center align-content-center">
-
-                <div class="col cuadro-front m-5 ">
-                    <h4>Propósito de la marca</h4>
-                    <img src="assets/imgs/nosotros/Grupo 697.svg" class="img-fluid" alt="">
-                    <p class="mt-2"><strong>Transformamos digitalmente</strong> tu
-                        empresa para <strong>crecer</strong> con
-                        soluciones tecnológicas
-                        integradas.</p>
-                </div>
-                <div class="col cuadro-back m-5 visually-hidden">
-                    <h4>Propósito de la marca</h4>
-                    <img src="assets/imgs/nosotros/Grupo 697.svg" class="img-fluid" alt="">
-                    <p class="mt-2"><strong>Transformamos digitalmente</strong> tu
-                        empresa para <strong>crecer</strong> con
-                        soluciones tecnológicas
-                        integradas.</p>
-                </div>
-                <div class="col cuadro m-5">
-                    <h4>¿Por qué elegir Palermo?</h4>
-                    <img src="assets/imgs/nosotros/Grupo 696.svg" class="img-fluid" alt="">
-                    <p class="mt-2"><strong>Más de 25 años</strong> en el mercado
-                        peruano nos <strong>respaldan</strong> para brindar
-                        <strong>soluciones</strong> que <strong>optimizan y mejoran</strong>
-                        la Infraestructura de TI, los procesos
-                        de flujos de documentos y la
-                        colaboración en tu empresa.</p>
-                </div>
-                <div class="col cuadro m-5">
-                    <h4>¿Cómo lo hacemos?</h4>
-                    <img src="assets/imgs/nosotros/Trazado 915.svg" class="img-fluid" alt="">
-                    <p class="mt-2"><strong>Transformamos digitalmente</strong> tu
-                        empresa para <strong>crecer</strong> con
-                        soluciones tecnológicas
-                        integradas.</p>
-                </div>
-            </div>--}}
+        <div class="container mt-5">
 
             <div class="row">
                 <div class="list-tarjetas">
@@ -65,13 +27,12 @@
                             <div class="front">
                                 <h4>Propósito de la marca</h4>
                                 <img src="assets/imgs/resources/Grupo 891.svg" class="img-fluid" alt="">
-
                             </div>
                             <div class="front back">
                                 <h4>Propósito de la marca</h4>
                                 <img src="assets/imgs/nosotros/Grupo 697.svg" class="img-fluid" alt="">
-                                <p class="mt-2">Transformamos digitalmente tu
-                                    empresa para crecer con
+                                <p class="mt-2"><strong>Transformamos digitalmente</strong> tu
+                                    empresa para <strong>crecer</strong> con
                                     soluciones tecnológicas
                                     integradas.</p>
                             </div>
@@ -100,7 +61,6 @@
                             <div class="front">
                                 <h4>¿Cómo lo hacemos?</h4>
                                 <img src="assets/imgs/resources/Trazado 1186.svg" class="img-fluid" alt="">
-
                             </div>
                             <div class="front back">
                                 <h4>¿Cómo lo hacemos?</h4>
@@ -112,9 +72,18 @@
                             </div>
                         </div>
                     </div>
+
+                </div>
+                <div class="actions">
+                    <button type="button" class="btn-slider btn-slider-l" id="slider-previous">
+                        <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
+                    </button>
+                    <button type="button" class="btn-slider btn-slider-r" id="slider-next">
+                        <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
+                    </button>
                 </div>
             </div>
-            </div>
+
         </div>
     </section>
     {{--NUESTRA HISTORIA--}}
@@ -153,6 +122,7 @@
                 </li>
 
             </ul>
+
 
         </div>
     </section>
