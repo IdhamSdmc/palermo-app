@@ -243,7 +243,7 @@
                                                 para la toma de decisiones, la comunicación entre las sedes y
                                                 optimizamos los datos de la empresa.</p>
                                             <div class="button-he">
-                                                <button>CONOCE NUESTRAS SOLUCIONES</button>
+                                                <a class="button" href="{{url('/servicios')}}">CONOCE NUESTRAS SOLUCIONES</a>
                                             </div>
                                         </div>
 
@@ -273,9 +273,9 @@
                                             <p>Actualizamos el equipo de TI de Mission, mejoramos el proceso
                                                 para la toma de decisiones, la comunicación entre las sedes y
                                                 optimizamos los datos de la empresa.</p>
-                                            <div class="button-he">
-                                                <button>CONOCE NUESTRAS SOLUCIONES</button>
-                                            </div>
+                                                <div class="button-he">
+                                                    <a class="button" href="{{url('/servicios')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                                                </div>
                                         </div>
 
                                     </div>
@@ -303,9 +303,9 @@
                                             <p>Actualizamos el equipo de TI de Mission, mejoramos el proceso
                                                 para la toma de decisiones, la comunicación entre las sedes y
                                                 optimizamos los datos de la empresa.</p>
-                                            <div class="button-he">
-                                                <button>CONOCE NUESTRAS SOLUCIONES</button>
-                                            </div>
+                                                <div class="button-he">
+                                                    <a class="button" href="{{url('/servicios')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                                                </div>
                                         </div>
 
                                     </div>

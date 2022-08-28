@@ -2536,7 +2536,7 @@ input.input3 {
     display: flex;
     justify-content: center;
 }
-.historias-exito .detalle button{
+.historias-exito .detalle a{
     font-family: "Goldplay Medium","Poppins", sans-serif;
     font-size: 22px;
     color: white;
