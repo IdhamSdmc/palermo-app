@@ -32,7 +32,7 @@
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do
                             eiusmod tempor.</p>
-                        <a href="#">VER MAS</a>
+                        <a href="/blog">VER MÁS</a>
                     </div>
                 </div>
                 <div class="card-article">
@@ -43,7 +43,7 @@
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do
                             eiusmod tempor.</p>
-                        <a href="#">VER MAS</a>
+                        <a href="/blog">VER MÁS</a>
                     </div>
                 </div>
                 <div class="card-article">
@@ -56,7 +56,7 @@
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do
                             eiusmod tempor.</p>
-                        <a href="#">VER MAS</a>
+                        <a href="/blog">VER MÁS</a>
                     </div>
                 </div>
                 <div class="card-article">
@@ -67,7 +67,7 @@
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do
                             eiusmod tempor.</p>
-                        <a href="#">VER MAS</a>
+                        <a href="/blog">VER MÁS</a>
                     </div>
                 </div>
                 <div class="card-article">
@@ -78,7 +78,7 @@
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do
                             eiusmod tempor.</p>
-                        <a href="#">VER MAS</a>
+                        <a href="/blog">VER MÁS</a>
                     </div>
                 </div>
                 <div class="card-article">
@@ -89,7 +89,7 @@
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do
                             eiusmod tempor.</p>
-                        <a href="#">VER MAS</a>
+                        <a href="/blog">VER MÁS</a>
                     </div>
                 </div>
                 <div class="card-article">
@@ -100,7 +100,7 @@
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do
                             eiusmod tempor.</p>
-                        <a href="#">VER MAS</a>
+                        <a href="/blog">VER MÁS</a>
                     </div>
                 </div>
                 <div class="card-article">
@@ -111,7 +111,7 @@
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do
                             eiusmod tempor.</p>
-                        <a href="#">VER MAS</a>
+                        <a href="/blog">VER MÁS</a>
                     </div>
                 </div>
                 <div class="card-article">
@@ -122,7 +122,7 @@
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipiscing elit, sed do
                             eiusmod tempor.</p>
-                        <a href="#">VER MAS</a>
+                        <a href="/blog">VER MÁS</a>
                     </div>
                 </div>
             </div>

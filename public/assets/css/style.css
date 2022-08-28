@@ -2615,11 +2615,19 @@ input.input3 {
     align-items: center;
 }
 .cc-button{
-    background-color: #09218d;
-    width: 50px;
-    border-radius: 100px;
-    height: 50px;
+    flex-shrink: 0;
+    background-color: var(--bg-primary);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
     opacity: 1;
+}
+.cc-button img{
+    height: 100%;
+    width: 50%;
+    object-fit: contain;
 }
 .carousel-control-next {
     right: -60px;
@@ -2906,7 +2914,17 @@ input.input3 {
     max-width: 10rem;
 
 }
+.productos h2 {
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    color: #20208e;
+    text-align:center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 40px;
 
+
+}
 /*ARTICULOS*/
 #hero .articulos h2{
     font-family: "Goldplay SemiBold","Poppins", sans-serif;
@@ -2964,7 +2982,6 @@ input.input3 {
 .posts .card-info{
     position: relative;
     color: #222;
-    padding: 10px 20px 20px;
     display: flex;
     align-items: left;
     flex-direction: column;
@@ -2980,6 +2997,8 @@ input.input3 {
     font-size: 1.2em;
     margin-bottom: 5px;
     color: #cdcdcd;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .posts .card-info p{
     font-family: "Goldplay Regular","Poppins", sans-serif;

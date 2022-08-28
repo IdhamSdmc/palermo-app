@@ -7,7 +7,7 @@
                 <div class="container pl-0 pr-0">
                     <P class="animate__animated animate__fadeInDown">MÁS DE 25 AÑOS DE EXPERIENCIA</P>
                     <h2 class="animate__animated animate__fadeInUp col-4">TECNOLOGÍA PARA CRECER</h2></h2>
-                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">CONTÁCTANOS</a>
+                    <a href="#footer" class="btn-get-started animate__animated animate__fadeInUp scrollto">CONTÁCTANOS</a>
                 </div>
             </div>
         </div>
@@ -319,11 +319,11 @@
                         </div>
 
                         <button class="carousel-control-prev cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                            <img src="assets/imgs/left-slider.png" class="w-25" alt="">
+                            <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
                         </button>
 
                         <button class="carousel-control-next cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                            <img src="assets/imgs/right-slider.png" class="w-25" alt="">
+                            <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="left">
                         </button>
 
                     </div>

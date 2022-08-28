@@ -9,7 +9,7 @@
                         <h2 class="animate__animated animate__fadeInUp col">LAPTOPS Y PANTALLAS</h2></h2>
                         <p class="animate__animated animate__fadeInDown col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12">Equipa tu empresa con los mejores
                             equipos tecnológicos.</p>
-                        <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">VER MÁS</a>
+                        <a href="#productos" class="btn-get-started animate__animated animate__fadeInUp scrollto">VER MÁS</a>
                     </div>
                 </div>
             </div>
@@ -18,9 +18,10 @@
             <img src="{{asset('assets/imgs/resources/whatsapp.svg')}}" alt="">
         </a>
     </article>
-    <section class="productos">
+    <section class="productos" id="productos">
         <div class="container">
             <div class="row justify-content-center align-content-center">
+                <h2>NUESTROS PRODUCTOS</h2>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 mb-4">
                     <div class="cuadro h-100">
                         <img src="assets/imgs/recursos/producto01.png" class="img-fluid" alt="">
