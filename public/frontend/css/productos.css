@@ -1,0 +1,58 @@
+.lista-productos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+    gap: 1.5rem;
+}
+
+.product {
+    border: 2px solid var(--bg-info);
+    background-color: #fff;
+    padding: 3rem 1.5rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product .image {
+    height: 12rem;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.product .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.product h4 {
+    font-family: var(--font-semibold);
+    color: var(--bg-primary);
+    font-size: 1.25rem;
+}
+
+.product p {
+    font-family: var(--font-regular);
+    font-size: 1rem;
+}
+
+.product a {
+    text-decoration: none;
+    padding: 0.25rem 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--bg-info);
+    color: #fff;
+    font-family: var(--font-semibold);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product a i {
+    font-size: 1.25rem;
+}

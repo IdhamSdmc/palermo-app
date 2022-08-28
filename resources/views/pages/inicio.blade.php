@@ -3,11 +3,11 @@
     <article class="position-relative">
     <section id="hero">
         <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio.jpg')">
-            <div class="carousel-container">
-                <div class="container pl-0 pr-0">
+            <div class="carousel-container d-flex justify-content-start">
+                <div class="container m-0">
                     <P class="animate__animated animate__fadeInDown">MÁS DE 25 AÑOS DE EXPERIENCIA</P>
-                    <h2 class="animate__animated animate__fadeInUp col-4">TECNOLOGÍA PARA CRECER</h2></h2>
-                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">CONTÁCTANOS</a>
+                    <h2 class="animate__animated animate__fadeInUp col-4" style="font-size: 3rem">TECNOLOGÍA PARA CRECER</h2>
+                    <a href="#footer" class="btn-get-started animate__animated animate__fadeInUp scrollto mt-3">CONTÁCTANOS</a>
                 </div>
             </div>
         </div>

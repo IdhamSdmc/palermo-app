@@ -1,11 +1,13 @@
 @extends('layouts.app')
 @section('content')
     <section id="hero">
-        <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 2.jpg'); background-position-y: 15%">
-            <div class="carousel-container">
-                <div class="container nosotros ">
+        <div class="carousel-item active"
+            style="background-image: url('assets/imgs/recursos/inicio 2.jpg'); background-position-y: 15%">
+            <div class="carousel-container d-flex justify-content-start">
+                <div class="container m-0">
                     <h2 class="animate__animated animate__fadeInUp col">Somos Grupo Palermo</h2>
-                    <p class="animate__animated animate__fadeInDown col-lg-8 col-md-8 col-sm-12 col-12">Más de 25 años en el mercado tecnológico nos respaldan.
+                    <p class="animate__animated animate__fadeInDown col-lg-8 col-md-8 col-sm-12 col-12">Más de 25 años en el
+                        mercado tecnológico nos respaldan.
                         Nuestra amplia experiencia y capacidad nos permiten brindar, las
                         mejores soluciones empresariales y verdaderas oportunidades de
                         mejora.</p>
@@ -14,7 +16,7 @@
             </div>
         </div>
     </section>
-{{--    SOBRE NOSOTROS--}}
+    {{-- SOBRE NOSOTROS --}}
     <section class="sobre-nosotros">
         <h2>SOBRE NOSOTROS</h2>
         <div class="container mt-5">
@@ -52,7 +54,8 @@
                                     <strong>soluciones</strong> que <strong>optimizan y mejoran</strong>
                                     la Infraestructura de TI, los procesos
                                     de flujos de documentos y la
-                                    colaboración en tu empresa.</p>
+                                    colaboración en tu empresa.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -86,46 +89,71 @@
 
         </div>
     </section>
-    {{--NUESTRA HISTORIA--}}
+    {{-- NUESTRA HISTORIA --}}
     <section class="nuestra-historia">
-        <h2>NUESTRA HISTORIA</h2>
-        <div class="container">
-            <ul class="timeline">
-                <li>
-                    <div>
-                        <time datetime="2018-10-09">1996</time>
-                        <p>Comienza nuestra historia como
-                            GRUPO PALERMO dedicada al
-                            servicio de fotocopiado e
-                            impresión.</p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <time datetime="2018-10-09">2010</time>
-                        <p>Alianza estratégica y de
-                            distribución exclusiva en el Perú
-                            con la marca de impresoras
-                            RICOH</p>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <time datetime="2018-10-09">2016</time>
-                        <p>Grupo Palermo se expande en el
-                            norte del país, con sucursales en
-                            Chiclayo, Piura,
-                            consolidándose como líder en los
-                            servicios de outsourcing de
-                            impresoras en el norte del país.</p>
-                    </div>
-                </li>
-
-            </ul>
-
-
+        <div class="historia-container">
+            <button type="button" class="btn-slider">
+                <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="">
+            </button>
+            <div class="historia">
+                <h2>NUESTRA HISTORIA</h2>
+                <div class="timeline-container">
+                    <ul class="timeline">
+                        <li>
+                            <div>
+                                <time datetime="2018-10-09">1996</time>
+                                <p class="time-text">Comienza nuestra historia como
+                                    GRUPO PALERMO dedicada al
+                                    servicio de fotocopiado e
+                                    impresión.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time datetime="2018-10-09">2010</time>
+                                <p class="time-text">Alianza estratégica y de
+                                    distribución exclusiva en el Perú
+                                    con la marca de impresoras
+                                    RICOH</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time datetime="2018-10-09">2016</time>
+                                <p class="time-text">Grupo Palermo se expande en el
+                                    norte del país, con sucursales en
+                                    Chiclayo, Piura,
+                                    consolidándose como líder en los
+                                    servicios de outsourcing de
+                                    impresoras en el norte del país.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time datetime="2018-10-09">2016</time>
+                                <p class="time-text">Grupo Palermo se expande en el
+                                    norte del país, con sucursales en
+                                    Chiclayo, Piura,
+                                    consolidándose como líder en los
+                                    servicios de outsourcing de
+                                    impresoras en el norte del país.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+            </div>
+            <button type="button" class="btn-slider">
+                <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="">
+            </button>
         </div>
     </section>
+
+    {{-- @include('pages.timeline') --}}
+
     <script src="">
         const timeline = document.querySelector(".timeline ol"),
             elH = document.querySelectorAll(".timeline li > div"),
@@ -140,4 +168,9 @@
 @endsection
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/css/nosotros.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/layouts/nosotros/historia.css') }}">
+@endpush
+
+@push('js')
+    <script src="{{ asset('assets/js/nosotros/historia.js') }}"></script>
 @endpush

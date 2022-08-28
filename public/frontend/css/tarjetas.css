@@ -1,0 +1,226 @@
+/*tarjetas*/
+.sobre-nosotros .cuadro-front {
+
+    border: solid 0.5px #009fdd;
+    border-radius: 50px;
+    padding: 50px 30px 50px 30px;
+}
+
+.sobre-nosotros .cuadro-front h4 {
+    font-weight: bold;
+    color: #09218d;
+}
+
+.sobre-nosotros .cuadro-back {
+    background-color: #009FDD;
+    border: solid 0.8px #009FDD;
+    border-radius: 50px;
+    padding: 50px 30px 50px 30px;
+}
+
+.sobre-nosotros .cuadro-back h4 {
+    font-weight: bold;
+    color: #09218d;
+}
+
+/*tarjetas Box*/
+.list-tarjetas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.sobre-nosotros .actions {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    /* .list-tarjetas {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    } */
+
+    .sobre-nosotros .actions {
+        visibility: visible;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .sobre-nosotros .actions .btn-slider {
+        all: unset;
+        flex-shrink: 0;
+        cursor: pointer;
+        background-color: var(--bg-primary);
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+    }
+
+    .sobre-nosotros .actions .btn-slider img {
+        height: 50%;
+        width: 50%;
+        object-fit: contain;
+    }
+
+    .sobre-nosotros .actions .btn-slider-l {
+        float: left;
+    }
+}
+
+.tarjeta-box {
+    width: 100%;
+    height: 600px;
+    height: 32rem;
+    position: relative;
+    perspective: 1000px;
+    flex-direction: column;
+}
+
+.tarjeta-box:hover .tarjeta {
+    transform: rotateY(180deg);
+}
+
+.tarjeta {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+}
+
+.front {
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 50px;
+    padding: 50px 60px 50px 60px;
+    padding: 2rem 3rem;
+    background-color: #009FDD;
+    color: var(--bg-white);
+    width: 100%;
+    /* max-width: 32rem; */
+    height: 600px;
+    height: 32rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.front h4 {
+    font-family: "Goldplay SemiBold", "Poppins", sans-serif;
+    font-size: 1.2rem;
+    padding-bottom: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+.front.back h4 {
+    color: #09218d;
+    font-family: "Goldplay SemiBold", "Poppins", sans-serif;
+    font-size: 1.2rem;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.front img {
+    padding-bottom: 25px;
+    width: 30%;
+}
+
+.front.back img {
+    padding-bottom: 25px;
+}
+
+.front.back {
+    transform: rotateY(180deg);
+    color: var(--bg-black);
+    background-color: #fff;
+    border: 1px solid var(--bg-info);
+    box-shadow: rgba(0, 0, 0, 0.15) 8px 8px 8px;
+    width: 100%;
+    height: 600px;
+    height: 32rem;
+}
+
+.front .back img {
+    color: #fff;
+}
+
+.front p {
+    font-family: var(--font-regular);
+    color: #212121;
+    font-size: 0.875rem;
+}
+
+.front p strong {
+    font-family: var(--font-semibold);
+}
+
+@media (max-width: 1000px) {
+    .list-tarjetas {
+        overflow-x: hidden;
+    }
+
+    .tarjeta-box {
+        min-width: 20rem;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+/* 
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+ */
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nosotros .swiper {
+    margin-right: -1rem;
+    margin-top: -1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .arrows {
+        display: flex;
+    }
+}

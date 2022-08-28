@@ -15,6 +15,17 @@
     font-family: "Goldplay SemiBold";
     src: url("../fonts/Goldplay SemiBold.otf") format("opentype");
 }
+
+@font-face {
+    font-family: "Goldplay Thin";
+    src: url("../fonts/Goldplay Thin.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Goldplay Light";
+    src: url("../fonts/Goldplay Light.otf") format("opentype");
+}
+
 body {
     font-family: Goldplay, sans-serif;
     font-style: normal;
@@ -23,7 +34,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #d9232d;
+    /* color: #d9232d; */
 }
 
 a:hover {
@@ -434,12 +445,13 @@ h6 {
 
 #hero .container {
     text-align: left;
+    max-width: 1025px;
 }
 
 #hero h2 {
     color: #fff;
-    margin-bottom: 20px;
-    font-size: 52px;
+    margin-bottom: 5px;
+    font-size: 36px;
     font-weight: 700;
     font-family: "Goldplay Medium","Poppins", sans-serif;
 }
@@ -2133,7 +2145,7 @@ section {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.footer-flex {
+/* .footer-flex {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -2148,9 +2160,10 @@ section {
 .footer-flex div a {
     text-align: right;
     color: var(--bg-info);
-}
+} */
 
 /* Inpust */
+/*
 .footer-info2 .redes div{
     text-align: end;
 }
@@ -2442,8 +2455,9 @@ input {
         border: none;
         font-weight: 600;
         margin-top: 20px;
-    }
+    }*/
     /*Redes Sociales*/
+    /*
     #footer .footer-top .footer-info2 {
         margin-top: 40px;
     }
@@ -2473,7 +2487,7 @@ input {
         line-height: 1;
         font-weight: 700;
     }
-}
+}*/
 
 /* HISTORIAS DE EXTIO */
 .historias-exito .detalle{
@@ -2709,9 +2723,10 @@ input {
 
 /*SOLUCIONES*/
 #hero .soluciones p{
-    font-size: 18px;
+    font-size: 22px;
     font-weight: normal;
-    font-family: "Goldplay Medium","Poppins", sans-serif;
+    font-family: "Goldplay Light", sans-serif;
+    line-height: 1.25;
 }
 
 /*SERVICIOS*/

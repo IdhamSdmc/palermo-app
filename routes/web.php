@@ -15,28 +15,27 @@ Route::get('/', function () {
     return view('pages.inicio');
 });
 
-
 Route::get('/nosotros', function () {
-return view('pages.nosotros');
+return view('pages.nosotros2');
 });
 
-Route::get('/servicios', function () {
-    return view('pages.servicios');
+Route::get('/soluciones', function () {
+    return view('pages.servicios2');
 });
 
 Route::get('/productos', function () {
-    return view('pages.productos');
+    return view('pages.productos2');
 });
 
 Route::get('/blog', function () {
-    return view('pages.blog');
+    return view('pages.blog2');
 });
 
 Route::get('/contactanos', function () {
     return view('pages.contactanos');
 });
 Route::get('/articulos', function () {
-    return view('pages.articulos');
+    return view('pages.articulo');
 });
 
 Route::get('/admin/login', array(

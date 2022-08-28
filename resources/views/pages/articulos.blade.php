@@ -3,8 +3,8 @@
     <article class="position-relative">
         <section id="hero">
             <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 5.jpg')">
-                <div class="carousel-container">
-                    <div class="container articulos">
+                <div class="carousel-container d-flex justify-content-start">
+                    <div class="container m-0">
 
                         <h2 class="animate__animated animate__fadeInUp col-xl-6 xol-lg-6 col-md-6 col-sm-12 col-12">¿Por qué invertir en
                             Infraestructura de TI?</h2>

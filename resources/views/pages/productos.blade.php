@@ -3,8 +3,8 @@
     <article class="position-relative">
         <section id="hero">
             <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position: top">
-                <div class="carousel-container">
-                    <div class="container presentacion">
+                <div class="carousel-container d-flex justify-content-start">
+                    <div class="container m-0">
 
                         <h2 class="animate__animated animate__fadeInUp col">LAPTOPS Y PANTALLAS</h2></h2>
                         <p class="animate__animated animate__fadeInDown col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12">Equipa tu empresa con los mejores

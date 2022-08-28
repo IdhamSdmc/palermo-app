@@ -7,7 +7,7 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a href="{{url('/nosotros')}}" class="active">NOSOTROS</a></li>
-                <li><a href="{{url('/servicios')}}">SERVICIOS</a></li>
+                <li><a href="{{url('/soluciones')}}">SOLUCIONES</a></li>
                 <li><a href="{{url('/productos')}}">PRODUCTOS</a></li>
                 <li><a href="{{url('/articulos')}}">BLOG</a></li>
 
