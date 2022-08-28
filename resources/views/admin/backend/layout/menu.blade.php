@@ -26,25 +26,25 @@
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-            <li class="{{ setActive('admin') }}"><a href="{{ url(getLang() . '/admin') }}"> <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <li class="{{ setActive('admin') }}"><a href="{{ url('/admin') }}"> <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a></li>
-            <li class="{{ setActive('admin/menu*') }}"><a href="{{ url(getLang() . '/admin/menu') }}"> <i class="fa fa-bars"></i> <span>Menu</span> </a>
+            <li class="{{ setActive('admin/menu*') }}"><a href="{{ url( '/admin/menu') }}"> <i class="fa fa-bars"></i> <span>Menu</span> </a>
             </li>
             <li class="treeview {{ setActive('admin/news*') }}"><a href="#"> <i class="fa fa-th"></i> <span>News</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url(getLang() . '/admin/news') }}"><i class="fa fa-calendar"></i> All News</a>
+                    <li><a href="{{ url('/admin/news') }}"><i class="fa fa-calendar"></i> All News</a>
                     </li>
-                    <li><a href="{{ url(getLang() . '/admin/news/create') }}"><i class="fa fa-plus-square"></i> Add News</a>
+                    <li><a href="{{ url('/admin/news/create') }}"><i class="fa fa-plus-square"></i> Add News</a>
                     </li>
                 </ul>
             </li>
             <li class="treeview {{ setActive('admin/page*') }}"><a href="#"> <i class="fa fa-bookmark"></i> <span>Pages</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url(getLang() . '/admin/page') }}"><i class="fa fa-folder"></i> All Pages</a>
+                    <li><a href="{{ url('/admin/page') }}"><i class="fa fa-folder"></i> All Pages</a>
                     </li>
-                    <li><a href="{{ url(getLang() . '/admin/page/create') }}"><i class="fa fa-plus-square"></i> Add Page</a>
+                    <li><a href="{{url('/admin/page/create') }}"><i class="fa fa-plus-square"></i> Add Page</a>
                     </li>
                 </ul>
             </li>
@@ -52,10 +52,10 @@
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li>
-                        <a href="{{ url(getLang() . '/admin/photo-gallery') }}"><i class="fa fa-camera"></i> Photo Galleries</a>
+                        <a href="{{ url('/admin/photo-gallery') }}"><i class="fa fa-camera"></i> Photo Galleries</a>
                     </li>
                     <li>
-                        <a href="{{ url(getLang() . '/admin/video') }}"><i class="fa fa-play-circle-o"></i> Video Galleries</a>
+                        <a href="{{ url('/admin/video') }}"><i class="fa fa-play-circle-o"></i> Video Galleries</a>
                     </li>
 
                 </ul>
@@ -63,59 +63,59 @@
             <li class="treeview {{ setActive('admin/article*') }}"><a href="#"> <i class="fa fa-book"></i> <span>Articles</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url(getLang() . '/admin/article') }}"><i class="fa fa-archive"></i> All Articles</a>
+                    <li><a href="{{ url('/admin/article') }}"><i class="fa fa-archive"></i> All Articles</a>
                     </li>
                     <li>
-                        <a href="{{ url(getLang() . '/admin/article/create') }}"><i class="fa fa-plus-square"></i> Add Article</a>
+                        <a href="{{ url('/admin/article/create') }}"><i class="fa fa-plus-square"></i> Add Article</a>
                     </li>
                 </ul>
             </li>
             <li class="treeview {{ setActive('admin/slider*') }}"><a href="#"> <i class="fa fa-tint"></i> <span>Plugins</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url(getLang() . '/admin/slider') }}"><i class="fa fa-toggle-up"></i> Sliders</a>
+                    <li><a href="{{ url('/admin/slider') }}"><i class="fa fa-toggle-up"></i> Sliders</a>
                     </li>
                 </ul>
             </li>
             <li class="treeview {{ setActive('admin/project*') }}"><a href="#"> <i class="fa fa-gears"></i> <span>Projects</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url(getLang() . '/admin/project') }}"><i class="fa fa-gear"></i> All Projects</a>
+                    <li><a href="{{ url('/admin/project') }}"><i class="fa fa-gear"></i> All Projects</a>
                     </li>
                     <li>
-                        <a href="{{ url(getLang() . '/admin/project/create') }}"><i class="fa fa-plus-square"></i> Add Project</a>
+                        <a href="{{ url('/admin/project/create') }}"><i class="fa fa-plus-square"></i> Add Project</a>
                     </li>
                 </ul>
             </li>
             <li class="treeview {{ setActive('admin/faq*') }}"><a href="#"> <i class="fa fa-question"></i> <span>Faqs</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url(getLang() . '/admin/faq') }}"><i class="fa fa-question-circle"></i> All Faq</a></li>
+                    <li><a href="{{ url('/admin/faq') }}"><i class="fa fa-question-circle"></i> All Faq</a></li>
                     <li>
-                        <a href="{{ url(getLang() . '/admin/faq/create') }}"><i class="fa fa-plus-square"></i> Add Faq</a>
+                        <a href="{{ url('/admin/faq/create') }}"><i class="fa fa-plus-square"></i> Add Faq</a>
                     </li>
                 </ul>
             </li>
             <li class="treeview {{ setActive(['admin/user*', 'admin/group*']) }}"><a href="#"> <i class="fa fa-user"></i> <span>Users</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ url(getLang() . '/admin/user') }}"><i class="fa fa-user"></i> All Users</a>
+                    <li><a href="{{ url('/admin/user') }}"><i class="fa fa-user"></i> All Users</a>
                     </li>
-                    <li><a href="{{ url(getLang() . '/admin/role') }}"><i class="fa fa-group"></i> Add Role</a>
+                    <li><a href="{{ url('/admin/role') }}"><i class="fa fa-group"></i> Add Role</a>
                     </li>
                 </ul>
             </li>
             <li class="treeview {{ setActive(['admin/logs*', 'admin/form-post']) }}"><a href="#"> <i class="fa fa-thumb-tack"></i> <span>Records</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
-                    <li><a target="_blank" href="{{ url(getLang() . '/admin/logs') }}"><i class="fa fa-save"></i> Log</a></li>
+                    <li><a target="_blank" href="{{ url('/admin/logs') }}"><i class="fa fa-save"></i> Log</a></li>
                     <li>
-                        <a href="{{ url(getLang() . '/admin/form-post') }}"><i class="fa fa-envelope"></i> Form Post</a>
+                        <a href="{{ url('/admin/form-post') }}"><i class="fa fa-envelope"></i> Form Post</a>
                     </li>
                 </ul>
             </li>
             <li class="{{ setActive('admin/settings*') }}">
-                <a href="{{ url(getLang() . '/admin/settings') }}"> <i class="fa fa-gear"></i> <span>Settings</span> </a>
+                <a href="{{ url('/admin/settings') }}"> <i class="fa fa-gear"></i> <span>Settings</span> </a>
             </li>
             <li class="{{ setActive('admin/logout*') }}">
                 <a href="{{ url('/admin/logout') }}"> <i class="fa fa-sign-out"></i> <span>Logout</span> </a>

@@ -2194,6 +2194,8 @@ section {
     margin-bottom: 20px;
 }
 
+
+
 input.input2 {
     height: 45px;
 }
@@ -2217,6 +2219,33 @@ input {
     border: none;
 
 }
+.wrap-input3 {
+    width: 80%;
+    position: relative;
+    border-bottom: 3px solid #aaaaaa;
+
+    margin-bottom: 20px;
+}
+input.input3 {
+    height: 45px;
+}
+.input3 {
+    display: block;
+    width: 80%;
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 570;
+    color: #aaaaaa;
+    line-height: 1.2;
+    background-color: transparent;
+}
+.input3::placeholder {
+    color: #aaaaaa;
+    
+}
+
+
+
 
 .btn-enviar{
     padding: 10px 30px 10px 30px;
@@ -2709,7 +2738,7 @@ input {
 
 /*SOLUCIONES*/
 #hero .soluciones p{
-    font-size: 18px;
+    font-size: 30px;
     font-weight: normal;
     font-family: "Goldplay Medium","Poppins", sans-serif;
 }
@@ -2731,8 +2760,11 @@ input {
     border: none;
 }
 .ejemplos .card img{
-    height: 450px;
     border-radius: 50px 50px 0px 0px;
+    height: 419px;
+    width: 627px;
+    object-fit: cover;
+    object-position: top;
 
 }
 .ejemplos .card p{
@@ -2754,7 +2786,7 @@ input {
 
 }
 #hero .colaboracion p{
-    font-size: 25px;
+    font-size: 27px;
     font-weight: normal;
     font-family: "Goldplay Medium","Poppins", sans-serif;
 }
@@ -2791,7 +2823,7 @@ input {
 
 }
 #hero .digitalizacion p{
-    font-size: 25px;
+    font-size: 27px;
     font-weight: normal;
     font-family: "Goldplay Medium","Poppins", sans-serif;
 }
@@ -2805,10 +2837,16 @@ input {
 .dig-ejemplos .card{
     border: none;
 }
-.dig-ejemplos .card img{
-    height: 450px;
+.dig-ejemplos .card .header img{
     border-radius: 50px 50px 0px 0px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 
+}
+.dig-ejemplos .card .header{
+    height: 419.6px;
 }
 .dig-ejemplos .card p{
     font-family: "Goldplay Regular","Poppins", sans-serif;
@@ -2906,8 +2944,8 @@ input {
 .posts .card-article {
     position: relative;
     background: #FFF;
-    max-width: 325px;
-    width: 325px;
+    max-width: 500px;
+    width: 500px;
     height: auto;
     /*box-shadow: 0 5px 25px rgb(1 1 1 / 20%);*/
     border-radius: 30px 30px 0 0;
@@ -2918,16 +2956,19 @@ input {
     /*max-height: 250px;*/
 }
 .posts .card-image img{
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 333.33px;
+    object-fit: cover;
+    object-position: center;
 }
 .posts .card-info{
     position: relative;
     color: #222;
     padding: 10px 20px 20px;
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
+
 }
 .posts .card-info h3{
     font-family: "Goldplay SemiBold","Poppins", sans-serif;
@@ -3014,22 +3055,84 @@ input {
 /*CONTACTANOS*/
 .form-contacto{
     background-color: rgba(157,157,157,0.08);
-
-
     margin-top: 50px;
-    margin-bottom: 50px;
+}
+
+
+.form-contacto p{
+    color:  #1c1c1c;
+    font-size: 20px;
 }
 .form-contacto h2{
     font-family: "Goldplay SemiBold","Poppins", sans-serif;
     color: #009fdd;
     font-size: 45px;
+    font-weight: bold;
+}
+.form-contacto .titulo {
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    color: #20208e;
+    font-size: 45px;
+    font-weight: bold;
 }
 /*FORM TRABAJO*/
-.trabajo{
+.form-trabajo{
     background-color: #009fdd;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    }
+
+
+
+.wrap-input4 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #f2f2f2;
+    margin-bottom: 20px;
 }
 
+input.input4 {
+    height: 45px;
+}
+.input4 {
+    display: block;
+    width: 100%;
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    color: #f2f2f2;
+    line-height: 1.2;
+    background-color:transparent;
+}
+.input4::placeholder {
+    color: #f2f2f2 !important;
+    opacity: 1;
+}
 
+.form-trabajo h2{
+    font-family: "Goldplay SemiBold","Poppins", sans-serif;
+    color: #f2f2f2;
+    text-align:center;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.form-trabajo .formulario{
+    width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-trabajo .btn-enviar{
+    padding: 5px 20px 5px 20px;
+    background-color: white;
+    border-radius: 10px;
+    font-family: "Goldplay Regular","Poppins", sans-serif;
+    color: #009fdd;
+    border: none;
+    font-weight: 600;
+    margin-top: 20px;
+    display: inline-block;
+}

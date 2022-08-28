@@ -23,7 +23,9 @@
         <div class="container-article">
             <div class="card-content">
                 <div class="card-article">
-                    <div class="card-image"><img src="{{asset('assets/imgs/recursos/articulo 1.jpg')}}" alt=""></div>
+                    <div class="card-image">
+                        <img src="{{asset('assets/imgs/recursos/articulo 1.jpg')}}" alt="" class="card-img-top" alt="...">
+                    </div>
                     <div class="card-info">
                         <h4>2022, 12 DE MAYO</h4>
                         <h3>Título de artículo</h3>
@@ -45,7 +47,9 @@
                     </div>
                 </div>
                 <div class="card-article">
-                    <div class="card-image"><img src="{{asset('assets/imgs/recursos/articulo 3.jpg')}}" alt=""></div>
+                    <div class="card-image">
+                        <img src="{{asset('assets/imgs/recursos/articulo 3.jpg')}}" class="card-img-top" alt="...">
+                    </div>
                     <div class="card-info">
                         <h4>2022, 12 DE MAYO</h4>
                         <h3>Título de artículo</h3>

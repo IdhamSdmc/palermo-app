@@ -139,28 +139,33 @@
             <div class="row justify-content-center align-content-center">
                 <div class="col align-items-center">
                     <div class="card" >
-                        <img src="{{asset('assets/imgs/recursos/dig-ejemplo02.jpg')}}" class="card-img-top img-fluid" alt="...">
+                        <div class="header">
+                            <img src="{{asset('assets/imgs/recursos/dig-ejemplo01.jpg')}}" class="card-img-top" alt="...">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Digitalización, Gestión & Custodia de
                                 Documentos</h5>
 
                             <ul>
+                                <li><p>Cuidado y protección de la información,
+                                    menor riesgo de deterioro de los
+                                    documentos</p></li>
                                 <li><p>Elimina costos de almacenamiento en las
-                                        oficinas.</p></li>
-                                <li><p>Virtualización & Hiper convergencia.</p></li>
-                                <li><p>Inventario y organización de toda la
-                                        documentación.</p></li>
+                                    oficinas.</p></li>
+                                <li><p>Inventario y organización de toda la documentación.</p></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col align-items-center">
                     <div class="card" >
-                        <img src="{{asset('assets/imgs/recursos/dig-ejemplo01.jpg')}}" class="card-img-top" alt="...">
+                        <div class="header">
+                        <img src="{{asset('assets/imgs/recursos/dig-ejemplo02.jpg')}}" class="card-img-top img-fluid" alt="...">
+                        </div>
+
                         <div class="card-body">
-                            <h5 class="card-title">Cuidado y protección de la información,
-                                menor riesgo de deterioro de los
-                                documentos.</h5>
+                            <h5 class="card-title">Optimización de flujos de trabajo & 
+                                automatización de procesos RPA</h5>
                             <ul>
                                 <li><p>Accede a la documentación en cuestión de
                                         segundos.</p></li>

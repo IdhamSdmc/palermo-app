@@ -1,5 +1,5 @@
 <!-- ======= Footer ======= -->
-<footer id="footer" style="margin-top: 3%;">
+<footer id="footer" >
     <div class="footer-top " style="background-image: url('assets/imgs/resources/patron derecho.svg'); background-repeat: no-repeat;background-position: right center; background-size: 20%; background-position-y: 100%">
         <div class="container-fluid" style="background-image: url('assets/imgs/resources/patron izquierdo.svg'); background-repeat: no-repeat;background-position-x: 5%; background-size: contain">
             <div class="row justify-content-center">

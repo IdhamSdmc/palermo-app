@@ -61,7 +61,7 @@
 <div class="wrapper">
     <header class="main-header">
         <!-- Logo -->
-        <a href="{!! url(getLang() . '/admin') !!}" class="logo"><b></b></a>
+        <a href="{{ URL::to('/admin') }}" class="logo"><b></b></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
@@ -74,17 +74,8 @@
                     <li class="dropdown messages-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                             <img alt="" src="img/flags/us.png">
-                            <span class="username">{{ LaravelLocalization::getCurrentLocaleName() }}</span>
                             <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                <li>
-                                    <a href="{{LaravelLocalization::getLocalizedURL($localeCode) }}" hreflang="{{$localeCode}}"><img alt="" src="img/flags/es.png">{{{ $properties['native'] }}}</a>
-
-                                </li>
-                            @endforeach
-                        </ul>
+                        </a>  
                     </li>
 
                     <!-- Notifications: style can be found in dropdown.less -->
