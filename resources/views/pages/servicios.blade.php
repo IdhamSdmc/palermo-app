@@ -277,9 +277,8 @@
                         <img src="{{ asset('assets/imgs/recursos/dig-ejemplo01.jpg') }}" class="card-img-top"
                             alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Cuidado y protección de la información,
-                                menor riesgo de deterioro de los
-                                documentos.</h5>
+                            <h5 class="card-title">Optimización de flujos de trabajo & 
+                                automatización de procesos RPA</h5>
                             <ul>
                                 <li>
                                     <p>Accede a la documentación en cuestión de

@@ -65,7 +65,8 @@ class AuthController extends Controller
        
                 $result = Sentinel::authenticate($credentials);
             if ($result) {
-                return Redirect::route('admin.dashboard');
+                echo "exito";
+               // return Redirect::route('admin.dashboard');
             }
         } catch (NotActivatedException $e) {
             return Redirect::back()->withErrors($e->getMessage());
@@ -84,7 +85,7 @@ class AuthController extends Controller
     {
         Sentinel::logout(Sentinel::getUser());
 
-        return Redirect::route('admin.login');
+        return Redirect::route('login');
     }
 
     public function getForgotPassword()

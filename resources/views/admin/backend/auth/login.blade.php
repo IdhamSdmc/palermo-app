@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>FullyCMS | Log in</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iniciar Sesion | Bienvenido</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="{!! url('backend/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet" type="text/css" />
@@ -12,50 +14,58 @@
     <link href="{!! url('backend/css/AdminLTE.min.css') !!}" rel="stylesheet" type="text/css" />
     <!-- iCheck -->
     <link href="{!! url('backend/plugins/iCheck/square/blue.css') !!}" rel="stylesheet" type="text/css" />
-    {{ Html::style("assets/css/github-right.css") }}
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    {!! Html::style("assets/css/github-right.css") !!}
 </head>
 <body class="login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="../../index2.html"><b>fully</b>cms</a>
     </div><!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
-            {!! Form::open(array()) !!}
+        <form id="loginForm" action="{{ route('signin') }}" autocomplete="off" method="POST">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-            @if ($errors->has('login'))
-                <div class="alert alert-danger">
-                    <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>{!! $errors->first('login', ':message') !!}
-                </div>
-            @endif
+          <div class="group form-group {{ $errors->first('email', 'has-error') }}">
+                    <input onkeyup="this.value = this.value.replace(/[&$*<>]/g, '')" type="text" id="email" name="email" required value="{!! old('email') !!}">
+                    <span class="highlight"></span>
+                    <span class="bar"></span>
+                    <label class="material">Correo</label>
+                  </div>
+                  <span class="help-block">{{ $errors->first('email', ':message') }}</span>
 
-            <div class="form-group has-feedback">
-                <input type="text" class="form-control" name="email" placeholder="Email"/>
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" name="password" placeholder="Password"/>
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="checkbox icheck">
-                        <label>
-                            <input type="checkbox"> Remember Me
-                        </label>
+                  <div class="group form-group {{ $errors->first('password', 'has-error') }}">
+                      <span id="icon-span" onclick="showPassword()" class="glyphicon glyphicon-eye-open icon-visibility" style="cursor: pointer;"></span>
+                      <input id="password" type="password" name="password" required>
+                      <span class="highlight"></span>
+                      <span class="bar"></span>
+                      <label class="material">Contraseña</label>
+                  </div>
+                  <span class="help-block">{{ $errors->first('password', ':message') }}</span>
+
+                  <input type="hidden" id="attemps" name="attemps" value="0">
+                  <div id="captcha" class="form-group" style="display:none;text-align: center">
+                    <div class="g-recaptcha" data-sitekey="6Lf5B0YUAAAAADoiUFizC-NMYd-OtAXgXEQqo9c-"></div>
+                  </div>
+                  {{$errors->first('email',':message')}}
+                  <br>
+                  <div class="row">
+                    <div class="col-xs-5" style="padding-left:0px;padding-right:0px; font-size:14px;">
+                      <input type="checkbox" class=""> Recordar Contraseña
                     </div>
-                </div><!-- /.col -->
-                <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-                </div><!-- /.col -->
-            </div>
-        {!! Form::close() !!}
+                    <div class="col-xs-1">
+                    </div>
+                    <div class="col-xs-6" style="text-align:right;margin-left:20px;padding-left:0px; padding-right:0px; font-size:14px;">
+                      <a href="{{ route('forgot-password') }}" class="text-link-color" id="forgot_pwd_title" style="margin-left:0px">
+                        ¿Olvidaste tu Contraseña?
+                      </a>
+                    </div>
+
+                  </div>
+                  <br>
+                  <input type="hidden" name="type_user" value="paciente">
+                  <input type="submit"  class="btn btn-block btn-color" style="color: #e22715;border-radius: 4px !important; border: 1px solid; background-color: white" value="INICIAR SESIÓN">
+              
+        </form>
 
         <div class="social-auth-links text-center">
             <!--<p>- OR -</p>

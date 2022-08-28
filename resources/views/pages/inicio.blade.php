@@ -243,7 +243,7 @@
                                                 para la toma de decisiones, la comunicación entre las sedes y
                                                 optimizamos los datos de la empresa.</p>
                                             <div class="button-he">
-                                                <button>CONOCE NUESTRAS SOLUCIONES</button>
+                                                <a class="button" href="{{url('/servicios')}}">CONOCE NUESTRAS SOLUCIONES</a>
                                             </div>
                                         </div>
 
@@ -273,9 +273,9 @@
                                             <p>Actualizamos el equipo de TI de Mission, mejoramos el proceso
                                                 para la toma de decisiones, la comunicación entre las sedes y
                                                 optimizamos los datos de la empresa.</p>
-                                            <div class="button-he">
-                                                <button>CONOCE NUESTRAS SOLUCIONES</button>
-                                            </div>
+                                                <div class="button-he">
+                                                    <a class="button" href="{{url('/servicios')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                                                </div>
                                         </div>
 
                                     </div>
@@ -303,9 +303,9 @@
                                             <p>Actualizamos el equipo de TI de Mission, mejoramos el proceso
                                                 para la toma de decisiones, la comunicación entre las sedes y
                                                 optimizamos los datos de la empresa.</p>
-                                            <div class="button-he">
-                                                <button>CONOCE NUESTRAS SOLUCIONES</button>
-                                            </div>
+                                                <div class="button-he">
+                                                    <a class="button" href="{{url('/servicios')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                                                </div>
                                         </div>
 
                                     </div>
@@ -319,11 +319,11 @@
                         </div>
 
                         <button class="carousel-control-prev cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                            <img src="assets/imgs/left-slider.png" class="w-25" alt="">
+                            <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
                         </button>
 
                         <button class="carousel-control-next cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                            <img src="assets/imgs/right-slider.png" class="w-25" alt="">
+                            <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="left">
                         </button>
 
                     </div>
