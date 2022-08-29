@@ -2550,6 +2550,11 @@ input.input3 {
     display: flex;
     justify-content: center;
 }
+@media(max-width: 600px){
+    .historias-exito .detalle a {
+        font-size: 16px !important;
+    }
+}
 .historias-exito .detalle a{
     font-family: "Goldplay Medium","Poppins", sans-serif;
     font-size: 22px;
@@ -2624,6 +2629,7 @@ input.input3 {
         font-weight: 700;
     }
 }
+
 .div-ccbutton{
     display: flex;
     align-items: center;
