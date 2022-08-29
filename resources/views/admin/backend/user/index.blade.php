@@ -10,7 +10,7 @@
         <small> | Control Panel</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/user') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{!! url('/admin/user') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active">User</li>
     </ol>
 </section>

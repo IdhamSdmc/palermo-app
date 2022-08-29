@@ -65,7 +65,7 @@
                 <tbody>
                 @foreach( $photo_galleries as $photo_gallery )
                 <tr>
-                    <td> {!! URL::route('.admin.photo-gallery.show', $photo_gallery->title, $photo_gallery->id, array( 'class' => 'btn btn-link btn-xs' )) !!}
+                    <td> {!! URL::route('admin.photo-gallery.show', $photo_gallery->title, $photo_gallery->id, array( 'class' => 'btn btn-link btn-xs' )) !!}
                     <td>{!! $photo_gallery->created_at !!}</td>
                     <td>{!! $photo_gallery->updated_at !!}</td>
                     <td>

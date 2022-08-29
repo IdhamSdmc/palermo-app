@@ -44,6 +44,8 @@ Route::get('/admin/login', array(
 
         return view('/admin/backend/auth/login');
     }, ));
+    Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show',
+    'uses' => 'PhotoGalleryController@show', ));
     Route::group(['prefix' => 'admin', 'namespace'=>'Admin'], function () {
     Route::get('login', 'AuthController@getLogin')->name('login');
     Route::get('signin', 'AuthController@getSignin')->name('signin');
@@ -71,10 +73,11 @@ Route::get('/admin/login', array(
         'uses' => 'PhotoGalleryController@create', ))->where('id', '[0-9]+');
         Route::get('photo-gallery/{id}/delete', array('as' => 'admin.photo-gallery.delete',
                                                       'uses' => 'PhotoGalleryController@confirmDestroy', ))->where('id', '[0-9]+');
-                                                      Route::get('photo-gallery/{id}/edit', array('as' => 'admin.photo-gallery.edit',
+        Route::get('photo-gallery/{id}/edit', array('as' => 'admin.photo-gallery.edit',
                                                       'uses' => 'PhotoGalleryController@edit', ))->where('id', '[0-9]+');
-                                                      Route::get('photo-gallery/{id}/show', array('as' => 'admin.photo-gallery.show',
+        Route::get('photo-gallery/{id}/show', array('as' => 'admin.photo-gallery.show',
                                                       'uses' => 'PhotoGalleryController@show', ))->where('id', '[0-9]+');
-   
+    Route::patch('photo-gallery/{id}/update', array('as' => 'admin.photo-gallery.update',
+                                                      'uses' => 'PhotoGalleryController@update', ))->where('id', '[0-9]+');
    
                                                     });

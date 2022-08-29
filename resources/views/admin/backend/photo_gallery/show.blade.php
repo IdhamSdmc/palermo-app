@@ -1,7 +1,7 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-    {!! HTML::style('ckeditor/contents.css') !!}
-    {!! HTML::script('assets/js/jquery.lazyload.min.js') !!}
+    {!! Html::style('ckeditor/contents.css') !!}
+    {!! Html::script('assets/js/jquery.lazyload.min.js') !!}
     <script type="text/javascript">
         $(function () {
             $("img.lazy").lazyload({
@@ -15,7 +15,7 @@
             <small> | Show Photo Gallery</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{!! langRoute('admin.photo-gallery.index') !!}"><i class="fa fa-desktop"></i> Photo Gallery</a>
+            <li><a href="{!! url('admin.photo-gallery.index') !!}"><i class="fa fa-desktop"></i> Photo Gallery</a>
             </li>
             <li class="active">Show Photo Gallery</li>
         </ol>
@@ -26,7 +26,7 @@
         <div class="col-lg-10">
             <div class="pull-left">
                 <div class="btn-toolbar">
-                    <a href="{!! langRoute('admin.photo-gallery.index') !!}"
+                    <a href="{!! url('admin.photo-gallery.index') !!}"
                        class="btn btn-primary"> <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back </a>
                 </div>
             </div>

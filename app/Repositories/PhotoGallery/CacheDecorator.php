@@ -52,6 +52,20 @@ class CacheDecorator extends AbstractPhotoGalleryDecorator
 
         return $photoGallery;
     }
+    public function create($id)
+    {   $var= implode(' ', $id);
+        $key = md5(getLang().$this->cacheKey.'.id.'.$var);
+
+        if ($this->cache->has($key)) {
+            return $this->cache->get($key);
+        }
+
+        $photoGallery = $this->photoGallery->create($id);
+
+        $this->cache->put($key, $photoGallery);
+
+        return $photoGallery;
+    }
 
     /**
      * @param $slug
@@ -72,27 +86,7 @@ class CacheDecorator extends AbstractPhotoGalleryDecorator
 
         return $photoGallery;
     }
-    
-    /**
-     * @param $new
-     *
-     * @return mixed
-     */
-    public function create($news)
-    {
-        $new = implode(", ", $news);
-        $key = md5(getLang().$this->cacheKey.'.new.'.$new);
 
-        if ($this->cache->has($key)) {
-            return $this->cache->get($key);
-        }
-
-        $photoGallery = $this->photoGallery->create($new);
-
-        $this->cache->put($key, $photoGallery);
-
-        return $photoGallery;
-    }
     /**
      * @return mixed
      */
