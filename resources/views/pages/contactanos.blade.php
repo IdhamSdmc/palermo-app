@@ -36,7 +36,7 @@
         </section>
     </article>
     <article class="wrapper bg-info">
-        <section class="section-container" id="historia">
+        <section class="section-container" id="work">
             <div class="section">
                 <div class="content">
                     <div class="form-work">
