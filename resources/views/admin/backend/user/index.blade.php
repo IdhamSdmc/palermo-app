@@ -54,12 +54,12 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{!! langRoute('admin.user.show', array($user->id)) !!}">
+                                    <a href="{!! URL::route('admin.user.show', array($user->id)) !!}">
                                         <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show User
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{!! langRoute('admin.user.edit', array($user->id)) !!}">
+                                    <a href="{!! URL::route('admin.user.edit', array($user->id)) !!}">
                                         <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit User
                                     </a>
                                 </li>

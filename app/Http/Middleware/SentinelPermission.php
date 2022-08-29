@@ -25,9 +25,7 @@ class SentinelPermission
                     return $next($request);
                 }
                 if ($request->route()->getName() != 'admin.dashboard' && !Sentinel::hasAccess($request->route()->getName())) {
-                    Flash::error('You are not permitted to access this area');
-
-                    return Redirect::route('admin.dashboard')->withErrors('Permission denied.');
+                   // return Redirect::route('admin.dashboard')->withErrors('Permission denied.');
                 }
             }
         }

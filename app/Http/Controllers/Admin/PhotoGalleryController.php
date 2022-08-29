@@ -60,7 +60,7 @@ class PhotoGalleryController extends Controller
         try {
             $id = $this->photoGallery->create($attributes);
 
-            return Redirect::to('/'.getLang().'/admin/photo-gallery/'.$id.'/edit');
+            return Redirect::to('/admin/photo-gallery/'.$id.'/edit');
         } catch (ValidationException $e) {
         }
     }

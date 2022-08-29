@@ -44,6 +44,7 @@
         <br>
 
         <div class="pull-left">
+            <div class="btn-toolbar"><a href="{!! URL::route('admin.photo-gallery.create') !!}" class="btn btn-primary">
                     <span class="glyphicon glyphicon-plus"></span>&nbsp;Add Photo Gallery </a></div>
         </div>
         <br>
@@ -64,7 +65,7 @@
                 <tbody>
                 @foreach( $photo_galleries as $photo_gallery )
                 <tr>
-                    <td> {!! link_to_route(getLang(). '.admin.photo-gallery.show', $photo_gallery->title, $photo_gallery->id, array( 'class' => 'btn btn-link btn-xs' )) !!}
+                    <td> {!! URL::route('.admin.photo-gallery.show', $photo_gallery->title, $photo_gallery->id, array( 'class' => 'btn btn-link btn-xs' )) !!}
                     <td>{!! $photo_gallery->created_at !!}</td>
                     <td>{!! $photo_gallery->updated_at !!}</td>
                     <td>
@@ -75,12 +76,12 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{!! langRoute('admin.photo-gallery.show', array($photo_gallery->id)) !!}">
+                                    <a href="{!! URL::route('admin.photo-gallery.show', array($photo_gallery->id)) !!}">
                                         <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show Photo Gallery
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{!! langRoute('admin.photo-gallery.edit', array($photo_gallery->id)) !!}">
+                                    <a href="{!! URL::route('admin.photo-gallery.edit', array($photo_gallery->id)) !!}">
                                         <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit Photo Gallery
                                     </a>
                                 </li>
