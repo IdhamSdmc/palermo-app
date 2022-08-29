@@ -267,3 +267,9 @@
 .progress-bar {
     background-color: var(--bg-primary);
 }
+
+@media (max-width: 600px) {
+    .section h2 {
+        font-size: 2.25rem;
+    }
+}

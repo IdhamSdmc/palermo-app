@@ -160,3 +160,23 @@
 .form-work .box-check label {
     color: #fafafa;
 }
+
+@media(max-width: 1000px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-container .text {
+        max-width: 55%;
+    }
+
+    .form-contact {
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px) {
+    .contact-container .text {
+        max-width: 100%;
+    }
+}
