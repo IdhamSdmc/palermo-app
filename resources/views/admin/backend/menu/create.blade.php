@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <script type="text/javascript">
     $(document).ready(function () {
@@ -31,7 +31,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open(array('action' => '\Fully\Http\Controllers\Admin\MenuController@store')) !!}
+    {!! Form::open(array('action' => '\App\Http\Controllers\Admin\MenuController@store')) !!}
     <!-- Title -->
     <div class="control-group {!! $errors->has('title') ? 'has-error' : '' !!}">
         <label class="control-label" for="title">Title</label>

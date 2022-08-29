@@ -80,7 +80,7 @@ class CategoryRepository extends RepositoryAbstract implements CategoryInterface
      */
     public function lists()
     {
-        return $this->category->where('lang', $this->getLang())->lists('title', 'id');
+        return $this->category->where('lang', $this->getLang())->pluck('title', 'id');
     }
 
     /**

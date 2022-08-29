@@ -70,7 +70,7 @@ class PageRepository extends RepositoryAbstract implements PageInterface, Crudab
      */
     public function lists()
     {
-        return $this->page->where('lang', $this->getLang())->lists('title', 'id');
+        return $this->page->where('lang', $this->getLang())->pluck('title', 'id');
     }
 
     /**

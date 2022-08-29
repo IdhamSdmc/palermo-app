@@ -70,7 +70,20 @@ class CacheDecorator extends AbstractCategoryDecorator
 
         return $categories;
     }
+    public function lists()
+    {
+        $key = md5(getLang().$this->cacheKey.'.all.categories');
 
+        if ($this->cache->has($key)) {
+            return $this->cache->get($key);
+        }
+
+        $categories = $this->category->all();
+
+        $this->cache->put($key, $categories);
+
+        return $categories;
+    }
     /**
      * @param int  $page
      * @param int  $limit

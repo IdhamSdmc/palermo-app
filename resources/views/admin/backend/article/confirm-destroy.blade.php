@@ -1,11 +1,11 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <section class="content-header">
     <h1> Article
         <small> | Delete Article</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! langRoute('admin.article.index') !!}"><i class="fa fa-book"></i> Article</a></li>
+        <li><a href="{!! url('admin.article.index') !!}"><i class="fa fa-book"></i> Article</a></li>
         <li class="active">Delete Article</li>
     </ol>
 </section>

@@ -95,7 +95,7 @@ class PhotoGalleryRepository extends RepositoryAbstract implements PhotoGalleryI
      */
     public function lists()
     {
-        return $this->photoGallery->where('lang', $this->getLang())->lists('title', 'id');
+        return $this->photoGallery->where('lang', $this->getLang())->pluck('title', 'id');
     }
 
     /**
@@ -149,11 +149,15 @@ class PhotoGalleryRepository extends RepositoryAbstract implements PhotoGalleryI
      * @throws \App\Exceptions\Validation\ValidationException
      */
     public function create($attributes)
+    {
+        if ($this->isValid($attributes)) {
+            $this->photoGallery->lang = $this->getLang();
+            $this->photoGallery->fill($attributes)->save();
 
-    {           $this->photoGallery->fill($attributes)->save();
-        return $this->photoGallery->id;
+            return $this->photoGallery->id;
+        }
 
-       
+        throw new ValidationException('Photo Gallery validation failed', $this->getErrors());
     }
 
     /**

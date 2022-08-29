@@ -1,11 +1,11 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-{!! HTML::style('assets/bootstrap/css/bootstrap-tagsinput.css') !!}
-{!! HTML::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
-{!! HTML::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
-{!! HTML::script('ckeditor/ckeditor.js') !!}
-{!! HTML::script('assets/bootstrap/js/bootstrap-tagsinput.js') !!}
-{!! HTML::script('assets/js/jquery.slug.js') !!}
+{!! Html::style('assets/bootstrap/css/bootstrap-tagsinput.css') !!}
+{!! Html::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
+{!! Html::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
+{!! Html::script('ckeditor/ckeditor.js') !!}
+{!! Html::script('assets/bootstrap/js/bootstrap-tagsinput.js') !!}
+{!! Html::script('assets/js/jquery.slug.js') !!}
 <script type="text/javascript">
     $(document).ready(function () {
         $("#title").slug();
@@ -28,7 +28,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open( array( 'route' => array(getLang(). '.admin.article.update', $article->id), 'method' => 'PATCH', 'files'=>true)) !!}
+    {!! Form::open( array( 'route' => array( 'admin.article.update', $article->id), 'method' => 'PATCH', 'files'=>true)) !!}
     <!-- Title -->
     <div class="control-group {!! $errors->has('title') ? 'has-error' : '' !!}">
         <label class="control-label" for="title">Title</label>

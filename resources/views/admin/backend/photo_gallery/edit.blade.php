@@ -1,14 +1,14 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-{!! HTML::script('ckeditor/ckeditor.js') !!}
-{!! HTML::style('dropzone/css/basic.css') !!}
-{!! HTML::style('dropzone/css/dropzone.css') !!}
-{!! HTML::script('dropzone/dropzone.js') !!}
+{!! Html::script('ckeditor/ckeditor.js') !!}
+{!! Html::style('dropzone/css/basic.css') !!}
+{!! Html::style('dropzone/css/dropzone.css') !!}
+{!! Html::script('dropzone/dropzone.js') !!}
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1> Photo Gallery <small> | Add Photo Gallery</small> </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/photo-gallery') !!}"><i class="fa fa-desktop"></i> Photo Gallery</a></li>
+        <li><a href="{!! url('/admin/photo-gallery') !!}"><i class="fa fa-desktop"></i> Photo Gallery</a></li>
         <li class="active">Add Photo Gallery</li>
     </ol>
 </section>
@@ -19,7 +19,7 @@
     <label class="control-label" for="title">Images</label>
 
     <div style="width: 700px; min-height: 300px; height: auto; border:1px solid slategray;" id="dropzone">
-        {!! Form::open(array('url' => getLang() . '/admin/photo-gallery/upload/' . $photo_gallery->id, 'class'=>'dropzone', 'id'=>'my-dropzone')) !!}
+        {!! Form::open(array('url' =>  '/admin/photo-gallery/upload/' . $photo_gallery->id, 'class'=>'dropzone', 'id'=>'my-dropzone')) !!}
         <!-- Single file upload
         <div class="dz-default dz-message"><span>Drop files here to upload</span></div>
         -->
@@ -98,7 +98,7 @@
     </script>
 
     <br>
-    {!! Form::open( array( 'route' => array( getLang() . '.admin.photo-gallery.update', $photo_gallery->id), 'method' => 'PATCH', 'files'=>true)) !!}
+    {!! Form::open( array( 'route' => array( 'admin.photo-gallery.update', $photo_gallery->id), 'method' => 'PATCH', 'files'=>true)) !!}
     <!-- Title -->
     <div class="control-group {!! $errors->has('title') ? 'has-error' : '' !!}">
         <label class="control-label" for="title">Title</label>

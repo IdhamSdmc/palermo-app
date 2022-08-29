@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 
 <!-- Content Header (Page header) -->
@@ -7,7 +7,7 @@
         <small> | Add Category</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/category') !!}"><i class="fa fa-list"></i> Category</a></li>
+        <li><a href="{!! url('/admin/category') !!}"><i class="fa fa-list"></i> Category</a></li>
         <li class="active">Add Category</li>
     </ol>
 </section>
@@ -15,7 +15,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open(array('action' => '\Fully\Http\Controllers\Admin\CategoryController@store' )) !!}
+    {!! Form::open(array('action' => '\App\Http\Controllers\Admin\CategoryController@store' )) !!}
     <!-- Title -->
     <div class="control-group {!! $errors->has('title') ? 'has-error' : '' !!}">
         <label class="control-label" for="title">Category</label>

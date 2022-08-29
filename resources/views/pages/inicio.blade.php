@@ -20,75 +20,81 @@
     <main id="main">
 
         <!-- ======= About Section ======= -->
-        <section id="about" class="about">
+        <section id="about" class="about" >
             <div class="container">
                 <div class="about-content">
                     <div class="about-text">
                         <div class="text">
                             <h2>SOLUCIONES</h2>
-                            <h3 class="mb-4">Enfocados en la <strong>optimizacion de procesos</strong> y
+                            <h3 class="mb-4">Enfocados en la <strong>optimización de procesos</strong> y
                                 <strong>recursos</strong>
                             </h3>
                             <h5>Implementamos los mejores servicios tecnológicos</h5>
                         </div>
-                        <div class="actions">
-                            <button type="button" class="btn-slider" id="slider-previous">
+                        <div class="arrows">
+                            <button type="button" class="btn-slider prev">
                                 <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
                             </button>
-                            <button type="button" class="btn-slider" id="slider-next">
+                            <button type="button" class="btn-slider next">
                                 <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
                             </button>
                         </div>
+                 
                     </div>
-                    <div class="about-flex" id="slider-container">
-                        <div class="about-item active" data-index="1">
-                            <div class="header">
-                                <img src="assets/imgs/recursos/soluciones 1.jpg" class="card-img-top " alt="...">
-                            </div>
-                            <div class="body">
-                                <div class="content">
-                                    <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
-                                        Servicios & infraestructura de TI</h3>
-                                    <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde el
-                                        dimensionamiento hasta la implementación.</p>
+                    <div class="swiper mySwiper" >
+                        <div class="swiper-wrapper"  >
+                            <div class="swiper-slide solution" id="solutions-tarjet">
+                                <div class="header">
+                                    <img src="assets/imgs/recursos/soluciones 1.jpg" class="card-img-top " alt="...">
                                 </div>
-                                <div class="action">
-                                    <a href="#" class="btn btn-info">VER MÁS</a>
+                                <div class="body">
+                                    <div class="content">
+                                        <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
+                                            Servicios & infraestructura de TI</h3>
+                                        <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde el
+                                            dimensionamiento hasta la implementación.</p>
+                                    </div>
+                                    <div class="action">
+                                        <a href="/soluciones#infrastructura" class="btn btn-info">VER MÁS</a>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="swiper-slide solution" id="solutions-tarjet">
+                                <div class="header">
+                                    <img src="assets/imgs/recursos/soluciones 2.jpg" class="card-img-top " alt="...">
+                                </div>
+                                <div class="body">
+                                    <div class="content">
+                                        <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
+                                            Colaboración & videoconferencia</h3>
+                                        <p class="card-text">Adáptate al trabajo híbrido y mantente conectado desde cualquier
+                                            lugar y dispositivo.</p>
+                                    </div>
+                                    <div class="action">
+                                        <a href="/soluciones#colaboracion" class="btn btn-info">VER MÁS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide solution" id="solutions-tarjet">
+                                <div class="header">
+                                    <img src="assets/imgs/recursos/soluciones 3.jpg" class="card-img-top " alt="...">
+                                </div>
+                                <div class="body">
+                                    <div class="content">
+                                        <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
+                                            Digitalización y Ge documental</h3>
+                                        <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde el
+                                            dimensionamiento hasta la implementación.</p>
+                                    </div>
+                                    <div class="action">
+                                        <a href="/soluciones#gestion" class="btn btn-info">VER MÁS</a>
+                                    </div>
+                                </div>
+                            </div>
+                           
                         </div>
-                        <div class="about-item" data-index="2">
-                            <div class="header">
-                                <img src="assets/imgs/recursos/soluciones 2.jpg" class="card-img-top " alt="...">
-                            </div>
-                            <div class="body">
-                                <div class="content">
-                                    <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
-                                        Colaboración & videoconferencia</h3>
-                                    <p class="card-text">Adáptate al trabajo híbrido y mantente conectado desde cualquier
-                                        lugar y dispositivo.</p>
-                                </div>
-                                <div class="action">
-                                    <a href="#" class="btn btn-info">VER MÁS</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="about-item" data-index="3">
-                            <div class="header">
-                                <img src="assets/imgs/recursos/soluciones 3.jpg" class="card-img-top " alt="...">
-                            </div>
-                            <div class="body">
-                                <div class="content">
-                                    <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
-                                        Digitalización y Ge documental</h3>
-                                    <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde el
-                                        dimensionamiento hasta la implementación.</p>
-                                </div>
-                                <div class="action">
-                                    <a href="#" class="btn btn-info">VER MÁS</a>
-                                </div>
-                            </div>
-                        </div>
+
+                       
                     </div>
                 </div>
                 {{-- <div class="row content">
@@ -138,7 +144,10 @@
 
                     </div>
                 </div>--}}
-
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
             </div>
         </section><!-- End About Section -->
 
@@ -321,7 +330,10 @@
                         <button class="carousel-control-prev cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                             <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
                         </button>
-
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
                         <button class="carousel-control-next cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                             <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="left">
                         </button>
@@ -337,9 +349,13 @@
 
 @endsection
 @push('css')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ asset('assets/css/inicio.css') }}">
 @endpush
 
 @push('js')
-    <script src="{{ asset('assets/js/slider.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script src="{{ asset('frontend/js/inicio.js') }}"></script>
+
 @endpush

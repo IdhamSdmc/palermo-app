@@ -76,7 +76,7 @@ class PhotoGalleryController extends Controller
     {
         $photo_gallery = $this->photoGallery->find($id);
 
-        return view('backend.photo_gallery.show', compact('photo_gallery'));
+        return view('/admin/backend.photo_gallery.show', compact('photo_gallery'));
     }
 
     /**
@@ -90,7 +90,7 @@ class PhotoGalleryController extends Controller
     {
         $photo_gallery = $this->photoGallery->find($id);
 
-        return view('backend.photo_gallery.edit', compact('photo_gallery'));
+        return view('admin/backend.photo_gallery.edit', compact('photo_gallery'));
     }
 
     /**
