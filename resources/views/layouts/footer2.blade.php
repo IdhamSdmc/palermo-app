@@ -36,7 +36,7 @@
                         <h5>ENLACES DE INTERÉS</h5>
                         <div class="grupo-enlaces">
                             <div class="enlaces">
-                                <a href="">Oportunidad Laboral</a>
+                                <a href="/contactanos/#work" target="_blank">Oportunidad Laboral</a>
                                 <a href="">contacto@grupopalermo.pe</a>
                                 <a href="">(01) 620 6025</a>
                             </div>

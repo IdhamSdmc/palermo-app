@@ -51,7 +51,7 @@
                         <div class="footer-flex">
                             <h3>ENLACES DE INTERÉS</h3>
                             <div>
-                                <a href="/contactanos/#laboral" target="_blank">Oportunidad Laboral</a>
+                                <a href="/contactanos/#work" target="_blank">Oportunidad Laboral</a>
                                 <a href="">contacto@grupopalermo.pe</a>
                                 <a href="">(01) 620 6025</a>
                             </div>
