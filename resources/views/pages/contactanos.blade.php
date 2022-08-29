@@ -1,7 +1,7 @@
 @extends('layouts.app2')
 @section('content')
     <article class="wrapper bg-gray">
-        <section class="section-container" id="historia">
+        <section class="section-container" id="contactanos">
             <div class="section">
                 <div class="content">
                     <div class="contact-container">

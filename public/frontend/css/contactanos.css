@@ -1,3 +1,8 @@
+#contactanos {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
 .contact-container {
     display: flex;
     justify-content: center;
@@ -7,7 +12,7 @@
 .form-contact {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.75rem;
     width: 45%;
 }
 
@@ -47,7 +52,7 @@
 .form-contact .box-form input {
     width: 100%;
     border: 0;
-    border-bottom: 2px solid #aaa;
+    border-bottom: 3px solid #aaa;
     background-color: transparent;
     padding: 0.25rem 0;
     outline: none;
@@ -97,7 +102,7 @@
 .form-work .box-form input{
     width: 100%;
     border: 0;
-    border-bottom: 2px solid #fff;
+    border-bottom: 3px solid #fff;
     background-color: transparent;
     padding: 0.25rem 0;
     outline: none;
