@@ -1,11 +1,11 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-{!! HTML::style('assets/bootstrap/css/bootstrap-tagsinput.css') !!}
-{!! HTML::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
-{!! HTML::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
-{!! HTML::script('ckeditor/ckeditor.js') !!}
-{!! HTML::script('assets/bootstrap/js/bootstrap-tagsinput.js') !!}
-{!! HTML::script('assets/js/jquery.slug.js') !!}
+{!! Html::style('assets/bootstrap/css/bootstrap-tagsinput.css') !!}
+{!! Html::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
+{!! Html::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
+{!! Html::script('ckeditor/ckeditor.js') !!}
+{!! Html::script('assets/bootstrap/js/bootstrap-tagsinput.js') !!}
+{!! Html::script('assets/js/jquery.slug.js') !!}
 <script type="text/javascript">
     $(document).ready(function () {
         $("#title").slug();
@@ -16,7 +16,7 @@
 <section class="content-header">
     <h1> Article <small> | Add Article</small> </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang() . '/admin/article') !!}"><i class="fa fa-book"></i> Article</a></li>
+        <li><a href="{!! url('/admin/article') !!}"><i class="fa fa-book"></i> Article</a></li>
         <li class="active">Add Article</li>
     </ol>
 </section>
@@ -24,7 +24,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open(array('action' => '\Fully\Http\Controllers\Admin\ArticleController@store', 'files'=>true)) !!}
+    {!! Form::open(array('action' => '\App\Http\Controllers\Admin\ArticleController@store', 'files'=>true)) !!}
 
     <!-- Title -->
     <div class="control-group {!! $errors->has('title') ? 'has-error' : '' !!}">

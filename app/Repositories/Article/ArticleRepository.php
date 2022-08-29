@@ -77,7 +77,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
      */
     public function lists()
     {
-        return $this->article->get()->where('lang', $this->getLang())->lists('title', 'id');
+        return $this->article->get()->where('lang', $this->getLang())->pluck('title', 'id');
     }
 
     /*

@@ -44,7 +44,7 @@ class ArticleController extends Controller
         $pagiData = $this->article->paginate(Input::get('page', 1), $this->perPage, true);
         $articles = Pagination::makeLengthAware($pagiData->items, $pagiData->totalItems, $this->perPage);
 
-        return view('backend.article.index', compact('articles'));
+        return view('/admin/backend.article.index', compact('articles'));
     }
 
     /**
@@ -56,7 +56,7 @@ class ArticleController extends Controller
     {
         $categories = $this->category->lists();
 
-        return view('backend.article.create', compact('categories'));
+        return view('/admin/backend.article.create', compact('categories'));
     }
 
     /**
@@ -87,7 +87,7 @@ class ArticleController extends Controller
     {
         $article = $this->article->find($id);
 
-        return view('backend.article.show', compact('article'));
+        return view('/admin/backend.article.show', compact('article'));
     }
 
     /**
@@ -109,7 +109,7 @@ class ArticleController extends Controller
         $tags = substr($tags, 1);
         $categories = $this->category->lists();
 
-        return view('backend.article.edit', compact('article', 'tags', 'categories'));
+        return view('/admin/backend.article.edit', compact('article', 'tags', 'categories'));
     }
 
     /**
@@ -150,7 +150,7 @@ class ArticleController extends Controller
     {
         $article = $this->article->find($id);
 
-        return view('backend.article.confirm-destroy', compact('article'));
+        return view('/admin/backend.article.confirm-destroy', compact('article'));
     }
 
     public function togglePublish($id)

@@ -1,7 +1,7 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-    {!! HTML::style('assets/css/menu-managment.css') !!}
-    {!! HTML::script('assets/js/jquery.nestable.js') !!}
+    {!! Html::style('assets/css/menu-managment.css') !!}
+    {!! Html::script('assets/js/jquery.nestable.js') !!}
     <meta name="_token" content="{!! csrf_token() !!}"/>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -46,11 +46,10 @@
 
     <br>
     <div class="col-lg-10">
-        @include('flash::message')
         <div class="pull-right">
             <div id="msg"></div>
         </div>
-        <br> <a href="{!! langRoute('admin.menu.create') !!}" class="btn btn-primary">
+        <br> <a href="{!! URL::route('admin.menu.create') !!}" class="btn btn-primary">
             <span class="glyphicon glyphicon-plus"></span>&nbsp;New Menu Item </a> <br>
         <hr>
         <div class="dd" id="nestable">

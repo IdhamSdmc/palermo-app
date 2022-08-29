@@ -37,7 +37,7 @@ class MenuController extends Controller
         $items = $this->menu->orderBy('order', 'asc')->where('lang', getLang())->get();
         $menus = $this->menu->getMenuHTML($items);
 
-        return view('backend.menu.index', compact('menus'));
+        return view('/admin/backend.menu.index', compact('menus'));
     }
 
     /**
@@ -49,7 +49,7 @@ class MenuController extends Controller
     {
         $options = $this->menu->getMenuOptions();
 
-        return view('backend.menu.create', compact('options'));
+        return view('/admin/backend.menu.create', compact('options'));
     }
 
     /**

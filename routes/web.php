@@ -79,5 +79,23 @@ Route::get('/admin/login', array(
                                                       'uses' => 'PhotoGalleryController@show', ))->where('id', '[0-9]+');
     Route::patch('photo-gallery/{id}/update', array('as' => 'admin.photo-gallery.update',
                                                       'uses' => 'PhotoGalleryController@update', ))->where('id', '[0-9]+');
-   
+     // menu-managment
+     Route::resource('menu', 'MenuController');
+     Route::get('menu/create', array('as' => 'admin.menu.create',
+     'uses' => 'MenuController@create', ))->where('id', '[0-9]+');
+     Route::post('menu/save', array('as' => 'admin.menu.save', 'uses' => 'MenuController@save'));
+     Route::get('menu/{id}/delete', array('as'   => 'admin.menu.delete',
+                                          'uses' => 'MenuController@confirmDestroy'))->where('id', '[0-9]+');
+     Route::post('menu/{id}/toggle-publish', array('as'   => 'admin.menu.toggle-publish',
+                                                   'uses' => 'MenuController@togglePublish'))->where('id', '[0-9]+');
+     Route::resource('article', 'ArticleController');
+     Route::get('article/create', array('as' => 'admin.article.create',
+     'uses' => 'ArticleController@create', ));
+     Route::get('/article', array('as' => 'dashboard.article', 'uses' => 'ArticleController@index'));
+     Route::get('/article/{slug}', array('as' => 'dashboard.article.show', 'uses' => 'ArticleController@show'));
+    Route::resource('category', 'CategoryController', array('before' => 'hasAccess:category'));
+    Route::get('category/create', array('as' => 'admin.category.create',
+                                                 'uses' => 'CategoryController@create', ))->where('id', '[0-9]+');
+        Route::get('category/{id}/delete', array('as' => 'admin.category.delete',
+                                                 'uses' => 'CategoryController@confirmDestroy', ))->where('id', '[0-9]+');
                                                     });

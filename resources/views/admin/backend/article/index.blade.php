@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
     <script type="text/javascript">
         $(document).ready(function () {
@@ -11,7 +11,7 @@
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "{!! url(getLang() . '/admin/article/" + id + "/toggle-publish/') !!}",
+                    url: "{!! url('/admin/article/" + id + "/toggle-publish/') !!}",
                     headers: {
                         'X-CSRF-Token': $('meta[name="_token"]').attr('content')
                     },
@@ -33,7 +33,7 @@
             <small> | Control Panel</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{!! url(getLang() . '/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{!! url( '/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li class="active">Article</li>
         </ol>
     </section>
@@ -41,14 +41,13 @@
 
     <div class="container">
         <div class="col-lg-10">
-            @include('flash::message')
             <br>
 
             <div class="pull-left">
                 <div class="btn-toolbar">
-                    <a href="{!! langRoute('admin.article.create') !!}" class="btn btn-primary">
+                    <a href="{!!  URL::route('admin.article.create') !!}" class="btn btn-primary">
                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Add Article </a>
-                    <a href="{!! langRoute('admin.category.create') !!}" class="btn btn-primary">
+                    <a href="{!!  URL::route('admin.category.create') !!}" class="btn btn-primary">
                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Add Category </a>
                 </div>
             </div>
@@ -69,7 +68,7 @@
                         @foreach( $articles as $article )
                             <tr>
                                 <td>
-                                    <a href="{!! langRoute('admin.article.show', array($article->id)) !!}" class="btn btn-link btn-xs">
+                                    <a href="{!! URL::route('admin.article.show', array($article->id)) !!}" class="btn btn-link btn-xs">
                                         {!! $article->title !!} </a>
                                 </td>
                                 <td>{!! $article->created_at !!}</td>
@@ -80,12 +79,12 @@
                                             Action <span class="caret"></span> </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="{!! langRoute('admin.article.show', array($article->id)) !!}">
+                                                <a href="{!! URL::route('admin.article.show', array($article->id)) !!}">
                                                     <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show Article
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{!! langRoute('admin.article.edit', array($article->id)) !!}">
+                                                <a href="{!! URL::route('admin.article.edit', array($article->id)) !!}">
                                                     <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit Article
                                                 </a>
                                             </li>

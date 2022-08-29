@@ -37,7 +37,7 @@
                         <tbody>
                         @foreach( $categories as $category )
                             <tr>
-                                <td> {!! link_to_route( getLang() . '.admin.category.show', $category->title,
+                                <td> {!! link_to_route( '.admin.category.show', $category->title,
                                     $category->id, array( 'class' => 'btn btn-link btn-xs' )) !!}
                                 <td>
                                     <div class="btn-group">
@@ -45,12 +45,12 @@
                                             Action <span class="caret"></span> </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="{!! langRoute('admin.category.show', array($category->id)) !!}">
+                                                <a href="{!!  URL::route('admin.category.show', array($category->id)) !!}">
                                                     <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show
                                                     Category </a>
                                             </li>
                                             <li>
-                                                <a href="{!! langRoute('admin.category.edit', array($category->id)) !!}">
+                                                <a href="{!!  URL::route('admin.category.edit', array($category->id)) !!}">
                                                     <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit Category
                                                 </a>
                                             </li>

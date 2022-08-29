@@ -1,6 +1,6 @@
 <?php
 
-namespace Fully\Repositories\Category;
+namespace App\Repositories\Category;
 
 /**
  * Class AbstractCategoryDecorator.

@@ -3,8 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\SluggableTrait;
-use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\Sluggable;
 use App\Interfaces\ModelInterface as ModelInterface;
 
 /**
@@ -12,19 +11,24 @@ use App\Interfaces\ModelInterface as ModelInterface;
  *
  * @author Sefa Karagöz <karagozsefa@gmail.com>
  */
-class Category extends Model implements ModelInterface, SluggableInterface
+class Category extends Model implements ModelInterface
 {
-    use SluggableTrait;
+    use Sluggable;
 
     public $table = 'categories';
     public $timestamps = false;
     protected $fillable = ['title'];
     protected $appends = ['url'];
 
-    protected $sluggable = array(
-        'build_from' => 'title',
-        'save_to' => 'slug',
-    );
+    public function sluggable() {
+        return [
+            'slug' => [
+                'source'         => 'title',
+                'separator'      => '-',
+                'includeTrashed' => true,
+            ]
+        ];
+    }
 
     public function articles()
     {

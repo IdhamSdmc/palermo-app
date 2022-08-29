@@ -95,7 +95,7 @@ class PhotoGalleryRepository extends RepositoryAbstract implements PhotoGalleryI
      */
     public function lists()
     {
-        return $this->photoGallery->where('lang', $this->getLang())->lists('title', 'id');
+        return $this->photoGallery->where('lang', $this->getLang())->pluck('title', 'id');
     }
 
     /**
