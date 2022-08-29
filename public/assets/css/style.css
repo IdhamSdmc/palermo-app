@@ -557,8 +557,8 @@ h6 {
 
     #hero .carousel-container {
         top: 8px;
-        left: 15px;
-        right: 15px;
+        left: 15px !important;
+        right: 15px !important;
     }
     #hero .btn-get-started {
         font-family: "Goldplay Medium", sans-serif;
@@ -2254,7 +2254,7 @@ input.input3 {
 }
 .input3::placeholder {
     color: #aaaaaa;
-    
+
 }
 
 
