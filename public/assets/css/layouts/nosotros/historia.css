@@ -1,0 +1,38 @@
+.historia-container {
+    max-width: 1154px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1.5rem;
+}
+
+.historia {
+    width: 100%;
+}
+
+.historia h2{
+    margin-bottom: 5rem;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: center;
+    /* overflow: hidden; */
+    /* padding: 0 3rem;
+    width: calc(100% - 3.75rem); */
+}
+
+.timeline {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    overflow: hidden;
+}
+
+.timeline li div time {
+    font-size: 1.25rem;
+    color: #000;
+}
+
+.time-text {
+    font-size: 0.875rem;
+}

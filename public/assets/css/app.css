@@ -1,0 +1,47 @@
+.btn-slider {
+    all: unset;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: var(--bg-primary);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.btn-slider img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.progress {
+    margin-top: 3rem;
+    height: 0.25rem;
+    background-color: #bbb;
+}
+
+.progress-bar {
+    background-color: var(--bg-primary);
+}
+
+.carousel-container h2 {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Goldplay Medium", sans-serif;
+}
+
+.carousel-container p {
+    font-size: 22px;
+    font-weight: normal;
+    font-family: "Goldplay Light", sans-serif;
+    line-height: 1.25;
+}
+
+#hero .carousel-container {
+    left: 120px;
+    right: 120px;
+}

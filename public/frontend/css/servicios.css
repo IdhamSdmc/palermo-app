@@ -1,0 +1,123 @@
+#nosotros,
+#digitalizacion {
+    max-width: 940px;
+}
+
+.solutions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.solution {
+    flex-shrink: 0;
+    width: 24rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.solution .image {
+    flex-shrink: 0;
+    height: 18.5rem;
+    width: 100%;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.solution .image img {
+    width: 100%;
+    height: calc(100% + 2.5rem);
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    top: -2.5rem;
+}
+
+.solution h5 {
+    font-size: 1.5rem;
+    color: #20208e;
+    font-family: "Goldplay SemiBold", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.solution .content {
+    padding: 3rem 0;
+}
+
+.solution p,
+.solution ul li {
+    color: #303030;
+    font-size: 1.25rem;
+    font-family: var(--font-regular), sans-serif;
+    line-height: 1.25;
+}
+
+.solution ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.solution ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.125rem;
+}
+
+.solution ul li::before {
+    content: "\2022";
+    font-size: 2rem;
+    line-height: 0.75;
+    color: #009fdd;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.reuniones {
+    gap: 2rem;
+}
+
+.reuniones .solution {
+    width: 22rem;
+}
+
+.reuniones .solution .image {
+    height: 17rem;
+}
+
+.reuniones .solution .image img {
+    width: 100%;
+    height: calc(100% + 0.25rem);
+    object-fit: cover;
+    object-position: top right;
+    position: absolute;
+    top: -0.25rem;
+}
+
+/*** DIGITALIZACION ***/
+#digitalizacion .solution .image {
+    height: 17rem;
+}
+
+#digitalizacion .solution .image img {
+    /* height: calc(100% + 8rem); */
+    height: 100%;
+    top: 0;
+    object-fit: cover;
+    object-position: left;
+    position: absolute;
+    /* top: -8rem; */
+}
+
+.obj-top-left {
+    object-position: top left;
+}
+
+.obj-top-left {
+    object-position: top left;
+}
