@@ -94,7 +94,53 @@
             <div class="section">
                 <h2>NUESTRA HISTORIA</h2>
                 <div class="content">
-
+                    <div class="historia-container">
+                        <button type="button" class="btn-slider">
+                            <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="">
+                        </button>
+                        <div class="historia">
+                            <div class="timeline-container">
+                                <ul class="timeline">
+                                    <li>
+                                        <div>
+                                            <time datetime="2018-10-09">1996</time>
+                                            <p class="time-text">Comienza nuestra historia como
+                                                GRUPO PALERMO dedicada al
+                                                servicio de fotocopiado e
+                                                impresión.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <time datetime="2018-10-09">2010</time>
+                                            <p class="time-text">Alianza estratégica y de
+                                                distribución exclusiva en el Perú
+                                                con la marca de impresoras
+                                                RICOH</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <time datetime="2018-10-09">2016</time>
+                                            <p class="time-text">Grupo Palermo se expande en el
+                                                norte del país, con sucursales en
+                                                Chiclayo, Piura,
+                                                consolidándose como líder en los
+                                                servicios de outsourcing de
+                                                impresoras en el norte del país.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-slider">
+                            <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="">
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -103,6 +149,7 @@
 @push('css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ asset('frontend/css/tarjetas.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/historia.css') }}">
 @endpush
 @push('js')
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
