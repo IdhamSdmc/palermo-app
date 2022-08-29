@@ -56,3 +56,10 @@
 .product a i {
     font-size: 1.25rem;
 }
+@media (max-width: 600px) {
+    .banner{
+
+        background-position-x: 25%;
+    }
+
+}

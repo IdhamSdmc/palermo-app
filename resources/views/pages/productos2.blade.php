@@ -1,7 +1,7 @@
 @extends('layouts.app2')
 @section('content')
     <section class="banner"
-        style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position-y: 40%;">
+        style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position-y: 50%;">
         <div class="wrapper">
             <div class="banner-container">
                 <div class="banner-content">
