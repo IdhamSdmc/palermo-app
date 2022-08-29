@@ -2548,7 +2548,9 @@ input.input3 {
 }
 .historias-exito .detalle .button-he{
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin-top: 50px;
+
 }
 @media(max-width: 600px){
     .historias-exito .detalle a {
@@ -2557,7 +2559,7 @@ input.input3 {
 }
 .historias-exito .detalle a{
     font-family: "Goldplay Medium","Poppins", sans-serif;
-    font-size: 22px;
+    font-size: 17px;
     color: white;
     border: none;
     background-color: #009fdd;

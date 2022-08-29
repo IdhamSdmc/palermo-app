@@ -225,122 +225,125 @@
         <!-- Historias de Exito -->
         <section class="historias-exito">
             <div class="container">
-                <div class="row">
                     <h2 class="mb-5">HISTORIAS DE ÉXITO</h2>
-                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                        {{--<div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>--}}
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row ">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
-                                        <div class="detalle">
-                                            <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
-                                            <h5>EL RETO</h5>
-                                            <p>Mejorar la gestión documental entre los fundos para optimizar la
-                                                toma de decisiones y actualizar el equipo de TI de la empresa.</p>
-                                            <h5>LA SOLUCIÓN</h5>
-                                            <p>Brindamos equipos de impresión, etiquetado, laptops, escáneres
-                                                e impresora térmica. Además, proporcionamos pantallas
-                                                colaborativas de proyección, digitalizamos y clasificamos toda la
-                                                documentación de la empresa.</p>
-                                            <h5>EL RESULTADO</h5>
-                                            <p>Actualizamos el equipo de TI de Mission, mejoramos el proceso
-                                                para la toma de decisiones, la comunicación entre las sedes y
-                                                optimizamos los datos de la empresa.</p>
-                                            <div class="button-he">
-                                                <a class="button" href="{{url('/soluciones')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                    <div class="content">
+                        <div class="historias">
+                            <button type="button" class="btn-slider prev">
+                                <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
+                            </button>
+                            <div class="swiper mySwiper" id="">
+                        
+                                <div class="swiper-wrapper" >
+                                    <div class="swiper-slide solution" >
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
+
+                                                <div class="detalle">
+                                                    <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
+                                                    <h5>EL RETO</h5>
+                                                    <p>Mejorar la gestión documental entre los fundos para optimizar la
+                                                        toma de decisiones y actualizar el equipo de TI de la empresa.</p>
+                                                    <h5>LA SOLUCIÓN</h5>
+                                                    <p>Brindamos equipos de impresión, etiquetado, laptops, escáneres
+                                                        e impresora térmica. Además, proporcionamos pantallas
+                                                        colaborativas de proyección, digitalizamos y clasificamos toda la
+                                                        documentación de la empresa.</p>
+                                                    <h5>EL RESULTADO</h5>
+                                                    <p>Actualizamos el equipo de TI de Mission, mejoramos el proceso
+                                                        para la toma de decisiones, la comunicación entre las sedes y
+                                                        optimizamos los datos de la empresa.</p>
+                                                    <div class="button-he">
+                                                        <a class="button" href="{{url('/soluciones')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
+
+                                                 <div class="img-he">
+                                                    <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
+                                                    </div>
                                             </div>
                                         </div>
-
                                     </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
-                                        <div class="img-he">
-                                            <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
+                                    <div class="swiper-slide solution" >
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
+
+                                                <div class="detalle">
+                                                    <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
+                                                    <h5>EL RETO</h5>
+                                                    <p>Mejorar la gestión documental entre los fundos para optimizar la
+                                                        toma de decisiones y actualizar el equipo de TI de la empresa.</p>
+                                                    <h5>LA SOLUCIÓN</h5>
+                                                    <p>Brindamos equipos de impresión, etiquetado, laptops, escáneres
+                                                        e impresora térmica. Además, proporcionamos pantallas
+                                                        colaborativas de proyección, digitalizamos y clasificamos toda la
+                                                        documentación de la empresa.</p>
+                                                    <h5>EL RESULTADO</h5>
+                                                    <p>Actualizamos el equipo de TI de Mission, mejoramos el proceso
+                                                        para la toma de decisiones, la comunicación entre las sedes y
+                                                        optimizamos los datos de la empresa.</p>
+                                                    <div class="button-he">
+                                                        <a class="button" href="{{url('/soluciones')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
+
+                                                 <div class="img-he">
+                                                    <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide solution" >
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
+
+                                                <div class="detalle">
+                                                    <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
+                                                    <h5>EL RETO</h5>
+                                                    <p>Mejorar la gestión documental entre los fundos para optimizar la
+                                                        toma de decisiones y actualizar el equipo de TI de la empresa.</p>
+                                                    <h5>LA SOLUCIÓN</h5>
+                                                    <p>Brindamos equipos de impresión, etiquetado, laptops, escáneres
+                                                        e impresora térmica. Además, proporcionamos pantallas
+                                                        colaborativas de proyección, digitalizamos y clasificamos toda la
+                                                        documentación de la empresa.</p>
+                                                    <h5>EL RESULTADO</h5>
+                                                    <p>Actualizamos el equipo de TI de Mission, mejoramos el proceso
+                                                        para la toma de decisiones, la comunicación entre las sedes y
+                                                        optimizamos los datos de la empresa.</p>
+                                                    <div class="button-he">
+                                                        <a class="button" href="{{url('/soluciones')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                                                    </div>
+                                                </div>   
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
+
+                                                 <div class="img-he">
+                                                    <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
+                                                    </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
+                               
                             </div>
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
-                                        <div class="detalle">
-                                            <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
-                                            <h5>EL RETO</h5>
-                                            <p>Mejorar la gestión documental entre los fundos para optimizar la
-                                                toma de decisiones y actualizar el equipo de TI de la empresa.</p>
-                                            <h5>LA SOLUCIÓN</h5>
-                                            <p>Brindamos equipos de impresión, etiquetado, laptops, escáneres
-                                                e impresora térmica. Además, proporcionamos pantallas
-                                                colaborativas de proyección, digitalizamos y clasificamos toda la
-                                                documentación de la empresa.</p>
-                                            <h5>EL RESULTADO</h5>
-                                            <p>Actualizamos el equipo de TI de Mission, mejoramos el proceso
-                                                para la toma de decisiones, la comunicación entre las sedes y
-                                                optimizamos los datos de la empresa.</p>
-                                                <div class="button-he">
-                                                    <a class="button" href="{{url('/soluciones')}}">CONOCE NUESTRAS SOLUCIONES</a>
-                                                </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
-                                        <div class="img-he">
-                                            <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
-                                        <div class="detalle">
-                                            <h3>MISSION SOUTH & CENTRAL AMÉRICA</h3>
-                                            <h5>EL RETO</h5>
-                                            <p>Mejorar la gestión documental entre los fundos para optimizar la
-                                                toma de decisiones y actualizar el equipo de TI de la empresa.</p>
-                                            <h5>LA SOLUCIÓN</h5>
-                                            <p>Brindamos equipos de impresión, etiquetado, laptops, escáneres
-                                                e impresora térmica. Además, proporcionamos pantallas
-                                                colaborativas de proyección, digitalizamos y clasificamos toda la
-                                                documentación de la empresa.</p>
-                                            <h5>EL RESULTADO</h5>
-                                            <p>Actualizamos el equipo de TI de Mission, mejoramos el proceso
-                                                para la toma de decisiones, la comunicación entre las sedes y
-                                                optimizamos los datos de la empresa.</p>
-                                                <div class="button-he">
-                                                    <a class="button" href="{{url('/soluciones')}}">CONOCE NUESTRAS SOLUCIONES</a>
-                                                </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
-                                        <div class="img-he">
-                                            <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           
+                            <button type="button" class="btn-slider next">
+                                <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
+                            </button>
+                            <div>
+                    
+                               
                         </div>
-
-                        <button class="carousel-control-prev cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                            <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
-                        </button>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <button class="carousel-control-next cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                            <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="left">
-                        </button>
-
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- Fin Historias de Exito -->
 
