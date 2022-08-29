@@ -252,7 +252,7 @@
                                                 para la toma de decisiones, la comunicación entre las sedes y
                                                 optimizamos los datos de la empresa.</p>
                                             <div class="button-he">
-                                                <a class="button" href="{{url('/servicios')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                                                <a class="button" href="{{url('/soluciones')}}">CONOCE NUESTRAS SOLUCIONES</a>
                                             </div>
                                         </div>
 
@@ -283,7 +283,7 @@
                                                 para la toma de decisiones, la comunicación entre las sedes y
                                                 optimizamos los datos de la empresa.</p>
                                                 <div class="button-he">
-                                                    <a class="button" href="{{url('/servicios')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                                                    <a class="button" href="{{url('/soluciones')}}">CONOCE NUESTRAS SOLUCIONES</a>
                                                 </div>
                                         </div>
 
@@ -313,7 +313,7 @@
                                                 para la toma de decisiones, la comunicación entre las sedes y
                                                 optimizamos los datos de la empresa.</p>
                                                 <div class="button-he">
-                                                    <a class="button" href="{{url('/servicios')}}">CONOCE NUESTRAS SOLUCIONES</a>
+                                                    <a class="button" href="{{url('/soluciones')}}">CONOCE NUESTRAS SOLUCIONES</a>
                                                 </div>
                                         </div>
 

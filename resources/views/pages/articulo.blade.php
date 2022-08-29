@@ -31,7 +31,8 @@
                         <option value="" selected></option>
                     </select>
                 </div>
-                <div class="content">
+                <div class="content" id="list">
+             
                     <div class="lista-articulos">
                         <div class="articulo">
                             <div class="image">
@@ -133,17 +134,25 @@
                             <a href="#">VER MÁS</a>
                         </div>
                     </div>
+                    <div class="opciones">
+                            <button type="button" class="btn-slider prev">
+                                <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
+                            </button>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                             </div>
+                            <button type="button" class="btn-slider next">
+                                <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
+                            </button>                       
+                       
+                    </div>
+                
+                   
                 </div>
-                <button class="carousel-control-prev cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
-                </button>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <button class="carousel-control-next cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="left">
-                </button>
+            
+                
+                
             </div>
         </section>
     </article>
