@@ -1,6 +1,6 @@
 @extends('layouts.app2')
 @section('content')
-    <section class="banner mb-5"
+    <section class="banner mb-5" id="infrastructura"
         style="background-image: url('assets/imgs/recursos/inicio 3.jpg'); background-position-y: 87%;">
         <div class="wrapper">
             <div class="banner-container">
@@ -92,7 +92,7 @@
             </div>
         </section>
     </article>
-    <section class="banner mb-5"
+    <section class="banner mb-5" id="colaboracion"
         style="background-image: url('assets/imgs/recursos/digitalizacion.jpg'); background-position-y: 70%;">
         <div class="wrapper">
             <div class="banner-container">
@@ -175,7 +175,7 @@
         </section>
     </article>
     <section class="banner mb-5"
-        style="background-image: url('assets/imgs/recursos/digitalizacion.jpg'); background-position-y: 70%;">
+        style="background-image: url('assets/imgs/recursos/digitalizacion.jpg'); background-position-y: 70%;" id="gestion">
         <div class="wrapper">
             <div class="banner-container">
                 <div class="banner-content">

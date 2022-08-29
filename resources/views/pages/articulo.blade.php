@@ -134,6 +134,16 @@
                         </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
+                </button>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <button class="carousel-control-next cc-button" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="left">
+                </button>
             </div>
         </section>
     </article>
