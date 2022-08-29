@@ -72,7 +72,27 @@ class CacheDecorator extends AbstractPhotoGalleryDecorator
 
         return $photoGallery;
     }
+    
+    /**
+     * @param $new
+     *
+     * @return mixed
+     */
+    public function create($news)
+    {
+        $new = implode(", ", $news);
+        $key = md5(getLang().$this->cacheKey.'.new.'.$new);
 
+        if ($this->cache->has($key)) {
+            return $this->cache->get($key);
+        }
+
+        $photoGallery = $this->photoGallery->create($new);
+
+        $this->cache->put($key, $photoGallery);
+
+        return $photoGallery;
+    }
     /**
      * @return mixed
      */

@@ -58,4 +58,24 @@ Route::get('/admin/login', array(
     'namespace' => 'Admin',
     'middleware' => ['before', 'sentinel.auth', 'sentinel.permission'] ), function ()  {
         Route::get('/', array('as' => 'admin.dashboard', 'uses' => 'DashboardController@index'));
-});
+        Route::resource('user', 'UserController');
+        
+        Route::get('user/{id}/delete', array('as' => 'admin.user.delete',
+                                             'uses' => 'UserController@confirmDestroy', ))->where('id', '[0-9]+');
+        Route::get('user/{id}/edit', array('as' => 'admin.user.edit',
+                                             'uses' => 'UserController@edit', ))->where('id', '[0-9]+');
+                                             Route::get('user/{id}/show', array('as' => 'admin.user.show',
+                                             'uses' => 'UserController@show', ))->where('id', '[0-9]+');
+        
+        Route::resource('photo-gallery', 'PhotoGalleryController');
+        Route::get('photo-gallery/create', array('as' => 'admin.photo-gallery.create',
+        'uses' => 'PhotoGalleryController@create', ))->where('id', '[0-9]+');
+        Route::get('photo-gallery/{id}/delete', array('as' => 'admin.photo-gallery.delete',
+                                                      'uses' => 'PhotoGalleryController@confirmDestroy', ))->where('id', '[0-9]+');
+                                                      Route::get('photo-gallery/{id}/edit', array('as' => 'admin.photo-gallery.edit',
+                                                      'uses' => 'PhotoGalleryController@edit', ))->where('id', '[0-9]+');
+                                                      Route::get('photo-gallery/{id}/show', array('as' => 'admin.photo-gallery.show',
+                                                      'uses' => 'PhotoGalleryController@show', ))->where('id', '[0-9]+');
+   
+   
+                                                    });
