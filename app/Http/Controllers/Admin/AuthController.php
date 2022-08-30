@@ -91,7 +91,7 @@ class AuthController extends Controller
     public function getForgotPassword()
     {
         if (!Sentinel::check()) {
-            return view('backend/auth/forgot-password');
+            return view('/admin/backend/auth/forgot-password');
         }
 
         return Redirect::route('admin.dashboard');
@@ -149,7 +149,7 @@ class AuthController extends Controller
 
         if ($reminder = Reminder::exists($this->user, $code)) {
 
-            return view('backend/auth/reset-password', compact('id', 'code'));
+            return view('/admin/backend/auth/reset-password', compact('id', 'code'));
         } else {
             return Redirect::route('admin.login');
         }

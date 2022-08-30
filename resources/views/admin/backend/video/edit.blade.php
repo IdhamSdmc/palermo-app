@@ -1,6 +1,6 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-{!! HTML::script('/assets/js/fully.js') !!}
+{!! Html::script('/assets/js/fully.js') !!}
 <script type="text/javascript">
     $(document).ready(function () {
 
@@ -38,7 +38,7 @@
         <small> | Update Video</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/video') !!}"><i class="fa fa-play"></i> Video</a></li>
+        <li><a href="{!! url('/admin/video') !!}"><i class="fa fa-play"></i> Video</a></li>
         <li class="active">Update Video</li>
     </ol>
 </section>
@@ -46,7 +46,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open( array( 'route' => array(getLang(). '.admin.video.update', $video->id), 'method' => 'PATCH')) !!}
+    {!! Form::open( array( 'route' => array('admin.video.update', $video->id), 'method' => 'PATCH')) !!}
 
     <!-- Type -->
     <label class="control-label" for="type">Type</label>

@@ -23,7 +23,7 @@
 <section class="content-header">
     <h1> Menu <small> | Add Menu</small> </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/menu') !!}">Menu</a></li>
+        <li><a href="{!! url('/admin/menu') !!}">Menu</a></li>
         <li class="active">Add Menu Item</li>
     </ol>
 </section>

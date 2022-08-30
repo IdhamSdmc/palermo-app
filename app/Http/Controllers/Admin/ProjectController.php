@@ -37,7 +37,7 @@ class ProjectController extends Controller
         $pagiData = $this->project->paginate(Input::get('page', 1), $this->perPage, true);
         $projects =  Pagination::makeLengthAware($pagiData->items, $pagiData->totalItems, $this->perPage);
 
-        return view('backend.project.index', compact('projects'));
+        return view('/admin/backend.project.index', compact('projects'));
     }
 
     /**
@@ -47,7 +47,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('backend.project.create');
+        return view('/admin/backend.project.create');
     }
 
     /**
@@ -78,7 +78,7 @@ class ProjectController extends Controller
     {
         $project = $this->project->find($id);
 
-        return view('backend.project.show', compact('project'));
+        return view('/admin/backend.project.show', compact('project'));
     }
 
     /**
@@ -92,7 +92,7 @@ class ProjectController extends Controller
     {
         $project = $this->project->find($id);
 
-        return view('backend.project.edit', compact('project'));
+        return view('/admin/backend.project.edit', compact('project'));
     }
 
     /**
@@ -138,6 +138,6 @@ class ProjectController extends Controller
     {
         $project = $this->project->find($id);
 
-        return view('backend.project.confirm-destroy', compact('project'));
+        return view('/admin/backend.project.confirm-destroy', compact('project'));
     }
 }

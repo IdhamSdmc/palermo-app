@@ -1,11 +1,11 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-{!! HTML::style('dropzone/css/basic.css') !!}
-{!! HTML::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
-{!! HTML::style('dropzone/css/dropzone.css') !!}
-{!! HTML::script('dropzone/dropzone.js') !!}
-{!! HTML::script('ckeditor/ckeditor.js') !!}
-{!! HTML::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
+{!! Html::style('dropzone/css/basic.css') !!}
+{!! Html::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
+{!! Html::style('dropzone/css/dropzone.css') !!}
+{!! Html::script('dropzone/dropzone.js') !!}
+{!! Html::script('ckeditor/ckeditor.js') !!}
+{!! Html::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -13,7 +13,7 @@
         <small> | Add Slider</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/slider') !!}"><i class="fa fa-tint"></i> Slider</a></li>
+        <li><a href="{!! url('/admin/slider') !!}"><i class="fa fa-tint"></i> Slider</a></li>
         <li class="active">Add Slider</li>
     </ol>
 </section>
@@ -21,7 +21,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open(array('action' => '\Fully\Http\Controllers\Admin\SliderController@store', 'files'=>true)) !!}
+    {!! Form::open(array('action' => '\App\Http\Controllers\Admin\SliderController@store', 'files'=>true)) !!}
     <!-- Title -->
     <div class="control-group {!! $errors->has('title') ? 'has-error' : '' !!}">
         <label class="control-label" for="title">Title</label>

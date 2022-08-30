@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 
 <!-- Content Header (Page header) -->
@@ -7,14 +7,14 @@
         <small> | Add User</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/user') !!}"><i class="fa fa-user"></i> User</a></li>
+        <li><a href="{!! url('/admin/user') !!}"><i class="fa fa-user"></i> User</a></li>
         <li class="active">Add User</li>
     </ol>
 </section>
 <br>
 <br>
 <div class="container">
-    {!! Form::open(array('action' => '\Fully\Http\Controllers\Admin\UserController@store')) !!}
+    {!! Form::open(array('action' => '\App\Http\Controllers\Admin\UserController@store')) !!}
     
     <!-- First Name -->
     <div class="control-group {!! $errors->has('first-name') ? 'has-error' : '' !!}">

@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -6,7 +6,7 @@
         <small> | Show Role</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! langRoute('admin.role.index') !!}"><i class="fa fa-user"></i> Role</a></li>
+        <li><a href="{!! URL::route('admin.role.index') !!}"><i class="fa fa-user"></i> Role</a></li>
         <li class="active">Show Role</li>
     </ol>
 </section>
@@ -15,7 +15,7 @@
 <div class="container">
     <div class="pull-left">
         <div class="btn-toolbar">
-            <a href="{!! langRoute('admin.role.index') !!}"
+            <a href="{!! URL::route('admin.role.index') !!}"
                class="btn btn-primary">
                 <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back
             </a>

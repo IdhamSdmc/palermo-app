@@ -68,7 +68,22 @@ Route::get('/admin/login', array(
                                              Route::get('user/{id}/show', array('as' => 'admin.user.show',
                                              'uses' => 'UserController@show', ))->where('id', '[0-9]+');
 
-        Route::resource('photo-gallery', 'PhotoGalleryController');
+                                             Route::resource('role', 'RoleController');
+                                             Route::get('role/{id}/delete', array('as' => 'admin.role.delete',
+                                                                                   'uses' => 'RoleController@confirmDestroy', ))->where('id', '[0-9]+');
+                                              Route::get('role/create', array('as' => 'admin.role.create',
+                                                                                   'uses' => 'RoleController@create', ))->where('id', '[0-9]+');
+                                        Route::get('role/{id}/edit', array('as' => 'admin.role.edit',
+                                                                                   'uses' => 'RoleController@edit', ))->where('id', '[0-9]+');
+                                         Route::get('/role', array('as' => 'admin.role.index', 'uses' => 'RoleController@index'));
+
+                                         Route::get('role/{id}/show', array('as' => 'admin.role.show',
+                                                                                   'uses' => 'RoleController@show', ))->where('id', '[0-9]+');
+        
+                                                                                   Route::patch('role/{id}/update', array('as' => 'admin.role.update',
+                                                                                   'uses' => 'RoleController@update', ))->where('id', '[0-9]+');
+        
+                                                                                   Route::resource('photo-gallery', 'PhotoGalleryController');
         Route::get('photo-gallery/create', array('as' => 'admin.photo-gallery.create',
         'uses' => 'PhotoGalleryController@create', ))->where('id', '[0-9]+');
         Route::get('photo-gallery/{id}/delete', array('as' => 'admin.photo-gallery.delete',
@@ -98,4 +113,19 @@ Route::get('/admin/login', array(
                                                  'uses' => 'CategoryController@create', ))->where('id', '[0-9]+');
         Route::get('category/{id}/delete', array('as' => 'admin.category.delete',
                                                  'uses' => 'CategoryController@confirmDestroy', ))->where('id', '[0-9]+');
+
+
+                                                 Route::get('/slider', array(
+                                                    'as' => 'admin.slider',
+                                                    function () {
+                                        
+                                                        return View::make('backend/slider/index');
+                                                    }, ));
+                                        
+                                                // slider
+                                                Route::resource('slider', 'SliderController');
+                                                Route::get('slider/{id}/delete', array('as' => 'admin.slider.delete',
+                                                                                       'uses' => 'SliderController@confirmDestroy', ))->where('id', '[0-9]+');
+                                                                                       Route::get('slider/create', array('as' => 'admin.slider.create',
+                                                                                       'uses' => 'SliderController@create', ))->where('id', '[0-9]+');                                    
                                                     });

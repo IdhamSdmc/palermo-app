@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 
 <!-- Content Header (Page header) -->
@@ -7,14 +7,14 @@
         <small> | Add Role</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/role') !!}"><i class="fa fa-user"></i> Role</a></li>
+        <li><a href="{!! url('/admin/role') !!}"><i class="fa fa-user"></i> Role</a></li>
         <li class="active">Add User</li>
     </ol>
 </section>
 <br>
 <br>
 <div class="container">
-    {!! Form::open(array('action' => '\Fully\Http\Controllers\Admin\RoleController@store')) !!}
+    {!! Form::open(array('action' => '\App\Http\Controllers\Admin\RoleController@store')) !!}
 
     <!-- Role Name -->
     <div class="control-group {!! $errors->has('name') ? 'has-error' : '' !!}">

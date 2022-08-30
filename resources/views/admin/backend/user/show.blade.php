@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
         <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -6,7 +6,7 @@
         <small> | Show User</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! langRoute('admin.user.index') !!}"><i class="fa fa-user"></i> User</a></li>
+        <li><a href="{!! URL::route('admin.user.index') !!}"><i class="fa fa-user"></i> User</a></li>
         <li class="active">Show User</li>
     </ol>
 </section>
@@ -16,7 +16,7 @@
     <div class="col-lg-10">
         <div class="pull-left">
             <div class="btn-toolbar">
-                <a href="{!! langRoute('admin.user.index') !!}"
+                <a href="{!! URL::route('admin.user.index') !!}"
                    class="btn btn-primary"> <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back </a>
             </div>
         </div>

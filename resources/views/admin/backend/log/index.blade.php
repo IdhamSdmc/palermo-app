@@ -1,6 +1,6 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-    {!! HTML::style('assets/css/style-backend.css') !!}
+    {!! Html::style('assets/css/style-backend.css') !!}
     <script type="text/javascript">
         $(document).ready(function () {
             $('#levels').change(function () {
@@ -13,7 +13,7 @@
             <small> | Log View</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{!! url(getLang(). '/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{!! url('/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li class="active">Log View</li>
         </ol>
     </section>

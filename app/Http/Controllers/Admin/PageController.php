@@ -40,7 +40,7 @@ class PageController extends Controller
         $pagiData = $this->page->paginate(Input::get('page', 1), $this->perPage, true);
         $pages = Pagination::makeLengthAware($pagiData->items, $pagiData->totalItems, $this->perPage);
 
-        return view('backend.page.index', compact('pages'));
+        return view('/admin/backend.page.index', compact('pages'));
     }
 
     /**
@@ -50,7 +50,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        return view('backend.page.create');
+        return view('/admin/backend.page.create');
     }
 
     /**
@@ -81,7 +81,7 @@ class PageController extends Controller
     {
         $page = $this->page->find($id);
 
-        return view('backend.page.show', compact('page'));
+        return view('/admin/backend.page.show', compact('page'));
     }
 
     /**
@@ -95,7 +95,7 @@ class PageController extends Controller
     {
         $page = $this->page->find($id);
 
-        return view('backend.page.edit', compact('page'));
+        return view('/admin/backend.page.edit', compact('page'));
     }
 
     /**
@@ -136,7 +136,7 @@ class PageController extends Controller
     {
         $page = $this->page->find($id);
 
-        return view('backend.page.confirm-destroy', compact('page'));
+        return view('/admin/backend.page.confirm-destroy', compact('page'));
     }
 
     public function togglePublish($id)

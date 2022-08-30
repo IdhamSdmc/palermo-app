@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -6,7 +6,7 @@
         <small> | Show Category</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! langRoute('admin.category.index') !!}"><i class="fa fa-list"></i> Category</a></li>
+        <li><a href="{!! URL::route('admin.category.index') !!}"><i class="fa fa-list"></i> Category</a></li>
         <li class="active">Show Category</li>
     </ol>
 </section>
@@ -15,7 +15,7 @@
 <div class="container">
     <div class="pull-left">
         <div class="btn-toolbar">
-            <a href="{!! langRoute('admin.category.index') !!}"
+            <a href="{!! URL::route('admin.category.index') !!}"
                class="btn btn-primary">
                 <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back
             </a>

@@ -174,7 +174,7 @@ plain text can do so.
 If the recipient's mail client offers preferences for displaying text vs. HTML
 then the mail client will present that part to the user where available. In
 other cases the mail client will display the "best" part it can - usually HTML
-if you've included HTML::
+if you've included Html::
 
     // Pass it as a parameter when you create the message
     $message = new Swift_Message('Subject here', 'My amazing body');

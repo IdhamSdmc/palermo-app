@@ -1,13 +1,13 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-{!! HTML::style('ckeditor/contents.css') !!}
+{!! Html::style('ckeditor/contents.css') !!}
         <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1> Project
         <small> | Show News</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! langRoute('admin.project.index') !!}"><i class="fa fa-gears"></i> Project</a></li>
+        <li><a href="{!! URL::route('admin.project.index') !!}"><i class="fa fa-gears"></i> Project</a></li>
         <li class="active">Show Project</li>
     </ol>
 </section>
@@ -17,7 +17,7 @@
     <div class="col-lg-10">
         <div class="pull-left">
             <div class="btn-toolbar">
-                <a href="{!! langRoute('admin.project.index') !!}"
+                <a href="{!! URL::route('admin.project.index') !!}"
                    class="btn btn-primary"> <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back </a>
             </div>
         </div>

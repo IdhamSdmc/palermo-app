@@ -39,7 +39,7 @@ class NewsController extends Controller
         $pagiData = $this->news->paginate(Input::get('page', 1), $this->perPage, true);
         $news = Pagination::makeLengthAware($pagiData->items, $pagiData->totalItems, $this->perPage);
 
-        return view('backend.news.index', compact('news'));
+        return view('/admin/backend.news.index', compact('news'));
     }
 
     /**
@@ -49,7 +49,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('backend.news.create');
+        return view('/admin/backend.news.create');
     }
 
     /**
@@ -80,7 +80,7 @@ class NewsController extends Controller
     {
         $news = $this->news->find($id);
 
-        return view('backend.news.show', compact('news'));
+        return view('/admin/backend.news.show', compact('news'));
     }
 
     /**
@@ -94,7 +94,7 @@ class NewsController extends Controller
     {
         $news = $this->news->find($id);
 
-        return view('backend.news.edit', compact('news'));
+        return view('/admin/backend.news.edit', compact('news'));
     }
 
     /**
@@ -135,7 +135,7 @@ class NewsController extends Controller
     {
         $news = $this->news->find($id);
 
-        return view('backend.news.confirm-destroy', compact('news'));
+        return view('/admin/backend.news.confirm-destroy', compact('news'));
     }
 
     public function togglePublish($id)

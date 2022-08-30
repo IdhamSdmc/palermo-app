@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
     <script type="text/javascript">
         $(document).ready(function () {
@@ -11,18 +11,18 @@
             <small> | Control Panel</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{!! url(getLang(). '/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{!! url('/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li class="active">Project</li>
         </ol>
     </section>
     <br>
     <div class="container">
         <div class="col-lg-10">
-            @include('flash::message')
+            
             <br>
 
             <div class="pull-left">
-                <div class="btn-toolbar"><a href="{!! langRoute('admin.project.create') !!}" class="btn btn-primary">
+                <div class="btn-toolbar"><a href="{!! URL::route('admin.project.create') !!}" class="btn btn-primary">
                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Add Project </a></div>
             </div>
             <br> <br> <br>
@@ -40,7 +40,7 @@
                         <tbody>
                         @foreach( $projects as $project )
                             <tr>
-                                <td> {!! link_to_route(getLang(). '.admin.project.show', $project->title, $project->id,
+                                <td> {!! link_to_route('admin.project.show', $project->title, $project->id,
                                     array( 'class' => 'btn btn-link btn-xs' )) !!}
                                 </td>
                                 <td>{!! $project->created_at !!}</td>
@@ -50,10 +50,10 @@
                                         <a class="btn btn-danger dropdown-toggle" data-toggle="dropdown" href="#">
                                             Action <span class="caret"></span> </a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="{!! langRoute('admin.project.show', array($project->id)) !!}">
+                                            <li><a href="{!! URL::route('admin.project.show', array($project->id)) !!}">
                                                     <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show Project
                                                 </a></li>
-                                            <li><a href="{!! langRoute('admin.project.edit', array($project->id)) !!}">
+                                            <li><a href="{!! URL::route('admin.project.edit', array($project->id)) !!}">
                                                     <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit Project
                                                 </a></li>
                                             <li class="divider"></li>

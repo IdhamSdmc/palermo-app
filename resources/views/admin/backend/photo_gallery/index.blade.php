@@ -33,7 +33,7 @@
         <small> | Control Panel</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{!! url('/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active">Photo Gallery</li>
     </ol>
 </section>

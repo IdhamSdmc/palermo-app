@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 
     <script type="text/javascript">
@@ -44,11 +44,11 @@
     <br>
     <div class="container">
         <div class="col-lg-10">
-            @include('flash::message')
+            
             <br>
 
             <div class="pull-left">
-                <div class="btn-toolbar"><a href="{!! langRoute('admin.news.create') !!}" class="btn btn-primary">
+                <div class="btn-toolbar"><a href="{!! URL::route('admin.news.create') !!}" class="btn btn-primary">
                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Add News </a></div>
             </div>
             <br> <br> <br>
@@ -67,7 +67,7 @@
                         <tbody>
                         @foreach($news as $v )
                             <tr>
-                                <td> {!! link_to_route(getLang(). '.admin.news.show', $v->title, $v->id, array( 'class'
+                                <td> {!! link_to_route('admin.news.show', $v->title, $v->id, array( 'class'
                                     => 'btn btn-link btn-xs' )) !!}
                                 </td>
                                 <td>{!! $v->created_at !!}</td>
@@ -77,10 +77,10 @@
                                         <a class="btn btn-danger dropdown-toggle" data-toggle="dropdown" href="#">
                                             Action <span class="caret"></span> </a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="{!! langRoute('admin.news.show', array($v->id)) !!}">
+                                            <li><a href="{!! URL::route('admin.news.show', array($v->id)) !!}">
                                                     <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show News
                                                 </a></li>
-                                            <li><a href="{!! langRoute('admin.news.edit', array($v->id)) !!}">
+                                            <li><a href="{!! URL::route('admin.news.edit', array($v->id)) !!}">
                                                     <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit News </a>
                                             </li>
                                             <li class="divider"></li>

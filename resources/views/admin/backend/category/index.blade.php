@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
     <script type="text/javascript">
         $(document).ready(function () {
@@ -10,18 +10,18 @@
             <small> | Control Panel</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{!! url(getLang(). '/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{!! url('/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li class="active">Category</li>
         </ol>
     </section>
     <br>
     <div class="container">
         <div class="col-lg-10">
-            @include('flash::message')
+            
             <br>
 
             <div class="pull-left">
-                <div class="btn-toolbar"><a href="{!! langRoute('admin.category.create') !!}" class="btn btn-primary">
+                <div class="btn-toolbar"><a href="{!! URL::route('admin.category.create') !!}" class="btn btn-primary">
                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Add Category </a></div>
             </div>
             <br> <br> <br>
@@ -37,7 +37,7 @@
                         <tbody>
                         @foreach( $categories as $category )
                             <tr>
-                                <td> {!! link_to_route( '.admin.category.show', $category->title,
+                                <td> {!! link_to_route( 'admin.category.show', $category->title,
                                     $category->id, array( 'class' => 'btn btn-link btn-xs' )) !!}
                                 <td>
                                     <div class="btn-group">

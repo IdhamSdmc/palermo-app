@@ -27,7 +27,7 @@ class RoleController extends Controller
     {
         $roles = Role::orderBy('created_at', 'DESC')->paginate(10);
 
-        return view('backend.role.index', compact('roles'));
+        return view('/admin/backend.role.index', compact('roles'));
     }
 
     /**
@@ -37,7 +37,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        return view('backend.role.create');
+        return view('/admin/backend.role.create');
     }
 
     /**
@@ -86,7 +86,7 @@ class RoleController extends Controller
     {
         $role = Role::find($id);
 
-        return view('backend.role.show', compact('role'));
+        return view('/admin/backend.role.show', compact('role'));
     }
 
     /**
@@ -100,7 +100,7 @@ class RoleController extends Controller
     {
         $role = Role::find($id);
 
-        return view('backend.role.edit', compact('role'));
+        return view('/admin/backend.role.edit', compact('role'));
     }
 
     /**
@@ -162,6 +162,6 @@ class RoleController extends Controller
     {
         $role = Role::find($id);
 
-        return view('backend.role.confirm-destroy', compact('role'));
+        return view('/admin/backend.role.confirm-destroy', compact('role'));
     }
 }

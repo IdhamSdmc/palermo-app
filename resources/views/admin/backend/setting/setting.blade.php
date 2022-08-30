@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <script type="text/javascript">
     $(document).ready(function () {
@@ -10,7 +10,7 @@
         <small> | Change Settings</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{!! url('/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active">Change Settings</li>
     </ol>
 </section>
@@ -18,7 +18,7 @@
 <br>
 <div class="col-lg-10">
 
-    @include('flash::message')
+    
     <ul class="nav nav-tabs" id="myTab">
         <li class="active"><a href="#settings" data-toggle="tab">Settings</a></li>
         <li><a href="#info" data-toggle="tab">Info</a></li>

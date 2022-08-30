@@ -1,14 +1,14 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-{!! HTML::script('ckeditor/ckeditor.js') !!}
-{!! HTML::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
-{!! HTML::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
+{!! Html::script('ckeditor/ckeditor.js') !!}
+{!! Html::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
+{!! Html::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1> Project <small> | Update Project</small> </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/project') !!}"><i class="fa fa-gears"></i> Project</a></li>
+        <li><a href="{!! url('/admin/project') !!}"><i class="fa fa-gears"></i> Project</a></li>
         <li class="active">Update Project</li>
     </ol>
 </section>
@@ -16,7 +16,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open( array( 'route' => array( getLang() . '.admin.project.update', $project->id), 'method' => 'PATCH', 'files'=>true)) !!}
+    {!! Form::open( array( 'route' => array( 'admin.project.update', $project->id), 'method' => 'PATCH', 'files'=>true)) !!}
 
     <!-- Title -->
     <div class="control-group {!! $errors->has('title') ? 'has-error' : '' !!}">

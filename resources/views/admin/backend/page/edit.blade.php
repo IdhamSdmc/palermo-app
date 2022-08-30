@@ -1,6 +1,6 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-{!! HTML::script('ckeditor/ckeditor.js') !!}
+{!! Html::script('ckeditor/ckeditor.js') !!}
 <section class="content-header">
     <h1> Page <small> | Update Page</small> </h1>
     <ol class="breadcrumb">
@@ -12,7 +12,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open( array( 'route' => array( getLang() . '.admin.page.update', $page->id), 'method' => 'PATCH', 'files'=>true)) !!}
+    {!! Form::open( array( 'route' => array( 'admin.page.update', $page->id), 'method' => 'PATCH', 'files'=>true)) !!}
     <!-- Title -->
     <div class="control-group {!! $errors->has('title') ? 'has-error' : '' !!}">
         <label class="control-label" for="title">Title</label>

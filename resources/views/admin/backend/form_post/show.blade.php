@@ -1,11 +1,11 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <section class="content-header">
     <h1> Form Post
         <small> | Form Post View</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! langRoute('admin.form-post.index') !!}"><i class="fa fa-envelope"></i> Form Post</a></li>
+        <li><a href="{!! URL::route('admin.form-post.index') !!}"><i class="fa fa-envelope"></i> Form Post</a></li>
         <li class="active">Form Post View</li>
     </ol>
 </section>
@@ -14,7 +14,7 @@
 <div class="container">
     <div class="pull-left">
         <div class="btn-toolbar">
-            <a href="{!! langRoute('admin.form-post.index') !!}"
+            <a href="{!! URL::route('admin.form-post.index') !!}"
                class="btn btn-primary">
                 <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;Back
             </a>
