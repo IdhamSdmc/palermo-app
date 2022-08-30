@@ -28,7 +28,7 @@ Route::get('/productos', function () {
 });
 
 Route::get('/blog', function () {
-    return view('pages.blog2');
+    return view('pages.blog');
 });
 
 Route::get('/contactanos', function () {
