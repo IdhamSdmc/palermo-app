@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 @section('content')
     <section id="hero">
         <div class="carousel-item active" style="background-image: url('assets/imgs/recursos/inicio 6.jpg')">
@@ -16,6 +16,11 @@
     </section>
     <section class="blog">
         <div class="container">
+            <div class="categorias">
+                <a href="">TECNOLOGÍA</a>
+                <a href="">SOFTWARE</a>
+
+            </div>
             <div class="row">
                 <h2>¿Por qué invertir en Infraestructura de TI?</h2>
                 <h4>2022, 12 DE MAYO</h4>

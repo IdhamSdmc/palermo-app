@@ -1,4 +1,14 @@
-
+:root {
+    --bg-primary: #20208E;
+    --bg-info: #009FDD;
+    --bg-plomo: #D0D0D0;
+    --bg-white: #F2F2F2;
+    --bg-dark: #AAAAAA;
+    --bg-black: #1C1C1C;
+    --font-bold: 'Goldplay SemiBold';
+    --font-medium: 'Goldplay Medium';
+    --font-regular: 'Goldplay Regular';
+}
 .btn-whatsapp {
     height: 6rem;
     width: 6rem;
@@ -26,4 +36,16 @@
         bottom: -2rem;
         padding: 0.8rem;
     }
+}
+.categorias{
+    display: grid;
+    gap: 1.5rem;
+}
+.categorias a{
+    text-decoration: none;
+    background-color: var(--bg-plomo);
+    color: var(--bg-white);
+    padding: 7px 5px 7px 5px;
+    border-radius: 50px;
+
 }

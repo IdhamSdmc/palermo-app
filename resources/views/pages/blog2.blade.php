@@ -10,7 +10,7 @@
                         <p>
                             Equipa tu empresa con los mejores equipos tecnológicos.
                         </p>
-                        <a href="#productos" class="btn-banner">VER MÁS</a>
+                        <a href="{{url('/blog)}}" class="btn-banner">VER MÁS</a>
                         <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor"
                             target="_blank" class="btn-whatsapp">
                             <img src="{{ asset('assets/imgs/resources/whatsapp.svg') }}" alt="">

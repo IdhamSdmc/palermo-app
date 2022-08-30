@@ -320,10 +320,10 @@
 /*Historias de Exito*/
 @media (max-width: 600px) {
     .historias .prev{
-        visibility: hidden;
+        display: none;
     }
     .historias .next{
-        visibility: hidden;
+        display: none;
     }
 }
 
@@ -369,7 +369,7 @@
 }
 
 @media (max-width: 1000px) {
-    .swiper {
+    #soluciones .swiper {
         display: none;
     }
     #soluciones .section > .content {
