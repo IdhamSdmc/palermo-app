@@ -223,6 +223,7 @@
 .slider::before {
     left: 0;
     top: 0;
+    height: 5rem;
 }
 
 .slider .slide-track {
@@ -247,6 +248,7 @@
         height: 5rem;
         display: flex;
         align-items: center;
+        border-radius: 4rem;
     }
 
     .slider .slide {
@@ -285,7 +287,7 @@
 .arrows {
     height: 100%;
     display: flex;
-    align-items: end;
+    /* align-items: end; */
     justify-content: flex-start;
     gap: .5rem;
     margin-bottom: 25px;
@@ -325,3 +327,64 @@
     }
 }
 
+.about-section {
+    display: flex;
+    overflow: hidden;
+    margin-top: 5rem;
+}
+
+.about-text {
+    justify-content: center;
+}
+
+#soluciones h2 {
+    text-align: left;
+}
+
+#soluciones .section > .content {
+    display: flex;
+    gap: 5rem;
+}
+
+#soluciones .about-text {
+    padding: 0;
+    max-width: 14rem;
+}
+
+#solutions-tarjet {
+    margin-top: 0;
+    width: 19rem !important;
+}
+
+#solutions-tarjet .header {
+    height: 15rem;
+}
+
+#solutions-tarjet .content p {
+    font-size: 0.875rem;
+}
+
+#solutions-tarjet .content h3 {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+    .swiper {
+        display: none;
+    }
+    #soluciones .section > .content {
+        justify-content: center;
+    }
+
+    .about-text .text {
+        text-align: center;
+    }
+
+    #soluciones h2 {
+        text-align: center;
+    }
+
+    #soluciones .progress {
+        display: none;
+    }
+}
