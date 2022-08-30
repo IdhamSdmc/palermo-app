@@ -44,10 +44,15 @@
 .lista-articulos {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 3rem 2rem;
 }
-
+@media (max-width: 1000px) {
+    .lista-articulos {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+}
 .articulo {
     display: flex;
     flex-direction: column;

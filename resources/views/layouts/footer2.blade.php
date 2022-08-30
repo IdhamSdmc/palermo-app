@@ -1,7 +1,7 @@
 <footer class="footer-container" id="footer">
     <div class="footer">
         <div class="content">
-            <form action="#" class="footer-form">
+            <form class="footer-form" id="formulario">
                 <div class="logo">
                     <img src="{{ asset('assets/imgs/logo_white.svg') }}" alt="palermo-logo">
                 </div>
@@ -12,9 +12,9 @@
                     <input type="text" placeholder="EMPRESA" autocomplete="none">
                     <input type="email" placeholder="CORREO" autocomplete="none">
                     <input type="text" placeholder="TELÉFONO DE CONTACTO" autocomplete="none">
-                    <button type="submit">ENVIAR</button>
+                    <button type="submit" id="btn-enviar">ENVIAR</button>
                     <div class="input-check">
-                        <input type="checkbox" class="w-auto" id="check">
+                        <input type="checkbox" class="w-auto" id="check" required>
                         <label for="check">Acepto términos y condiciones</label>
                     </div>
                 </div>
@@ -24,10 +24,10 @@
                     <div class="redes">
                         <h5>REDES SOCIALES</h5>
                         <div>
-                            <a href="https://www.facebook.com/grupopalermope" class="facebook ml-2">
+                            <a href="https://www.facebook.com/grupopalermope" class="facebook ml-2" target="_blank">
                                 <img src="assets/imgs/resources/facebook.svg" alt="">
                             </a>
-                            <a href="https://www.linkedin.com/company/grupo-palermo-peru/" class="linkedin">
+                            <a href="https://www.linkedin.com/company/grupo-palermo-peru/" class="linkedin" target="_blank">
                                 <img src="assets/imgs/resources/in.svg" alt="">
                             </a>
                         </div>
@@ -55,3 +55,14 @@
         </div>
     </div>
 </footer>
+@push("js")
+<script !src="">
+    $(document).ready(function () {
+        $("#formulario").on("submit", function (e){
+            e.preventDefault();
+            alert("Datos enviados")
+        });
+    });
+</script>
+@endpush
+

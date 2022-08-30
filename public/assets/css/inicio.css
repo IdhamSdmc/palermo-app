@@ -264,14 +264,14 @@
     .about-text{
         width: 100%;
         display: flex;  /*display: flex; el cual vuelve al contenedor un elemento flex*/
-  
+
         align-items: center;  /*justify-content: center; le decimos a los elementos del contenedor flex que se ubiquen al centro del eje principal eje horizontal*/
         justify-content: center;
     }
     .progress{
         display: none;
     }
-    
+
     .arrows{
         display: flex;
         align-items: end;
@@ -315,3 +315,12 @@
     margin-right: 100px;
 }
 /*Historias de Exito*/
+@media (max-width: 600px) {
+    .historias .prev{
+        visibility: hidden;
+    }
+    .historias .next{
+        visibility: hidden;
+    }
+}
+

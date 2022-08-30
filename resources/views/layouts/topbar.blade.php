@@ -13,7 +13,7 @@
                 <li class="topbar-item">
                     <a href="{{ url('/contactanos') }}" class="btn-topbar">Contáctanos</a>
                 </li>
-                <li class="topbar-item m-support"><a href="{{ url('/articulos') }}">Soporte Técnico</a></li>
+                <li class="topbar-item m-support"><a href="{{ url('https://soporte.grupopalermo.pe') }}" target="_blank">Soporte Técnico</a></li>
                 <li class="topbar-item w-support">
                     <a target="_blank" href="{{ url('https://soporte.grupopalermo.pe') }}" class="btn-soporte">
                         <img src="{{ asset('assets/imgs/soporte técnico.svg') }}" alt="">
