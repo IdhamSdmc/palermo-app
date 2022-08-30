@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -6,7 +6,7 @@
         <small> | Update Faq</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/faq') !!}"><i class="fa fa-question"></i> Faq</a></li>
+        <li><a href="{!! url('/admin/faq') !!}"><i class="fa fa-question"></i> Faq</a></li>
         <li class="active">Update Faq</li>
     </ol>
 </section>
@@ -14,7 +14,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open( array( 'route' => array(getLang(). '.admin.faq.update', $faq->id), 'method' => 'PATCH')) !!}
+    {!! Form::open( array( 'route' => array('admin.faq.update', $faq->id), 'method' => 'PATCH')) !!}
     <!-- Question -->
     <div class="control-group {!! $errors->has('question') ? 'has-error' : '' !!}">
         <label class="control-label" for="question">Question</label>

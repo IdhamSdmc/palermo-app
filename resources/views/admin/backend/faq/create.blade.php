@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 
 <!-- Content Header (Page header) -->
@@ -7,7 +7,7 @@
         <small> | Add Faq</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/faq') !!}"><i class="fa fa-question"></i> Faq</a></li>
+        <li><a href="{!! url('/admin/faq') !!}"><i class="fa fa-question"></i> Faq</a></li>
         <li class="active">Add Faq</li>
     </ol>
 </section>
@@ -15,7 +15,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open(array('action' => '\Fully\Http\Controllers\Admin\FaqController@store')) !!}
+    {!! Form::open(array('action' => '\App\Http\Controllers\Admin\FaqController@store')) !!}
     <!-- Question -->
     <div class="control-group {!! $errors->has('question') ? 'has-error' : '' !!}">
         <label class="control-label" for="question">Question</label>
@@ -43,7 +43,7 @@
     <br>
     <!-- Form actions -->
     {!! Form::submit('Save Changes', array('class' => 'btn btn-success')) !!}
-    <a href="{!! url(getLang(). '/admin/faq') !!}" class="btn btn-default">&nbsp;Cancel</a>
+    <a href="{!! url('/admin/faq') !!}" class="btn btn-default">&nbsp;Cancel</a>
     {!! Form::close() !!}
 </div>
 @stop

@@ -131,7 +131,7 @@ class PhotoGalleryController extends Controller
     {
         $photo_gallery = $this->photoGallery->find($id);
 
-        return view('backend.photo_gallery.confirm-destroy', compact('photo_gallery'));
+        return view('/admin/backend.photo_gallery.confirm-destroy', compact('photo_gallery'));
     }
 
     public function togglePublish($id)

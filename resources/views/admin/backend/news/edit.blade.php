@@ -1,14 +1,14 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
-    {!! HTML::script('ckeditor/ckeditor.js') !!}
-    {!! HTML::style('assets/bootstrap/css/bootstrap-tagsinput.css') !!}
-    {!! HTML::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
-    {!! HTML::script('assets/bootstrap/js/bootstrap-tagsinput.js') !!}
-    {!! HTML::script('assets/js/jquery.slug.js') !!}
-    {!! HTML::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
-    {!! HTML::style('bootstrap_datepicker/css/datepicker.css') !!}
-    {!! HTML::script('bootstrap_datepicker/js/bootstrap-datepicker.js') !!}
-    {!! HTML::script('bootstrap_datepicker/js/locales/bootstrap-datepicker.tr.js') !!}
+    {!! Html::script('ckeditor/ckeditor.js') !!}
+    {!! Html::style('assets/bootstrap/css/bootstrap-tagsinput.css') !!}
+    {!! Html::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
+    {!! Html::script('assets/bootstrap/js/bootstrap-tagsinput.js') !!}
+    {!! Html::script('assets/js/jquery.slug.js') !!}
+    {!! Html::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
+    {!! Html::style('bootstrap_datepicker/css/datepicker.css') !!}
+    {!! Html::script('bootstrap_datepicker/js/bootstrap-datepicker.js') !!}
+    {!! Html::script('bootstrap_datepicker/js/locales/bootstrap-datepicker.tr.js') !!}
     <script type="text/javascript">
         $(document).ready(function () {
             $("#title").slug();
@@ -66,7 +66,7 @@
     <br>
     <br>
     <div class="container">
-        {!! Form::open( array( 'route' => array( getLang() . '.admin.news.update', $news->id), 'method' => 'PATCH', 'files'=>true)) !!}
+        {!! Form::open( array( 'route' => array( 'admin.news.update', $news->id), 'method' => 'PATCH', 'files'=>true)) !!}
                 <!-- Title -->
         <div class="control-group {!! $errors->has('title') ? 'has-error' : '' !!}">
             <label class="control-label" for="title">Title</label>

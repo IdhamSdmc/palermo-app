@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <script type="text/javascript">
     $(document).ready(function () {
@@ -23,7 +23,7 @@
 <section class="content-header">
     <h1> Menu <small> | Edit Menu</small> </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/menu') !!}">Menu</a></li>
+        <li><a href="{!! url('/admin/menu') !!}">Menu</a></li>
         <li class="active">Add Menu Item</li>
     </ol>
 </section>
@@ -31,7 +31,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open( array( 'route' => array(getLang(). '.admin.menu.update', $menu->id), 'method' => 'PATCH')) !!}
+    {!! Form::open( array( 'route' => array('admin.menu.update', $menu->id), 'method' => 'PATCH')) !!}
     <!-- Title -->
     <div class="control-group {!! $errors->has('title') ? 'has-error' : '' !!}">
         <label class="control-label" for="title">Title</label>

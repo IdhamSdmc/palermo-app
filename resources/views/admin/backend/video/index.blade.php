@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
     <script type="text/javascript">
         $(document).ready(function () {
@@ -10,18 +10,18 @@
             <small> | Control Panel</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="{!! url(getLang(). '/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="{!! url('/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
             <li class="active">Video</li>
         </ol>
     </section>
     <br>
     <div class="container">
         <div class="col-lg-10">
-            @include('flash::message')
+            
             <br>
 
             <div class="pull-left">
-                <div class="btn-toolbar"><a href="{!! langRoute('admin.video.create') !!}" class="btn btn-primary">
+                <div class="btn-toolbar"><a href="{!! URL::route('admin.video.create') !!}" class="btn btn-primary">
                         <span class="glyphicon glyphicon-plus"></span>&nbsp;Add Video </a></div>
             </div>
             <br> <br> <br>
@@ -37,7 +37,7 @@
                         <tbody>
                         @foreach( $videos as $video )
                             <tr>
-                                <td> {!! link_to_route(getLang(). '.admin.video.show', $video->title, $video->id, array(
+                                <td> {!! link_to_route('admin.video.show', $video->title, $video->id, array(
                                     'class' => 'btn btn-link btn-xs' )) !!}
                                 <td>
                                     <div class="btn-group">
@@ -45,12 +45,12 @@
                                             Action <span class="caret"></span> </a>
                                         <ul class="dropdown-menu">
                                             <li>
-                                                <a href="{!! langRoute('admin.video.show', array($video->id)) !!}">
+                                                <a href="{!! URL::route('admin.video.show', array($video->id)) !!}">
                                                     <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show Video
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{!! langRoute('admin.video.edit', array($video->id)) !!}">
+                                                <a href="{!! URL::route('admin.video.edit', array($video->id)) !!}">
                                                     <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit Video </a>
                                             </li>
                                             <li class="divider"></li>

@@ -123,7 +123,7 @@ class MenuController extends Controller
         $options = $this->menu->getMenuOptions();
         $menu = $this->menu->find($id);
 
-        return view('backend.menu.edit', compact('menu', 'options'));
+        return view('/admin/backend.menu.edit', compact('menu', 'options'));
     }
 
     /**
@@ -202,7 +202,7 @@ class MenuController extends Controller
     {
         $menu = $this->menu->find($id);
 
-        return view('backend.menu.confirm-destroy', compact('menu'));
+        return view('/admin/backend.menu.confirm-destroy', compact('menu'));
     }
 
     public function save()

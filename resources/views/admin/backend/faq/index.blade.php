@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <script type="text/javascript">
     $(document).ready(function () {
@@ -10,18 +10,18 @@
         <small> | Control Panel</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{!! url('/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active">Faq</li>
     </ol>
 </section>
 <br>
 <div class="container">
     <div class="col-lg-10">
-        @include('flash::message')
+        
         <br>
 
         <div class="pull-left">
-            <div class="btn-toolbar"><a href="{!! langRoute('admin.faq.create') !!}" class="btn btn-primary">
+            <div class="btn-toolbar"><a href="{!! URL::route('admin.faq.create') !!}" class="btn btn-primary">
                     <span class="glyphicon glyphicon-plus"></span>&nbsp;Add Faq </a></div>
         </div>
         <br>
@@ -40,7 +40,7 @@
                 @foreach( $faqs as $faq )
                 <tr>
                     <td>
-                        <a href="{!! langRoute('admin.faq.show', array($faq->id)) !!}" class="btn btn-link btn-xs">
+                        <a href="{!! URL::route('admin.faq.show', array($faq->id)) !!}" class="btn btn-link btn-xs">
                             {!! $faq->question !!}
                         </a>
                     <td>
@@ -51,12 +51,12 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{!! langRoute('admin.faq.show', array($faq->id)) !!}">
+                                    <a href="{!! URL::route('admin.faq.show', array($faq->id)) !!}">
                                         <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show Faq
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{!! langRoute('admin.faq.edit', array( $faq->id)) !!}">
+                                    <a href="{!! URL::route('admin.faq.edit', array( $faq->id)) !!}">
                                         <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit Faq
                                     </a>
                                 </li>

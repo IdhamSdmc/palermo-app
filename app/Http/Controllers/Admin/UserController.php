@@ -102,7 +102,7 @@ class UserController extends Controller
     {
         $user = Sentinel::findUserById($id);
 
-        return view('backend.user.show', compact('user'))->with('active', 'user');
+        return view('/admin/backend.user.show', compact('user'))->with('active', 'user');
     }
 
     /**
@@ -119,7 +119,7 @@ class UserController extends Controller
         $userRoles = $user->getRoles()->lists('name', 'id')->toArray();
         $roles = Role::lists('name', 'id');
 
-        return view('backend.user.edit', compact('user', 'roles', 'userRoles'))->with('active', 'user');
+        return view('/admin/backend.user.edit', compact('user', 'roles', 'userRoles'))->with('active', 'user');
     }
 
     /**
@@ -204,6 +204,6 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        return view('backend.user.confirm-destroy', compact('user'))->with('active', 'user');
+        return view('/admin/backend.user.confirm-destroy', compact('user'))->with('active', 'user');
     }
 }

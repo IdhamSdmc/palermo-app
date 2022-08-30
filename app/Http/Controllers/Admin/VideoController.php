@@ -40,7 +40,7 @@ class VideoController extends Controller
         $pagiData = $this->video->paginate(Input::get('page', 1), $this->perPage, true);
         $videos = Pagination::makeLengthAware($pagiData->items, $pagiData->totalItems, $this->perPage);
 
-        return view('backend.video.index', compact('videos'));
+        return view('/admin/backend.video.index', compact('videos'));
     }
 
     /**
@@ -50,7 +50,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        return view('backend.video.create');
+        return view('/admin/backend.video.create');
     }
 
     /**
@@ -83,7 +83,7 @@ class VideoController extends Controller
     {
         $video = $this->video->find($id);
 
-        return view('backend.video.show', compact('video'));
+        return view('/admin/backend.video.show', compact('video'));
     }
 
     /**
@@ -97,7 +97,7 @@ class VideoController extends Controller
     {
         $video = $this->video->find($id);
 
-        return view('backend.video.edit', compact('video'));
+        return view('/admin/backend.video.edit', compact('video'));
     }
 
     /**
@@ -145,7 +145,7 @@ class VideoController extends Controller
     {
         $video = $this->video->find($id);
 
-        return view('backend.video.confirm-destroy', compact('video'));
+        return view('/admin/backend.video.confirm-destroy', compact('video'));
     }
 
     public function getVideoDetail()

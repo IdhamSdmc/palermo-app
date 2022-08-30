@@ -1628,7 +1628,7 @@ url("./fonts/bootstrap-icons.woff?8d200481aa7f02a2d63a331fc782cfaf") format("wof
 .bi-filetype-exe::before { content: "\f746"; }
 .bi-filetype-gif::before { content: "\f747"; }
 .bi-filetype-heic::before { content: "\f748"; }
-.bi-filetype-html::before { content: "\f749"; }
+.bi-filetype-Html::before { content: "\f749"; }
 .bi-filetype-java::before { content: "\f74a"; }
 .bi-filetype-jpg::before { content: "\f74b"; }
 .bi-filetype-js::before { content: "\f74c"; }

@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -6,7 +6,7 @@
         <small> | Update User</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/user') !!}"><i class="fa fa-user"></i> User</a></li>
+        <li><a href="{!! url('/admin/user') !!}"><i class="fa fa-user"></i> User</a></li>
         <li class="active">Update User</li>
     </ol>
 </section>
@@ -14,7 +14,7 @@
 <br>
 <div class="container">
 
-    {!! Form::open( array( 'route' => array(getLang(). '.admin.user.update', $user->id), 'method' => 'PATCH')) !!}
+    {!! Form::open( array( 'route' => array('admin.user.update', $user->id), 'method' => 'PATCH')) !!}
     <!-- First Name -->
     <div class="control-group {!! $errors->has('first-name') ? 'has-error' : '' !!}">
         <label class="control-label" for="first-name">First Name</label>

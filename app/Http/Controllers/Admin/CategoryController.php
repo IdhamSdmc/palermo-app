@@ -38,7 +38,7 @@ class CategoryController extends Controller
         $pagiData = $this->category->paginate(Input::get('page', 1), $this->perPage, true);
         $categories = Pagination::makeLengthAware($pagiData->items, $pagiData->totalItems, $this->perPage);
 
-        return view('backend.category.index', compact('categories'));
+        return view('/admin/backend.category.index', compact('categories'));
     }
 
     /**
@@ -79,7 +79,7 @@ class CategoryController extends Controller
     {
         $category = $this->category->find($id);
 
-        return view('backend.category.show', compact('category'));
+        return view('/admin/backend.category.show', compact('category'));
     }
 
     /**
@@ -93,7 +93,7 @@ class CategoryController extends Controller
     {
         $category = $this->category->find($id);
 
-        return view('backend.category.edit', compact('category'));
+        return view('/admin/backend.category.edit', compact('category'));
     }
 
     /**
@@ -139,6 +139,6 @@ class CategoryController extends Controller
     {
         $category = $this->category->find($id);
 
-        return view('backend.category.confirm-destroy', compact('category'));
+        return view('/admin/backend.category.confirm-destroy', compact('category'));
     }
 }

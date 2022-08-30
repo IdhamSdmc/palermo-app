@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <script type="text/javascript">
     $(document).ready(function () {
@@ -32,14 +32,14 @@
         <small> | Control Panel</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+        <li><a href="{!! url('/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li class="active">Form Post</li>
     </ol>
 </section>
 <br>
 <br>
 <div class="col-lg-10">
-    @include('flash::message')
+    
 
     <div class="table-responsive">
         @if($formPosts->count())
@@ -69,7 +69,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="{!! langRoute('admin.form-post.show', array($formPost->id)) !!}">
+                                <a href="{!! URL::route('admin.form-post.show', array($formPost->id)) !!}">
                                     <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show Post
                                 </a>
                             </li>

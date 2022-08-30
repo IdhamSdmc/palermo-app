@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
   <section class="content-header">
     <h1> News <small> | Delete News</small> </h1>
@@ -10,7 +10,7 @@
   <br>
   <br>
 <div class="col-lg-10">
-  {!! Form::open( array(  'route' => array(getLang(). '.admin.news.destroy', $news->id ) ) ) !!}
+  {!! Form::open( array(  'route' => array('admin.news.destroy', $news->id ) ) ) !!}
   {!! Form::hidden( '_method', 'DELETE' ) !!}
   <div class="alert alert-warning">
     <div class="pull-left"><b> Be Careful!</b> Are you sure you want to delete <b>{!! $news->title !!} </b> ? </div>

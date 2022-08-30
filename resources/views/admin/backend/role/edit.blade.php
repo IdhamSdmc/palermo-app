@@ -1,4 +1,4 @@
-@extends('backend/layout/layout')
+@extends('/admin/backend/layout/layout')
 @section('content')
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -6,14 +6,14 @@
         <small> | Update Role</small>
     </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang(). '/admin/role') !!}"><i class="fa fa-user"></i> Role</a></li>
+        <li><a href="{!! url('/admin/role') !!}"><i class="fa fa-user"></i> Role</a></li>
         <li class="active">Update Role</li>
     </ol>
 </section>
 <br>
 <br>
 <div class="container">
-    {!! Form::open( array( 'route' => array(getLang(). '.admin.role.update', $role->id), 'method' => 'PATCH')) !!}
+    {!! Form::open( array( 'route' => array('admin.role.update', $role->id), 'method' => 'PATCH')) !!}
     <!-- Role Name -->
     <div class="control-group {!! $errors->has('name') ? 'has-error' : '' !!}">
         <label class="control-label" for="name">Name</label>

@@ -42,7 +42,7 @@ class SliderController extends Controller
     {
         $sliders = Slider::orderBy('created_at', 'DESC')->paginate(15);
 
-        return view('backend.slider.index', compact('sliders'));
+        return view('/admin/backend.slider.index', compact('sliders'));
     }
 
     /**
@@ -52,7 +52,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return view('backend.slider.create');
+        return view('/admin/backend.slider.create');
     }
 
     /**
@@ -106,7 +106,7 @@ class SliderController extends Controller
     {
         $slider = Slider::findOrFail($id);
 
-        return view('backend.slider.edit', compact('slider'));
+        return view('/admin/backend.slider.edit', compact('slider'));
     }
 
     /**
@@ -178,6 +178,6 @@ class SliderController extends Controller
     {
         $slider = Slider::findOrFail($id);
 
-        return view('backend.slider.confirm-destroy', compact('slider'));
+        return view('/admin/backend.slider.confirm-destroy', compact('slider'));
     }
 }
