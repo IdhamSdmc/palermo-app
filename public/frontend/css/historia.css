@@ -1,8 +1,16 @@
 .historia-container {
     display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.historia {
+    overflow-x: auto;
+}
+
+.historia::-webkit-scrollbar {
+    display: none;
 }
 
 .timeline {
@@ -16,8 +24,8 @@
     padding: 0;
     font-family: "Goldplay Regular";
     height: 400px;
-    max-width: 1056px;
-    width: 100%;
+    /* max-width: 1056px; */
+    /* width: 100%; */
 }
 
 /* middle line */
@@ -31,10 +39,11 @@
     background: var(--timeline-color);
 }
 
-.timeline li div time{
+.timeline li div time {
     font-family: "Goldplay SemiBold";
     font-size: 1.25rem;
 }
+
 .timeline li {
     flex-shrink: 0;
     min-width: 14rem;
@@ -43,10 +52,13 @@
     text-align: left;
 
     border-left: 3px var(--timeline-color) dashed;
-    align-self: flex-start; }
+    align-self: flex-start;
+}
 
 /*  event in even position are bottom-aligned */
-.timeline li:nth-child(2n) { align-self: flex-end;  }
+.timeline li:nth-child(2n) {
+    align-self: flex-end;
+}
 
 .timeline div {
     position: relative;
@@ -65,7 +77,7 @@
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background:  var(--timeline-color);
+    background: var(--timeline-color);
 
 }
 
@@ -74,7 +86,8 @@
     top: 100%;
     margin-top: -8px;
     border-right: 1px var(--timeline-color) solid;
-    border-bottom: 1px var(--timeline-color) solid; }
+    border-bottom: 1px var(--timeline-color) solid;
+}
 
 /* position of the event arrow in even position */
 .timeline li:nth-child(2n) div:before {
@@ -86,4 +99,10 @@
 
 .time-text {
     font-size: 0.875rem;
+}
+
+@media (max-width: 1000px) {
+    .historia-container .btn-slider {
+        display: none;
+    }
 }

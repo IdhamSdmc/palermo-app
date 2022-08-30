@@ -151,14 +151,14 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
                         </div>
                         <button type="button" class="btn-slider">
                             <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="">
                         </button>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
