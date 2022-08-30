@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-@font-face {
+/*@font-face {
     font-family: "Goldplay Regular";
     src: url("../fonts/Goldplay Regular.otf") format("opentype");
 }
@@ -24,9 +24,9 @@
 @font-face {
     font-family: "Goldplay Light";
     src: url("../fonts/Goldplay Light.otf") format("opentype");
-}
+}*/
 
-body {
+/*body {
     font-family: Goldplay, sans-serif;
     font-style: normal;
     color: #444444;
@@ -34,7 +34,7 @@ body {
 
 a {
     text-decoration: none;
-    /* color: #d9232d; */
+    !* color: #d9232d; *!
 }
 
 a:hover {
@@ -51,12 +51,12 @@ h6 {
     font-family: "Goldplay Regular", sans-serif;
     font-style: normal;
     font-weight: normal;
-}
+}*/
 
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
+/*.back-to-top {
     position: fixed;
     visibility: hidden;
     opacity: 0;
@@ -84,12 +84,12 @@ h6 {
 .back-to-top.active {
     visibility: visible;
     opacity: 1;
-}
+}*/
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
+/*#header {
     background: white;
     transition: all 0.5s;
     z-index: 997;
@@ -120,7 +120,7 @@ h6 {
 
 #header .logo img {
     max-height: 60px;
-}
+}*/
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -128,7 +128,7 @@ h6 {
 /**
 * Desktop Navigation
 */
-.navbar {
+/*.navbar {
     padding: 0;
 }
 
@@ -254,12 +254,12 @@ h6 {
     .navbar .dropdown .dropdown:hover>ul {
         left: -100%;
     }
-}
+}*/
 
 /**
 * Mobile Navigation
 */
-.mobile-nav-toggle {
+/*.mobile-nav-toggle {
     color: #009fdd;
     font-size: 28px;
     cursor: pointer;
@@ -395,7 +395,7 @@ h6 {
 
 .navbar-mobile .dropdown>.dropdown-active {
     display: block;
-}
+}*/
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -603,6 +603,7 @@ h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+/*
 section {
     padding: 60px 0;
     overflow: hidden;
@@ -647,6 +648,7 @@ section {
     font-family: "Goldplay Medium", sans-serif;
     color: #556270;
 }
+*/
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -2567,6 +2569,7 @@ input.input3 {
     padding: 5px 30px 5px 30px;
     text-align: center;
     font-weight: 700;
+    text-decoration: none;
 }
 .historias-exito h2{
     font-weight: 700;

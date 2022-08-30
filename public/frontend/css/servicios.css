@@ -121,3 +121,9 @@
 .obj-top-left {
     object-position: top left;
 }
+
+@media (max-width: 1000px) {
+    .solution .content {
+        padding-bottom: 1rem;
+    }
+}

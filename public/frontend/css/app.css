@@ -254,6 +254,7 @@
 @media (max-width: 1000px) {
     .arrows {
         display: flex;
+        margin-top: 1.5rem;
     }
 }
 

@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    return view('pages.inicio');
+    return view('pages.inicio2');
 });
 
 Route::get('/nosotros', function () {

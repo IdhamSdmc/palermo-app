@@ -5,23 +5,24 @@
         </a>
         <div id="navbar" class="navbar">
             <ul class="topbar-menu">
-                <li class="topbar-item"><a href="{{ url('/nosotros') }}" class="active">NOSOTROS</a></li>
-                <li class="topbar-item"><a href="{{ url('/soluciones') }}">SOLUCIONES</a></li>
-                <li class="topbar-item"><a href="{{ url('/productos') }}">PRODUCTOS</a></li>
-                <li class="topbar-item"><a href="{{ url('/articulos') }}">BLOG</a></li>
+                <li class="topbar-item"><a href="{{ url('/nosotros') }}" class="active">Nosotros</a></li>
+                <li class="topbar-item"><a href="{{ url('/soluciones') }}">Soluciones</a></li>
+                <li class="topbar-item"><a href="{{ url('/productos') }}">Productos</a></li>
+                <li class="topbar-item"><a href="{{ url('/articulos') }}">Blog</a></li>
 
                 <li class="topbar-item">
-                    <a href="{{ url('/contactanos') }}" class="btn-topbar">CONTÁCTANOS</a>
+                    <a href="{{ url('/contactanos') }}" class="btn-topbar">Contáctanos</a>
                 </li>
-                <li class="topbar-item">
+                <li class="topbar-item m-support"><a href="{{ url('https://soporte.grupopalermo.pe') }}" target="_blank">Soporte Técnico</a></li>
+                <li class="topbar-item w-support">
                     <a target="_blank" href="{{ url('https://soporte.grupopalermo.pe') }}" class="btn-soporte">
                         <img src="{{ asset('assets/imgs/soporte técnico.svg') }}" alt="">
                     </a>
                 </li>
                 {{-- <i class="bi bi-x close"></i> --}}
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
             {{-- <i class="bi bi-list mobile-nav-toggle"></i> --}}
         </div>
+        <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
 </header>

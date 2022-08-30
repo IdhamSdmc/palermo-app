@@ -103,43 +103,62 @@
                                 <ul class="timeline">
                                     <li>
                                         <div>
-                                            <time datetime="2018-10-09">1996</time>
-                                            <p class="time-text">Comienza nuestra historia como
-                                                GRUPO PALERMO dedicada al
-                                                servicio de fotocopiado e
-                                                impresión.</p>
+                                            <time datetime="1996-10-09">1996</time>
+                                            <p class="time-text">Nacimos como fotocopiadora PALERMO S.R.L., una empresa trujillana dedicada al servicio de fotocopiado e impresión.</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
-                                            <time datetime="2018-10-09">2010</time>
-                                            <p class="time-text">Alianza estratégica y de
-                                                distribución exclusiva en el Perú
-                                                con la marca de impresoras
-                                                RICOH</p>
+                                            <time datetime="2003-10-09">2003</time>
+                                            <p class="time-text">Incorporamos la división de soporte gráfico y publicitario.</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div>
-                                            <time datetime="2018-10-09">2016</time>
-                                            <p class="time-text">Grupo Palermo se expande en el
-                                                norte del país, con sucursales en
-                                                Chiclayo, Piura,
-                                                consolidándose como líder en los
-                                                servicios de outsourcing de
-                                                impresoras en el norte del país.</p>
+                                            <time datetime="2010-10-09">2010</time>
+                                            <p class="time-text">Realizamos nuestra alianza estratégica y de distribución exclusiva con la marca RICOH.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <time datetime="2012-10-09">2012</time>
+                                            <p class="time-text">Renovamos y consolidamos la identidad corporativa de “Grupo Palermo S.R.L.” como estrategia de crecimiento para lograr la presencia a nivel nacional, con nueva infraestructura.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <time datetime="2013-10-09">2013</time>
+                                            <p class="time-text">Obtuvimos la homologación de procesos internos por la certificadora Bureau Veritas, un importante respaldo para incursionar en mercados más exigentes.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <time datetime="2016-10-09">2016</time>
+                                            <p class="time-text">Nos forjamos como líderes en servicios de Outsourcing de impresoras en el norte del país.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <time datetime="2018-10-09">2018</time>
+                                            <p class="time-text">Asumimos nuevas alianzas estratégicas con las principales marcas de tecnología en el mundo como DELL, CISCO, IBM, ZEBRA y otras, para ampliar nuestras soluciones a Servicios integrados de TI.</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <time datetime="2022-10-09">2022</time>
+                                            <p class="time-text">Consolidamos la división de Digitalización y Gestión Documental, ampliando la cartera de servicios hacia nuestros clientes actuales.</p>
                                         </div>
                                     </li>
                                 </ul>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <button type="button" class="btn-slider">
                             <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="">
                         </button>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
