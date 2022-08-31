@@ -2554,14 +2554,14 @@ input.input3 {
 }
 .historias-exito .detalle .button-he{
     display: flex;
-    justify-content: left;
+    justify-content: center;
 
     margin-top: auto;
 
 }
 @media(max-width: 600px){
     .historias-exito .detalle a {
-        font-size: 16px !important;
+        font-size: 12px !important;
     }
 }
 .historias-exito .detalle a{
@@ -2595,7 +2595,7 @@ input.input3 {
     width: 100%;
     height: 65vh;
 }
-@media (max-width: 991px) {
+@media (max-width: 1000px) {
     .historias-exito .detalle{
         padding-left: 15px;
         padding-right: 15px;
@@ -2627,17 +2627,17 @@ input.input3 {
         text-transform: uppercase;
         text-align: center;
     }
-    .historias-exito .detalle button{
+    .historias-exito .detalle .button-he{
         font-family: "Goldplay Medium","Poppins", sans-serif;
-        font-size: 15px;
+        font-size: 13px;
         color: white;
         border: none;
         background-color: #009fdd;
         border-radius: 50px;
-        padding: 5px 30px 5px 30px;
         text-align: center;
         font-weight: 700;
     }
+
 }
 
 .div-ccbutton{

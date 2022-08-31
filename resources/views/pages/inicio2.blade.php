@@ -158,7 +158,7 @@
             <h2 class="mb-5">HISTORIAS DE ÉXITO</h2>
             <div class="content">
                 <div class="historias">
-                    <button type="button" class="btn-slider prev">
+                    <button type="button" class="btn-slider web prev">
                         <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
                     </button>
                     <div class="swiper mySwiper" id="">
@@ -260,14 +260,20 @@
 
                     </div>
 
-                    <button type="button" class="btn-slider next">
+                    <button type="button" class="btn-slider web next">
                         <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
                     </button>
-                    <div>
-
-
+                    <div class="btn-movil d-none">
+                        <button type="button" class="btn-slider movil prev ">
+                            <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
+                        </button>
+                        <button type="button" class="btn-slider movil next ">
+                            <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
+                        </button>
                     </div>
+
                 </div>
+
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
                         aria-valuemin="0" aria-valuemax="100"></div>
