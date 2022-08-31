@@ -170,7 +170,7 @@
     }
 
     .tarjeta-box {
-        min-width: 20rem;
+        min-width: 16rem;
     }
 }
 
@@ -178,7 +178,7 @@
     width: 100%;
     height: 100%;
 }
-/* 
+/*
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -222,5 +222,9 @@
 @media (max-width: 1000px) {
     .arrows {
         display: flex;
+    }
+    .wrapper{
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
     }
 }
