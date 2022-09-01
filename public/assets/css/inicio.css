@@ -117,6 +117,17 @@
     margin-right: 2rem;
 }
 
+.columna {
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    height: auto;
+    width: 22rem !important;
+    margin-top: 50px;
+    margin-right: 2rem;
+}
+
 #solutions-tarjet .header {
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
@@ -266,7 +277,6 @@
         width: 8rem;
     }
     .about-text{
-        width: 100%;
         display: flex;  /*display: flex; el cual vuelve al contenedor un elemento flex*/
 
         align-items: center;  /*justify-content: center; le decimos a los elementos del contenedor flex que se ubiquen al centro del eje principal eje horizontal*/
@@ -285,14 +295,14 @@
         height: 0%;
     }
 }
-.arrows {
+
+.arrows_inico {
     height: 100%;
     display: flex;
-    /* align-items: end; */
+    align-items: end;
     justify-content: flex-start;
     gap: .5rem;
     margin-bottom: 25px;
-
 }
 
 @media (max-width: 1000px) {
@@ -337,7 +347,12 @@
         flex-direction: row;
         gap: 1.5rem;
     }
-
+    #soluciones .btn-movil{
+        margin-top: 1.2rem;
+        display: flex !important;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
 }
 
 .about-section {
@@ -360,8 +375,8 @@
 }
 
 #soluciones .about-text {
-    padding: 0;
-    max-width: 14rem;
+    padding: 0 2rem;
+    max-width: 20rem;
 }
 
 #solutions-tarjet {
@@ -382,9 +397,31 @@
 }
 
 @media (max-width: 1000px) {
-    #soluciones .swiper {
-        display: none;
+    #soluciones #solutions-tarjet {
+        
+        width: 100%;
+        display: flex;
+    flex-direction: column;
+
     }
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #soluciones .content {
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+  
     #soluciones .section > .content {
         justify-content: center;
     }
@@ -397,6 +434,10 @@
         text-align: center;
     }
 
+    
+#soluciones .about-text {
+   display: none;
+}
     #soluciones .progress {
         display: none;
     }
