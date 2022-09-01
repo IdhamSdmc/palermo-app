@@ -1,10 +1,11 @@
 var progressBar = document.querySelector(' #about .progress .progress-bar');
-let autoPlayDelay = 1500;
-var mySwiper = new Swiper(".about .mySwiper", {
+let autoPlayDelay = 2000;
+var mySwiper = new Swiper("#soluciones .mySwiper", {
     loop: true,
+    slidesPerView: 'auto',
     navigation: {
-        nextEl: "#about .btn-slider.next",
-        prevEl: "#about .btn-slider.prev",
+        nextEl: "#soluciones .btn-slider.next",
+        prevEl: "#soluciones .btn-slider.prev",
     },
     breakpoints: {
         // when window width is >= 320px
@@ -14,52 +15,47 @@ var mySwiper = new Swiper(".about .mySwiper", {
         },
         // when window width is >= 640px
         1000: {
-            slidesPerView: 3,
-            spaceBetween: 40
+            slidesPerView: 'auto',
         }
     },autoplay: {
         delay: autoPlayDelay,
         disableOnInteraction: false
+
     },
     
 });
-let slidersCount = mySwiper.slides.length-2;
-
+let slidersCount = mySwiper.slides.length-mySwiper.loopedSlides*2;
 let widthParts = 100 / slidersCount;
 function initProgressBar(){
     let calcProgress = (slidersCount-1) * (autoPlayDelay + mySwiper.params.speed);
     calcProgress += autoPlayDelay;
-    $('  #about .progress .progress-bar').animate({
+    $('  #soluciones .progress .progress-bar').animate({
         width: '100%'
     }, calcProgress, 'linear');
 }
 initProgressBar();
+
 mySwiper.on('slideChange', function () {
-    let progress = $('  #about .progress .progress-bar');
-    let active=this.activeIndex-3
-if(this.params.loop){
+    let progress = $('  #soluciones .progress .progress-bar');
+    console.log(this.activeIndex);
+    let active=this.activeIndex-slidersCount;
+    console.log(active);
+    if( 
+        ( 
+            this.active == 0 || (this.params.loop) 
+        ) && !progress.parent().is('.stopped')
+    ){
+        console.log("entro");
     progress.css('width', '0');
-    if(active == 0 ){
-        console.log('entro');
+    if(active == slidersCount){
         initProgressBar();
     }
-}
-   
-    if(progress.parent().is('.stopped')){		   
-        progress.animate({
-            'width': Math.round(widthParts * (active + 1)) + '%'
-        }, this.params.speed, 'linear');
     }
 });
-
-mySwiper.on('touchMove', function () {
-    $(' #about .progress .progress-bar').stop().parent().addClass('stopped');
-});
-
-
 
 var progressBar2 = document.querySelector('.historias .progress .progress-bar');
 var mySwiper2 = new Swiper(".historias .mySwiper", {
+    slidesPerView: 1,
     loop: true,
     navigation: {
         nextEl: ".historias .btn-slider.next",
@@ -83,7 +79,7 @@ var mySwiper2 = new Swiper(".historias .mySwiper", {
     
 });
 let slidersCount2 = mySwiper2.slides.length-2;
-
+console.log(slidersCount2 );
 let widthParts2 = 100 / slidersCount2;
 function initProgressBar2(){
     let calcProgress2 = (slidersCount2-1) * (autoPlayDelay + mySwiper2.params.speed);
@@ -95,12 +91,10 @@ function initProgressBar2(){
 initProgressBar2();
 mySwiper2.on('slideChange', function () {
     let progress = $('.historias-exito .progress .progress-bar');
-    let active=this.activeIndex-3 
-    console.log(active);
+    let active=this.activeIndex-3 ;
 if(this.params.loop){
     progress.css('width', '0');
     if(active == 0 ){
-        console.log('entro2');
         initProgressBar2();
     }
 }

@@ -15,7 +15,6 @@
 
 .timeline {
     --timeline-color: var(--bg-info);
-
     position: relative;
     list-style: none;
     display: inline-flex;
@@ -24,17 +23,21 @@
     padding: 0;
     font-family: "Goldplay Regular";
     height: 400px;
+    width: 100% !important;
+
     /* max-width: 1056px; */
     /* width: 100%; */
 }
-
+.lista{
+    list-style: none;
+}
 /* middle line */
 .timeline:before {
     content: "";
     position: absolute;
     top: calc(50% - 1px);
     /* width: calc(100% - 6rem); */
-    width: 100%;
+    width: 100% !important;
     height: 0.25rem;
     background: var(--timeline-color);
 }
@@ -47,10 +50,9 @@
 .timeline li {
     flex-shrink: 0;
     min-width: 14rem;
-    width: 352px;
-    width: 300px;
     text-align: left;
-
+   
+    height: 185px;
     border-left: 3px var(--timeline-color) dashed;
     align-self: flex-start;
 }
@@ -60,7 +62,7 @@
     align-self: flex-end;
 }
 
-.timeline div {
+.timeline .prueba {
     position: relative;
     padding: 10px;
     height: 185px;
@@ -70,7 +72,6 @@
 .timeline li:before {
     content: "";
     position: absolute;
-    top: 50%;
     margin-left: 0px;
     transform: translate(-50%, -50%);
     border: 1px var(--timeline-color) solid;
@@ -78,31 +79,47 @@
     height: 1rem;
     border-radius: 50%;
     background: var(--timeline-color);
-
 }
 
 /* position of the event arrow in odd position */
-.timeline li:nth-child(2n - 1) div:before {
+.timeline li:nth-child(2n - 1):before {
     top: 100%;
-    margin-top: -8px;
-    border-right: 1px var(--timeline-color) solid;
-    border-bottom: 1px var(--timeline-color) solid;
+      margin-top: 15px;
+  
 }
 
 /* position of the event arrow in even position */
-.timeline li:nth-child(2n) div:before {
-    top: 0;
-    margin-top: -10px;
-    border-left: 1px var(--timeline-color) solid;
-    border-top: 1px var(--timeline-color) solid;
+.timeline li:nth-child(2n):before {
+    bottom: 100%;
+    margin-top: 15px;
 }
+.timeline li:nth-child(2n) .prueba:before {
+    height: 50px !important;
 
+}
 .time-text {
     font-size: 0.875rem;
 }
 
 @media (max-width: 1000px) {
-    .historia-container .btn-slider {
+    .historia{
+        width: 100%;
+    }
+     .historia-container {
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .historia-container .web {
         display: none;
     }
+    .historia-container  .btn-movil{
+        margin-top: 1.2rem;
+        display: flex !important;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    
 }

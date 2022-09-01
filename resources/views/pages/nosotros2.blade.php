@@ -95,56 +95,56 @@
                 <h2>NUESTRA HISTORIA</h2>
                 <div class="content">
                     <div class="historia-container">
-                        <button type="button" class="btn-slider">
+                        <button type="button" class="btn-slider web prev">
                             <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="">
                         </button>
                         <div class="historia">
-                            <div class="timeline-container">
-                                <ul class="timeline">
-                                    <li>
-                                        <div>
+                            <div class="swiper timeline-dates timeline" >
+                                <ul class="swiper-wrapper lista">
+                                    <li class="swiper-slide">
+                                        <div class="prueba">
                                             <time datetime="1996-10-09">1996</time>
                                             <p class="time-text">Nacimos como fotocopiadora PALERMO S.R.L., una empresa trujillana dedicada al servicio de fotocopiado e impresión.</p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div>
+                                    <li class="swiper-slide">
+                                        <div class="prueba">
                                             <time datetime="2003-10-09">2003</time>
                                             <p class="time-text">Incorporamos la división de soporte gráfico y publicitario.</p>
-                                        </div>
+                                        </div> 
                                     </li>
-                                    <li>
-                                        <div>
+                                    <li class="swiper-slide">
+                                        <div class="prueba">
                                             <time datetime="2010-10-09">2010</time>
                                             <p class="time-text">Realizamos nuestra alianza estratégica y de distribución exclusiva con la marca RICOH.</p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div>
+                                    <li class="swiper-slide">
+                                        <div class="prueba">
                                             <time datetime="2012-10-09">2012</time>
                                             <p class="time-text">Renovamos y consolidamos la identidad corporativa de “Grupo Palermo S.R.L.” como estrategia de crecimiento para lograr la presencia a nivel nacional, con nueva infraestructura.</p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div>
+                                    <li class="swiper-slide">
+                                        <div class="prueba">
                                             <time datetime="2013-10-09">2013</time>
                                             <p class="time-text">Obtuvimos la homologación de procesos internos por la certificadora Bureau Veritas, un importante respaldo para incursionar en mercados más exigentes.</p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div>
+                                    <li class="swiper-slide">
+                                        <div class="prueba">
                                             <time datetime="2016-10-09">2016</time>
                                             <p class="time-text">Nos forjamos como líderes en servicios de Outsourcing de impresoras en el norte del país.</p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div>
+                                    <li class="swiper-slide">
+                                        <div class="prueba">
                                             <time datetime="2018-10-09">2018</time>
                                             <p class="time-text">Asumimos nuevas alianzas estratégicas con las principales marcas de tecnología en el mundo como DELL, CISCO, IBM, ZEBRA y otras, para ampliar nuestras soluciones a Servicios integrados de TI.</p>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div>
+                                    <li class="swiper-slide">
+                                        <div class="prueba">
                                             <time datetime="2022-10-09">2022</time>
                                             <p class="time-text">Consolidamos la división de Digitalización y Gestión Documental, ampliando la cartera de servicios hacia nuestros clientes actuales.</p>
                                         </div>
@@ -152,9 +152,18 @@
                                 </ul>
                             </div>
                         </div>
-                        <button type="button" class="btn-slider">
-                            <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="">
+                        <button type="button" class="btn-slider web next">
+                            <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
                         </button>
+                        <div class="btn-movil d-none">
+                            <button type="button" class="btn-slider movil prev ">
+                                <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
+                            </button>
+                            <button type="button" class="btn-slider movil next ">
+                                <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
+                            </button>
+                        </div>
+                        
                     </div>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
@@ -173,4 +182,5 @@
 @push('js')
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="{{ asset('frontend/js/tarjetas.js') }}"></script>
+    <script src="{{ asset('assets/js/nosotros/historia.js') }}"></script>
 @endpush

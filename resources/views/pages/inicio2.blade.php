@@ -221,7 +221,7 @@
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
 
                                         <div class="img-he">
-                                            <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
+                                            <img src="assets/imgs/recursos/MONTESSORI_2.jpg" alt="...">
                                         </div>
                                     </div>
                                 </div>
@@ -251,7 +251,7 @@
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
 
                                         <div class="img-he">
-                                            <img src="assets/imgs/recursos/historia de exito.jpg" alt="...">
+                                            <img src="assets/imgs/recursos/SIDER_1.jfif" alt="...">
                                         </div>
                                     </div>
                                 </div>
