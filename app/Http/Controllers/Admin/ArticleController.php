@@ -13,6 +13,8 @@ use App\Repositories\Category\CategoryInterface;
 use App\Exceptions\Validation\ValidationException;
 use App\Repositories\Article\ArticleRepository as Article;
 use App\Repositories\Category\CategoryRepository as Category;
+use Illuminate\Support\Facades\DB;
+use function Psy\debug;
 
 /**
  * Class ArticleController.
@@ -156,5 +158,13 @@ class ArticleController extends Controller
     public function togglePublish($id)
     {
         return $this->article->togglePublish($id);
+    }
+
+    public function mostrar()
+    {
+        $articulos = DB::table('articles')->paginate(3);
+        $categorias = DB::table('categories')->get();
+
+        return view('pages.articulo', compact('articulos', 'categorias'));
     }
 }

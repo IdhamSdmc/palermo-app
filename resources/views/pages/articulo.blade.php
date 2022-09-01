@@ -27,14 +27,31 @@
                         <input type="text" autocomplete="none">
                         <i class="bi bi-search"></i>
                     </div>
-                    <select name="" id="" class="select">
-                        <option value="" selected></option>
+                    <select name="categoria" id="categoria" class="select">
+                    @foreach($categorias as $categoria)
+                            <option value="{{$categoria->id}}" selected>{{$categoria->title}}</option>
+                    @endforeach
                     </select>
+
                 </div>
                 <div class="content" id="list">
 
                     <div class="lista-articulos">
-                        <div class="articulo">
+                        @foreach($articulos as $item)
+                            <div class="articulo">
+                                <div class="image">
+                                    <img src="{{ asset('assets/imgs/recursos/articulo 1.jpg') }}" alt="">
+                                </div>
+                                <span>{{  $item->created_at}}</span>
+                                <h3>{{$item->title}}</h3>
+                                <p>
+                                    {{$item->content}}
+                                </p>
+                                <a href="#">VER MÁS</a>
+                            </div>
+                        @endforeach
+
+                        {{--<div class="articulo">
                             <div class="image">
                                 <img src="{{ asset('assets/imgs/recursos/articulo 1.jpg') }}" alt="">
                             </div>
@@ -132,8 +149,11 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                             <a href="#">VER MÁS</a>
-                        </div>
+                        </div>--}}
                     </div>
+                    <h5>Pagination:</h5>
+
+                    {{ $articulos->onEachSide(2)->links() }}
                     <div class="opciones">
                             <button type="button" class="btn-slider prev">
                                 <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
@@ -150,6 +170,7 @@
 
 
                 </div>
+
 
 
 

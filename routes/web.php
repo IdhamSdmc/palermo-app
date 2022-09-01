@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ArticleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,9 +35,8 @@ Route::get('/blog', function () {
 Route::get('/contactanos', function () {
     return view('pages.contactanos');
 });
-Route::get('/articulos', function () {
-    return view('pages.articulo');
-});
+
+Route::get('/articulos', [ArticleController::class, 'mostrar']);
 
 Route::get('/admin/login', array(
     'as' => 'admin.login',
@@ -79,10 +79,10 @@ Route::get('/admin/login', array(
 
                                          Route::get('role/{id}/show', array('as' => 'admin.role.show',
                                                                                    'uses' => 'RoleController@show', ))->where('id', '[0-9]+');
-        
+
                                                                                    Route::patch('role/{id}/update', array('as' => 'admin.role.update',
                                                                                    'uses' => 'RoleController@update', ))->where('id', '[0-9]+');
-        
+
                                                                                    Route::resource('photo-gallery', 'PhotoGalleryController');
         Route::get('photo-gallery/create', array('as' => 'admin.photo-gallery.create',
         'uses' => 'PhotoGalleryController@create', ))->where('id', '[0-9]+');
@@ -104,6 +104,7 @@ Route::get('/admin/login', array(
      Route::post('menu/{id}/toggle-publish', array('as'   => 'admin.menu.toggle-publish',
                                                    'uses' => 'MenuController@togglePublish'))->where('id', '[0-9]+');
      Route::resource('article', 'ArticleController');
+
      Route::get('article/create', array('as' => 'admin.article.create',
      'uses' => 'ArticleController@create', ));
      Route::get('/article', array('as' => 'dashboard.article', 'uses' => 'ArticleController@index'));
@@ -118,14 +119,14 @@ Route::get('/admin/login', array(
                                                  Route::get('/slider', array(
                                                     'as' => 'admin.slider',
                                                     function () {
-                                        
+
                                                         return View::make('backend/slider/index');
                                                     }, ));
-                                        
+
                                                 // slider
                                                 Route::resource('slider', 'SliderController');
                                                 Route::get('slider/{id}/delete', array('as' => 'admin.slider.delete',
                                                                                        'uses' => 'SliderController@confirmDestroy', ))->where('id', '[0-9]+');
                                                                                        Route::get('slider/create', array('as' => 'admin.slider.create',
-                                                                                       'uses' => 'SliderController@create', ))->where('id', '[0-9]+');                                    
+                                                                                       'uses' => 'SliderController@create', ))->where('id', '[0-9]+');
                                                     });

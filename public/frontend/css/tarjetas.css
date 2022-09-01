@@ -170,7 +170,7 @@
     }
 
     .tarjeta-box {
-        min-width: 16rem;
+        min-width: 100%;
     }
 }
 
