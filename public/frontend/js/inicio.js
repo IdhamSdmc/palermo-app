@@ -9,12 +9,11 @@ var mySwiper = new Swiper("#soluciones .mySwiper", {
     },
     breakpoints: {
         // when window width is >= 320px
-        320: {
+        450: {
             slidesPerView: 1,
-            spaceBetween: 20
         },
         // when window width is >= 640px
-        1000: {
+        600: {
             slidesPerView: 'auto',
         }
     },autoplay: {

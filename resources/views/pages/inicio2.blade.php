@@ -27,7 +27,7 @@
                             </h3>
                             <h5>Implementamos los mejores servicios tecnológicos</h5>
                         </div>
-                        <div class="arrows">
+                        <div class="arrows_inico">
                             <button type="button" class="btn-slider prev">
                                 <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
                             </button>
@@ -90,6 +90,14 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="btn-movil d-none">
+                        <button type="button" class="btn-slider movil prev ">
+                            <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
+                        </button>
+                        <button type="button" class="btn-slider movil next ">
+                            <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
+                        </button>
                     </div>
                 </div>
                 <div class="progress">
