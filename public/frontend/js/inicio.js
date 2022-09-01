@@ -9,13 +9,7 @@ var mySwiper = new Swiper("#soluciones .mySwiper", {
     },
     breakpoints: {
         // when window width is >= 320px
-        450: {
-            slidesPerView: 1,
-        },
-        // when window width is >= 640px
-        600: {
-            slidesPerView: 'auto',
-        }
+        
     },autoplay: {
         delay: autoPlayDelay,
         disableOnInteraction: false
