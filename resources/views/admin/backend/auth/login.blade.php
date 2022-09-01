@@ -64,17 +64,17 @@
                   <br>
                   <input type="hidden" name="type_user" value="paciente">
                   <input type="submit"  class="btn btn-block btn-color" style="color: #e22715;border-radius: 4px !important; border: 1px solid; background-color: white" value="INICIAR SESIÓN">
-              
+
         </form>
 
         <div class="social-auth-links text-center">
-            <!--<p>- OR -</p>
+            <p>- OR -</p>
             <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
             <a href="#" class="btn btn-block btn-social btn-google-plus btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
         </div>
 
         <a href="#">I forgot my password</a><br>
-        <a href="#" class="text-center">Register a new membership</a>-->
+        <a href="#" class="text-center">Register a new membership</a>
 
     </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->

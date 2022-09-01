@@ -151,10 +151,10 @@
                             <a href="#">VER MÁS</a>
                         </div>--}}
                     </div>
-                    <h5>Pagination:</h5>
-
-                    {{ $articulos->onEachSide(2)->links() }}
-                    <div class="opciones">
+                    <div class="pagination mt-3">
+                        {{ $articulos->onEachSide(2)->links() }}
+                    </div>
+                    {{--<div class="opciones">
                             <button type="button" class="btn-slider prev">
                                 <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
                             </button>
@@ -166,7 +166,7 @@
                                 <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
                             </button>
 
-                    </div>
+                    </div>--}}
 
 
                 </div>

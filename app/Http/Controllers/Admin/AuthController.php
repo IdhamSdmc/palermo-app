@@ -38,7 +38,7 @@ class AuthController extends Controller
     public function getLogin()
     {
         if (!Sentinel::check()) {
-            return view('/admin/backend/auth/login');
+            return view('/admin/backend/auth/login2');
         }
 
         return Redirect::route('admin.dashboard');
@@ -62,7 +62,7 @@ class AuthController extends Controller
         $rememberMe = $request->get('rememberMe');
 
         try {
-       
+
                 $result = Sentinel::authenticate($credentials);
             if ($result) {
                 echo "exito";
