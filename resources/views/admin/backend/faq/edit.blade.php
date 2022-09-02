@@ -42,7 +42,7 @@
     <br>
     <!-- Form actions -->
     {!! Form::submit('Save Changes', array('class' => 'btn btn-success')) !!}
-    <a href="{!! url(getLang() . '/admin/faq') !!}" class="btn btn-default">&nbsp;Cancel</a>
+    <a href="{!! url( '/admin/faq') !!}" class="btn btn-default">&nbsp;Cancel</a>
     {!! Form::close() !!}
 
 </div>

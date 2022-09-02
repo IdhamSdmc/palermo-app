@@ -51,7 +51,7 @@
 
                             $.ajax({
                                 type: "POST",
-                                url: "{!! url(getLang() . '/admin/photo-gallery-delete-image') !!}",
+                                url: "{!! url( '/admin/photo-gallery-delete-image') !!}",
                                 headers: {
                                     'X-CSRF-Token': $('meta[name="_token"]').attr('content')
                                 },

@@ -67,7 +67,7 @@
 
     <!-- Form actions -->
     {!! Form::submit('Save Changes', array('class' => 'btn btn-success')) !!}
-    <a href="{!! url(getLang() . '/admin/user') !!}"
+    <a href="{!! url( '/admin/user') !!}"
        class="btn btn-default">
         &nbsp;Cancel
     </a>

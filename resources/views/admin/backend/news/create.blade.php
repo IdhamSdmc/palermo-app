@@ -30,7 +30,7 @@
     <section class="content-header">
         <h1> News <small> | Add News</small> </h1>
         <ol class="breadcrumb">
-            <li><a href="{!! url(getLang() . '/admin/news') !!}"><i class="fa fa-bookmark"></i> News</a></li>
+            <li><a href="{!! url( '/admin/news') !!}"><i class="fa fa-bookmark"></i> News</a></li>
             <li class="active">Add News</li>
         </ol>
     </section>

@@ -10,7 +10,7 @@
             e.preventDefault();
             $.ajax({
                 type: "POST",
-                url: "{!! url( getLang() . '/admin/form-post/" + id + "/toggle-answer/') !!}",
+                url: "{!! url(  '/admin/form-post/" + id + "/toggle-answer/') !!}",
                 headers: {
                     'X-CSRF-Token': $('meta[name="_token"]').attr('content')
                 },

@@ -4,7 +4,7 @@
 <section class="content-header">
     <h1> Page <small> | Update Page</small> </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang() . '/admin/page') !!}"><i class="fa fa-bookmark"></i> Page</a></li>
+        <li><a href="{!! url( '/admin/page') !!}"><i class="fa fa-bookmark"></i> Page</a></li>
         <li class="active">Update Page</li>
     </ol>
 </section>

@@ -16,7 +16,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "{!! url(getLang() . '/admin/video/get-video-detail') !!}",
+                url: "{!! url( '/admin/video/get-video-detail') !!}",
                 data: {"video_id": id, "type": type},
                 headers: {
                     'X-CSRF-Token': $('meta[name="_token"]').attr('content')
@@ -102,7 +102,7 @@
 
     <!-- Form actions -->
     {!! Form::submit('Save Changes', array('class' => 'btn btn-success')) !!}
-    <a href="{!! url(getLang() . '/admin/video') !!}" class="btn btn-default">&nbsp;Cancel</a>
+    <a href="{!! url( '/admin/video') !!}" class="btn btn-default">&nbsp;Cancel</a>
     {!! Form::close() !!}
 </div>
 @stop

@@ -20,7 +20,7 @@
 <section class="content-header">
     <h1> Article <small> | Update Article</small> </h1>
     <ol class="breadcrumb">
-        <li><a href="{!! url(getLang() . '/admin/article') !!}"><i class="fa fa-book"></i> Article</a></li>
+        <li><a href="{!! url( '/admin/article') !!}"><i class="fa fa-book"></i> Article</a></li>
         <li class="active">Update Article</li>
     </ol>
 </section>

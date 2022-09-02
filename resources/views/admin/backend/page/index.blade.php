@@ -11,7 +11,7 @@
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "{!! url(getLang() . '/admin/page/" + id + "/toggle-publish/') !!}",
+                    url: "{!! url( '/admin/page/" + id + "/toggle-publish/') !!}",
                     headers: {
                         'X-CSRF-Token': $('meta[name="_token"]').attr('content')
                     },
