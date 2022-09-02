@@ -39,7 +39,7 @@ Route::get('/contactanos', function () {
 Route::get('/articulos', [ArticleController::class, 'mostrar']);
 
 Route::get('/admin/login', array(
-    'as' => 'admin.login',
+    'as' => 'admin.login2',
     function () {
 
         return view('/admin/backend/auth/login');
