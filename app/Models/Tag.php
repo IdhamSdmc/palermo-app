@@ -3,8 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\SluggableTrait;
-use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\Sluggable;
 use App\Interfaces\ModelInterface as ModelInterface;
 
 /**
@@ -12,17 +11,23 @@ use App\Interfaces\ModelInterface as ModelInterface;
  *
  * @author Sefa Karagöz <karagozsefa@gmail.com>
  */
-class Tag extends Model implements ModelInterface , SluggableInterface
+class Tag extends Model implements ModelInterface
 {
-    use SluggableTrait;
+    use Sluggable;
+
 
     public $table = 'tags';
     protected $appends = ['url'];
 
-    protected $sluggable = array(
-        'build_from' => 'name',
-        'save_to' => 'slug',
-    );
+    public function sluggable() {
+        return [
+            'slug' => [
+                'source'         => 'title',
+                'separator'      => '-',
+                'includeTrashed' => true,
+            ]
+        ];
+    }
 
     public function articles()
     {

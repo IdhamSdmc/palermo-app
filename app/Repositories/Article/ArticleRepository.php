@@ -155,7 +155,6 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
     {
         $attributes['is_published'] = isset($attributes['is_published']) ? true : false;
 
-        if ($this->isValid($attributes)) {
 
             //--------------------------------------------------------
 
@@ -168,7 +167,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
             if ($file) {
                 $destinationPath = public_path().$this->imgDir;
                 $fileName = $file->getClientOriginalName();
-                $fileSize = $file->getClientSize();
+                $fileSize = $file->getSize();
 
                 $upload_success = $file->move($destinationPath, $fileName);
 
@@ -184,6 +183,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
                     $this->article->file_name = $fileName;
                     $this->article->file_size = $fileSize;
                     $this->article->path = $this->imgDir;
+                    $this->article->category_id = $attributes['category'];
                 }
             }
 
@@ -191,6 +191,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
 
             $this->article->lang = $this->getLang();
             if ($this->article->fill($attributes)->save()) {
+
                 $category = Category::find($attributes['category']);
                 $category->articles()->save($this->article);
             }
@@ -216,12 +217,10 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
             }
 
             //Event::fire('article.created', $this->article);
-            Event::fire('article.creating', $this->article);
 
             return true;
-        }
+        
 
-        throw new ValidationException('Article validation failed', $this->getErrors());
     }
 
     /**

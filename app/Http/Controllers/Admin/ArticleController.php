@@ -56,9 +56,10 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        $categories = $this->category->lists();
-
-        return view('/admin/backend.article.create', compact('categories'));
+        $cat_array = null;
+        $categories = $this->category->all();
+        $categories->toArray();
+          return view('/admin/backend.article.create', compact('categories'));
     }
 
     /**

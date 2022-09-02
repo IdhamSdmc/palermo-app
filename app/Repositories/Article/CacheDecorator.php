@@ -132,4 +132,19 @@ class CacheDecorator extends AbstractArticleDecorator
 
         return $articles;
     }
+    public function create($id)
+    {   $var= implode(' ', $id);
+        $key = md5(getLang().$this->cacheKey.'.id.'.$var);
+
+        if ($this->cache->has($key)) {
+            return $this->cache->get($key);
+        }
+
+        $article = $this->article->create($id);
+
+        $this->cache->put($key, $article);
+
+        return $article;
+    }
+
 }
