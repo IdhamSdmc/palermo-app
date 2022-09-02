@@ -108,7 +108,7 @@ Route::get('/admin/login', array(
      Route::get('article/create', array('as' => 'admin.article.create',
      'uses' => 'ArticleController@create', ));
      Route::get('article/{id}/delete', array('as' => 'admin.article.delete',
-     'uses' => 'ArticleController@delete', ));
+     'uses' => 'ArticleController@destroy', ));
      Route::get('article/{id}/edit', array('as' => 'admin.article.edit',
      'uses' => 'ArticleController@edit', ));
      Route::get('article/{id}/show', array('as' => 'admin.article.show',

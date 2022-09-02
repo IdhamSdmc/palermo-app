@@ -85,7 +85,7 @@
 }
 
 .articulo p {
-    font-family: var(--font-regular);
+    font-family: var(--font-regular) !important;
     color: rgb(157, 157, 157);
 }
 

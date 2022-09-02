@@ -71,7 +71,7 @@ class ArticleController extends Controller
     {
         try {
             $this->article->create(Input::all());
-            Flash::message('Article was successfully added');
+            /*Flash::message('Article was successfully added');*/
 
             return langRedirectRoute('admin.article.index');
         } catch (ValidationException $e) {
@@ -126,7 +126,7 @@ class ArticleController extends Controller
     {
         try {
             $this->article->update($id, Input::all());
-            Flash::message('Article was successfully updated');
+           /* Flash::message('Article was successfully updated');*/
 
             return langRedirectRoute('admin.article.index');
         } catch (ValidationException $e) {
@@ -144,7 +144,7 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         $this->article->delete($id);
-        Flash::message('Article was successfully deleted');
+        /*Flash::message('Article was successfully deleted');*/
 
         return langRedirectRoute('admin.article.index');
     }
@@ -163,7 +163,7 @@ class ArticleController extends Controller
 
     public function mostrar()
     {
-        $articulos = DB::table('articles')->paginate(3);
+        $articulos = DB::table('articles')->get();
         $categorias = DB::table('categories')->get();
 
         return view('pages.articulo', compact('articulos', 'categorias'));

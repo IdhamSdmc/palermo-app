@@ -40,121 +40,23 @@
                         @foreach($articulos as $item)
                             <div class="articulo">
                                 <div class="image">
-                                    <img src="{{ $item->path.$item->file_name }}" alt="">
+                                    <img src="{{ url($item->path.$item->file_name) }}" alt="">
                                 </div>
                                 <span>{{  $item->created_at}}</span>
                                 <h3>{{$item->title}}</h3>
-                                <p>
-                                    {{$item->content}}
-                                </p>
+
+                                {!! $item->content !!}
+
                                 <a href="#">VER MÁS</a>
                             </div>
                         @endforeach
 
-                        {{--<div class="articulo">
-                            <div class="image">
-                                <img src="{{ asset('assets/imgs/recursos/articulo 1.jpg') }}" alt="">
-                            </div>
-                            <span>2022, 12 DE MAYO</span>
-                            <h3>Título de artículo</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                            </p>
-                            <a href="#">VER MÁS</a>
-                        </div>
-                        <div class="articulo">
-                            <div class="image">
-                                <img src="{{ asset('assets/imgs/recursos/articulo 2.jpg') }}" alt="">
-                            </div>
-                            <span>2022, 12 DE MAYO</span>
-                            <h3>Título de artículo</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                            </p>
-                            <a href="#">VER MÁS</a>
-                        </div>
-                        <div class="articulo">
-                            <div class="image">
-                                <img src="{{ asset('assets/imgs/recursos/articulo 3.jpg') }}" alt="">
-                            </div>
-                            <span>2022, 12 DE MAYO</span>
-                            <h3>Título de artículo</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                            </p>
-                            <a href="#">VER MÁS</a>
-                        </div>
-                        <div class="articulo">
-                            <div class="image">
-                                <img src="{{ asset('assets/imgs/recursos/articulo 4.jpg') }}" alt="">
-                            </div>
-                            <span>2022, 12 DE MAYO</span>
-                            <h3>Título de artículo</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                            </p>
-                            <a href="#">VER MÁS</a>
-                        </div>
-                        <div class="articulo">
-                            <div class="image">
-                                <img src="{{ asset('assets/imgs/recursos/articulo 5.jpg') }}" alt="">
-                            </div>
-                            <span>2022, 12 DE MAYO</span>
-                            <h3>Título de artículo</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                            </p>
-                            <a href="#">VER MÁS</a>
-                        </div>
-                        <div class="articulo">
-                            <div class="image">
-                                <img src="{{ asset('assets/imgs/recursos/articulo 6.jpg') }}" alt="">
-                            </div>
-                            <span>2022, 12 DE MAYO</span>
-                            <h3>Título de artículo</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                            </p>
-                            <a href="#">VER MÁS</a>
-                        </div>
-                        <div class="articulo">
-                            <div class="image">
-                                <img src="{{ asset('assets/imgs/recursos/articulo 7.jpg') }}" alt="">
-                            </div>
-                            <span>2022, 12 DE MAYO</span>
-                            <h3>Título de artículo</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                            </p>
-                            <a href="#">VER MÁS</a>
-                        </div>
-                        <div class="articulo">
-                            <div class="image">
-                                <img src="{{ asset('assets/imgs/recursos/articulo 8.jpg') }}" alt="">
-                            </div>
-                            <span>2022, 12 DE MAYO</span>
-                            <h3>Título de artículo</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                            </p>
-                            <a href="#">VER MÁS</a>
-                        </div>
-                        <div class="articulo">
-                            <div class="image">
-                                <img src="{{ asset('assets/imgs/recursos/articulo 9.jpg') }}" alt="">
-                            </div>
-                            <span>2022, 12 DE MAYO</span>
-                            <h3>Título de artículo</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                            </p>
-                            <a href="#">VER MÁS</a>
-                        </div>--}}
+
                     </div>
-                    <div class="pagination mt-3">
+                    {{--<div class="pagination mt-3">
                         {{ $articulos->onEachSide(2)->links() }}
-                    </div>
-                    {{--<div class="opciones">
+                    </div>--}}
+                    <div class="opciones">
                             <button type="button" class="btn-slider prev">
                                 <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
                             </button>
@@ -166,7 +68,7 @@
                                 <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
                             </button>
 
-                    </div>--}}
+                    </div>
 
 
                 </div>
