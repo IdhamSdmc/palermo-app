@@ -26,11 +26,11 @@
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-            <li class="{{ URL::('admin') }}"><a href="{{ url('/admin') }}"> <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <li class="{{ URL::route('admin') }}"><a href="{{ url('/admin') }}"> <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a></li>
-            <li class="{{ URL::('admin/menu*') }}"><a href="{{ url( '/admin/menu') }}"> <i class="fa fa-bars"></i> <span>Menu</span> </a>
+            <li class="{{ URL::route('admin/menu*') }}"><a href="{{ url( '/admin/menu') }}"> <i class="fa fa-bars"></i> <span>Menu</span> </a>
             </li>
-            <li class="treeview {{ URL::('admin/news*') }}"><a href="#"> <i class="fa fa-th"></i> <span>News</span>
+            <li class="treeview {{ URL::route('admin/news*') }}"><a href="#"> <i class="fa fa-th"></i> <span>News</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/admin/news') }}"><i class="fa fa-calendar"></i> All News</a>
@@ -39,7 +39,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="treeview {{ URL::('admin/page*') }}"><a href="#"> <i class="fa fa-bookmark"></i> <span>Pages</span>
+            <li class="treeview {{ URL::route('admin/page*') }}"><a href="#"> <i class="fa fa-bookmark"></i> <span>Pages</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/admin/page') }}"><i class="fa fa-folder"></i> All Pages</a>
@@ -48,7 +48,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="treeview {{ URL::(['admin/photo-gallery*', 'admin/video*']) }}"><a href="#"> <i class="fa fa-picture-o"></i> <span>Galleries</span>
+            <li class="treeview {{ URL::route(['admin/photo-gallery*', 'admin/video*']) }}"><a href="#"> <i class="fa fa-picture-o"></i> <span>Galleries</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li>
@@ -60,7 +60,7 @@
 
                 </ul>
             </li>
-            <li class="treeview {{ URL::('admin/article*') }}"><a href="#"> <i class="fa fa-book"></i> <span>Articles</span>
+            <li class="treeview {{ URL::route('admin/article*') }}"><a href="#"> <i class="fa fa-book"></i> <span>Articles</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/admin/article') }}"><i class="fa fa-archive"></i> All Articles</a>
@@ -70,7 +70,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="treeview {{ URL::('admin/product*') }}"><a href="#"> <i class="fa fa-star"></i> <span>Productos</span>
+            <li class="treeview {{ URL::route('admin/product*') }}"><a href="#"> <i class="fa fa-star"></i> <span>Productos</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/admin/product') }}"><i class="fa fa-archive"></i> Lista de Productos</a>
@@ -80,14 +80,14 @@
                     </li>
                 </ul>
             </li>
-            <li class="treeview {{ URL::('admin/slider*') }}"><a href="#"> <i class="fa fa-tint"></i> <span>Plugins</span>
+            <li class="treeview {{ URL::route('admin/slider*') }}"><a href="#"> <i class="fa fa-tint"></i> <span>Plugins</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/admin/slider') }}"><i class="fa fa-toggle-up"></i> Sliders</a>
                     </li>
                 </ul>
             </li>
-            <li class="treeview {{ URL::('admin/project*') }}"><a href="#"> <i class="fa fa-gears"></i> <span>Projects</span>
+            <li class="treeview {{ URL::route('admin/project*') }}"><a href="#"> <i class="fa fa-gears"></i> <span>Projects</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/admin/project') }}"><i class="fa fa-gear"></i> All Projects</a>
@@ -97,7 +97,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="treeview {{ URL::('admin/faq*') }}"><a href="#"> <i class="fa fa-question"></i> <span>Faqs</span>
+            <li class="treeview {{ URL::route('admin/faq*') }}"><a href="#"> <i class="fa fa-question"></i> <span>Faqs</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/admin/faq') }}"><i class="fa fa-question-circle"></i> All Faq</a></li>
@@ -106,7 +106,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="treeview {{ URL::(['admin/user*', 'admin/group*']) }}"><a href="#"> <i class="fa fa-user"></i> <span>Users</span>
+            <li class="treeview {{ URL::route(['admin/user*', 'admin/group*']) }}"><a href="#"> <i class="fa fa-user"></i> <span>Users</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li><a href="{{ url('/admin/user') }}"><i class="fa fa-user"></i> All Users</a>
@@ -115,7 +115,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="treeview {{ URL::(['admin/logs*', 'admin/form-post']) }}"><a href="#"> <i class="fa fa-thumb-tack"></i> <span>Records</span>
+            <li class="treeview {{ URL::route(['admin/logs*', 'admin/form-post']) }}"><a href="#"> <i class="fa fa-thumb-tack"></i> <span>Records</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
                     <li><a target="_blank" href="{{ url('/admin/logs') }}"><i class="fa fa-save"></i> Log</a></li>
@@ -124,10 +124,10 @@
                     </li>
                 </ul>
             </li>
-            <li class="{{ URL::('admin/settings*') }}">
+            <li class="{{ URL::route('admin/settings*') }}">
                 <a href="{{ url('/admin/settings') }}"> <i class="fa fa-gear"></i> <span>Settings</span> </a>
             </li>
-            <li class="{{ URL::('admin/logout*') }}">
+            <li class="{{ URL::route('admin/logout*') }}">
                 <a href="{{ url('/admin/logout') }}"> <i class="fa fa-sign-out"></i> <span>Logout</span> </a>
             </li>
         </ul>
