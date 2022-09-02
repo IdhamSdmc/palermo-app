@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="_token" content="{!! csrf_token() !!}" />
-    <title>FullyCMS | Dashboard</title>
+    <title>Palermo | Dashboard</title>
+    <link rel="icon" type="image/png" href="{{asset('assets/imgs/resources/favicon.ico')}}"/>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
     <link href="{!! url('backend/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet" type="text/css"/>
@@ -49,7 +50,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{!! url('backend/js/demo.js') !!}" type="text/javascript"></script>
 
-    <!-- AdminLTE Skins. Choose a skin from the css/skins 
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link href="{!! url('backend/css/skins/_all-skins.min.css') !!}" rel="stylesheet" type="text/css"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -75,7 +76,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                             <img alt="" src="img/flags/us.png">
                             <b class="caret"></b>
-                        </a>  
+                        </a>
                     </li>
 
                     <!-- Notifications: style can be found in dropdown.less -->
@@ -84,7 +85,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <!-- inner menu: contains the actual data -->
-                                
+
                             </li>
                             <li class="footer"><a href="{{ url(getLang() . '/admin/form-post') }}">See All Messages</a></li>
                         </ul>

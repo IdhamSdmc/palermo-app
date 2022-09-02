@@ -40,7 +40,7 @@
                         @foreach($articulos as $item)
                             <div class="articulo">
                                 <div class="image">
-                                    <img src="{{ asset('assets/imgs/recursos/articulo 1.jpg') }}" alt="">
+                                    <img src="{{ $item->path.$item->file_name }}" alt="">
                                 </div>
                                 <span>{{  $item->created_at}}</span>
                                 <h3>{{$item->title}}</h3>
