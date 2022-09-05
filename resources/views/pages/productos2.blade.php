@@ -1,66 +1,70 @@
 @extends('layouts.app2')
 @section('content')
-    <section class="banner"
-        style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position-y: 50%;">
-        <div class="wrapper">
+    <section  class="banner mb-5">
             <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper ">
                     <div class="swiper-slide solution">
 
-                    <div class="banner-container">
-                        <div class="banner-content">
+                        <div class="banner" style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position:top;">
+                            <div class="banner-container wrapper">
+                                <div class="banner-content">
                             <h2 class="animate__animated animate__fadeInUp">LAPTOPS Y PANTALLAS</h2>
                             <div style="max-width: 28rem">
                                 <p>
                                     Equipa tu empresa con los mejores equipos tecnológicos.
                                 </p>
                                 <a href="#productos" class="btn-banner">VER MÁS</a>
-                                <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor"
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                           
+                    </div>
+                    <div class="swiper-slide solution" >
+
+                        <div class="banner" style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position:top;"">
+                            <div class="banner-container wrapper">
+                                <div class="banner-content">
+                            <h2 class="animate__animated animate__fadeInUp">VIDEOCONFERENCIA</h2>
+                            <div style="max-width: 28rem">
+                                <p>
+                                    Equipa tu empresa con los mejores equipos tecnológicos.
+                                </p>
+                                <a href="#productos" class="btn-banner">VER MÁS</a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                           
+                    </div>
+                    <div class="swiper-slide solution" >
+
+                        <div class="banner" style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position:top;"">
+                            <div class="banner-container wrapper">
+                                <div class="banner-content">
+                            <h2 class="animate__animated animate__fadeInUp">IMPRESORAS</h2>
+                            <div style="max-width: 28rem">
+                                <p>
+                                    Equipa tu empresa con los mejores equipos tecnológicos.
+                                </p>
+                                <a href="#productos" class="btn-banner">VER MÁS</a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                           
+                    </div>
+                  
+                </div>
+                <div class="pagination">
+                </div>
+            </div>
+            <div style="max-width: 28rem">
+                <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor"
                                     target="_blank" class="btn-whatsapp">
                                     <img src="{{ asset('assets/imgs/resources/whatsapp.svg') }}" alt="">
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide solution">
-
-                        <div class="banner-container">
-                            <div class="banner-content">
-                                <h2 class="animate__animated animate__fadeInUp">LAPTOPS 1</h2>
-                                <div style="max-width: 28rem">
-                                    <p>
-                                        Equipa tu empresa con los mejores equipos tecnológicos.
-                                    </p>
-                                    <a href="#productos" class="btn-banner">VER MÁS</a>
-                                    <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor"
-                                        target="_blank" class="btn-whatsapp">
-                                        <img src="{{ asset('assets/imgs/resources/whatsapp.svg') }}" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide solution">
-
-                            <div class="banner-container">
-                                <div class="banner-content">
-                                    <h2 class="animate__animated animate__fadeInUp">LAPTOPS2</h2>
-                                    <div style="max-width: 28rem">
-                                        <p>
-                                            Equipa tu empresa con los mejores equipos tecnológicos.
-                                        </p>
-                                        <a href="#productos" class="btn-banner">VER MÁS</a>
-                                        <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor"
-                                            target="_blank" class="btn-whatsapp">
-                                            <img src="{{ asset('assets/imgs/resources/whatsapp.svg') }}" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
                 </div>
-                </div>
-            
-            </div>
-        </div>
     </section>
     <article class="wrapper">
         <section class="section-container" id="productos">
@@ -162,6 +166,6 @@
 @endpush
 @push('js')
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="{{ asset('frontend/js/producto.js') }}"></script>
+    <script src="{{ asset('frontend/js/productos.js') }}"></script>
 
 @endpush

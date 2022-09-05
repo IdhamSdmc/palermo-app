@@ -11,13 +11,16 @@
                         dimensionamiento, implementación hasta la adopción de nuevas tecnologías.
                     </p>
                     <a href="#footer" class="btn-banner">COTIZA AHORA</a>
-                    <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor"
-                        target="_blank" class="btn-whatsapp">
-                        <img src="{{ asset('assets/imgs/resources/whatsapp.svg') }}" alt="">
-                    </a>
+                    
                 </div>
             </div>
         </div>
+        <div style="max-width: 28rem">
+            <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor"
+                                target="_blank" class="btn-whatsapp">
+                                <img src="{{ asset('assets/imgs/resources/whatsapp.svg') }}" alt="">
+                            </a>
+            </div>
     </section>
     <article class="wrapper">
         <section class="section-container" id="nosotros">
