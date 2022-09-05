@@ -29,7 +29,7 @@ class MailController extends Controller
 
         } catch (\Throwable $th) {
             //throw $th;
-            return response()->json([
+            return Response::json([
                 'ok' => false,
                 'msg' => $th->getMessage(),
                 'error' => $th->getTrace()
