@@ -21,19 +21,24 @@ class MailController extends Controller
                 $message->to($data['correo'], $data['correo'])->subject($data['cliente'].' INFORMACION');
             });
 
-
-            return Response::json([
+            $response = json_encode([
                 'ok' => true,
                 'msg' => 'Correo enviado!!!'
-            ], 200);
+            ]);
+            return Response($response);
+            /*return Response::json([
+                'ok' => true,
+                'msg' => 'Correo enviado!!!'
+            ], 200);*/
 
         } catch (\Throwable $th) {
             //throw $th;
-            return Response::json([
+            $error = json_encode([
                 'ok' => false,
                 'msg' => $th->getMessage(),
                 'error' => $th->getTrace()
-            ], 200);
+            ]);
+            return Response($error);
         }
     }
 }

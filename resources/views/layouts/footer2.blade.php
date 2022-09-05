@@ -68,7 +68,12 @@
                 data: $(this).serialize(),
                 dataType: "json",
                 success: function(response){
-                    alert(response['msg']);
+                    if(response['ok']==true){
+                        alert(response['msg']);
+                    }else{
+                        alert("Ocurrio un error vuelva a intentarlo");
+                    }
+
                 },
                 error: function(e){
                     /*alert("Ocurio un error");*/
