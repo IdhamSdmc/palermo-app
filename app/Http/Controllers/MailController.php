@@ -15,7 +15,7 @@ class MailController extends Controller
             $data['cliente'] = $request->cliente;
             $data['empresa'] = $request->empresa;
             $data['telefono'] = $request->telefono;
-            $data['email'] = 'soporte.grupopalermo.pe';
+            $data['email'] = 'soporte@grupopalermo.pe';
             Mail::send('mail.template', $data, function($message) use($data)
             {
                 $message->to($data['email'], $data['email'])->subject($data['cliente'].' INFORMACION');
