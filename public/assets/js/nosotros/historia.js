@@ -14,8 +14,8 @@ let autoPlayDelay = 2000;
     breakpoints: {
         // when window width is >= 320px
         320: {
-            slidesPerView: 3,
-            spaceBetween: 20
+            slidesPerView: 1.5,
+            spaceBetween: 10
         },
         // when window width is >= 640px
         1000: {

@@ -1,12 +1,12 @@
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,
-    grid: {
-        rows: 2
-      },
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        nextEl: "#productos .btn-slider.next",
-        prevEl: "#productos .btn-slider.prev",
+let autoPlayDelay = 2000;
+var timelineContents = new Swiper('.mySwiper', {
+        
+   
+    slidesPerView: 1,
+    autoplay: {
+        delay: autoPlayDelay,
+        disableOnInteraction: false
     },
+  
+    speed:500
 });
