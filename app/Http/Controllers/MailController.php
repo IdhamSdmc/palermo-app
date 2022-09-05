@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Response;
 class MailController extends Controller
 {
     //
@@ -14,13 +15,14 @@ class MailController extends Controller
             $data['cliente'] = $request->cliente;
             $data['empresa'] = $request->empresa;
             $data['telefono'] = $request->telefono;
+            //$data['email'] = 'soporte.grupopalermo.pe';
             Mail::send('mail.template', $data, function($message) use($data)
             {
                 $message->to($data['correo'], $data['correo'])->subject($data['cliente'].' INFORMACION');
             });
 
 
-            return response()->json([
+            return Response::json([
                 'ok' => true,
                 'msg' => 'Correo enviado!!!'
             ], 200);
