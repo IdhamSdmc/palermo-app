@@ -76,7 +76,7 @@
                     <li><a href="{{ url('/admin/product') }}"><i class="fa fa-archive"></i> Lista de Productos</a>
                     </li>
                     <li>
-                        <a href="{{ url('/admin/article/create') }}"><i class="fa fa-plus-square"></i> Agregar Producto</a>
+                        <a href="{{ url('/admin/product/create') }}"><i class="fa fa-plus-square"></i> Agregar Producto</a>
                     </li>
                 </ul>
             </li>
