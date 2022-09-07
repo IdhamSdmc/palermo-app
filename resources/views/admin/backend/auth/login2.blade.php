@@ -28,7 +28,7 @@
 					</span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Correo valido contiene: correo@dominio.com">
-                    <input class="input100" type="text" id="email" name="email">
+                    <input class="input100" type="text" id="email" name="email" value="test@example.com">
                     <span class="focus-input100" data-placeholder="Correo"></span>
                 </div>
 
@@ -36,7 +36,7 @@
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
-                    <input class="input100" type="password" name="password" id="password">
+                    <input class="input100" type="password" name="password" id="password" value="foobar">
                     <span class="focus-input100" data-placeholder="Contraseña"></span>
                 </div>
 

@@ -37,6 +37,7 @@ Route::get('/contactanos', function () {
     return view('pages.contactanos');
 });
 Route::post('mail', [MailController::class, 'sendMail']);
+Route::post('trabajo', [MailController::class, 'trabajo']);
 
 Route::get('/articulos', [ArticleController::class, 'mostrar']);
 

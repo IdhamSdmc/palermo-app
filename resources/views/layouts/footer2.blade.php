@@ -11,8 +11,8 @@
                 <div class="form">
                     <input type="text" name="cliente" placeholder="NOMBRE Y APELLIDO" autocomplete="none">
                     <input type="text" name="empresa" placeholder="EMPRESA" autocomplete="none">
-                    <input type="email" name="correo" placeholder="CORREO" autocomplete="none">
-                    <input type="number" name="telefono" placeholder="TELÉFONO DE CONTACTO" autocomplete="none">
+                    <input type="email" name="correo" placeholder="CORREO" autocomplete="none" required>
+                    <input type="number" name="telefono" placeholder="TELÉFONO DE CONTACTO" required autocomplete="none">
                     <button type="submit" id="btn-enviar">ENVIAR</button>
                     <div class="input-check">
                         <input type="checkbox" class="w-auto" id="check" required>
@@ -67,17 +67,24 @@
                 method: "POST",
                 data: $(this).serialize(),
                 dataType: "json",
+                beforeSend: function (){
+                    $("#btn-enviar").append(`
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    `);
+                },
                 success: function(response){
                     if(response['ok']==true){
                         alert(response['msg']);
+                        $("#btn-enviar").html("ENVIAR");
                     }else{
                         alert("Ocurrio un error vuelva a intentarlo");
+                        $("#btn-enviar").html("ENVIAR");
                     }
-
                 },
                 error: function(e){
                     /*alert("Ocurio un error");*/
                     alert(e);
+                    $("#btn-enviar").html("ENVIAR");
                 }
             });
 

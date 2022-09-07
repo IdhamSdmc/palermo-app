@@ -10,23 +10,24 @@
                             <h2>de la transformación tecnológica</h2>
                             <p>Llena el formulario y conoce las soluciones que tenemos para tu organización.</p>
                         </div>
-                        <form action="#" class="form-contact">
+                        <form id="formulario-C" class="form-contact">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <h2>Contáctanos</h2>
                             <div class="box-form">
-                                <input type="text" placeholder="NOMBRE Y APELLIDO">
+                                <input type="text" name="cliente" placeholder="NOMBRE Y APELLIDO" required>
                             </div>
                             <div class="box-form">
-                                <input type="text" placeholder="EMPRESA">
+                                <input type="text" name="empresa" placeholder="EMPRESA">
                             </div>
                             <div class="box-form">
-                                <input type="text" placeholder="CORREO">
+                                <input type="email" name="correo" placeholder="CORREO" required>
                             </div>
                             <div class="box-form">
-                                <input type="text" placeholder="TELÉFONO DE CONTACTO">
+                                <input type="number" name="telefono" placeholder="TELÉFONO DE CONTACTO" required>
                             </div>
-                            <button type="submit">ENVIAR</button>
+                            <button type="submit" id="btn-c">ENVIAR</button>
                             <div class="box-form box-check">
-                                <input class="term" type="checkbox" name="term_cond" id="term_cond">
+                                <input class="term" type="checkbox" name="term_cond" id="term_cond" required>
                                 <label class="term" for="term_cond">Acepto términos y condiciones</label>
                             </div>
                         </form>
@@ -41,18 +42,19 @@
                 <div class="content">
                     <div class="form-work">
                         <h2>TRABAJA CON NOSOTROS</h2>
-                        <form action="#">
+                        <form id="formulario-T">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="box-form">
-                                <input type="text" placeholder="NOMBRE Y APELLIDO">
+                                <input type="text" required placeholder="NOMBRE Y APELLIDO">
                             </div>
                             <div class="box-form">
                                 <input type="text" placeholder="EMPRESA">
                             </div>
                             <div class="box-form">
-                                <input type="text" placeholder="CORREO">
+                                <input type="text"  required placeholder="CORREO">
                             </div>
                             <div class="box-form">
-                                <input type="text" placeholder="TELÉFONO DE CONTACTO">
+                                <input type="text"  required placeholder="TELÉFONO DE CONTACTO">
                             </div>
                             <input type="file" accept=".pdf" id="file" name="file" class="d-none">
                             <div class="form-buttons">
@@ -60,10 +62,10 @@
                                     <i class="bi bi-arrow-up"></i>
                                     SUBIR CURRICULUM VITAE
                                 </label>
-                                <button type="submit">ENVIAR</button>
+                                <button type="submit" id="btn-enviar">ENVIAR</button>
                             </div>
                             <div class="box-form box-check">
-                                <input class="term" type="checkbox" name="term_cond" id="term_cond">
+                                <input class="term" type="checkbox" name="term_cond" id="term_cond" required>
                                 <label class="term" for="term_cond">Acepto términos y condiciones</label>
                             </div>
                         </form>
@@ -72,77 +74,76 @@
             </div>
         </section>
     </article>
-    {{-- <section class="form-contacto">
-        <div class="container">
-            <div class="row">
-                <div class="col" style="margin-top:100px" >
-                    <h2>A solo un clic<br>
-                        de la transformación<br>
-                        tecnológica</h2>
-                    <p>Llena el formulario y conoce las soluciones<br>
-                        que tenemos para tu organización.</p>
-                </div>
-                <div class="col" style="margin-top:50px" >
-                    <h2 class="titulo">Contáctanos</h2>
-                    <form action="#">
-                        <div class="wrap-input3 validate-input" data-validate="Name is required">
-                            <input class="input3" type="text" name="name" placeholder="NOMBRE Y APELLIDO">
-                            <span class="focus-input3" data-placeholder="NAME"></span>
-                        </div>
-                        <div class="wrap-input3 validate-input" data-validate="empresa is required">
-                            <input class="input3" type="text" name="empresa" placeholder="EMPRESA">
-                            <span class="focus-input3" data-placeholder="NAME"></span>
-                        </div>
-                        <div class="wrap-input3 validate-input" data-validate="Correo is required">
-                            <input class="input3" type="email" name="name" placeholder="CORREO">
-                            <span class="focus-input3" data-placeholder="CORREO"></span>
-                        </div>
-                        <div class="wrap-input2 validate-input" data-validate="Teléfono is required">
-                            <input class="input2" type="text" name="telefono_contacto"
-                                placeholder="TELÉFONO DE CONTACTO">
-                            <span class="focus-input2" data-placeholder="TELEFONO"></span>
-                        </div>
-                        <button class="btn-enviar">ENVIAR</button>
-                        <br><br>
-                        <input class="term" type="checkbox" name="term_cond" id="term_cond">
-                        <label class="term" for="term_cond">Acepto términos y condiciones</label>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="laboral" class="form-trabajo">
-        <div class="container">
-            <h2>TRABAJA CON NOSOTROS</h2>
-            <form action="#" class="formulario">
-                <div class="wrap-input4 validate-input" data-validate="Name is required">
-                    <input class="input4" type="text" name="name" placeholder="NOMBRE Y APELLIDO">
-                    <span class="focus-input4" data-placeholder="NAME"></span>
-                </div>
-                <div class="wrap-input4 validate-input" data-validate="empresa is required">
-                    <input class="input4" type="text" name="area" placeholder="AREA DONDE TRABAJAR">
-                    <span class="focus-input4" data-placeholder="NAME"></span>
-                </div>
-                <div class="wrap-input4 validate-input" data-validate="Correo is required">
-                    <input class="input4" type="email" name="correo" placeholder="CORREO">
-                    <span class="focus-input4" data-placeholder="CORREO"></span>
-                </div>
-                <div class="wrap-input4 validate-input" data-validate="Teléfono is required">
-                    <input class="input4" type="text" name="numero_contacto" placeholder="NÚMERO DE CONTACTO">
-                    <span class="focus-input4" data-placeholder="NÚMERO DE CONTACTO"></span>
-                </div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button class="btn-curiculum">SUBIR CURRICULUM  VITAE</button>
-                   
-                    <button class="btn-enviar">ENVIAR</button>
 
-                </div>
-                <label><input class="term" type="checkbox" name="term_cond" id="term_cond"> Acepto términos y condiciones</label>
-            
-            </form>
-        </div>
-    </section> --}}
 @endsection
+@push('js')
+    <script !src="">
+        $(document).ready(function () {
+            $("#formulario-C").on("submit", function (e){
+                e.preventDefault();
+
+                $.ajax({
+                    url: "/mail",
+                    method: "POST",
+                    data: $(this).serialize(),
+                    dataType: "json",
+                    beforeSend: function (){
+                        $("#btn-c").append(`
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    `);
+                    },
+                    success: function(response){
+                        if(response['ok']==true){
+                            alert(response['msg']);
+                            $("#btn-c").html("ENVIAR");
+                        }else{
+                            alert("Ocurrio un error vuelva a intentarlo");
+                            $("#btn-c").html("ENVIAR");
+                        }
+                    },
+                    error: function(e){
+                        /*alert("Ocurio un error");*/
+                        alert(e);
+                        $("#btn-c").html("ENVIAR");
+                    }
+                });
+
+            });
+
+            //Trabajo
+            $("#formulario-T").on("submit", function (e){
+                e.preventDefault();
+
+                $.ajax({
+                    url: "/trabajo",
+                    method: "POST",
+                    data: $(this).serialize(),
+                    dataType: "json",
+                    beforeSend: function (){
+                        $("#btn-c").append(`
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    `);
+                    },
+                    success: function(response){
+                        if(response['ok']==true){
+                            alert(response['msg']);
+                            $("#btn-c").html("ENVIAR");
+                        }else{
+                            alert("Ocurrio un error vuelva a intentarlo");
+                            $("#btn-c").html("ENVIAR");
+                        }
+                    },
+                    error: function(e){
+                        /*alert("Ocurio un error");*/
+                        alert(e['msg']);
+                        $("#btn-c").html("ENVIAR");
+                    }
+                });
+
+            });
+        });
+    </script>
+@endpush
 @push('css')
     <link rel="stylesheet" href="{{ asset('frontend/css/contactanos.css') }}">
 @endpush
