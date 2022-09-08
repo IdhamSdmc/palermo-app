@@ -43,7 +43,7 @@
                             </div>
                             <div class="enlaces">
                                 <a href="/terminos-condiciones" target="_blank">Terminos y condiciones</a>
-                                <a href="/politicas-privacidad" target="_blank">Política de cookies</a>
+                                <a href="/politicas-cookies" target="_blank">Política de cookies</a>
                             </div>
                         </div>
                     </div>
