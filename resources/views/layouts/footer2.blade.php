@@ -39,7 +39,7 @@
                             <div class="enlaces">
                                 <a href="/contactanos/#work" target="_blank">Oportunidad Laboral</a>
                                 <a href="">contacto@grupopalermo.pe</a>
-                                <a href="">(01) 620 6025</a>
+                                <a href="tel:016206025">(01) 620 6025</a>
                             </div>
                             <div class="enlaces">
                                 <a href="/terminos-condiciones" target="_blank">Terminos y condiciones</a>
