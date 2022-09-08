@@ -47,7 +47,7 @@ class CategoryRepository extends RepositoryAbstract implements CategoryInterface
      */
     public function all()
     {
-        return $this->category->where('lang', $this->getLang())->get();
+        return $this->category->get();
     }
 
     /**
@@ -67,7 +67,7 @@ class CategoryRepository extends RepositoryAbstract implements CategoryInterface
 
         $query = $this->category->orderBy('title');
 
-        $categories = $query->skip($limit * ($page - 1))->take($limit)->where('lang', $this->getLang())->get();
+        $categories = $query->skip($limit * ($page - 1))->take($limit)->get();
 
         $result->totalItems = $this->totalCategories();
         $result->items = $categories->all();
@@ -80,7 +80,7 @@ class CategoryRepository extends RepositoryAbstract implements CategoryInterface
      */
     public function lists()
     {
-        return $this->category->where('lang', $this->getLang())->pluck('title', 'id');
+        return $this->category->pluck('title', 'id');
     }
 
     /**
@@ -100,7 +100,7 @@ class CategoryRepository extends RepositoryAbstract implements CategoryInterface
      */
     public function getArticlesBySlug($slug)
     {
-        return $this->category->where('slug', $slug)->where('lang', $this->getLang())->first()->articles()->paginate($this->perPage);
+        return $this->category->where('slug', $slug)->first()->articles()->paginate($this->perPage);
     }
 
     /**
@@ -113,7 +113,7 @@ class CategoryRepository extends RepositoryAbstract implements CategoryInterface
     public function create($attributes)
     {
         if ($this->isValid($attributes)) {
-            $this->category->lang = $this->getLang();
+
             $this->category->fill($attributes)->save();
 
             return true;
@@ -163,6 +163,6 @@ class CategoryRepository extends RepositoryAbstract implements CategoryInterface
      */
     protected function totalCategories()
     {
-        return $this->category->where('lang', $this->getLang())->count();
+        return $this->category->count();
     }
 }

@@ -45,84 +45,96 @@ Route::post('mail', [MailController::class, 'sendMail']);
 Route::post('trabajo', [MailController::class, 'trabajo']);
 
 Route::get('/articulos', [ArticleController::class, 'mostrar']);
-
-Route::get('/admin/login', array(
-    'as' => 'admin.login2',
-    function () {
-
-        return view('/admin/backend/auth/login');
-    }, ));
-    Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show',
-    'uses' => 'PhotoGalleryController@show', ));
-    Route::group(['prefix' => 'admin', 'namespace'=>'Admin'], function () {
-    Route::get('login', 'AuthController@getLogin')->name('login');
-    Route::get('signin', 'AuthController@getSignin')->name('signin');
-    Route::get('logout', array('as' => 'admin.logout', 'uses' => 'AuthController@getLogout'));
-    Route::post('signin', array('as' => 'admin.login.post', 'uses' => 'AuthController@postLogin'));
-
-    Route::post('forgot-password', 'AuthController@postForgotPassword')->name('forgot-password');
+Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show',
+'uses' => 'PhotoGalleryController@show', ));
+        Route::group(['prefix' => 'admin', 'namespace'=>'Admin'], function () {
+        Route::get('login', 'AuthController@getSignin')->name('login');
+        Route::get('signin', 'AuthController@getSignin')->name('signin');
+        Route::post('signin', 'AuthController@postSignin')->name('postSignin');
+        Route::post('signup', 'AuthController@postSignup')->name('admin.signup');
+        Route::post('forgot-password', 'AuthController@postForgotPassword')->name('forgot-password');
+        Route::get('login2', function () {
+            return view('admin/login2');
+        });
+    
+    
+        # Register2
+        Route::get('register2', function () {
+            return view('admin/register2');
+        });
+        Route::post('register2', 'AuthController@postRegister2')->name('register2');
+    
+        # Forgot Password Confirmation
+        Route::get('forgot-password/{userId}/{passwordResetCode}', 'AuthController@getForgotPasswordConfirm')->name('forgot-password-confirm');
+        Route::post('forgot-password/{userId}/{passwordResetCode}', 'AuthController@getForgotPasswordConfirm');
+    
+        # Logout
+        Route::get('logout', 'AuthController@getLogout')->name('logout');
+    
+        # Account Activation
+        Route::get('activate/{userId}/{activationCode}', 'AuthController@getActivate')->name('activate');
 
     });
-    Route::group(array('prefix' => '/admin', 'namespace' => 'Admin', 'middleware' => ['before', 'sentinel.auth', 'sentinel.permission'] ), function ()  {
-        Route::get('/', array('as' => 'admin.dashboard', 'uses' => 'DashboardController@index'));
-        Route::resource('user', 'UserController');
+    Route::group(['prefix' => 'admin', 'middleware' => 'admin', 'as' => 'admin.'], function ()  {
+        Route::get('/','Admin\DashboardController@index') ->name('dashboard');
+        Route::resource('user', 'Admin\UserController');
+        Route::get('user/{id}/delete',  'Admin\UserController@confirmDestroy', )->name('user.delete')->where('id', '[0-9]+');
+        Route::get('user/{id}/edit', 'Admin\UserController@edit')->name('user.edit')->where('id', '[0-9]+');
+        Route::get('user/{id}/show','Admin\UserController@show')->name('user.show')->where('id', '[0-9]+');
 
-        Route::get('user/{id}/delete', array('as' => 'admin.user.delete', 'uses' => 'UserController@confirmDestroy', ))->where('id', '[0-9]+');
-        Route::get('user/{id}/edit', array('as' => 'admin.user.edit', 'uses' => 'UserController@edit', ))->where('id', '[0-9]+');
-        Route::get('user/{id}/show', array('as' => 'admin.user.show', 'uses' => 'UserController@show', ))->where('id', '[0-9]+');
-
-        Route::resource('role', 'RoleController');
+        Route::resource('user', 'Admin\RoleController');
         Route::get('role/{id}/delete', array('as' => 'admin.role.delete', 'uses' => 'RoleController@confirmDestroy', ))->where('id', '[0-9]+');
         Route::get('role/create', array('as' => 'admin.role.create', 'uses' => 'RoleController@create', ))->where('id', '[0-9]+');
         Route::get('role/{id}/edit', array('as' => 'admin.role.edit', 'uses' => 'RoleController@edit', ))->where('id', '[0-9]+');
         Route::get('/role', array('as' => 'admin.role.index', 'uses' => 'RoleController@index'));
-
         Route::get('role/{id}/show', array('as' => 'admin.role.show', 'uses' => 'RoleController@show', ))->where('id', '[0-9]+');
 
         Route::patch('role/{id}/update', array('as' => 'admin.role.update', 'uses' => 'RoleController@update', ))->where('id', '[0-9]+');
 
-        Route::resource('photo-gallery', 'PhotoGalleryController');
-        Route::get('photo-gallery/create', array('as' => 'admin.photo-gallery.create', 'uses' => 'PhotoGalleryController@create', ))->where('id', '[0-9]+');
-        Route::get('photo-gallery/{id}/delete', array('as' => 'admin.photo-gallery.delete', 'uses' => 'PhotoGalleryController@confirmDestroy', ))->where('id', '[0-9]+');
-        Route::get('photo-gallery/{id}/edit', array('as' => 'admin.photo-gallery.edit', 'uses' => 'PhotoGalleryController@edit', ))->where('id', '[0-9]+');
-        Route::get('photo-gallery/{id}/show', array('as' => 'admin.photo-gallery.show', 'uses' => 'PhotoGalleryController@show', ))->where('id', '[0-9]+');
-        Route::patch('photo-gallery/{id}/update', array('as' => 'admin.photo-gallery.update', 'uses' => 'PhotoGalleryController@update', ))->where('id', '[0-9]+');
+        Route::resource('photo-gallery', 'Admin\PhotoGalleryController');
+        Route::get('photo-gallery/create','Admin\PhotoGalleryController@create')->name('photo-gallery.create')->where('id', '[0-9]+');
+        Route::get('photo-gallery/{id}/delete',  'Admin\PhotoGalleryController@confirmDestroy')->name('photo-gallery.delete')->where('id', '[0-9]+');
+        Route::get('photo-gallery/{id}/edit',  'Admin\PhotoGalleryController@edit')->name('photo-gallery.edit')->where('id', '[0-9]+');
+        Route::get('photo-gallery/{id}/show', 'Admin\PhotoGalleryController@show')->name('photo-gallery.show')->where('id', '[0-9]+');
+        Route::patch('photo-gallery/{id}/update',  'Admin\PhotoGalleryController@update',)->name('photo-gallery.update')->where('id', '[0-9]+');
      // menu-managment
-        Route::resource('menu', 'MenuController');
-        Route::get('menu/create', array('as' => 'admin.menu.create', 'uses' => 'MenuController@create', ))->where('id', '[0-9]+');
-        Route::post('menu/save', array('as' => 'admin.menu.save', 'uses' => 'MenuController@save'));
-        Route::get('menu/{id}/delete', array('as'   => 'admin.menu.delete', 'uses' => 'MenuController@confirmDestroy'))->where('id', '[0-9]+');
-        Route::post('menu/{id}/toggle-publish', array('as'   => 'admin.menu.toggle-publish', 'uses' => 'MenuController@togglePublish'))->where('id', '[0-9]+');
-        Route::resource('article', 'ArticleController');
+        Route::resource('menu', 'Admin\MenuController');
+        Route::get('menu/create', 'Admin\MenuController@create')->name('menu.create')->where('id', '[0-9]+');
+        Route::post('menu/save', 'Admin\MenuController@save')->name('menu.save');
+        Route::get('menu/{id}/delete', 'Admin\MenuController@confirmDestroy')->name('menu.delete')->where('id', '[0-9]+');
+        Route::post('menu/{id}/toggle-publish','Admin\MenuController@togglePublish')->name('menu.toggle-publish')->where('id', '[0-9]+');
+        Route::resource('article', 'Admin\ArticleController');
 
-        Route::get('article/create', array('as' => 'admin.article.create', 'uses' => 'ArticleController@create', ));
-        Route::get('article/{id}/delete', array('as' => 'admin.article.delete', 'uses' => 'ArticleController@destroy', ));
-        Route::get('article/{id}/edit', array('as' => 'admin.article.edit', 'uses' => 'ArticleController@edit', ));
-        Route::get('article/{id}/show', array('as' => 'admin.article.show', 'uses' => 'ArticleController@show', ));
-        Route::patch('article/{id}/update', array('as' => 'admin.article.update', 'uses' => 'ArticleController@update', ))->where('id', '[0-9]+');
-        Route::get('/article', array('as' => 'dashboard.article.index', 'uses' => 'ArticleController@index'));
-        Route::get('/article/{slug}', array('as' => 'dashboard.article.show', 'uses' => 'ArticleController@show'));
-        Route::resource('category', 'CategoryController', array('before' => 'hasAccess:category'));
-        Route::get('category/create', array('as' => 'admin.category.create', 'uses' => 'CategoryController@create', ))->where('id', '[0-9]+');
-        Route::get('category/{id}/delete', array('as' => 'admin.category.delete', 'uses' => 'CategoryController@confirmDestroy', ))->where('id', '[0-9]+');
+        Route::get('article/create','Admin\ArticleController@create')->name('article.create');
+        Route::get('article/{id}/delete', 'Admin\ArticleController@destroy')->name('article.delete');
+        Route::get('article/{id}/edit', 'Admin\ArticleController@edit')->name('article.edit');
+        Route::get('article/{id}/show', 'Admin\ArticleController@show')->name('article.show');
+        Route::patch('article/{id}/update',  'Admin\ArticleController@update')->name('article.update')->where('id', '[0-9]+');
+        Route::get('/article', 'Admin\ArticleController@index')->name('article.index');
+        Route::get('/article/{slug}', 'Admin\ArticleController@show')->name('article.show');
+
+
+        Route::resource('category', 'Admin\CategoryController', array('before' => 'hasAccess:category'));
+        Route::get('category/create', 'Admin\CategoryController@create')->name('category.create')->where('id', '[0-9]+');
+        Route::get('category/{id}/delete', 'Admin\CategoryController@confirmDestroy')->name('category.delete')->where('id', '[0-9]+');
 
         Route::get('/slider', array('as' => 'admin.slider', function () {
                 return View::make('backend/slider/index');
         }, ));
 
                                                 // slider
-        Route::resource('slider', 'SliderController');
-        Route::get('slider/{id}/delete', array('as' => 'admin.slider.delete', 'uses' => 'SliderController@confirmDestroy', ))->where('id', '[0-9]+');
-        Route::get('slider/create', array('as' => 'admin.slider.create', 'uses' => 'SliderController@create', ))->where('id', '[0-9]+');
+        Route::resource('slider', 'Admin\SliderController');
+        Route::get('slider/{id}/delete',  'SAdmin\liderController@confirmDestroy')->name('slider.delete')->where('id', '[0-9]+');
+        Route::get('slider/create',  'Admin\SliderController@create')->name('slider.create')->where('id', '[0-9]+');
 
         //Product Routes
-        Route::resource('product', 'ProductController');
+        Route::resource('product', 'Admin\ProductController');
 
-        Route::get('product/create', array('as' => 'admin.product.create', 'uses' => 'ProductController@create', ));
-        Route::get('product/{id}/delete', array('as' => 'admin.product.delete', 'uses' => 'ProductController@destroy', ));
-        Route::get('product/{id}/edit', array('as' => 'admin.product.edit', 'uses' => 'ProductController@edit', ));
-        Route::get('product/{id}/show', array('as' => 'admin.product.show', 'uses' => 'ProductController@show', ));
-        Route::patch('product/{id}/update', array('as' => 'admin.product.update', 'uses' => 'ProductController@update', ))->where('id', '[0-9]+');
-        Route::get('/product', array('as' => 'dashboard.product.index', 'uses' => 'ProductController@index'));
+        Route::get('product/create', 'Admin\ProductController@create')->name('product.create');
+        Route::get('product/{id}/delete','Admin\ProductController@destroy')->name('product.delete');
+        Route::get('product/{id}/edit',  'Admin\ProductController@edit')->name('product.edit');
+        Route::get('product/{id}/show', 'Admin\ProductController@show')->name('product.show');
+        Route::patch('product/{id}/update',  'Admin\ProductController@update')->name('product.update')->where('id', '[0-9]+');
+        Route::get('/product',  'Admin\ProductController@index')->name('product.index');
 
     });

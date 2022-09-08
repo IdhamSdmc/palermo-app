@@ -19,7 +19,7 @@ class Menu extends Model
 
     public function getMaxOrder()
     {
-        $menu = $this->where('lang', getLang())->orderBy('order', 'desc')->first();
+        $menu = $this->orderBy('order', 'desc')->first();
         if (isset($menu)) {
             return $menu->order;
         }
@@ -88,7 +88,7 @@ class Menu extends Model
 
     public function hasChildItems($id)
     {
-        $count = $this->where('parent_id', $id)->where('lang', getLang())->where('is_published', 1)->get()->count();
+        $count = $this->where('parent_id', $id)->where('is_published', 1)->get()->count();
         if ($count === 0) {
             return false;
         }
@@ -156,7 +156,7 @@ class Menu extends Model
                 break;
         }
 
-        $url = '/'.getLang().'/'.ltrim($url, '/');
+        $url = '/'.ltrim($url, '/');
 
         return $url;
     }

@@ -14,10 +14,7 @@ abstract class RepositoryAbstract extends AbstractValidator
      *
      * @return mixed
      */
-    protected function getLang()
-    {
-        return getLang();
-    }
+    
 
     /**
      * @param $string

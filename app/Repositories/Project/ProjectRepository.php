@@ -79,7 +79,7 @@ class ProjectRepository extends RepositoryAbstract implements ProjectInterface, 
      */
     public function all()
     {
-        return $this->project->where('lang', $this->getLang())->get();
+        return $this->project->get();
     }
 
     /**
@@ -109,7 +109,7 @@ class ProjectRepository extends RepositoryAbstract implements ProjectInterface, 
         $result->totalItems = 0;
         $result->items = array();
 
-        $query = $this->project->orderBy('created_at', 'DESC')->where('lang', $this->getLang());
+        $query = $this->project->orderBy('created_at', 'DESC');
 
         $projects = $query->skip($limit * ($page - 1))
             ->take($limit)
@@ -176,7 +176,6 @@ class ProjectRepository extends RepositoryAbstract implements ProjectInterface, 
             }
 
             //--------------------------------------------------------
-            $this->project->lang = $this->getLang();
             $this->project->fill($attributes)->save();
             $this->project->resluggify();
 
@@ -264,6 +263,6 @@ class ProjectRepository extends RepositoryAbstract implements ProjectInterface, 
      */
     protected function totalProjects()
     {
-        return $this->project->where('lang', $this->getLang())->count();
+        return $this->project->count();
     }
 }

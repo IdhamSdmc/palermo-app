@@ -70,7 +70,7 @@ class NewsRepository extends RepositoryAbstract implements NewsInterface, Crudab
     public function all()
     {
         return $this->news->orderBy('created_at', 'DESC')
-            ->where('is_published', 1)->where('lang', $this->getLang())
+            ->where('is_published', 1)
             ->get();
     }
 
@@ -79,7 +79,7 @@ class NewsRepository extends RepositoryAbstract implements NewsInterface, Crudab
      */
     public function lists()
     {
-        return $this->news->get()->where('lang', $this->getLang())->lists('title', 'id');
+        return $this->news->get()->lists('title', 'id');
     }
 
     /*
@@ -112,7 +112,7 @@ class NewsRepository extends RepositoryAbstract implements NewsInterface, Crudab
         $result->totalItems = 0;
         $result->items = array();
 
-        $query = $this->news->orderBy('created_at', 'DESC')->where('lang', $this->getLang());
+        $query = $this->news->orderBy('created_at', 'DESC');
 
         if (!$all) {
             $query->where('is_published', 1);
@@ -191,7 +191,6 @@ class NewsRepository extends RepositoryAbstract implements NewsInterface, Crudab
 
             //--------------------------------------------------------
 
-            $this->news->lang = $this->getLang();
             $this->news->fill($attributes)->save();
 
             return true;
@@ -287,10 +286,10 @@ class NewsRepository extends RepositoryAbstract implements NewsInterface, Crudab
     protected function totalNews($all = false)
     {
         if (!$all) {
-            return $this->news->where('is_published', 1)->where('lang', $this->getLang())->count();
+            return $this->news->where('is_published', 1)->count();
         }
 
-        return $this->news->where('lang', $this->getLang())->count();
+        return $this->news->count();
     }
 
     /**
@@ -300,6 +299,6 @@ class NewsRepository extends RepositoryAbstract implements NewsInterface, Crudab
      */
     public function getLastNews($limit)
     {
-        return $this->news->orderBy('created_at', 'desc')->where('lang', $this->getLang())->take($limit)->offset(0)->get();
+        return $this->news->orderBy('created_at', 'desc')->take($limit)->offset(0)->get();
     }
 }

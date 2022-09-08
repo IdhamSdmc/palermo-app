@@ -5,11 +5,11 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{!! gravatarUrl(Sentinel::getUser()->email) !!}" class="img-circle" alt="User Image" />
+                <img src="{!! gravatarUrl(Auth::user()->email) !!}" class="img-circle" alt="User Image" />
 
             </div>
             <div class="pull-left info">
-                <p>{{ Sentinel::getUser()->first_name . ' ' . Sentinel::getUser()->last_name }}</p>
+                <p>{{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}</p>
 
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -30,15 +30,7 @@
                 </a></li>
             <li><a href="{{ url( '/admin/menu') }}"> <i class="fa fa-bars"></i> <span>Menu</span> </a>
             </li>
-            <li class="treeview"><a href="#"> <i class="fa fa-th"></i> <span>News</span>
-                    <i class="fa fa-angle-left pull-right"></i> </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ url('/admin/news') }}"><i class="fa fa-calendar"></i> All News</a>
-                    </li>
-                    <li><a href="{{ url('/admin/news/create') }}"><i class="fa fa-plus-square"></i> Add News</a>
-                    </li>
-                </ul>
-            </li>
+           
             <li class="treeview"><a href="#"> <i class="fa fa-bookmark"></i> <span>Pages</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
@@ -48,25 +40,14 @@
                     </li>
                 </ul>
             </li>
-            <li class="treeview"><a href="#"> <i class="fa fa-picture-o"></i> <span>Galleries</span>
+            
+            <li class="treeview"><a href="#"> <i class="fa fa-book"></i> <span>Blog</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
-                    <li>
-                        <a href="{{ url('/admin/photo-gallery') }}"><i class="fa fa-camera"></i> Photo Galleries</a>
+                    <li><a href="{{ url('/admin/article') }}"><i class="fa fa-archive"></i>Articulos</a>
                     </li>
                     <li>
-                        <a href="{{ url('/admin/video') }}"><i class="fa fa-play-circle-o"></i> Video Galleries</a>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="treeview"><a href="#"> <i class="fa fa-book"></i> <span>Articles</span>
-                    <i class="fa fa-angle-left pull-right"></i> </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ url('/admin/article') }}"><i class="fa fa-archive"></i> All Articles</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/admin/article/create') }}"><i class="fa fa-plus-square"></i> Add Article</a>
+                        <a href="{{ url('/admin/article/create') }}"><i class="fa fa-plus-square"></i> Agregar Articulo</a>
                     </li>
                 </ul>
             </li>
@@ -87,16 +68,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="treeview"><a href="#"> <i class="fa fa-gears"></i> <span>Projects</span>
-                    <i class="fa fa-angle-left pull-right"></i> </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ url('/admin/project') }}"><i class="fa fa-gear"></i> All Projects</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('/admin/project/create') }}"><i class="fa fa-plus-square"></i> Add Project</a>
-                    </li>
-                </ul>
-            </li>
+            
             <li class="treeview"><a href="#"> <i class="fa fa-question"></i> <span>Faqs</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">

@@ -38,7 +38,7 @@ class CacheDecorator extends AbstractSliderDecorator
      */
     public function all()
     {
-        $key = md5(getLang().$this->cacheKey.'all.sliders');
+        $key = md5($this->cacheKey.'all.sliders');
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);

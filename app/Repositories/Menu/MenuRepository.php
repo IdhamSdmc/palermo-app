@@ -30,7 +30,7 @@ class MenuRepository extends RepositoryAbstract implements MenuInterface
      */
     public function all()
     {
-        return $this->menu->where('is_published', 1)->where('lang', $this->getLang())->orderBy('order', 'asc')->get();
+        return $this->menu->where('is_published', 1)->orderBy('order', 'asc')->get();
     }
 
     /**
@@ -74,7 +74,7 @@ class MenuRepository extends RepositoryAbstract implements MenuInterface
      */
     public function hasChildItems($id)
     {
-        $count = $this->menu->where('parent_id', $id)->where('is_published', 1)->where('lang', $this->getLang())->get()->count();
+        $count = $this->menu->where('parent_id', $id)->where('is_published', 1)->get()->count();
         if ($count === 0) {
             return false;
         }

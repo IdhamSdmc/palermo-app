@@ -16,7 +16,6 @@ class BaseModel extends Model
         return $query->where(function ($query) use ($search) {
 
             $query->where('title', 'LIKE', "%$search%")
-                    ->where('lang', getLang())
                     ->orWhere('content', 'LIKE', "%$search%");
         });
     }

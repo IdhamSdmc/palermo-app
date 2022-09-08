@@ -40,7 +40,7 @@ class CacheDecorator extends AbstractTagDecorator
      */
     public function find($id)
     {
-        $key = md5(getLang().$this->cacheKey.'.id.'.$id);
+        $key = md5($this->cacheKey.'.id.'.$id);
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
@@ -58,7 +58,7 @@ class CacheDecorator extends AbstractTagDecorator
      */
     public function all()
     {
-        $key = md5(getLang().$this->cacheKey.'.all.tags');
+        $key = md5($this->cacheKey.'.all.tags');
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
@@ -80,7 +80,7 @@ class CacheDecorator extends AbstractTagDecorator
     public function paginate($page = 1, $limit = 10, $all = false)
     {
         $allkey = ($all) ? '.all' : '';
-        $key = md5(getLang().$this->cacheKey.'.page.'.$page.'.'.$limit.$allkey);
+        $key = md5($this->cacheKey.'.page.'.$page.'.'.$limit.$allkey);
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
@@ -100,7 +100,7 @@ class CacheDecorator extends AbstractTagDecorator
      */
     public function getArticlesBySlug($slug)
     {
-        $key = md5(getLang().$this->cacheKey.'.all.tags.slug');
+        $key = md5($this->cacheKey.'.all.tags.slug');
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);

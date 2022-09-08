@@ -96,7 +96,7 @@
                                             </li>
                                             <li class="divider"></li>
                                             <li>
-                                                <a target="_blank" href="{!! URL::route('dashboard.article.show', ['slug' => $article->slug]) !!}">
+                                                <a target="_blank" href="{!! URL::route('admin.article.show', ['slug' => $article->slug]) !!}">
                                                     <span class="glyphicon glyphicon-eye-open"></span>&nbsp;View On Site
                                                 </a>
                                             </li>

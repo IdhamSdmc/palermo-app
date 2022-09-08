@@ -86,7 +86,7 @@ class VideoRepository extends RepositoryAbstract implements VideoInterface, Crud
         $result->totalItems = 0;
         $result->items = array();
 
-        $query = $this->video->orderBy('created_at', 'DESC')->where('lang', $this->getLang());
+        $query = $this->video->orderBy('created_at', 'DESC');
 
         $videos = $query->skip($limit * ($page - 1))
             ->take($limit)
@@ -129,7 +129,6 @@ class VideoRepository extends RepositoryAbstract implements VideoInterface, Crud
     public function create($attributes)
     {
         if ($this->isValid($attributes)) {
-            $this->video->lang = $this->getLang();
             $this->video->fill($attributes)->save();
             $this->video->resluggify();
 
@@ -179,7 +178,7 @@ class VideoRepository extends RepositoryAbstract implements VideoInterface, Crud
      */
     protected function totalVideos()
     {
-        return $this->video->where('lang', $this->getLang())->count();
+        return $this->video->count();
     }
 
     public function getDetails($type, $id)

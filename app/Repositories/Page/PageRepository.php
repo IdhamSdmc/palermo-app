@@ -48,7 +48,7 @@ class PageRepository extends RepositoryAbstract implements PageInterface, Crudab
      */
     public function all()
     {
-        return $this->page->where('lang', $this->getLang())->get();
+        return $this->page->get();
     }
 
     /**
@@ -70,7 +70,7 @@ class PageRepository extends RepositoryAbstract implements PageInterface, Crudab
      */
     public function lists()
     {
-        return $this->page->where('lang', $this->getLang())->pluck('title', 'id');
+        return $this->page->pluck('title', 'id');
     }
 
     /**
@@ -90,7 +90,7 @@ class PageRepository extends RepositoryAbstract implements PageInterface, Crudab
         $result->totalItems = 0;
         $result->items = array();
 
-        $query = $this->page->orderBy('created_at', 'DESC')->where('lang', $this->getLang());
+        $query = $this->page->orderBy('created_at', 'DESC');
 
         if (!$all) {
             $query->where('is_published', 1);
@@ -126,7 +126,6 @@ class PageRepository extends RepositoryAbstract implements PageInterface, Crudab
         $attributes['is_published'] = isset($attributes['is_published']) ? true : false;
 
         if ($this->isValid($attributes)) {
-            $this->page->lang = $this->getLang();
             $this->page->fill($attributes)->save();
 
             return true;
@@ -193,9 +192,9 @@ class PageRepository extends RepositoryAbstract implements PageInterface, Crudab
     protected function totalPages($all = false)
     {
         if (!$all) {
-            return $this->page->where('is_published', 1)->where('lang', $this->getLang())->count();
+            return $this->page->where('is_published', 1)->count();
         }
 
-        return $this->page->where('lang', $this->getLang())->count();
+        return $this->page->count();
     }
 }

@@ -48,7 +48,7 @@ class FaqRepository extends RepositoryAbstract implements FaqInterface, Crudable
      */
     public function all()
     {
-        return $this->faq->where('lang', $this->getLang())->get();
+        return $this->faq->get();
     }
 
     /**
@@ -68,7 +68,7 @@ class FaqRepository extends RepositoryAbstract implements FaqInterface, Crudable
         $result->totalItems = 0;
         $result->items = array();
 
-        $query = $this->faq->orderBy('created_at', 'DESC')->where('lang', $this->getLang());
+        $query = $this->faq->orderBy('created_at', 'DESC');
 
         $faqs = $query->skip($limit * ($page - 1))->take($limit)->get();
 
@@ -98,7 +98,6 @@ class FaqRepository extends RepositoryAbstract implements FaqInterface, Crudable
     public function create($attributes)
     {
         if ($this->isValid($attributes)) {
-            $this->faq->lang = $this->getLang();
             $this->faq->fill($attributes)->save();
 
             return true;
@@ -147,6 +146,6 @@ class FaqRepository extends RepositoryAbstract implements FaqInterface, Crudable
      */
     protected function totalFaqs()
     {
-        return $this->faq->where('lang', $this->getLang())->count();
+        return $this->faq->count();
     }
 }

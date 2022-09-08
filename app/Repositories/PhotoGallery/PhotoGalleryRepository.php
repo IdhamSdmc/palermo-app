@@ -77,7 +77,7 @@ class PhotoGalleryRepository extends RepositoryAbstract implements PhotoGalleryI
      */
     public function all()
     {
-        return $this->photoGallery->where('lang', $this->getLang())->get();
+        return $this->photoGallery->get();
     }
 
     /**
@@ -95,7 +95,7 @@ class PhotoGalleryRepository extends RepositoryAbstract implements PhotoGalleryI
      */
     public function lists()
     {
-        return $this->photoGallery->where('lang', $this->getLang())->pluck('title', 'id');
+        return $this->photoGallery->pluck('title', 'id');
     }
 
     /**
@@ -115,7 +115,7 @@ class PhotoGalleryRepository extends RepositoryAbstract implements PhotoGalleryI
         $result->totalItems = 0;
         $result->items = array();
 
-        $query = $this->photoGallery->orderBy('created_at', 'DESC')->where('lang', $this->getLang());
+        $query = $this->photoGallery->orderBy('created_at', 'DESC');
 
         if (!$all) {
             $query->where('is_published', 1);
@@ -151,7 +151,6 @@ class PhotoGalleryRepository extends RepositoryAbstract implements PhotoGalleryI
     public function create($attributes)
     {
         if ($this->isValid($attributes)) {
-            $this->photoGallery->lang = $this->getLang();
             $this->photoGallery->fill($attributes)->save();
 
             return $this->photoGallery->id;
@@ -284,9 +283,9 @@ class PhotoGalleryRepository extends RepositoryAbstract implements PhotoGalleryI
     protected function totalPhotoGalleries($all = false)
     {
         if (!$all) {
-            return $this->photoGallery->where('is_published', 1)->where('lang', $this->getLang())->count();
+            return $this->photoGallery->where('is_published', 1)->count();
         }
 
-        return $this->photoGallery->where('lang', $this->getLang())->count();
+        return $this->photoGallery->count();
     }
 }

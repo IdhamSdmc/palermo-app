@@ -38,7 +38,7 @@ class CacheDecorator extends AbstractMenuDecorator
      */
     public function all()
     {
-        $key = md5(getLang().$this->cacheKey.'all.menus');
+        $key = md5($this->cacheKey.'all.menus');
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
@@ -60,7 +60,7 @@ class CacheDecorator extends AbstractMenuDecorator
      */
     public function generateFrontMenu($menu, $parentId = 0, $starter = false)
     {
-        $key = md5(getLang().$this->cacheKey.$parentId.'.menu.html');
+        $key = md5($this->cacheKey.$parentId.'.menu.html');
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
@@ -104,7 +104,7 @@ class CacheDecorator extends AbstractMenuDecorator
      */
     public function hasChildItems($id)
     {
-        $key = md5(getLang().$this->cacheKey.$id.'.has.child');
+        $key = md5($this->cacheKey.$id.'.has.child');
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);

@@ -34,7 +34,7 @@ class TagRepository implements TagInterface
      */
     public function all()
     {
-        return $this->tag->where('lang', getLang())->get();
+        return $this->tag->get();
     }
 
     /**
@@ -64,7 +64,7 @@ class TagRepository implements TagInterface
         $result->totalItems = 0;
         $result->items = array();
 
-        $query = $this->tag->orderBy('created_at', 'DESC')->where('lang', getLang());
+        $query = $this->tag->orderBy('created_at', 'DESC');
 
         $tags = $query->skip($limit * ($page - 1))
             ->take($limit)
@@ -95,6 +95,6 @@ class TagRepository implements TagInterface
      */
     protected function totalTags()
     {
-        return $this->tag->where('lang', getLang())->count();
+        return $this->tag->count();
     }
 }

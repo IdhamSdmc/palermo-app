@@ -40,7 +40,7 @@ class CacheDecorator extends AbstractPageDecorator
      */
     public function find($id)
     {
-        $key = md5(getLang().$this->cacheKey.'.id.'.$id);
+        $key = md5($this->cacheKey.'.id.'.$id);
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
@@ -60,10 +60,10 @@ class CacheDecorator extends AbstractPageDecorator
      */
     public function getBySlug($slug, $isPublished = false)
     {
-        $key = md5(getLang().$this->cacheKey.'.slug.'.$slug);
+        $key = md5($this->cacheKey.'.slug.'.$slug);
 
         if ($isPublished === true) {
-            $key = md5(getLang().$this->cacheKey.'.slug.'.$slug.'.published');
+            $key = md5($this->cacheKey.'.slug.'.$slug.'.published');
         }
 
         if ($this->cache->has($key)) {
@@ -82,7 +82,7 @@ class CacheDecorator extends AbstractPageDecorator
      */
     public function all()
     {
-        $key = md5(getLang().$this->cacheKey.'.all.pages');
+        $key = md5($this->cacheKey.'.all.pages');
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
@@ -105,7 +105,7 @@ class CacheDecorator extends AbstractPageDecorator
     public function paginate($page = 1, $limit = 10, $all = false)
     {
         $allkey = ($all) ? '.all' : '';
-        $key = md5(getLang().$this->cacheKey.'.page.'.$page.'.'.$limit.$allkey);
+        $key = md5($this->cacheKey.'.page.'.$page.'.'.$limit.$allkey);
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);

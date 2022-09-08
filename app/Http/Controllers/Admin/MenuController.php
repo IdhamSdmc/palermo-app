@@ -34,7 +34,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $items = $this->menu->orderBy('order', 'asc')->where('lang', getLang())->get();
+        $items = $this->menu->orderBy('order', 'asc')->get();
         $menus = $this->menu->getMenuHTML($items);
 
         return view('/admin/backend.menu.index', compact('menus'));
@@ -90,7 +90,6 @@ class MenuController extends Controller
             $url = ($formData['type'] == 'module') ? $formData['url'] : 'http://'.$formData['url'];
         }
 
-        $this->menu->lang = getLang();
         $this->menu->url = $url;
         $this->menu->save();
 

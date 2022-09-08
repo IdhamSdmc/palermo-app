@@ -40,7 +40,7 @@ class CacheDecorator extends AbstractVideoDecorator
      */
     public function find($id)
     {
-        $key = md5(getLang().$this->cacheKey.'.id.'.$id);
+        $key = md5($this->cacheKey.'.id.'.$id);
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
@@ -60,7 +60,7 @@ class CacheDecorator extends AbstractVideoDecorator
      */
     public function getBySlug($slug)
     {
-        $key = md5(getLang().$this->cacheKey.'.slug.'.$slug);
+        $key = md5($this->cacheKey.'.slug.'.$slug);
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
@@ -78,7 +78,7 @@ class CacheDecorator extends AbstractVideoDecorator
      */
     public function all()
     {
-        $key = md5(getLang().$this->cacheKey.'.all.videos');
+        $key = md5($this->cacheKey.'.all.videos');
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);
@@ -100,7 +100,7 @@ class CacheDecorator extends AbstractVideoDecorator
     public function paginate($page = 1, $limit = 10, $all = false)
     {
         $allkey = ($all) ? '.all' : '';
-        $key = md5(getLang().$this->cacheKey.'.page.'.$page.'.'.$limit.$allkey);
+        $key = md5($this->cacheKey.'.page.'.$page.'.'.$limit.$allkey);
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);

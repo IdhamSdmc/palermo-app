@@ -30,6 +30,6 @@ class SliderRepository extends Validator implements SliderInterface
      */
     public function all()
     {
-        return $this->slider->where('lang', getLang())->orderBy('created_at', 'DESC')->get();
+        return $this->slider->orderBy('created_at', 'DESC')->get();
     }
 }

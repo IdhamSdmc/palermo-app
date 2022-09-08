@@ -40,7 +40,7 @@ class CacheDecorator extends AbstractSettingDecorator
      */
     public function getSettings()
     {
-        $key = md5(getLang().$this->cacheKey.'settings');
+        $key = md5($this->cacheKey.'settings');
 
         if ($this->cache->has($key)) {
             return $this->cache->get($key);

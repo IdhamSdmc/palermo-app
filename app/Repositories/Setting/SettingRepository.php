@@ -30,7 +30,7 @@ class SettingRepository extends Validator implements SettingInterface
      */
     public function getSettings()
     {
-        $obj = ($this->setting->where('lang', getLang())->first()) ?: $this->setting;
+        $obj = ($this->setting->first()) ?: $this->setting;
 
         $jsonData = $obj->settings;
         $setting = json_decode($jsonData, true);

@@ -3,12 +3,13 @@
 namespace App\Models;
 
 use Cartalyst\Sentinel\Users\EloquentUser;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * Class User.
  *
  * @author Sefa Karagöz <karagozsefa@gmail.com>
  */
-class User extends EloquentUser
+class User extends Authenticatable
 {
 }

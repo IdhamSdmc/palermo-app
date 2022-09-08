@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'before' => \App\Http\Middleware\BeforeMiddleware::class,
         'sentinel.auth' => \App\Http\Middleware\SentinelAuth::class,
         'sentinel.permission' => \App\Http\Middleware\SentinelPermission::class,
+        'admin' => \App\Http\Middleware\SentinelAdmin::class
     ];
 }

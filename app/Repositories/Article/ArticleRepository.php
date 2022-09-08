@@ -59,7 +59,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
      */
     public function all()
     {
-        return $this->article->with('tags')->orderBy('created_at', 'DESC')->where('is_published', 1)->where('lang', $this->getLang())->get();
+        return $this->article->with('tags')->orderBy('created_at', 'DESC')->where('is_published', 1)->get();
     }
 
     /**
@@ -69,7 +69,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
      */
     public function getLastArticle($limit)
     {
-        return $this->article->orderBy('created_at', 'desc')->where('lang', $this->getLang())->take($limit)->offset(0)->get();
+        return $this->article->orderBy('created_at', 'desc')->take($limit)->offset(0)->get();
     }
 
     /**
@@ -77,7 +77,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
      */
     public function lists()
     {
-        return $this->article->get()->where('lang', $this->getLang())->pluck('title', 'id');
+        return $this->article->get()->pluck('title', 'id');
     }
 
     /*
@@ -110,7 +110,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
         $result->totalItems = 0;
         $result->items = array();
 
-        $query = $this->article->with('tags')->orderBy('created_at', 'DESC')->where('lang', $this->getLang());
+        $query = $this->article->with('tags')->orderBy('created_at', 'DESC');
 
         if (!$all) {
             $query->where('is_published', 1);
@@ -179,7 +179,6 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
                     // thumb
                     Image::make($destinationPath.$fileName)->resize($this->thumbWidth, $this->thumbHeight)->save($destinationPath.'thumb_'.$fileName);
 
-                    $this->article->lang = $this->getLang();
                     $this->article->file_name = $fileName;
                     $this->article->file_size = $fileSize;
                     $this->article->path = $this->imgDir;
@@ -189,7 +188,6 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
 
             //--------------------------------------------------------
 
-            $this->article->lang = $this->getLang();
             if ($this->article->fill($attributes)->save()) {
 
                 $category = Category::find($attributes['category']);
@@ -209,7 +207,6 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
                     $tag = new Tag();
                 }
 
-                $tag->lang = $this->getLang();
                 $tag->name = $articleTag;
                 //$tag->slug = Str::slug($articleTag);
 
@@ -287,7 +284,6 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
                     $tag = new Tag();
                 }
 
-                $tag->lang = $this->getLang();
                 $tag->name = $articleTag;
                 //$tag->slug = Str::slug($articleTag);
                 $this->article->tags()->save($tag);
@@ -348,9 +344,9 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
     protected function totalArticles($all = false)
     {
         if (!$all) {
-            return $this->article->where('is_published', 1)->where('lang', $this->getLang())->count();
+            return $this->article->where('is_published', 1)->count();
         }
 
-        return $this->article->where('lang', $this->getLang())->count();
+        return $this->article->count();
     }
 }
