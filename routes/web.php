@@ -32,7 +32,12 @@ Route::get('/productos', function () {
 Route::get('/blog', function () {
     return view('pages.blog');
 });
-
+Route::get('/terminos-condiciones', function () {
+    return view('pages.terminos-condiciones');
+});
+Route::get('/politicas-cookies', function () {
+    return view('pages.politicas-cookies');
+});
 Route::get('/contactanos', function () {
     return view('pages.contactanos');
 });

@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Goldplay Medium";
+    src: url("../../assets/fonts/Goldplay Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Goldplay Regular";
+    src: url("../../assets/fonts/Goldplay Regular.otf") format("opentype");
+}
+:root {
+    --bg-primary: #20208E;
+    --bg-info: #009FDD;
+    --bg-gray: #f2f2f2;
+    --font-medium: 'Goldplay Medium', sans-serif;
+    --font-regular: 'Goldplay Regular', sans-serif;
+}
+
+h1{
+    font-family: var(--font-medium);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+h2{
+    font-family: var(--font-medium);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+}
+h4{
+    font-family: var(--font-medium);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+}
+p{
+    font-family: var(--font-regular);
+    font-size: 1.0rem;
+    text-align: justify;
+}
+li{
+    font-family: var(--font-regular);
+    font-size: 1.0rem;
+    margin-left: 2.5rem;
+}
+.tipo-cookies{
+    margin-left: 2.5rem;
+}
+.navegadores li{
+    list-style: none;
+}
+.acciones{
+    margin-left: 2.5rem;
+}

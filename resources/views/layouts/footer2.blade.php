@@ -42,8 +42,8 @@
                                 <a href="">(01) 620 6025</a>
                             </div>
                             <div class="enlaces">
-                                <a href="">Terminos y condiciones</a>
-                                <a href="">Política de cookies</a>
+                                <a href="/terminos-condiciones" target="_blank">Terminos y condiciones</a>
+                                <a href="/politicas-privacidad" target="_blank">Política de cookies</a>
                             </div>
                         </div>
                     </div>
