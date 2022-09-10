@@ -39,7 +39,10 @@ class AuthController extends Controller
      */
     public function getSignin()
     {
+      //  dd(Auth::check());
+
         if (Auth::check()) {
+
             return Redirect::route('admin.dashboard');
 
         }

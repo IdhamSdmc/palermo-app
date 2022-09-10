@@ -76,6 +76,7 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
 
     });
     Route::group(['prefix' => 'admin', 'middleware' => 'admin', 'as' => 'admin.'], function ()  {
+        
         Route::get('/','Admin\DashboardController@index') ->name('dashboard');
         Route::resource('user', 'Admin\UserController');
         Route::get('user/{id}/delete',  'Admin\UserController@confirmDestroy', )->name('user.delete')->where('id', '[0-9]+');

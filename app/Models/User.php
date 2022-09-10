@@ -12,4 +12,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  */
 class User extends Authenticatable
 {
+    public $table = 'users';
+    protected $primaryKey = 'id';
+    protected $fillable =['email','password'];
 }
