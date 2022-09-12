@@ -17,7 +17,10 @@ use App\Http\Controllers\Admin\LineaController;
 |
 */
 Route::get('/', [MarcaController::class, 'marcas']);
-//nUEVAS RUTAS
+//
+
+
+//Rutas
 Route::get('/nosotros', [LineaController::class, 'lineas']);
 
 Route::get('/soluciones', function () {
