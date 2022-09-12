@@ -135,6 +135,7 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
         Route::patch('product/{id}/update',  'Admin\ProductController@update')->name('product.update')->where('id', '[0-9]+');
         Route::get('/product',  'Admin\ProductController@index')->name('product.index');
 
+        //Nuevas rutas
         //Marcas Routes
         Route::resource('marca', 'Admin\MarcaController');
 
