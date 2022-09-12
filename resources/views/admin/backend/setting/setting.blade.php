@@ -1,5 +1,11 @@
 @extends('/admin/backend/layout/layout')
 @section('content')
+{!! Html::style('assets/bootstrap/css/bootstrap-tagsinput.css') !!}
+{!! Html::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
+{!! Html::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
+{!! Html::script('ckeditor/ckeditor.js') !!}
+{!! Html::script('assets/bootstrap/js/bootstrap-tagsinput.js') !!}
+{!! Html::script('assets/js/jquery.slug.js') !!}
 <script type="text/javascript">
     $(document).ready(function () {
         $('#notification').show().delay(4000).fadeOut(700);
@@ -31,11 +37,11 @@
             <h4><i class="glyphicon glyphicon-cog"></i> Settings</h4>
 
             <br>
-            {!! Form::open() !!}
+            {!! Form::open(array('action' => '\App\Http\Controllers\Admin\SettingController@store', 'files'=>true)) !!}
 
             <!-- Title -->
             <div class="control-group {!! $errors->has('site_title') ? 'has-error' : '' !!}">
-                <label class="control-label" for="title">Title</label>
+                <label class="control-label" for="title">Titulo</label>
 
                 <div class="controls">
                     {!! Form::text('site_title', ($setting['site_title']) ?: null, array('class'=>'form-control', 'id' => 'site_title', 'placeholder'=>'Title', 'value'=>Input::old('site_title'))) !!}
@@ -45,46 +51,22 @@
                 </div>
             </div>
             <br>
-
-            <!-- Google Analytics Code -->
-            <div class="control-group {!! $errors->has('ga_code') ? 'has-error' : '' !!}">
-                <label class="control-label" for="title"> Google Analytics Code</label>
-
-                <div class="controls">
-                    {!! Form::text('ga_code', ($setting['ga_code']) ?: null, array('class'=>'form-control', 'id' => 'ga_code', 'placeholder'=>' Google Analytics Code', 'value'=>Input::old('ga_code'))) !!}
-                    @if ($errors->first('ga_code'))
-                    <span class="help-block">{!! $errors->first('ga_code') !!}</span>
-                    @endif
-                </div>
+            <div class="fileinput fileinput-new control-group {!! $errors->has('logo') ? 'has-error' : '' !!}" data-provides="fileinput">
+                <label class="control-label" for="title">Logo</label>
+                <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+                <div> <span class="btn btn-default btn-file"><span class="fileinput-new">SeLecciona </span><span class="fileinput-exists">Archivo</span> {!! Form::file('logo', null, array('class'=>'form-control', 'id' => 'logo', 'placeholder'=>'Image', 'value'=>Input::old('logo'))) !!}
+              @if ($errors->first('logo')) <span class="help-block">{!! $errors->first('logo') !!}</span> @endif </span> <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
             </div>
             <br>
+            <div class="fileinput fileinput-new control-group {!! $errors->has('favicon') ? 'has-error' : '' !!}" data-provides="fileinput">
+                <label class="control-label" for="title">Favicon</label>
 
-            <!-- Meta Keywords -->
-            <div class="control-group {!! $errors->has('meta_keywords') ? 'has-error' : '' !!}">
-                <label class="control-label" for="title">Meta Keywords</label>
-
-                <div class="controls">
-                    {!! Form::text('meta_keywords', ($setting['meta_keywords']) ?: null, array('class'=>'form-control', 'id' => 'meta_keywords', 'placeholder'=>'Meta Keywords', 'value'=>Input::old('meta_keywords'))) !!}
-                    @if ($errors->first('meta_keywords'))
-                    <span class="help-block">{!! $errors->first('meta_keywords') !!}</span>
-                    @endif
-                </div>
+                <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+                <div> <span class="btn btn-default btn-file"><span class="fileinput-new">SeLecciona </span><span class="fileinput-exists">Archivo</span> {!! Form::file('favicon', null, array('class'=>'form-control', 'id' => 'favicon', 'placeholder'=>'Image', 'value'=>Input::old('favicon'))) !!}
+              @if ($errors->first('favicon')) <span class="help-block">{!! $errors->first('favicon') !!}</span> @endif </span> <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
             </div>
-            <br>
 
-            <!-- Meta Description -->
-            <div class="control-group {!! $errors->has('meta_description') ? 'has-error' : '' !!}">
-                <label class="control-label" for="title">Meta Description</label>
-
-                <div class="controls">
-                    {!! Form::text('meta_description', ($setting['meta_description']) ?: null, array('class'=>'form-control', 'id' => 'meta_description', 'placeholder'=>'Meta Description', 'value'=>Input::old('meta_description'))) !!}
-                    @if ($errors->first('meta_description'))
-                    <span class="help-block">{!! $errors->first('meta_description') !!}</span>
-                    @endif
-                </div>
-            </div>
-            <br>
-            {!! Form::submit('Save Changes', array('class' => 'btn btn-success')) !!}
+            {!! Form::submit('Create', array('class' => 'btn btn-success')) !!}
             {!! Form::close() !!}
         </div>
         <div class="tab-pane" id="info">

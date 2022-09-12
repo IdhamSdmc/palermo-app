@@ -1,6 +1,6 @@
 <?php
 
-namespace Fully\Repositories\Setting;
+namespace App\Repositories\Setting;
 
 /**
  * Class AbstractSettingDecorator.
@@ -28,5 +28,33 @@ abstract class AbstractSettingDecorator implements SettingInterface
     public function getSettings()
     {
         return $this->setting->getSettings();
+    }
+     /**
+     * @param $id
+     *
+     * @return mixed
+     */
+    public function find($id)
+    {
+        return $this->setting->find($id);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function all()
+    {
+        return $this->setting->all();
+    }
+
+    /**
+     * @param null $perPage
+     * @param bool $all
+     *
+     * @return mixed
+     */
+    public function paginate($page = 1, $limit = 10, $all = false)
+    {
+        return $this->setting->paginate($page, $limit, $all);
     }
 }
