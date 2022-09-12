@@ -30,7 +30,7 @@
                 </a></li>
             <li><a href="{{ url( '/admin/menu') }}"> <i class="fa fa-bars"></i> <span>Menu</span> </a>
             </li>
-           
+
             <li class="treeview"><a href="#"> <i class="fa fa-bookmark"></i> <span>Pages</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
@@ -40,7 +40,7 @@
                     </li>
                 </ul>
             </li>
-            
+
             <li class="treeview"><a href="#"> <i class="fa fa-book"></i> <span>Blog</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
@@ -61,6 +61,36 @@
                     </li>
                 </ul>
             </li>
+            <li class="treeview"><a href="#"> <i class="fa fa-circle"></i> <span>Marcas</span>
+                    <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('/admin/marca') }}"><i class="fa fa-archive"></i> Lista de Marcas</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/admin/marca/create') }}"><i class="fa fa-plus-square"></i> Agregar Marca</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview"><a href="#"> <i class="fa fa-plus"></i> <span>Historias de Exito</span>
+                    <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('/admin/historia') }}"><i class="fa fa-archive"></i> Lista de Historias</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/admin/historia/create') }}"><i class="fa fa-plus-square"></i> Agregar Historia</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="treeview"><a href="#"> <i class="fa fa-minus"></i> <span>Linea de Tiempo</span>
+                    <i class="fa fa-angle-left pull-right"></i> </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ url('/admin/linea') }}"><i class="fa fa-archive"></i> Lista de Años</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/admin/linea/create') }}"><i class="fa fa-plus-square"></i> Agregar Año</a>
+                    </li>
+                </ul>
+            </li>
             <li class="treeview"><a href="#"> <i class="fa fa-tint"></i> <span>Plugins</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
@@ -68,7 +98,7 @@
                     </li>
                 </ul>
             </li>
-            
+
             <li class="treeview"><a href="#"> <i class="fa fa-question"></i> <span>Faqs</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">

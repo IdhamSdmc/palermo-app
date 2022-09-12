@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -16,9 +18,16 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $products = Product::paginate(5);
+        $products = Product::paginate(6);
 
         return view('/admin/backend.product.index', compact('products'));
+    }
+    public function productos()
+    {
+        //
+        $products = DB::table('products')->get();
+
+        return view('pages.productos2', compact('products'));
     }
 
     /**
@@ -29,6 +38,7 @@ class ProductController extends Controller
     public function create()
     {
         //
+        return view('/admin.backend.product.create');
     }
 
     /**
@@ -40,6 +50,31 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        try {
+            if($request->hasFile('image')){
+                $imagen = $request->file("image");
+                $nombreimagen = $imagen->getClientOriginalName();
+                $ruta = public_path()."/uploads/product/";
+                $size = $imagen->getSize();
+                $imagen->move($ruta, $nombreimagen);
+            }else{
+                $nombreimagen = '';
+                $size = 0;
+            }
+            $producto = new Product();
+            $producto->titulo = $request->title;
+            $producto->descripcion = $request->descripcion;
+            $producto->path = '/uploads/product/';
+            $producto->file_name = $nombreimagen;
+            $producto->file_size = $size;
+            $producto->created_at = Carbon::now();
+            $producto->updated_at = Carbon::now();
+            $producto->save();
+            return redirect()->route('admin.product.index');
+        }catch (\Throwable $th){
+            return($th);
+        }
+
     }
 
     /**
@@ -51,6 +86,9 @@ class ProductController extends Controller
     public function show($id)
     {
         //
+        $product = Product::all()->find($id);
+
+        return view('admin.backend.product.show', compact('product'));
     }
 
     /**
@@ -62,6 +100,9 @@ class ProductController extends Controller
     public function edit($id)
     {
         //
+        $product = Product::all()->find($id);
+
+        return view('admin.backend.product.edit', compact('product'));
     }
 
     /**
@@ -74,6 +115,25 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         //
+        try {
+            $producto = Product::all()->find($id);
+            $producto->titulo = $request->title;
+            $producto->descripcion = $request->descripcion;
+            if($request->hasFile('image')){
+                $imagen = $request->file("image");
+                $nombreimagen = $imagen->getClientOriginalName();
+                $ruta = public_path()."/uploads/product/";
+                $size = $imagen->getSize();
+                $imagen->move($ruta, $nombreimagen);
+                $producto->file_name = $nombreimagen;
+                $producto->file_size = $size;
+            }
+            $producto->updated_at = Carbon::now();
+            $producto->update();
+            return redirect()->route('admin.product.index');
+        }catch (\Throwable $th){
+            return($th);
+        }
     }
 
     /**

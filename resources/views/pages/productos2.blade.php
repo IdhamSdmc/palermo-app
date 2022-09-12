@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         </div>
-                           
+
                     </div>
                     <div class="swiper-slide solution" >
 
@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         </div>
-                           
+
                     </div>
                     <div class="swiper-slide solution" >
 
@@ -52,9 +52,9 @@
                             </div>
                         </div>
                         </div>
-                           
+
                     </div>
-                  
+
                 </div>
                 <div class="pagination">
                 </div>
@@ -72,7 +72,22 @@
                 <h2>NUESTROS PRODUCTOS</h2>
                 <div class="content">
                     <div class="lista-productos">
+                        @foreach($products as $product)
                         <div class="product">
+                            <div class="image">
+                                <img src="{{url($product->path.$product->file_name)}}" alt="">
+                            </div>
+                            <h4>{!! $product->titulo !!}</h4>
+                            <p>
+                                {!! $product->descripcion !!}
+                            </p>
+                            <a target="_blank"
+                               href="{{ url('https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor') }}">
+                                <i class="bi bi-whatsapp"></i> COTIZAR
+                            </a>
+                        </div>
+                        @endforeach
+                        {{--<div class="product">
                             <div class="image">
                                 <img src="assets/imgs/recursos/producto01.png" alt="">
                             </div>
@@ -152,7 +167,7 @@
                                 href="{{ url('https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor') }}">
                                 <i class="bi bi-whatsapp"></i> COTIZAR
                             </a>
-                        </div>
+                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -162,7 +177,7 @@
 @push('css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ asset('frontend/css/productos.css') }}">
-    
+
 @endpush
 @push('js')
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

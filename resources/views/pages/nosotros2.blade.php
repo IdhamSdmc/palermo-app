@@ -101,7 +101,15 @@
                         <div class="historia">
                             <div class="swiper timeline-dates timeline" >
                                 <ul class="swiper-wrapper lista">
-                                    <li class="swiper-slide">
+                                    @foreach($lineas as $linea)
+                                        <li class="swiper-slide">
+                                            <div class="prueba">
+                                                <time datetime="1996-10-09">{{$linea->year}}</time>
+                                                <p class="time-text">{!! $linea->descripcion !!}</p>
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                    {{--<li class="swiper-slide">
                                         <div class="prueba">
                                             <time datetime="1996-10-09">1996</time>
                                             <p class="time-text">Nacimos como fotocopiadora PALERMO S.R.L., una empresa trujillana dedicada al servicio de fotocopiado e impresión.</p>
@@ -111,7 +119,7 @@
                                         <div class="prueba">
                                             <time datetime="2003-10-09">2003</time>
                                             <p class="time-text">Incorporamos la división de soporte gráfico y publicitario.</p>
-                                        </div> 
+                                        </div>
                                     </li>
                                     <li class="swiper-slide">
                                         <div class="prueba">
@@ -148,7 +156,7 @@
                                             <time datetime="2022-10-09">2022</time>
                                             <p class="time-text">Consolidamos la división de Digitalización y Gestión Documental, ampliando la cartera de servicios hacia nuestros clientes actuales.</p>
                                         </div>
-                                    </li>
+                                    </li>--}}
                                 </ul>
                             </div>
                         </div>
@@ -163,7 +171,7 @@
                                 <img src="{{ asset('assets/imgs/right-slider.png') }}" alt="right">
                             </button>
                         </div>
-                        
+
                     </div>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
