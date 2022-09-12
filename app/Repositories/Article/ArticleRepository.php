@@ -177,7 +177,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
                     /*Image::make($destinationPath.$fileName)->resize($this->width, $this->height)->save($destinationPath.$fileName);*/
 
                     // thumb
-                    Image::make($destinationPath.$fileName)->resize($this->thumbWidth, $this->thumbHeight)->save($destinationPath.'thumb_'.$fileName);
+                   // Image::make($destinationPath.$fileName)->resize($this->thumbWidth, $this->thumbHeight)->save($destinationPath.'thumb_'.$fileName);
 
                     $this->article->file_name = $fileName;
                     $this->article->file_size = $fileSize;
@@ -253,7 +253,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
                 if ($upload_success) {
 
                     // resizing an uploaded file
-                    Image::make($destinationPath.$fileName)->resize($this->width, $this->height)->save($destinationPath.$fileName);
+                   // Image::make($destinationPath.$fileName)->resize($this->width, $this->height)->save($destinationPath.$fileName);
 
                     // thumb
                     Image::make($destinationPath.$fileName)->resize($this->thumbWidth, $this->thumbHeight)->save($destinationPath.'thumb_'.$fileName);

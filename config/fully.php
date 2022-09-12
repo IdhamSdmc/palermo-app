@@ -63,7 +63,21 @@ return [
 
             'per_page' => 10,
         ],
+        'settings' => [
 
+            'image_size' => [
+                'width'  => 730,
+                'height' => 290
+            ],
+            'thumb_size' => [
+                'width'  => 64,
+                'height' => 64
+            ],
+
+            'image_dir' => '/uploads/setting/',
+
+            'per_page' => 10,
+        ],
         'project' => [
 
             'image_size' => [

@@ -1,13 +1,14 @@
 <?php
 
-namespace Fully\Repositories\Setting;
+namespace App\Repositories\Setting;
+use App\Repositories\RepositoryInterface;
 
 /**
  * Interface SettingInterface.
  *
  * @author Sefa Karagöz <karagozsefa@gmail.com>
  */
-interface SettingInterface
+interface SettingInterface extends RepositoryInterface
 {
     /**
      * @return mixed
