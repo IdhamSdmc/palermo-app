@@ -141,4 +141,34 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
         Route::resource('settings', 'Admin\SettingController');
         Route::get('/settings', 'Admin\SettingController@index')->name('settings.index');
         Route::post('/settings','Admin\SettingController@store', array('before' => 'csrf'))->name('settings.store');
+        //Nuevas rutas
+        //Marcas Routes
+        Route::resource('marca', 'Admin\MarcaController');
+
+        Route::get('marca/create', 'Admin\MarcaController@create')->name('marca.create');
+        Route::get('marca/{id}/delete','Admin\MarcaController@destroy')->name('marca.delete');
+        Route::get('marca/{id}/edit',  'Admin\MarcaController@edit')->name('marca.edit');
+        Route::get('marca/{id}/show', 'Admin\MarcaController@show')->name('marca.show');
+        Route::patch('marca/{id}/update',  'Admin\MarcaController@update')->name('marca.update')->where('id', '[0-9]+');
+        Route::get('/marca',  'Admin\MarcaController@index')->name('marca.index');
+
+        //Historias Routes
+        Route::resource('historia', 'Admin\HistoriaController');
+
+        Route::get('historia/create', 'Admin\HistoriaController@create')->name('historia.create');
+        Route::get('historia/{id}/delete','Admin\HistoriaController@destroy')->name('historia.delete');
+        Route::get('historia/{id}/edit',  'Admin\HistoriaController@edit')->name('historia.edit');
+        Route::get('historia/{id}/show', 'Admin\HistoriaController@show')->name('historia.show');
+        Route::patch('historia/{id}/update',  'Admin\HistoriaController@update')->name('historia.update')->where('id', '[0-9]+');
+        Route::get('/historia',  'Admin\HistoriaController@index')->name('historia.index');
+        //Lineas Routes
+        Route::resource('linea', 'Admin\LineaController');
+
+        Route::get('linea/create', 'Admin\LineaController@create')->name('linea.create');
+        Route::get('linea/{id}/delete','Admin\LineaController@destroy')->name('linea.delete');
+        Route::get('linea/{id}/edit',  'Admin\LineaController@edit')->name('linea.edit');
+        Route::get('linea/{id}/show', 'Admin\LineaController@show')->name('linea.show');
+        Route::patch('linea/{id}/update',  'Admin\LineaController@update')->name('linea.update')->where('id', '[0-9]+');
+        Route::get('/linea',  'Admin\LineaController@index')->name('linea.index');
+
     });
