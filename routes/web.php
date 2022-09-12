@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\Admin\MarcaController;
+use App\Http\Controllers\Admin\LineaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,21 +16,15 @@ use App\Http\Controllers\MailController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('pages.inicio2');
-});
+Route::get('/', [MarcaController::class, 'marcas']);
 
-Route::get('/nosotros', function () {
-return view('pages.nosotros2');
-});
+Route::get('/nosotros', [LineaController::class, 'lineas']);
 
 Route::get('/soluciones', function () {
     return view('pages.servicios2');
 });
 
-Route::get('/productos', function () {
-    return view('pages.productos2');
-});
+Route::get('/productos', [ProductController::class, 'productos']);
 
 Route::get('/blog', function () {
     return view('pages.blog');
@@ -56,27 +53,27 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
         Route::get('login2', function () {
             return view('admin/login2');
         });
-    
-    
+
+
         # Register2
         Route::get('register2', function () {
             return view('admin/register2');
         });
         Route::post('register2', 'AuthController@postRegister2')->name('register2');
-    
+
         # Forgot Password Confirmation
         Route::get('forgot-password/{userId}/{passwordResetCode}', 'AuthController@getForgotPasswordConfirm')->name('forgot-password-confirm');
         Route::post('forgot-password/{userId}/{passwordResetCode}', 'AuthController@getForgotPasswordConfirm');
-    
+
         # Logout
         Route::get('logout', 'AuthController@getLogout')->name('logout');
-    
+
         # Account Activation
         Route::get('activate/{userId}/{activationCode}', 'AuthController@getActivate')->name('activate');
 
     });
     Route::group(['prefix' => 'admin', 'middleware' => 'admin', 'as' => 'admin.'], function ()  {
-        
+
         Route::get('/','Admin\DashboardController@index') ->name('dashboard');
         Route::resource('user', 'Admin\UserController');
         Route::get('user/{id}/delete',  'Admin\UserController@confirmDestroy', )->name('user.delete')->where('id', '[0-9]+');
@@ -137,5 +134,34 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
         Route::get('product/{id}/show', 'Admin\ProductController@show')->name('product.show');
         Route::patch('product/{id}/update',  'Admin\ProductController@update')->name('product.update')->where('id', '[0-9]+');
         Route::get('/product',  'Admin\ProductController@index')->name('product.index');
+
+        //Marcas Routes
+        Route::resource('marca', 'Admin\MarcaController');
+
+        Route::get('marca/create', 'Admin\MarcaController@create')->name('marca.create');
+        Route::get('marca/{id}/delete','Admin\MarcaController@destroy')->name('marca.delete');
+        Route::get('marca/{id}/edit',  'Admin\MarcaController@edit')->name('marca.edit');
+        Route::get('marca/{id}/show', 'Admin\MarcaController@show')->name('marca.show');
+        Route::patch('marca/{id}/update',  'Admin\MarcaController@update')->name('marca.update')->where('id', '[0-9]+');
+        Route::get('/marca',  'Admin\MarcaController@index')->name('marca.index');
+
+        //Historias Routes
+        Route::resource('historia', 'Admin\HistoriaController');
+
+        Route::get('historia/create', 'Admin\HistoriaController@create')->name('historia.create');
+        Route::get('historia/{id}/delete','Admin\HistoriaController@destroy')->name('historia.delete');
+        Route::get('historia/{id}/edit',  'Admin\HistoriaController@edit')->name('historia.edit');
+        Route::get('historia/{id}/show', 'Admin\HistoriaController@show')->name('historia.show');
+        Route::patch('historia/{id}/update',  'Admin\HistoriaController@update')->name('historia.update')->where('id', '[0-9]+');
+        Route::get('/historia',  'Admin\HistoriaController@index')->name('historia.index');
+        //Lineas Routes
+        Route::resource('linea', 'Admin\LineaController');
+
+        Route::get('linea/create', 'Admin\LineaController@create')->name('linea.create');
+        Route::get('linea/{id}/delete','Admin\LineaController@destroy')->name('linea.delete');
+        Route::get('linea/{id}/edit',  'Admin\LineaController@edit')->name('linea.edit');
+        Route::get('linea/{id}/show', 'Admin\LineaController@show')->name('linea.show');
+        Route::patch('linea/{id}/update',  'Admin\LineaController@update')->name('linea.update')->where('id', '[0-9]+');
+        Route::get('/linea',  'Admin\LineaController@index')->name('linea.index');
 
     });

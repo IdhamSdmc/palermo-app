@@ -1,40 +1,12 @@
 @extends('/admin/backend/layout/layout')
 @section('content')
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            $('#notification').show().delay(4000).fadeOut(700);
-
-            // publish settings
-            $(".publish").bind("click", function (e) {
-                var id = $(this).attr('id');
-                e.preventDefault();
-                $.ajax({
-                    type: "POST",
-                    url: "{!! url('/admin/product/" + id + "/toggle-publish/') !!}",
-                    headers: {
-                        'X-CSRF-Token': $('meta[name="_token"]').attr('content')
-                    },
-                    success: function (response) {
-                        if (response['result'] == 'success') {
-                            var imagePath = (response['changed'] == 1) ? "{!!url('/')!!}/assets/images/publish.png" : "{!!url('/')!!}/assets/images/not_publish.png";
-                            $("#publish-image-" + id).attr('src', imagePath);
-                        }
-                    },
-                    error: function () {
-                        alert("error");
-                    }
-                })
-            });
-        });
-    </script>
     <section class="content-header">
-        <h1> Article
-            <small> | Control Panel</small>
+        <h1> Productos
+            <small> | Panel de Control</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="{!! url( '/product') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active">Article</li>
+            <li class="active">Productos</li>
         </ol>
     </section>
     <br>
@@ -46,8 +18,7 @@
             <div class="pull-left">
                 <div class="btn-toolbar">
                     <a href="{!!  URL::route('admin.product.create') !!}" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-plus"></span>&nbsp;Add Article </a>
-
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp;Agregar Producto </a>
                 </div>
             </div>
             <br> <br> <br>
@@ -56,10 +27,10 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Created Date</th>
-                            <th>Updated Date</th>
-                            <th>Action</th>
+                            <th>Titulo</th>
+                            <th>Descripcion</th>
+                            <th>Fecha Creacion</th>
+                            <th>Ultima Actualizacion</th>
 
                         </tr>
                         </thead>
@@ -76,23 +47,22 @@
                                 <td>
                                     <div class="btn-group">
                                         <a class="btn btn-danger dropdown-toggle" data-toggle="dropdown" href="#">
-                                            Action <span class="caret"></span> </a>
+                                            Opciones <span class="caret"></span> </a>
                                         <ul class="dropdown-menu">
                                             <li>
                                                 <a href="{!! URL::route('admin.product.show', array($product->id)) !!}">
-                                                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show Article
+                                                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Mostrar Producto
                                                 </a>
                                             </li>
                                             <li>
                                                 <a href="{!! URL::route('admin.product.edit', array($product->id)) !!}">
-                                                    <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit Article
+                                                    <span class="glyphicon glyphicon-edit"></span>&nbsp;Editar Producto
                                                 </a>
                                             </li>
                                             <li class="divider"></li>
                                             <li>
                                                 <a href="{!! URL::route('admin.product.delete', array($product->id)) !!}">
-                                                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Delete
-                                                    Article </a>
+                                                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Eliminar Producto </a>
                                             </li>
                                             <li class="divider"></li>
                                             <li>

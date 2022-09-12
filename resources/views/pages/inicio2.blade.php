@@ -116,10 +116,12 @@
         <div class="container ">
             <div class="slider">
                 <div class="slide-track">
-                    <div class="slide">
-                        <img src="assets/imgs/resources/dell.svg" height="100" width="250" alt="" />
-                    </div>
-                    <div class="slide">
+                    @foreach($marcas as $marca)
+                        <div class="slide">
+                            <img src="{{url($marca->path.$marca->file_name)}}" height="100" width="250" alt="" />
+                        </div>
+                    @endforeach
+                    {{--<div class="slide">
                         <img src="assets/imgs/resources/zebra.svg" height="100" width="250" alt="" />
                     </div>
                     <div class="slide">
@@ -152,7 +154,7 @@
                     </div>
                     <div class="slide">
                         <img src="assets/imgs/resources/zoom.svg" height="100" width="250" alt="" />
-                    </div>
+                    </div>--}}
 
                 </div>
             </div>
@@ -166,12 +168,45 @@
             <h2 class="mb-5">HISTORIAS DE ÉXITO</h2>
             <div class="content">
                 <div class="historias">
+
                     <button type="button" class="btn-slider web prev">
                         <img src="{{ asset('assets/imgs/left-slider.png') }}" alt="left">
                     </button>
                     <div class="swiper mySwiper" id="">
 
                         <div class="swiper-wrapper">
+                            @foreach($historias as $historia)
+                            <div class="swiper-slide solution">
+
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
+
+                                        <div class="detalle">
+                                            <h3>{{$historia->titulo}}</h3>
+                                            <h5>EL RETO</h5>
+                                            {!! $historia->reto !!}
+                                            <h5>LA SOLUCIÓN</h5>
+                                            {!! $historia->solucion !!}
+                                            <h5>EL RESULTADO</h5>
+                                            {!! $historia->resultado !!}
+                                            <div class="button-he">
+                                                <a class="button" href="{{ url('/soluciones') }}">CONOCE NUESTRAS
+                                                    SOLUCIONES</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 d-none d-sm-none d-md-block">
+
+                                        <div class="img-he">
+                                            <img src="{{url($historia->path.$historia->file_name)}}" alt="...">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            @endforeach
+
+                        {{--<div class="swiper-wrapper">
                             <div class="swiper-slide solution">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
@@ -203,8 +238,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide solution">
+                            </div>--}}
+                            {{--<div class="swiper-slide solution">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-12 m-auto">
 
@@ -263,7 +298,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--}}
                         </div>
 
                     </div>
