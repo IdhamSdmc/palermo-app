@@ -2,7 +2,7 @@
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container-fluid d-flex align-items-center">
         <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="{{url('/')}}" class="logo me-auto"><img src="{{asset('assets/imgs/logo_color.svg')}}" alt="" class="img-fluid"></a>
+        <a href="{{url('/')}}" class="logo me-auto"><img src="{{ url($settings['path_logo'].$settings['file_name_logo']) }}" alt="" class="img-fluid"></a>
 
         <nav id="navbar" class="navbar">
             <ul>
