@@ -58,7 +58,7 @@ class ArticleController extends Controller
     {
         $cat_array = null;
         $categories = $this->category->all();
-        $categories->toArray();
+        
           return view('/admin/backend.article.create', compact('categories'));
     }
 

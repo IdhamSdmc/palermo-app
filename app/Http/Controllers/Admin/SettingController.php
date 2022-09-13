@@ -30,19 +30,8 @@ class SettingController extends Controller
      */
     public function index()
     {
-        $obj = (Setting::where('lang', getLang())->first()) ?: new Setting();
-
-        $jsonData = $obj->settings;
-        $setting = json_decode($jsonData, true);
-
-        if ($setting === null) {
-            $setting = array(
-                'site_title' => null,
-                'ga_code' => null,
-                'meta_keywords' => null,
-                'meta_description' => null,
-            );
-        }
+        $setting = (Setting::where('lang', getLang())->first()) ?: new Setting();
+      
 
         return view('/admin/backend.setting.setting', compact('setting'))->with('active', 'settings');
     }
@@ -76,9 +65,9 @@ class SettingController extends Controller
         try {
 
             $this->setting->create(Input::all());
-            return langRedirectRoute('admin.setting.setting');
+            return langRedirectRoute('admin.setting.index');
         } catch (ValidationException $e) {
-            return langRedirectRoute('admin.setting.setting')->withInput()->withErrors($e->getErrors());
+            return langRedirectRoute('admin.setting.index')->withInput()->withErrors($e->getErrors());
         }
     }
   /**

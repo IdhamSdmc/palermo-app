@@ -125,8 +125,12 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
 
                                                 // slider
         Route::resource('slider', 'Admin\SliderController');
-        Route::get('slider/{id}/delete',  'SAdmin\liderController@confirmDestroy')->name('slider.delete')->where('id', '[0-9]+');
+        Route::get('slider/{id}/delete',  'Admin\SliderController@confirmDestroy')->name('slider.delete')->where('id', '[0-9]+');
         Route::get('slider/create',  'Admin\SliderController@create')->name('slider.create')->where('id', '[0-9]+');
+
+        //Configuracion
+        Route::resource('setting', 'Admin\SettingController');
+        Route::get('/settings',  'Admin\SettingController@index')->name('setting.index')->where('id', '[0-9]+');
 
         //Product Routes
         Route::resource('product', 'Admin\ProductController');

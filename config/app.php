@@ -165,6 +165,8 @@ return [
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
         App\Providers\RepositoryServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
+
         
         /*
          * Package Service Providers...

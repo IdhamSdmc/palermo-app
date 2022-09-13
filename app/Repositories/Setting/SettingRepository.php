@@ -48,27 +48,19 @@ class SettingRepository extends Validator implements SettingInterface
     {
         $obj = ($this->setting->first()) ?: $this->setting;
 
-        $jsonData = $obj->settings;
-        $setting = json_decode($jsonData, true);
-
-        if ($setting === null) {
-            $setting = array(
-                'site_title' => null,
-                'ga_code' => null,
-                'meta_keywords' => null,
-                'meta_description' => null,
-            );
-        }
-
-        return $setting;
+        return $obj;
     }
     public function create($settings)
     {
 
+        $this->setting = (Setting::where('lang', getLang())->first()) ?: new Setting();
 
+
+         $this->setting->title=$settings['title'];
             $file = null;
 
             $file2 = null;
+
             if (isset($settings['logo'])) {
                 $file = $settings['logo'];
             }

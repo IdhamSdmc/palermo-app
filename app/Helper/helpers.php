@@ -67,7 +67,7 @@ function langURL($url = null)
  */
 function langRoute($route, $parameters = array())
 {
-    return URL::route(getLang().'.'.$route, $parameters);
+    return URL::route($route, $parameters);
 }
 
 /**
@@ -77,5 +77,5 @@ function langRoute($route, $parameters = array())
  */
 function langRedirectRoute($route)
 {
-    return Redirect::route(getLang().'.'.$route);
+    return Redirect::route($route);
 }

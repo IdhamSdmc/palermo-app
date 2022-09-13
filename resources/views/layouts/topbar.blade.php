@@ -1,8 +1,9 @@
 <header id="header" class="fixed-top d-flex align-items-center topbar-container">
     <nav class="topbar">
         <a href="{{ url('/') }}" class="logo">
-            <img src="{{ asset('assets/imgs/logo_color.svg') }}" alt="palermo-logo">
+            <img src="{{ url($settings['path_logo'].$settings['file_name_logo']) }}" alt="palermo-logo">
         </a>
+
         <div id="navbar" class="navbar">
             <ul class="topbar-menu">
                 <li class="topbar-item"><a href="{{ url('/nosotros') }}" class="active">Nosotros</a></li>

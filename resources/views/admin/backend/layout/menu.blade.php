@@ -126,9 +126,16 @@
                     </li>
                 </ul>
             </li>
-            <li >
-                <a href="{{ url('/admin/settings') }}"> <i class="fa fa-gear"></i> <span>Settings</span> </a>
-            </li>
+            <li class="treeview"><a href="#"> <i class="fa fa-gear"></i> <span>Configuracion</span>
+                <i class="fa fa-angle-left pull-right"></i> </a>
+            <ul class="treeview-menu">
+                <li><a target="_blank" href="{{ url('/admin/settings') }}"><i class="fa fa-gear"></i> General</a></li>
+                <li>
+                    <a href="{{ url('/admin/footer') }}"><i class="fa fa-gear"></i> Footer</a>
+                </li>
+            </ul>
+        </li>
+         
             <li >
                 <a href="{{ url('/admin/logout') }}"> <i class="fa fa-sign-out"></i> <span>Logout</span> </a>
             </li>
