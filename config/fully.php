@@ -78,6 +78,22 @@ return [
 
             'per_page' => 10,
         ],
+
+        'footer' => [
+
+            'image_size' => [
+                'width'  => 730,
+                'height' => 290
+            ],
+            'thumb_size' => [
+                'width'  => 64,
+                'height' => 64
+            ],
+
+            'image_dir' => '/uploads/footer/',
+
+            'per_page' => 10,
+        ],
         'project' => [
 
             'image_size' => [

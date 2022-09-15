@@ -84,11 +84,11 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
         Route::get('user/{id}/show','Admin\UserController@show')->name('user.show')->where('id', '[0-9]+');
 
         Route::resource('user', 'Admin\RoleController');
-        Route::get('role/{id}/delete', array('as' => 'admin.role.delete', 'uses' => 'RoleController@confirmDestroy', ))->where('id', '[0-9]+');
-        Route::get('role/create', array('as' => 'admin.role.create', 'uses' => 'RoleController@create', ))->where('id', '[0-9]+');
-        Route::get('role/{id}/edit', array('as' => 'admin.role.edit', 'uses' => 'RoleController@edit', ))->where('id', '[0-9]+');
-        Route::get('/role', array('as' => 'admin.role.index', 'uses' => 'RoleController@index'));
-        Route::get('role/{id}/show', array('as' => 'admin.role.show', 'uses' => 'RoleController@show', ))->where('id', '[0-9]+');
+        Route::get('role/{id}/delete', 'Admin\RoleController@confirmDestroy', )->name('role.delete')->where('id', '[0-9]+');
+        Route::get('role/create',  'Admin\RoleController@create')->name('role.create')->where('id', '[0-9]+');
+        Route::get('role/{id}/edit', 'Admin\RoleController@edit')->name('role.edit')->where('id', '[0-9]+');
+        Route::get('/role', 'Admin\RoleController@index')->name('role.index');
+        Route::get('role/{id}/show','Admin\RoleController@show')->name('role.show')->where('id', '[0-9]+');
 
         Route::patch('role/{id}/update', array('as' => 'admin.role.update', 'uses' => 'RoleController@update', ))->where('id', '[0-9]+');
 
@@ -132,6 +132,10 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
         Route::resource('setting', 'Admin\SettingController');
         Route::get('/settings',  'Admin\SettingController@index')->name('setting.index')->where('id', '[0-9]+');
 
+
+         //Configuracion
+         Route::resource('footer', 'Admin\FooterController');
+         Route::get('/footer',  'Admin\FooterController@index')->name('footer.index')->where('id', '[0-9]+');
         //Product Routes
         Route::resource('product', 'Admin\ProductController');
 

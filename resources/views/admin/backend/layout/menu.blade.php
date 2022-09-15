@@ -31,15 +31,7 @@
             <li><a href="{{ url( '/admin/menu') }}"> <i class="fa fa-bars"></i> <span>Menu</span> </a>
             </li>
 
-            <li class="treeview"><a href="#"> <i class="fa fa-bookmark"></i> <span>Pages</span>
-                    <i class="fa fa-angle-left pull-right"></i> </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ url('/admin/page') }}"><i class="fa fa-folder"></i> All Pages</a>
-                    </li>
-                    <li><a href="{{url('/admin/page/create') }}"><i class="fa fa-plus-square"></i> Add Page</a>
-                    </li>
-                </ul>
-            </li>
+            
 
             <li class="treeview"><a href="#"> <i class="fa fa-book"></i> <span>Blog</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
@@ -90,24 +82,9 @@
                         <a href="{{ url('/admin/linea/create') }}"><i class="fa fa-plus-square"></i> Agregar Año</a>
                     </li>
                 </ul>
-            </li>
-            <li class="treeview"><a href="#"> <i class="fa fa-tint"></i> <span>Plugins</span>
-                    <i class="fa fa-angle-left pull-right"></i> </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ url('/admin/slider') }}"><i class="fa fa-toggle-up"></i> Sliders</a>
-                    </li>
-                </ul>
-            </li>
+          
 
-            <li class="treeview"><a href="#"> <i class="fa fa-question"></i> <span>Faqs</span>
-                    <i class="fa fa-angle-left pull-right"></i> </a>
-                <ul class="treeview-menu">
-                    <li><a href="{{ url('/admin/faq') }}"><i class="fa fa-question-circle"></i> All Faq</a></li>
-                    <li>
-                        <a href="{{ url('/admin/faq/create') }}"><i class="fa fa-plus-square"></i> Add Faq</a>
-                    </li>
-                </ul>
-            </li>
+            
             <li class="treeview"><a href="#"> <i class="fa fa-user"></i> <span>Users</span>
                     <i class="fa fa-angle-left pull-right"></i> </a>
                 <ul class="treeview-menu">
@@ -117,19 +94,11 @@
                     </li>
                 </ul>
             </li>
-            <li class="treeview"><a href="#"> <i class="fa fa-thumb-tack"></i> <span>Records</span>
-                    <i class="fa fa-angle-left pull-right"></i> </a>
-                <ul class="treeview-menu">
-                    <li><a target="_blank" href="{{ url('/admin/logs') }}"><i class="fa fa-save"></i> Log</a></li>
-                    <li>
-                        <a href="{{ url('/admin/form-post') }}"><i class="fa fa-envelope"></i> Form Post</a>
-                    </li>
-                </ul>
-            </li>
+          
             <li class="treeview"><a href="#"> <i class="fa fa-gear"></i> <span>Configuracion</span>
                 <i class="fa fa-angle-left pull-right"></i> </a>
             <ul class="treeview-menu">
-                <li><a target="_blank" href="{{ url('/admin/settings') }}"><i class="fa fa-gear"></i> General</a></li>
+                <li><a href="{{ url('/admin/settings') }}"><i class="fa fa-gear"></i> General</a></li>
                 <li>
                     <a href="{{ url('/admin/footer') }}"><i class="fa fa-gear"></i> Footer</a>
                 </li>
