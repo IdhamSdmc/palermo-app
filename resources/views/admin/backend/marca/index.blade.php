@@ -36,10 +36,7 @@
                         <tbody>
                         @foreach( $marcas as $marca )
                             <tr>
-                                <td>
-                                    <a href="{!! URL::route('admin.marca.show', array($marca->id)) !!}" class="btn-link ">
-                                         </a>
-                                </td>
+                              
                                 <td>{!! $marca->marca !!}</td>
                                 <td>{!! $marca->created_at !!}</td>
                                 <td>{!! $marca->updated_at !!}</td>
@@ -82,10 +79,7 @@
                 <div class="alert alert-danger">No se encontraron registro aun</div>
             @endif
         </div>
-        <div class="pull-left">
-            <ul class="pagination">
-                {!! $marcas->render() !!}
-            </ul>
-        </div>
+             
+    {!! $marcas->links() !!}
     </div>
 @stop

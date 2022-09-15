@@ -136,6 +136,7 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
          //Configuracion
          Route::resource('footer', 'Admin\FooterController');
          Route::get('/footer',  'Admin\FooterController@index')->name('footer.index')->where('id', '[0-9]+');
+         Route::post('/footer',  'Admin\FooterController@store')->name('footer.store')->where('id', '[0-9]+');
         //Product Routes
         Route::resource('product', 'Admin\ProductController');
 

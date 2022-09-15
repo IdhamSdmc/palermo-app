@@ -115,17 +115,8 @@ class CacheDecorator extends AbstractFooterDecorator
     }
 
     public function create($id)
-    {   $var= implode(' ', $id);
-        $key = md5($this->cacheKey.'.id.'.$var);
-
-        if ($this->cache->has($key)) {
-            return $this->cache->get($key);
-        }
-
-        $footer = $this->footer->create($id);
-
-        $this->cache->put($key, $footer);
-
-        return $footer;
+    {   
+        
+        return true;
     }
 }

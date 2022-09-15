@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="_token" content="{!! csrf_token() !!}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Palermo | Dashboard</title>
     <link rel="icon" type="image/png" href="{{asset('assets/imgs/resources/favicon.ico')}}"/>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
@@ -53,6 +54,8 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link href="{!! url('backend/css/skins/_all-skins.min.css') !!}" rel="stylesheet" type="text/css"/>
+    <link href="{!! url('backend/css/app.css') !!}" rel="stylesheet" type="text/css"/>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -103,7 +106,6 @@
 
                                 <p>
                                 <p> {{ Auth::user()->first_name . ' ' . Auth::user()->last_name }} - Web Developer
-                                    <small>Member since Nov. 2012</small>
                                 </p>
                             </li>
                             <!-- Menu Body -->

@@ -22,7 +22,7 @@
 </section>
 <br>
 <br>
-<div class="col-lg-10">
+<div class="container">
 
     
     <ul class="nav nav-tabs" id="myTab">
@@ -59,7 +59,7 @@
 
                 </div>
 
-                <div> <span class="btn btn-default btn-file"><span class="fileinput-new">SeLecciona </span><span class="fileinput-exists">Archivo</span> {!! Form::file('logo', null, array('class'=>'form-control', 'id' => 'logo', 'placeholder'=>'Image', 'value'=>Input::old('logo'))) !!}
+                <div> <span class="btn btn-default btn-file"><span class="fileinput-new">Selecciona Imagen</span><span class="fileinput-exists">Archivo</span> {!! Form::file('logo', null, array('class'=>'form-control', 'id' => 'logo', 'placeholder'=>'Image', 'value'=>Input::old('logo'))) !!}
               @if ($errors->first('logo')) <span class="help-block">{!! $errors->first('logo') !!}</span> @endif </span> <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
             </div>
             <br>
@@ -70,10 +70,10 @@
 
                 </div>
 
-                <div> <span class="btn btn-default btn-file"><span class="fileinput-new">SeLecciona </span><span class="fileinput-exists">Archivo</span> {!! Form::file('favicon', null, array('class'=>'form-control', 'id' => 'favicon', 'placeholder'=>'Image', 'value'=>Input::old('favicon'))) !!}
+                <div> <span class="btn btn-default btn-file"><span class="fileinput-new">Selecciona Imagen </span><span class="fileinput-exists">Archivo</span> {!! Form::file('favicon', null, array('class'=>'form-control', 'id' => 'favicon', 'placeholder'=>'Image', 'value'=>Input::old('favicon'))) !!}
               @if ($errors->first('favicon')) <span class="help-block">{!! $errors->first('favicon') !!}</span> @endif </span> <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a> </div>
             </div>
-
+            <br>
             {!! Form::submit('Guardar', array('class' => 'btn btn-success')) !!}
             {!! Form::close() !!}
         </div>

@@ -1,0 +1,24 @@
+.pagination{
+    height: 50px;
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fileinput .thumbnail {
+    overflow: hidden;
+    display: block !important;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    text-align: center;
+}
+.fileinput {
+    margin-bottom: 9px;
+    display: block !important;
+}
+.input_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }

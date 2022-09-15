@@ -6,12 +6,12 @@
         });
     </script>
     <section class="content-header">
-        <h1> Category
+        <h1> Categoria
             <small> | Control Panel</small>
         </h1>
         <ol class="breadcrumb">
             <li><a href="{!! url('/admin') !!}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active">Category</li>
+            <li class="active">Categoria</li>
         </ol>
     </section>
     <br>
@@ -22,7 +22,7 @@
 
             <div class="pull-left">
                 <div class="btn-toolbar"><a href="{!! URL::route('admin.category.create') !!}" class="btn btn-primary">
-                        <span class="glyphicon glyphicon-plus"></span>&nbsp;Add Category </a></div>
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp;Agregar Categoria </a></div>
             </div>
             <br> <br> <br>
             @if($categories->count())
@@ -30,8 +30,8 @@
                     <table class="table table-striped">
                         <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Action</th>
+                            <th>Descripcion</th>
+                            <th>Opciones</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -42,30 +42,23 @@
                                 <td>
                                     <div class="btn-group">
                                         <a class="btn btn-danger dropdown-toggle" data-toggle="dropdown" href="#">
-                                            Action <span class="caret"></span> </a>
+                                            Opciones <span class="caret"></span> </a>
                                         <ul class="dropdown-menu">
                                             <li>
                                                 <a href="{!!  URL::route('admin.category.show', array($category->id)) !!}">
-                                                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Show
-                                                    Category </a>
+                                                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp;Ver Categoria </a>
                                             </li>
                                             <li>
                                                 <a href="{!!  URL::route('admin.category.edit', array($category->id)) !!}">
-                                                    <span class="glyphicon glyphicon-edit"></span>&nbsp;Edit Category
+                                                    <span class="glyphicon glyphicon-edit"></span>&nbsp;Editar Categoria
                                                 </a>
                                             </li>
                                             <li class="divider"></li>
                                             <li>
                                                 <a href="{!! URL::route('admin.category.delete', array($category->id)) !!}">
-                                                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Delete
-                                                    Category </a>
+                                                    <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Eliminar Categoria </a>
                                             </li>
-                                            <li class="divider"></li>
-                                            <li>
-                                                <a target="_blank" href="{!! URL::route('dashboard.category', ['slug' => $category->slug]) !!}">
-                                                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp;View On Site
-                                                </a>
-                                            </li>
+                                            
                                         </ul>
                                     </div>
                                 </td>

@@ -17,6 +17,10 @@ class ComposerServiceProvider extends ServiceProvider
         View::composer('layouts.app2', 'App\Composers\SettingComposer');
         View::composer('layouts.topbar', 'App\Composers\SettingComposer');
         View::composer('layouts.navbar', 'App\Composers\SettingComposer');
+        View::composer('admin.backend.auth.login2', 'App\Composers\SettingComposer');
+        View::composer('admin.backend.layout.layout', 'App\Composers\SettingComposer');
+        View::composer('layouts.footer', 'App\Composers\FooterComposer');
+        View::composer('layouts.footer2', 'App\Composers\FooterComposer');
 
     }
 

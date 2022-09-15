@@ -11,9 +11,9 @@ use App\Http\Controllers\Controller;
 use App\Repositories\Article\ArticleInterface;
 use App\Repositories\Category\CategoryInterface;
 use App\Exceptions\Validation\ValidationException;
-use App\Repositories\Article\ArticleRepository as Article;
-use App\Repositories\Category\CategoryRepository as Category;
 use Illuminate\Support\Facades\DB;
+use App\Models\Category;
+use App\Models\Article;
 use function Psy\debug;
 
 /**
@@ -44,7 +44,7 @@ class ArticleController extends Controller
     public function index()
     {
         $pagiData = $this->article->paginate(Input::get('page', 1), $this->perPage, true);
-        $articles = Pagination::makeLengthAware($pagiData->items, $pagiData->totalItems, $this->perPage);
+        $articles = Article::paginate(6);
 
         return view('/admin/backend.article.index', compact('articles'));
     }
@@ -57,7 +57,7 @@ class ArticleController extends Controller
     public function create()
     {
         $cat_array = null;
-        $categories = $this->category->all();
+        $categories = Category::pluck('title', 'id');
         
           return view('/admin/backend.article.create', compact('categories'));
     }
@@ -110,8 +110,7 @@ class ArticleController extends Controller
         }
 
         $tags = substr($tags, 1);
-        $categories = $this->category->lists();
-
+        $categories = Category::pluck('title', 'id');
         return view('/admin/backend.article.edit', compact('article', 'tags', 'categories'));
     }
 

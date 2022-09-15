@@ -9,7 +9,9 @@ use Input;
 use Flash;
 use App\Models\Footer;
 use App\Repositories\Footer\FooterInterface;
-
+use Illuminate\Http\Request;
+use Config;
+use File;
 /**
  * Class FooterController.
  *
@@ -21,7 +23,13 @@ class FooterController extends Controller
     public function __construct(FooterInterface $footer)
     {
         $this->footer = $footer;
-
+        $config = Config::get('fully');
+        $this->perPage = $config['per_page'];
+        $this->width = $config['modules']['footer']['image_size']['width'];
+        $this->height = $config['modules']['footer']['image_size']['height'];
+        $this->thumbWidth = $config['modules']['footer']['thumb_size']['width'];
+        $this->thumbHeight = $config['modules']['footer']['thumb_size']['height'];
+        $this->imgDir = $config['modules']['footer']['image_dir'];
     }
       /**
      * Display a listing of the resource.
@@ -32,7 +40,8 @@ class FooterController extends Controller
     {
         $footer = (Footer::all()->first()) ?: new Footer();
       
-
+        $jsonData = $footer->redes;
+        $footer->redes = json_decode($jsonData, true);
         return view('/admin/backend.footer.footer', compact('footer'))->with('active', 'footers');
     }
   /**
@@ -60,11 +69,41 @@ class FooterController extends Controller
      * @return Response
      */
 
-    public function store()
+    public function store(Request $request)
     {
         try {
 
-            $this->footer->create(Input::all());
+
+            $this->footer = (Footer::all()->first()) ?: new Footer();
+
+
+            $this->footer->correo=$request['correo'];
+            $this->footer->telefono=$request['telefono'];
+            $dataAr = json_decode($request['redes']);
+            $array = array();
+            foreach ($dataAr as $value) {
+                 if ($value->nuevo=='1'){
+                    $destinationPath = public_path().$this->imgDir;
+                    $base64_str = substr($value->file, strpos($value->file, ",")+1);
+                    $image = base64_decode($base64_str);
+                    $safeName = $value->name;
+                    file_put_contents($destinationPath.$safeName,  $image);
+                 }
+               
+                $arreglo = array(
+                    'url' => $value->url,
+                    'name' => $value->name,
+                    'path' => $this->imgDir
+                );
+                array_push( $array, $arreglo);
+
+            }
+            $this->footer->redes=json_encode($array);
+            $this->footer->save();  
+               //--------------------------------------------------------
+               
+               //Event::fire('article.created', $this->article);
+   
             return langRedirectRoute('admin.footer.index');
         } catch (ValidationException $e) {
             return langRedirectRoute('admin.footer.index')->withInput()->withErrors($e->getErrors());

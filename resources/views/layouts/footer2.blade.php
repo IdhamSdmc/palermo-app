@@ -25,21 +25,20 @@
                     <div class="redes">
                         <h5>REDES SOCIALES</h5>
                         <div>
-                            <a href="https://www.facebook.com/grupopalermope" class="facebook ml-2" target="_blank">
-                                <img src="assets/imgs/resources/facebook.svg" alt="">
-                            </a>
-                            <a href="https://www.linkedin.com/company/grupo-palermo-peru/" class="linkedin" target="_blank">
-                                <img src="assets/imgs/resources/in.svg" alt="">
-                            </a>
+                            @foreach(  json_decode($footers['redes']) as $red )
+                            <a href="{{$red->url}}" ><img data-src="" {!! (($red->path) ? "src='".url($red->path.$red->name) ."'" : null) !!} alt=""></a>
+
+
+                            @endforeach
                         </div>
                     </div>
                     <div class="enlaces-container">
                         <h5>ENLACES DE INTERÉS</h5>
                         <div class="grupo-enlaces">
                             <div class="enlaces">
-                                <a href="/contactanos/#work" target="_blank">Oportunidad Laboral</a>
-                                <a href="">contacto@grupopalermo.pe</a>
-                                <a href="tel:016206025">(01) 620 6025</a>
+                                <a href="/contactanos/#work" target="_blank">Oportunidad Laboral</a>                                
+                                <a href="">{!! $footers['correo']!!}</a>
+                                <a href="tel:016206025">{!! $footers['telefono']!!}</a>
                             </div>
                             <div class="enlaces">
                                 <a href="/terminos-condiciones" target="_blank">Terminos y condiciones</a>

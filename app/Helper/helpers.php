@@ -56,7 +56,7 @@ function langURL($url = null)
 
     //return LaravelLocalization::getLocalizedURL(getLang(), $url);
 
-    return getLang().$url;
+    return $url;
 }
 
 /**

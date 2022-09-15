@@ -83,10 +83,6 @@
                 <div class="alert alert-danger">No results found</div>
             @endif
         </div>
-        <div class="pull-left">
-            <ul class="pagination">
-                {!! $products->render() !!}
-            </ul>
-        </div>
+        {!! $products->links() !!}
     </div>
 @stop

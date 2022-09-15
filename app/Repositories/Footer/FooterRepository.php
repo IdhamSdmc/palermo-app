@@ -46,73 +46,12 @@ class FooterRepository extends Validator implements FooterInterface
      */
     public function getFooters()
     {
-        $obj = ($this->footer->first()) ?: $this->footer;
-
+        $obj = (Footer::all()->first()) ?: $this->footer;
         return $obj;
     }
     public function create($footers)
     {
-
-        $this->footer = (Footer::all()->first()) ?: new Footer();
-
-
-         $this->footer->title=$footers['title'];
-            $file = null;
-
-            $file2 = null;
-
-            if (isset($footers['logo'])) {
-                $file = $footers['logo'];
-            }
-            if (isset($footers['favicon'])) {
-                $file2 = $footers['favicon'];
-            }
-            if ($file) {
-                $destinationPath = public_path().$this->imgDir;
-                $fileName = $file->getClientOriginalName();
-                $fileSize = $file->getSize();
-
-                $upload_success = $file->move($destinationPath, $fileName);
-
-                if ($upload_success) {
-
-                    // resizing an uploaded file
-                    /*Image::make($destinationPath.$fileName)->resize($this->width, $this->height)->save($destinationPath.$fileName);*/
-
-                    // thumb
-                  //  Image::make($destinationPath.$fileName)->resize($this->thumbWidth, $this->thumbHeight)->save($destinationPath.'thumb_'.$fileName);
-
-                    $this->footer->file_name_logo = $fileName;
-                    $this->footer->file_size_logo= $fileSize;
-                    $this->footer->path_logo = $this->imgDir;
-                }
-            }
-            if ($file2) {
-                $destinationPath = public_path().$this->imgDir;
-                $fileName = $file2->getClientOriginalName();
-                $fileSize = $file2->getSize();
-
-                $upload_success = $file2->move($destinationPath, $fileName);
-
-                if ($upload_success) {
-
-                    // resizing an uploaded file
-                    /*Image::make($destinationPath.$fileName)->resize($this->width, $this->height)->save($destinationPath.$fileName);*/
-
-                    // thumb
-                   // Image::make($destinationPath.$fileName)->resize($this->thumbWidth, $this->thumbHeight)->save($destinationPath.'thumb_'.$fileName);
-
-                    $this->footer->file_name_favicon = $fileName;
-                    $this->footer->file_size_favicon= $fileSize;
-                    $this->footer->path_favicon = $this->imgDir;
-                }
-            }
-            //--------------------------------------------------------
-            $this->footer->fill($footers)->save();
-            
-            //Event::fire('article.created', $this->article);
-
-            return true;
+       
 
 
     }
