@@ -53,7 +53,7 @@ class SettingRepository extends Validator implements SettingInterface
     public function create($settings)
     {
 
-        $this->setting = (Setting::where('lang', getLang())->first()) ?: new Setting();
+        $this->setting = (Setting::all()->first()) ?: new Setting();
 
 
          $this->setting->title=$settings['title'];

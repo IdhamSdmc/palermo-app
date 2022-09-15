@@ -57,7 +57,7 @@ class FooterController extends Controller
         unset($formData['_token']);
 
         $json = json_encode($formData);
-        $footer->fill(array('footers' => $json, 'lang' => getLang()))->save();
+        $footer->fill(array('footers' => $json))->save();
 
         Flash::message('Footers was successfully updated');
 

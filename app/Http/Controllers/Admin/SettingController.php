@@ -30,7 +30,7 @@ class SettingController extends Controller
      */
     public function index()
     {
-        $setting = (Setting::where('lang', getLang())->first()) ?: new Setting();
+        $setting = (Setting::all()->first()) ?: new Setting();
       
 
         return view('/admin/backend.setting.setting', compact('setting'))->with('active', 'settings');
@@ -42,13 +42,13 @@ class SettingController extends Controller
      */
     public function save()
     {
-        $setting = (Setting::where('lang', getLang())->first()) ?: new Setting();
+        $setting = (Setting::all()->first()) ?: new Setting();
 
         $formData = Input::all();
         unset($formData['_token']);
 
         $json = json_encode($formData);
-        $setting->fill(array('settings' => $json, 'lang' => getLang()))->save();
+        $setting->fill(array('settings' => $json))->save();
 
         Flash::message('Settings was successfully updated');
 
