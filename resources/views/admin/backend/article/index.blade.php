@@ -39,8 +39,8 @@
     </section>
     <br>
 
-    <div class="container">
-        <div class="col-lg-10">
+    <div class="container-fluid">
+        <div class="col-lg-12">
             <br>
 
             <div class="pull-left">
@@ -53,9 +53,9 @@
             </div>
             <br> <br> <br>
             @if($articles->count())
-                <div class="">
+                <div class="table-responsive">
                     <table class="table table-striped table-bordered table-hover">
-                        <thead>
+                        <thead class="table-dark">
                         <tr>
                             <th>Title</th>
                             <th>Created Date</th>

@@ -12,7 +12,7 @@
     <br>
 
     <div class="container">
-        <div class="col-lg-10">
+        <div class="col-lg-12">
             <br>
 
             <div class="pull-left">
@@ -37,10 +37,10 @@
                         @foreach( $marcas as $marca )
                             <tr>
                                 <td>
-                                    <a href="{!! URL::route('admin.marca.show', array($marca->id)) !!}" class="btn-link ">
-                                         </a>
+                                    <a href="{!! URL::route('admin.marca.show', array($marca->id)) !!}" class="btn-link text-bold">
+                                        {!! $marca->marca !!}
+                                    </a>
                                 </td>
-                                <td>{!! $marca->marca !!}</td>
                                 <td>{!! $marca->created_at !!}</td>
                                 <td>{!! $marca->updated_at !!}</td>
                                 <td>

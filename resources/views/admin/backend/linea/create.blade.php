@@ -55,7 +55,7 @@
         </div>
         <br>
 
-        {!! Form::submit('Create', array('class' => 'btn btn-success')) !!}
+        {!! Form::submit('Registrar año', array('class' => 'btn btn-success')) !!}
         {!! Form::close() !!}
         <br>
         <script type="text/javascript">

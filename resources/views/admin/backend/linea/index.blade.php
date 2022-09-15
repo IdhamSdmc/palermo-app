@@ -12,7 +12,7 @@
     <br>
 
     <div class="container">
-        <div class="col-lg-10">
+        <div class="col-lg-12">
             <br>
 
             <div class="pull-left">
@@ -38,7 +38,7 @@
                         @foreach( $lineas as $linea )
                             <tr>
                                 <td>
-                                    <a href="{!! URL::route('admin.linea.show', array($linea->id)) !!}" class="btn-link ">
+                                    <a href="{!! URL::route('admin.linea.show', array($linea->id)) !!}" class="btn-link text-bold">
                                         {!! $linea->year !!} </a>
                                 </td>
                                 <td>{!! Str::limit($linea->descripcion, 50) !!}</td>
