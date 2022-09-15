@@ -94,7 +94,7 @@
 
 
             <br>
-            {!! Form::submit('Update', array('class' => 'btn btn-success')) !!}
+            {!! Form::submit('Actualizar historia', array('class' => 'btn btn-success')) !!}
             {!! Form::close() !!}
             <script>
                 window.onload = function () {

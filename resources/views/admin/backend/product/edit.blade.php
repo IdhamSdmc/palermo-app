@@ -70,7 +70,7 @@
 
 
             <br>
-            {!! Form::submit('Update', array('class' => 'btn btn-success')) !!}
+            {!! Form::submit('Actualizar producto', array('class' => 'btn btn-success')) !!}
             {!! Form::close() !!}
             <script>
                 window.onload = function () {

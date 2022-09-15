@@ -11,8 +11,8 @@
     </section>
     <br>
 
-    <div class="container">
-        <div class="col-lg-10">
+    <div class="container-fluid">
+        <div class="col-lg-12">
             <br>
 
             <div class="pull-left">
@@ -43,9 +43,9 @@
                                     <a href="{!! URL::route('admin.historia.show', array($historia->id)) !!}" class="btn-link">
                                         {!! $historia->titulo !!} </a>
                                 </td>
-                                <td>{!! Str::limit($historia->reto, 15) !!}</td>
-                                <td>{!! Str::limit($historia->solucion, 15) !!}</td>
-                                <td>{!! Str::limit($historia->resultado, 15) !!}</td>
+                                <td>{!! Str::limit($historia->reto, 30) !!}</td>
+                                <td>{!! Str::limit($historia->solucion, 30) !!}</td>
+                                <td>{!! Str::limit($historia->resultado, 30) !!}</td>
                                 <td>{!! $historia->created_at !!}</td>
                                 <td>{!! $historia->updated_at !!}</td>
                                 <td>
@@ -76,6 +76,11 @@
                                             </li>
                                         </ul>
                                     </div>
+                                </td>
+                                <td>
+                                    <a target="_blank" href="#" class="btn btn-danger">
+                                        &nbsp;Ver en web
+                                    </a>
                                 </td>
 
                             </tr>

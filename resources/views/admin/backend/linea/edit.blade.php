@@ -56,7 +56,7 @@
         </div>
 
             <br>
-            {!! Form::submit('Update', array('class' => 'btn btn-success')) !!}
+            {!! Form::submit('Actualizar año', array('class' => 'btn btn-success')) !!}
             {!! Form::close() !!}
         <br>
             <script>

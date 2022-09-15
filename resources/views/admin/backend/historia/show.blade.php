@@ -13,8 +13,8 @@
     </section>
     <br>
     <br>
-    <div class="container">
-        <div class="col-lg-10">
+    <div class="container-flui">
+        <div class="col-lg-12">
             <div class="pull-left">
                 <div class="btn-toolbar">
                     <a href="{!! url('/admin/historia') !!}"
@@ -29,15 +29,15 @@
                     <td>{!! $historia->titulo !!}</td>
                 </tr>
                 <tr>
-                    <td><strong>Descripcion</strong></td>
+                    <td><strong>Reto</strong></td>
                     <td>{!! $historia->reto !!}</td>
                 </tr>
                 <tr>
-                    <td><strong>Descripcion</strong></td>
+                    <td><strong>Solucion</strong></td>
                     <td>{!! $historia->solucion !!}</td>
                 </tr>
                 <tr>
-                    <td><strong>Descripcion</strong></td>
+                    <td><strong>Resultado</strong></td>
                     <td>{!! $historia->resultado !!}</td>
                 </tr>
 

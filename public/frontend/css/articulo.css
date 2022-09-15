@@ -11,7 +11,7 @@
 }
 
 .input-search {
-    width: 60%;
+    width: 100%;
     position: relative;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .select {
-    width: 40%;
+    width: 100%;
     border: 2px solid var(--bg-primary);
     outline: none;
     border-radius: 1.375rem;

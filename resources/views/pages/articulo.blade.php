@@ -23,19 +23,18 @@
         <section class="section-container" id="articulos">
             <div class="section">
                 <div class="actions">
-                    <form action="{{route('lista')}}">
-                        <div class="input-search">
-                            <input type="text" autocomplete="none">
-                            <i class="bi bi-search"></i>
-                        </div>
-                    </form>
+                    <div class="input-search">
+                        <form action="{{route('lista')}}" method="get" class="text-center" id="form-busqueda">
+                                <input type="text" autocomplete="none" name="texto" id="texto" value="{{$texto}}">
+                                <i class="bi bi-search"></i>
 
+                        </form>
+                    </div>
                     <select name="categoria" id="categoria" class="select">
                     @foreach($categorias as $categoria)
                             <option value="{{$categoria->id}}" selected>{{$categoria->title}}</option>
                     @endforeach
                     </select>
-
                 </div>
                 <div class="content" id="list">
 
@@ -89,4 +88,17 @@
 @endpush
 @push('js')
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script !src="">
+        $(document).ready(function () {
+
+            $("#texto").keypress(function (e){
+                var key = e.which;
+                if(key == 13)  // the enter key code
+                {
+                    $("#form-busqueda").submit();
+                }
+
+            });
+        });
+    </script>
 @endpush

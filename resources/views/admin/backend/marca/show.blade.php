@@ -14,7 +14,7 @@
     <br>
     <br>
     <div class="container">
-        <div class="col-lg-10">
+        <div class="col-lg-12">
             <div class="pull-left">
                 <div class="btn-toolbar">
                     <a href="{!! url('/admin/marca') !!}"

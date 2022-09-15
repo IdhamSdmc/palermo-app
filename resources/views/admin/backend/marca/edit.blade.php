@@ -56,7 +56,7 @@
 
 
             <br>
-            {!! Form::submit('Update', array('class' => 'btn btn-success')) !!}
+            {!! Form::submit('Actualizar marca', array('class' => 'btn btn-success')) !!}
             {!! Form::close() !!}
             <script>
                 window.onload = function () {

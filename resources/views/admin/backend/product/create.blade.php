@@ -68,7 +68,7 @@
 
         <br>
 
-        {!! Form::submit('Create', array('class' => 'btn btn-success')) !!}
+        {!! Form::submit('Registrar producto', array('class' => 'btn btn-success')) !!}
         {!! Form::close() !!}
         <br>
         <script type="text/javascript">

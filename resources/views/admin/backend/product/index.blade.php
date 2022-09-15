@@ -11,8 +11,8 @@
     </section>
     <br>
 
-    <div class="container">
-        <div class="col-lg-10">
+    <div class="container-fluid">
+        <div class="col-lg-12">
             <br>
 
             <div class="pull-left">
@@ -61,17 +61,18 @@
                                             </li>
                                             <li class="divider"></li>
                                             <li>
-                                                <a href="{!! URL::route('admin.product.delete', array($product->id)) !!}">
+                                                <a onclick="return confirm('¿Estas seguro de eliminar este producto?')" href="{!! URL::route('admin.product.delete', array($product->id)) !!}">
                                                     <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Eliminar Producto </a>
                                             </li>
                                             <li class="divider"></li>
-                                            <li>
-                                                {{--<a target="_blank" href="{!! URL::route('admin.backend.product.show', ['slug' => $product->slug]) !!}">
-                                                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp;View On Site
-                                                </a>--}}
-                                            </li>
+
                                         </ul>
                                     </div>
+                                </td>
+                                <td>
+                                    <a target="_blank" class="btn btn-danger" href="http://web.grupopalermo.pe/productos">
+                                        &nbsp;Ver en la web
+                                    </a>
                                 </td>
 
                             </tr>
