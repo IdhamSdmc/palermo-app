@@ -54,7 +54,7 @@
             <br> <br> <br>
             @if($articles->count())
                 <div class="">
-                    <table class="table table-striped">
+                    <table class="table table-striped table-bordered table-hover">
                         <thead>
                         <tr>
                             <th>Title</th>
@@ -68,7 +68,7 @@
                         @foreach( $articles as $article )
                             <tr>
                                 <td>
-                                    <a href="{!! URL::route('admin.article.show', array($article->id)) !!}" class="btn btn-link btn-xs">
+                                    <a href="{!! URL::route('admin.article.show', array($article->id)) !!}" class=" btn-link">
                                         {!! $article->title !!} </a>
                                 </td>
                                 <td>{!! $article->created_at !!}</td>

@@ -37,10 +37,10 @@
                         @foreach( $marcas as $marca )
                             <tr>
                                 <td>
-                                    <a href="{!! URL::route('admin.marca.show', array($marca->id)) !!}" class="btn btn-link btn-xs">
-                                        {!! $marca->marca !!} </a>
+                                    <a href="{!! URL::route('admin.marca.show', array($marca->id)) !!}" class="btn-link ">
+                                         </a>
                                 </td>
-                                <td>{!! $marca->descripcion !!}</td>
+                                <td>{!! $marca->marca !!}</td>
                                 <td>{!! $marca->created_at !!}</td>
                                 <td>{!! $marca->updated_at !!}</td>
                                 <td>
@@ -60,7 +60,7 @@
                                             </li>
                                             <li class="divider"></li>
                                             <li>
-                                                <a href="{!! URL::route('admin.marca.delete', array($marca->id)) !!}">
+                                                <a onclick="return confirm('¿Estas seguro de eliminar esta marca?')" href="{!! URL::route('admin.marca.delete', array($marca->id)) !!}">
                                                     <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Eliminar Marca </a>
                                             </li>
                                             <li class="divider"></li>

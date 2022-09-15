@@ -40,7 +40,7 @@
                         @foreach( $historias as $historia )
                             <tr>
                                 <td>
-                                    <a href="{!! URL::route('admin.historia.show', array($historia->id)) !!}" class="btn btn-link btn-xs">
+                                    <a href="{!! URL::route('admin.historia.show', array($historia->id)) !!}" class="btn-link">
                                         {!! $historia->titulo !!} </a>
                                 </td>
                                 <td>{!! Str::limit($historia->reto, 15) !!}</td>
@@ -65,7 +65,7 @@
                                             </li>
                                             <li class="divider"></li>
                                             <li>
-                                                <a href="{!! URL::route('admin.historia.delete', array($historia->id)) !!}">
+                                                <a onclick="return confirm('¿Estas seguro de eliminar esta historia?')" href="{!! URL::route('admin.historia.delete', array($historia->id)) !!}">
                                                     <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Eliminar Historia </a>
                                             </li>
                                             <li class="divider"></li>

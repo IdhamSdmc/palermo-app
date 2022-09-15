@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="{{asset('assets/imgs/resources/favicon.ico')}}"/>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
-    <link href="{!! url('backend/bootstrap/css/bootstrap.min.css') !!}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <!-- Font Awesome Icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <!-- Ionicons -->
@@ -19,7 +19,7 @@
     <!-- Daterange picker -->
     <link href="{!! url('backend/plugins/daterangepicker/daterangepicker-bs3.css') !!}" rel="stylesheet" type="text/css"/>
     <!-- Theme style -->
-    <link href="{!! url('backend/css/AdminLTE.min.css') !!}" rel="stylesheet" type="text/css"/>
+    <link href="{!! url('backend/css/AdminLTE.css') !!}" rel="stylesheet" type="text/css"/>
 
     <link href="{!! url('backend/css/style.css') !!}" rel="stylesheet" type="text/css"/>
     {{Html::style("assets/css/github-left.css") }}
