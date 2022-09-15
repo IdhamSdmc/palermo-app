@@ -15,6 +15,7 @@ use App\Models\Video;
 use App\Models\Menu;
 use App\Models\Slider;
 use App\Models\Setting;
+use App\Models\Footer;
 use App\Repositories\Article\ArticleRepository;
 use App\Repositories\Article\CacheDecorator as ArticleCacheDecorator;
 use App\Repositories\Category\CategoryRepository;
@@ -39,6 +40,8 @@ use App\Repositories\Slider\SliderRepository;
 use App\Repositories\Slider\CacheDecorator as SliderCacheDecorator;
 use App\Repositories\Setting\SettingRepository;
 use App\Repositories\Setting\CacheDecorator as SettingCacheDecorator;
+use App\Repositories\Footer\FooterRepository;
+use App\Repositories\Footer\CacheDecorator as FooterCacheDecorator;
 use App\Services\Cache\AppCache;
 
 /**
@@ -261,6 +264,23 @@ class RepositoryServiceProvider extends ServiceProvider
             }
 
             return $setting;
+        });
+
+    // footer
+        $app->bind('App\Repositories\Footer\FooterInterface', function ($app) {
+
+            $footer = new FooterRepository(
+                new Footer()
+            );
+
+            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
+                $footer = new FooterCacheDecorator(
+                    $footer,
+                    new AppCache($app['cache'], 'footers')
+                );
+            }
+
+            return $footer;
         });
     }
 }
