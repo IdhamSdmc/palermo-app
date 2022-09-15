@@ -166,7 +166,7 @@ return [
         App\Providers\RepositoryServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
-
+     
         
         /*
          * Package Service Providers...
