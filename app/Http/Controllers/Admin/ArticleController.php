@@ -59,13 +59,6 @@ class ArticleController extends Controller
     {
         $cat_array = null;
         $categories = Category::pluck('title', 'id');
-<<<<<<< HEAD
-        $categories = Category::pluck('title', 'id');
-        
-=======
-        $categories = $this->category->all();
-
->>>>>>> 80165be1278c0a336dad5c8b285d833e086e0868
           return view('/admin/backend.article.create', compact('categories'));
     }
 
