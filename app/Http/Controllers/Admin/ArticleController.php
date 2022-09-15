@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use View;
 use Flash;
 use Input;
@@ -58,7 +59,7 @@ class ArticleController extends Controller
     {
         $cat_array = null;
         $categories = $this->category->all();
-        
+
           return view('/admin/backend.article.create', compact('categories'));
     }
 
@@ -161,11 +162,17 @@ class ArticleController extends Controller
         return $this->article->togglePublish($id);
     }
 
-    public function mostrar()
+    public function mostrar(Request $request)
     {
-        $articulos = DB::table('articles')->get();
+        $texto = trim($request->get('texto'));
+        $articulos = DB::table('articles')
+            ->select('id', 'title', 'content', 'path', 'file_name', 'created_at')
+            ->where('title', 'LIKE', '%'.$texto.'%')
+            ->orWhere('content', 'LIKE', '%'.$texto.'%')
+            ->orderBy('title', 'asc')
+            ->get();
         $categorias = DB::table('categories')->get();
 
-        return view('pages.articulo', compact('articulos', 'categorias'));
+        return view('pages.articulo', compact('articulos', 'texto', 'categorias'));
     }
 }

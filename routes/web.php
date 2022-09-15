@@ -44,7 +44,7 @@ Route::get('/contactanos', function () {
 Route::post('mail', [MailController::class, 'sendMail']);
 Route::post('trabajo', [MailController::class, 'trabajo']);
 
-Route::get('/articulos', [ArticleController::class, 'mostrar']);
+Route::get('/articulos', [ArticleController::class, 'mostrar'])->name('lista');
 Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show',
 'uses' => 'PhotoGalleryController@show', ));
         Route::group(['prefix' => 'admin', 'namespace'=>'Admin'], function () {
