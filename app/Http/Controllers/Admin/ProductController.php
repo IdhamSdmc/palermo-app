@@ -26,7 +26,6 @@ class ProductController extends Controller
     {
         //
         $products = DB::table('products')->get();
-
         return view('pages.productos2', compact('products'));
     }
 

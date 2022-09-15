@@ -38,7 +38,7 @@
                         @foreach( $lineas as $linea )
                             <tr>
                                 <td>
-                                    <a href="{!! URL::route('admin.linea.show', array($linea->id)) !!}" class="btn btn-link btn-xs">
+                                    <a href="{!! URL::route('admin.linea.show', array($linea->id)) !!}" class="btn-link ">
                                         {!! $linea->year !!} </a>
                                 </td>
                                 <td>{!! Str::limit($linea->descripcion, 50) !!}</td>
@@ -61,7 +61,7 @@
                                             </li>
                                             <li class="divider"></li>
                                             <li>
-                                                <a href="{!! URL::route('admin.linea.delete', array($linea->id)) !!}">
+                                                <a onclick="return confirm('¿Estas seguro de eliminar este periodo?')" href="{!! URL::route('admin.linea.delete', array($linea->id)) !!}">
                                                     <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;Eliminar Año </a>
                                             </li>
                                             <li class="divider"></li>

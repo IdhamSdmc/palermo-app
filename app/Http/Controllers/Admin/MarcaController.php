@@ -142,5 +142,7 @@ class MarcaController extends Controller
     public function destroy($id)
     {
         //
+        Marca::destroy($id);
+        return redirect()->route('admin.marca.index');
     }
 }

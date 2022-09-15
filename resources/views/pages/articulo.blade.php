@@ -23,10 +23,13 @@
         <section class="section-container" id="articulos">
             <div class="section">
                 <div class="actions">
-                    <div class="input-search">
-                        <input type="text" autocomplete="none">
-                        <i class="bi bi-search"></i>
-                    </div>
+                    <form action="{{route('lista')}}">
+                        <div class="input-search">
+                            <input type="text" autocomplete="none">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </form>
+
                     <select name="categoria" id="categoria" class="select">
                     @foreach($categorias as $categoria)
                             <option value="{{$categoria->id}}" selected>{{$categoria->title}}</option>
