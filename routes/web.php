@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\Admin\MarcaController;
 use App\Http\Controllers\Admin\LineaController;
+use App\Http\Controllers\Admin\BlogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,9 +30,7 @@ Route::get('/soluciones', function () {
 
 Route::get('/productos', [ProductController::class, 'productos']);
 
-Route::get('/blog', function () {
-    return view('pages.blog');
-});
+Route::get('/blog/{id}', [BlogController::class, 'blog']);
 Route::get('/terminos-condiciones', function () {
     return view('pages.terminos-condiciones');
 });
