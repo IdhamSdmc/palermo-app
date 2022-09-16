@@ -16,7 +16,7 @@ class Article extends BaseModel implements ModelInterface
 
 
     public $table = 'articles';
-    protected $fillable = ['title', 'content', 'meta_keywords', 'meta_description', 'is_published'];
+    protected $fillable = ['title', 'content', 'slug', 'category_id', 'path'];
     protected $appends = ['url'];
 
     public function sluggable() {
@@ -28,10 +28,7 @@ class Article extends BaseModel implements ModelInterface
             ]
         ];
     }
-    public function tags()
-    {
-        return $this->belongsToMany('App\Models\Tag', 'articles_tags');
-    }
+    
 
     public function category()
     {

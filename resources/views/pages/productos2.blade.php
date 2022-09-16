@@ -3,50 +3,30 @@
     <section  class="banner mb-5">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper ">
-                    <div class="swiper-slide solution">
-
-                        <div class="banner" style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position:top;">
-                            <div class="banner-container wrapper">
-                                <div class="banner-content">
-                            <h2 class="animate__animated animate__fadeInUp">LAPTOPS Y PANTALLAS</h2>
-                            <div style="max-width: 28rem">
-                                <p>
-                                    Equipa tu empresa con los mejores equipos tecnológicos.
-                                </p>
-                                <a href="#productos" class="btn-banner">VER MÁS</a>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-
-                    </div>
+                   
                     <div class="swiper-slide solution" >
 
-                        <div class="banner" style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position:top;"">
-                            <div class="banner-container wrapper">
-                                <div class="banner-content">
-                            <h2 class="animate__animated animate__fadeInUp">VIDEOCONFERENCIA</h2>
-                            <div style="max-width: 28rem">
-                                <p>
-                                    Equipa tu empresa con los mejores equipos tecnológicos.
-                                </p>
-                                <a href="#productos" class="btn-banner">VER MÁS</a>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide solution" >
-
-                        <div class="banner" style="background-image: url('assets/imgs/recursos/inicio 4 LAPTOPS Y PANTALLAS.jpg'); background-position:top;"">
+                        <div class="banner" style="background-image: url('assets/imgs/recursos/inicio impresoras.jpg'); background-position:top;"">
                             <div class="banner-container wrapper">
                                 <div class="banner-content">
                             <h2 class="animate__animated animate__fadeInUp">IMPRESORAS</h2>
                             <div style="max-width: 28rem">
-                                <p>
-                                    Equipa tu empresa con los mejores equipos tecnológicos.
-                                </p>
+                              
+                                <a href="#productos" class="btn-banner">VER MÁS</a>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide solution" >
+
+                        <div class="banner" style="background-image: url('assets/imgs/recursos/laptos,pantallas.png'); background-position:top;"">
+                            <div class="banner-container wrapper">
+                                <div class="banner-content">
+                            <h2 class="animate__animated animate__fadeInUp">LAPTOPS,PANTALLAS Y VIDEOCONFERENCIA</h2>
+                            <div style="max-width: 28rem">
+                             
                                 <a href="#productos" class="btn-banner">VER MÁS</a>
                             </div>
                             </div>

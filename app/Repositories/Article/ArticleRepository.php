@@ -5,7 +5,6 @@ namespace App\Repositories\Article;
 use App\Models\Article;
 use Config;
 use Response;
-use App\Models\Tag;
 use App\Models\Category;
 use Str;
 use Event;
@@ -59,7 +58,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
      */
     public function all()
     {
-        return $this->article->with('tags')->orderBy('created_at', 'DESC')->where('is_published', 1)->get();
+        return $this->article->orderBy('created_at', 'DESC')->where('is_published', 1)->get();
     }
 
     /**
@@ -110,7 +109,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
         $result->totalItems = 0;
         $result->items = array();
 
-        $query = $this->article->with('tags')->orderBy('created_at', 'DESC');
+        $query = $this->article->orderBy('created_at', 'DESC');
 
         if (!$all) {
             $query->where('is_published', 1);
@@ -131,7 +130,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
      */
     public function find($id)
     {
-        return $this->article->with(['tags', 'category'])->findOrFail($id);
+        return $this->article->with([ 'category'])->findOrFail($id);
     }
 
     /**
@@ -141,7 +140,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
      */
     public function getBySlug($slug)
     {
-        return $this->article->with(['tags', 'category'])->where('slug', $slug)->first();
+        return $this->article->with(['category'])->where('slug', $slug)->first();
     }
 
     /**
@@ -194,25 +193,7 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
                 $category->articles()->save($this->article);
             }
 
-            $articleTags = explode(',', $attributes['tag']);
-
-            foreach ($articleTags as $articleTag) {
-                if (!$articleTag) {
-                    continue;
-                }
-
-                $tag = Tag::where('name', '=', $articleTag)->first();
-
-                if (!$tag) {
-                    $tag = new Tag();
-                }
-
-                $tag->name = $articleTag;
-                //$tag->slug = Str::slug($articleTag);
-
-                $this->article->tags()->save($tag);
-            }
-
+           
             //Event::fire('article.created', $this->article);
 
             return true;
@@ -266,28 +247,11 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
             //-------------------------------------------------------
 
             if ($this->article->fill($attributes)->save()) {
-                $this->article->resluggify();
                 $category = Category::find($attributes['category']);
                 $category->articles()->save($this->article);
             }
 
-            $articleTags = explode(',', $attributes['tag']);
-
-            foreach ($articleTags as $articleTag) {
-                if (!$articleTag) {
-                    continue;
-                }
-
-                $tag = Tag::where('name', '=', $articleTag)->first();
-
-                if (!$tag) {
-                    $tag = new Tag();
-                }
-
-                $tag->name = $articleTag;
-                //$tag->slug = Str::slug($articleTag);
-                $this->article->tags()->save($tag);
-            }
+           
 
             return true;
         }

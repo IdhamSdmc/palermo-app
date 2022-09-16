@@ -80,24 +80,27 @@ class FooterController extends Controller
             $this->footer->telefono=$request['telefono'];
             $dataAr = json_decode($request['redes']);
             $array = array();
-            foreach ($dataAr as $value) {
-                 if ($value->nuevo=='1'){
-                    $destinationPath = public_path().$this->imgDir;
-                    $base64_str = substr($value->file, strpos($value->file, ",")+1);
-                    $image = base64_decode($base64_str);
-                    $safeName = $value->name;
-                    file_put_contents($destinationPath.$safeName,  $image);
-                 }
-               
-                $arreglo = array(
-                    'url' => $value->url,
-                    'name' => $value->name,
-                    'path' => $this->imgDir
-                );
-                array_push( $array, $arreglo);
-
+            if(!empty($dataAr)) {
+                foreach ($dataAr as $value) {
+                    if ($value->nuevo=='1'){
+                       $destinationPath = public_path().$this->imgDir;
+                       $base64_str = substr($value->file, strpos($value->file, ",")+1);
+                       $image = base64_decode($base64_str);
+                       $safeName = $value->name;
+                       file_put_contents($destinationPath.$safeName,  $image);
+                    }
+                  
+                   $arreglo = array(
+                       'url' => $value->url,
+                       'name' => $value->name,
+                       'path' => $this->imgDir
+                   );
+                   array_push( $array, $arreglo);
+   
+               }
+               $this->footer->redes=json_encode($array);
             }
-            $this->footer->redes=json_encode($array);
+            
             $this->footer->save();  
                //--------------------------------------------------------
                

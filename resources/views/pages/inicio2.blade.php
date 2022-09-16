@@ -1,6 +1,6 @@
 @extends('layouts.app2')
 @section('content')
-    <section class="banner" style="background-image: url('assets/imgs/recursos/inicio.jpg');">
+    <section class="banner" style="background-image: url('assets/imgs/recursos/reuniones4.jpg');">
         <div class="wrapper">
             <div class="banner-container">
                 <div class="banner-content banner-main">
@@ -40,7 +40,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide solution" id="solutions-tarjet">
                                 <div class="header">
-                                    <img src="assets/imgs/recursos/soluciones 1.jpg" class="card-img-top " alt="...">
+                                    <img src="assets/imgs/recursos/soluciones 7.jpg" class="card-img-top " alt="...">
                                 </div>
                                 <div class="body">
                                     <div class="content">
@@ -57,7 +57,7 @@
                             </div>
                             <div class="swiper-slide solution" id="solutions-tarjet">
                                 <div class="header">
-                                    <img src="assets/imgs/recursos/soluciones 2.jpg" class="card-img-top " alt="...">
+                                    <img src="assets/imgs/recursos/soluciones 8.jpg" class="card-img-top " alt="...">
                                 </div>
                                 <div class="body">
                                     <div class="content">
@@ -74,7 +74,7 @@
                             </div>
                             <div class="swiper-slide solution" id="solutions-tarjet">
                                 <div class="header">
-                                    <img src="assets/imgs/recursos/soluciones 3.jpg" class="card-img-top " alt="...">
+                                    <img src="assets/imgs/recursos/soluciones 6.jpg" class="card-img-top " alt="...">
                                 </div>
                                 <div class="body">
                                     <div class="content">

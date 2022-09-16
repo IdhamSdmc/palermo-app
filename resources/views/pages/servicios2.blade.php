@@ -30,7 +30,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide solution">
                                     <div class="image">
-                                        <img src="{{ asset('assets/imgs/recursos/sol-ejemplos1.jpg') }}" alt="...">
+                                        <img src="{{ asset('assets/imgs/recursos/sol-ejemplos4.jpg') }}" alt="...">
                                     </div>
                                     <div class="content">
                                         <h5>
@@ -120,7 +120,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide solution">
                                     <div class="image">
-                                        <img src="{{ asset('assets/imgs/recursos/reuniones1.jpg') }}" alt="...">
+                                        <img src="{{ asset('assets/imgs/recursos/reuniones5.jpg') }}" alt="...">
                                     </div>
                                     <div class="content">
                                         <h5>
@@ -177,7 +177,7 @@
         </section>
     </article>
     <section class="banner mb-5"
-        style="background-image: url('assets/imgs/recursos/digitalizacion.jpg'); background-position-y: 70%;" id="gestion">
+        style="background-image: url('assets/imgs/recursos/colaboracion.jpg'); background-position-y: 70%;" id="gestion">
         <div class="wrapper">
             <div class="banner-container">
                 <div class="banner-content">
@@ -202,7 +202,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide solution">
                                     <div class="image">
-                                        <img src="{{ asset('assets/imgs/recursos/dig-ejemplo01.jpg') }}" alt="...">
+                                        <img src="{{ asset('assets/imgs/recursos/dig-ejemplo04.jpg') }}" alt="...">
                                     </div>
                                     <div class="content">
                                         <h5>
@@ -223,7 +223,7 @@
                                 </div>
                                 <div class="swiper-slide solution">
                                     <div class="image">
-                                        <img src="{{ asset('assets/imgs/recursos/dig-ejemplo02.jpg') }}" alt="...">
+                                        <img src="{{ asset('assets/imgs/recursos/dig-ejemplo01.jpg') }}" alt="...">
                                     </div>
                                     <div class="content">
                                         <h5>

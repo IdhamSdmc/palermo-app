@@ -103,15 +103,8 @@ class ArticleController extends Controller
     public function edit($id)
     {
         $article = $this->article->find($id);
-        $tags = null;
-
-        foreach ($article->tags as $tag) {
-            $tags .= ','.$tag->name;
-        }
-
-        $tags = substr($tags, 1);
         $categories = Category::pluck('title', 'id');
-        return view('/admin/backend.article.edit', compact('article', 'tags', 'categories'));
+        return view('/admin/backend.article.edit', compact('article', 'categories'));
     }
 
     /**

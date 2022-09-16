@@ -29,11 +29,7 @@ class Tag extends Model implements ModelInterface
         ];
     }
 
-    public function articles()
-    {
-        return $this->belongsToMany('App\Models\Article', 'articles_tags');
-    }
-
+    
     public function setUrlAttribute($value)
     {
         $this->attributes['url'] = $value;

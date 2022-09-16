@@ -27,7 +27,6 @@
                         <div>  
                             @foreach( $footers["redes"] as $red )
                             <a href="{{$red["url"]}}" ><img data-src="" {!! (($red["path"]) ? "src='".url($red["path"].$red["name"]) ."'" : null) !!} alt=""></a>
-
                             @endforeach
                         </div>
                     </div>

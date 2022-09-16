@@ -3,7 +3,6 @@
     {!! Html::style('assets/bootstrap/css/bootstrap-tagsinput.css') !!}
     {!! Html::style('jasny-bootstrap/css/jasny-bootstrap.min.css') !!}
     {!! Html::script('jasny-bootstrap/js/jasny-bootstrap.min.js') !!}
-    {!! Html::script('ckeditor/ckeditor.js') !!}
     {!! Html::script('assets/bootstrap/js/bootstrap-tagsinput.js') !!}
     {!! Html::script('assets/js/jquery.slug.js') !!}
     <script type="text/javascript">
@@ -95,21 +94,7 @@
         {!! Form::submit('Registrar historia', array('class' => 'btn btn-success')) !!}
         {!! Form::close() !!}
         <br>
-        <script type="text/javascript">
-            window.onload = function () {
-                CKEDITOR.replace('content', {
-                    "filebrowserBrowseUrl": "{!! url('filemanager/show') !!}"
-                });
-            };
-
-            $(document).ready(function () {
-
-                if ($('#tag').length != 0) {
-                    var elt = $('#tag');
-                    elt.tagsinput();
-                }
-            });
-        </script>
+        
     </div>
 
 @stop

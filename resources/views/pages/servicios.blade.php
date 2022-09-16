@@ -95,7 +95,7 @@
         <div class="solutions reuniones">
             <div class="solution">
                 <div class="image">
-                    <img src="{{ asset('assets/imgs/recursos/reuniones1.jpg') }}" alt="...">
+                    <img src="{{ asset('assets/imgs/recursos/reuniones4.jpg') }}" alt="...">
                 </div>
                 <div class="content">
                     <h5>

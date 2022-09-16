@@ -31,7 +31,7 @@ class LineaController extends Controller
     public function lineas()
     {
         //
-        $lineas = DB::table('lineas')->get();
+        $lineas = DB::table('lineas')->orderBy('year')->get();
 
         return view('pages.nosotros2', compact('lineas'));
     }
@@ -122,6 +122,10 @@ class LineaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $linea = Linea::all()->find($id);
+       $linea->delete($id);
+        /*Flash::message('Article was successfully deleted');*/
+
+        return redirect()->route('admin.linea.index');
     }
 }
