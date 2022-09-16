@@ -1,10 +1,12 @@
 @extends('layouts.app2')
 @section('content')
-    <section class="banner" style="background-image: url('assets/imgs/recursos/inicio 5.jpg'); background-position-y: 40%;">
+@foreach($articulos as $item)
+@if($loop->first)
+    <section class="banner" style="background-image: url('{{$item->path.$item->file_name}}'); background-position-y: 40%;">
         <div class="wrapper">
             <div class="banner-container">
                 <div class="banner-content">
-                    <h2 class="animate__animated animate__fadeInUp">¿Por qué invertir en Infraestructura de TI?</h2>
+                    <h2 class="animate__animated animate__fadeInUp">{{$item->title}}</h2>
                     <div style="max-width: 28rem">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
@@ -19,6 +21,8 @@
             </div>
         </div>
     </section>
+    @endif
+    @endforeach
     <article class="wrapper">
         <section class="section-container" id="articulos">
             <div class="section">
@@ -32,7 +36,9 @@
                     </div>
                     <select name="categoria" id="categoria" class="select">
                     @foreach($categorias as $categoria)
+               
                             <option value="{{$categoria->id}}" selected>{{$categoria->title}}</option>
+                  
                     @endforeach
                     </select>
                 </div>
@@ -40,9 +46,10 @@
 
                     <div class="lista-articulos">
                         @foreach($articulos as $item)
+                        @if(!$loop->first)
                             <div class="articulo">
                                 <div class="image">
-                                    <img src="{{ url($item->path.$item->file_name) }}" alt="">
+                                <img src="{{ url($item->path.$item->file_name) }}" alt="">
                                 </div>
                                 <span>{{  $item->created_at}}</span>
                                 <h3>{{$item->title}}</h3>
@@ -51,6 +58,8 @@
 
                                 <a href="#">VER MÁS</a>
                             </div>
+                        
+                        @endif
                         @endforeach
 
 

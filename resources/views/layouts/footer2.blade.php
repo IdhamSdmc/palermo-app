@@ -24,9 +24,9 @@
                 <div class="content">
                     <div class="redes">
                         <h5>REDES SOCIALES</h5>
-                        <div>
-                            @foreach(  json_decode($footers['redes']) as $red )
-                            <a href="{{$red->url}}" ><img data-src="" {!! (($red->path) ? "src='".url($red->path.$red->name) ."'" : null) !!} alt=""></a>
+                        <div>  
+                            @foreach( $footers["redes"] as $red )
+                            <a href="{{$red["url"]}}" ><img data-src="" {!! (($red["path"]) ? "src='".url($red["path"].$red["name"]) ."'" : null) !!} alt=""></a>
 
 
                             @endforeach

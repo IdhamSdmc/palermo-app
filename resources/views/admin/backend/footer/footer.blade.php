@@ -59,12 +59,20 @@ cache: false,
         var url = $('#url').val();
         var file = $('#image_file')[0].files[0];
 if (file){
+    console.log(file);
     var tab=document.getElementById("tablaprueba");
-    
-    if (f_valida_repetido()){
-    document.getElementById('tablaprueba').insertRow(-1).innerHTML = '<td id="urllist">' +url +'</td><td><img src="'+file.result+'" style="width: 200px; height: 150px;"></td><td style="display:none;">1</td><td style="display:none;">'+file.result+'</td><td>'+ file.name+'</td>';
+
+    var filereader = new FileReader();
+  filereader.readAsDataURL(file);
+  filereader.onload = function (evt) {
+     var base64 = evt.target.result;
+   
+     if (f_valida_repetido()){
+    document.getElementById('tablaprueba').insertRow(-1).innerHTML = '<td id="urllist">' +url +'</td><td><img src="'+base64+'" style="width: 200px; height: 150px;"></td><td style="display:none;">1</td><td style="display:none;">'+base64+'</td><td>'+ file.name+'</td>';
 
     }
+  }
+  
    
 for (i=0; fila = tab.getElementsByTagName('tr')[i]; i++){
 var redes = new Object();
@@ -194,7 +202,8 @@ function checkAndAdd (obj) {
                         <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
                         <div> <span class="btn btn-default btn-file"><span class="fileinput-new">Seleccionar imagen</span><span class="fileinput-exists">Cambiar</span> 
                             <input type="file" class="form-control" id="image_file" placeholder="Image" value="image_file"/>
-                                @if ($errors->first('image_file')) <span class="help-block">{!! $errors->first('image_file') !!}</span> @endif </span> <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remover</a> </div>
+                                @if ($errors->first('image_file')) <span class="help-block">{!! $errors->first('image_file') !!}</span>
+                                 @endif </span> <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remover</a> </div>
                     </div>
                     <br>
                     <div class="form-group">
@@ -208,6 +217,8 @@ function checkAndAdd (obj) {
                           </tr>
                         </thead>
                         <tbody>
+
+                     @isset($footer["redes"] )
                         @foreach( $footer["redes"] as $red )
                         <tr>
                              <td id="urllist"> {{$red["url"]}}
@@ -219,6 +230,7 @@ function checkAndAdd (obj) {
                              <td style="display:none;">{{$red["name"]}}</td>
                         <tr>
                             @endforeach
+                     @endisset
                         </tbody>
                       </table>
                   

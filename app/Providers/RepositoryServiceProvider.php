@@ -69,12 +69,7 @@ class RepositoryServiceProvider extends ServiceProvider
 
             //dd($app['config']->get('is_admin', false));
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $article = new ArticleCacheDecorator(
-                    $article,
-                    new AppCache($app['cache'], 'articles')
-                );
-            }
+            
 
             return $article;
         });
@@ -86,12 +81,7 @@ class RepositoryServiceProvider extends ServiceProvider
                 new Category()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $category = new CategoryCacheDecorator(
-                    $category,
-                    new AppCache($app['cache'], 'categories')
-                );
-            }
+            
 
             return $category;
         });
@@ -103,13 +93,7 @@ class RepositoryServiceProvider extends ServiceProvider
                 new Page()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $page = new PageCacheDecorator(
-                    $page,
-                    new AppCache($app['cache'], 'pages')
-                );
-            }
-
+           
             return $page;
         });
 
@@ -120,13 +104,7 @@ class RepositoryServiceProvider extends ServiceProvider
                 new Faq()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $faq = new FaqCacheDecorator(
-                    $faq,
-                    new AppCache($app['cache'], 'faqs')
-                );
-            }
-
+           
             return $faq;
         });
 
@@ -137,12 +115,6 @@ class RepositoryServiceProvider extends ServiceProvider
                 new News()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $news = new NewsCacheDecorator(
-                    $news,
-                    new AppCache($app['cache'], 'pages')
-                );
-            }
 
             return $news;
         });
@@ -154,13 +126,6 @@ class RepositoryServiceProvider extends ServiceProvider
                 new PhotoGallery()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $photoGallery = new PhotoGalleryCacheDecorator(
-                    $photoGallery,
-                    new AppCache($app['cache'], 'photo_galleries')
-                );
-            }
-
             return $photoGallery;
         });
 
@@ -171,12 +136,7 @@ class RepositoryServiceProvider extends ServiceProvider
                 new Project()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $project = new ProjectCacheDecorator(
-                    $project,
-                    new AppCache($app['cache'], 'projects')
-                );
-            }
+          
 
             return $project;
         });
@@ -188,12 +148,7 @@ class RepositoryServiceProvider extends ServiceProvider
                 new Tag()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $tag = new TagCacheDecorator(
-                    $tag,
-                    new AppCache($app['cache'], 'tags')
-                );
-            }
+          
 
             return $tag;
         });
@@ -205,12 +160,7 @@ class RepositoryServiceProvider extends ServiceProvider
                 new Video()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $video = new VideoCacheDecorator(
-                    $video,
-                    new AppCache($app['cache'], 'pages')
-                );
-            }
+            
 
             return $video;
         });
@@ -222,12 +172,7 @@ class RepositoryServiceProvider extends ServiceProvider
                 new Menu()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $menu = new MenuCacheDecorator(
-                    $menu,
-                    new AppCache($app['cache'], 'menus')
-                );
-            }
+            
 
             return $menu;
         });
@@ -239,12 +184,6 @@ class RepositoryServiceProvider extends ServiceProvider
                 new Slider()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $slider = new SliderCacheDecorator(
-                    $slider,
-                    new AppCache($app['cache'], 'sliders')
-                );
-            }
 
             return $slider;
         });
@@ -256,13 +195,7 @@ class RepositoryServiceProvider extends ServiceProvider
                 new Setting()
             );
 
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $setting = new SettingCacheDecorator(
-                    $setting,
-                    new AppCache($app['cache'], 'settings')
-                );
-            }
-
+           
             return $setting;
         });
 
@@ -272,13 +205,6 @@ class RepositoryServiceProvider extends ServiceProvider
             $footer = new FooterRepository(
                 new Footer()
             );
-
-            if ($app['config']->get('fully.cache') === true && $app['config']->get('is_admin', false) == false) {
-                $footer = new FooterCacheDecorator(
-                    $footer,
-                    new AppCache($app['cache'], 'footers')
-                );
-            }
 
             return $footer;
         });

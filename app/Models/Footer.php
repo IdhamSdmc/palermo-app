@@ -12,4 +12,5 @@ use Illuminate\Database\Eloquent\Model;
 class Footer extends Model
 {
     public $table = 'footer';
+    public $fillable = ['correo', 'telefono','redes'];
 }

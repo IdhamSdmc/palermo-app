@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="_token" content="{!! csrf_token() !!}" />
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Palermo | Dashboard</title>
     <link rel="icon" type="image/png" href="{{asset('assets/imgs/resources/favicon.ico')}}"/>

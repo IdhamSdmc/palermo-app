@@ -47,6 +47,9 @@ class FooterRepository extends Validator implements FooterInterface
     public function getFooters()
     {
         $obj = (Footer::all()->first()) ?: $this->footer;
+        //dd($obj);
+        $jsonData = $obj->redes;
+        $obj->redes = json_decode($jsonData, true);
         return $obj;
     }
     public function create($footers)

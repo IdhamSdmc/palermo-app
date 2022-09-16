@@ -31,7 +31,6 @@ class FooterComposer
     public function compose($view)
     {
         $footers = $this->footer->getFooters();
-        //dd( $footers );
         $view->with('footers', $footers);
     }
 }

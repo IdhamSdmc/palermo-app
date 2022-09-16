@@ -39,10 +39,9 @@ class FooterController extends Controller
     public function index()
     {
         $footer = (Footer::all()->first()) ?: new Footer();
-      
         $jsonData = $footer->redes;
         $footer->redes = json_decode($jsonData, true);
-        return view('/admin/backend.footer.footer', compact('footer'))->with('active', 'footers');
+        return view('/admin/backend.footer.footer', compact('footer'))->with('active', 'footer');
     }
   /**
      * Display a listing of the resource.

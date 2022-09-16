@@ -11,6 +11,6 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Setting extends Model
 {
-    public $table = 'settings';
+    public $table = 'setting';
     public $fillable = ['title', 'lang'];
 }
