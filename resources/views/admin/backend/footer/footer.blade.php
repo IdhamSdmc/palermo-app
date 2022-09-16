@@ -19,34 +19,24 @@
     
    
         $("#formulario").on("submit", function (e){
-                e.preventDefault();
-                
-                
-                var correo = $("input[name=correo]").val();
+                e.preventDefault();  
+        var correo = $("input[name=correo]").val();
         var telefono = $("input[name=telefono]").val();
         var form_data = new FormData();
-            form_data.append('correo', correo);
-         form_data.append('telefono', telefono);
-         form_data.append('redes', JSON.stringify(arrayenlaces));
+        form_data.append('correo', correo);
+        form_data.append('telefono', telefono);
+        form_data.append('redes', JSON.stringify(arrayenlaces));
                 $.ajax({
                     url: "{{ route('admin.footer.store') }}",
                     method: "POST",
                     data: form_data,
                     dataType: "json",
-                    contentType: false,
-processData: false,
-cache: false,
+                    contentType: false,processData: false,
+                    cache: false,
                     success: function(response){
-                        if(response['ok']==true){
-                            alert(response['msg']);
-                          
-                        }else{
-                            alert("Ocurrio un error vuelva a intentarlo");
-                        }
+                        
                     },
                     error: function(e){
-                        /*alert("Ocurio un error");*/
-                        alert(e);
                     }
                 });
 
@@ -59,7 +49,6 @@ cache: false,
         var url = $('#url').val();
         var file = $('#image_file')[0].files[0];
 if (file){
-    console.log(file);
     var tab=document.getElementById("tablaprueba");
 
     var filereader = new FileReader();
@@ -68,13 +57,9 @@ if (file){
      var base64 = evt.target.result;
    
      if (f_valida_repetido()){
-    document.getElementById('tablaprueba').insertRow(-1).innerHTML = '<td id="urllist">' +url +'</td><td><img src="'+base64+'" style="width: 200px; height: 150px;"></td><td style="display:none;">1</td><td style="display:none;">'+base64+'</td><td>'+ file.name+'</td>';
-
-    }
-  }
-  
+    document.getElementById('tablaprueba').insertRow(-1).innerHTML = '<td id="urllist">' +url +'</td><td><img src="'+base64+'" style="width: 200px; height: 150px;"></td><td style="display:none;">1</td><td style="display:none;">'+base64+'</td><td  style="display:none;">'+ file.name+'</td>';
    
-for (i=0; fila = tab.getElementsByTagName('tr')[i]; i++){
+    for (i=0; fila = tab.getElementsByTagName('tr')[i]; i++){
 var redes = new Object();
   for (j=0; celda = fila.getElementsByTagName('td')[j]; j++){
 
@@ -102,9 +87,12 @@ if (JSON.stringify(redes)!=='{}') {
     checkAndAdd(redes)
  }
 }
+    }
+  }
+  
+
 
 }
-console.log(arrayenlaces);
 
 }
 function f_valida_repetido(){
@@ -238,7 +226,8 @@ function checkAndAdd (obj) {
             </div>
             <br>
             <button class="btn btn-success btn-submit">Guardar</button>
-        
+            {!! Form::close() !!}
+
          </form>
         </div>
        
