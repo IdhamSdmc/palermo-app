@@ -1,6 +1,6 @@
 <?php
 
-namespace Fully\Repositories\Menu;
+namespace App\Repositories\Menu;
 
 /**
  * Interface MenuInterface.
