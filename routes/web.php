@@ -42,7 +42,10 @@ Route::get('/contactanos', function () {
 });
 Route::post('mail', [MailController::class, 'sendMail']);
 Route::post('trabajo', [MailController::class, 'trabajo']);
+Route::get('filemanager/show', function () {
 
+    return View::make('/admin/backend/plugins/filemanager');
+});
 Route::get('/articulos', [ArticleController::class, 'mostrar'])->name('lista');
 Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show',
 'uses' => 'PhotoGalleryController@show', ));
@@ -175,5 +178,5 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
         Route::get('linea/{id}/show', 'Admin\LineaController@show')->name('linea.show');
         Route::patch('linea/{id}/update',  'Admin\LineaController@update')->name('linea.update')->where('id', '[0-9]+');
         Route::get('/linea',  'Admin\LineaController@index')->name('linea.index');
-
+     
     });

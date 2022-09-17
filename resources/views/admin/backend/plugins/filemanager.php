@@ -28,7 +28,7 @@
 
         <div id="uploadresponse"></div>
         <input id="mode" name="mode" type="hidden" value="add"/>
-        <input id="currentpath" name="currentpath" type="hidden"/>
+        <input id="currentpath" name="currentpath" type="hidden" value="http://127.0.0.1:8000/public/uploads"/>
 
         <div id="file-input-container">
             <div id="alt-fileinput">
