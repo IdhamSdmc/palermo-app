@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'c911e86e065286765840b43dc821d1933030b5f8',
+        'reference' => 'bd96662639ad2b9f900577ebfa76b570c5c85638',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -229,6 +229,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'haruncpi/laravel-simple-filemanager' => array(
+            'pretty_version' => 'v1.0.2',
+            'version' => '1.0.2.0',
+            'reference' => '99820d9fb17cbdb9522df5010dff6b9cb17136f6',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../haruncpi/laravel-simple-filemanager',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'illuminate/auth' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -442,7 +451,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'c911e86e065286765840b43dc821d1933030b5f8',
+            'reference' => 'bd96662639ad2b9f900577ebfa76b570c5c85638',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

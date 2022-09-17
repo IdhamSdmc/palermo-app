@@ -6,6 +6,7 @@
 {!! Html::script('ckeditor/ckeditor.js') !!}
 {!! Html::script('assets/bootstrap/js/bootstrap-tagsinput.js') !!}
 {!! Html::script('assets/js/jquery.slug.js') !!}
+
 <script type="text/javascript">
     $(document).ready(function () {
         $("#title").slug();
@@ -87,7 +88,7 @@
     <script type="text/javascript">
         window.onload = function () {
             CKEDITOR.replace('content', {
-                "filebrowserBrowseUrl": "{!! url('filemanager/show') !!}"
+                "filebrowserBrowseUrl": filemanager.ckBrowseUrl
             });
         };
 

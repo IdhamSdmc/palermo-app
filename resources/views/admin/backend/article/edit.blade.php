@@ -99,7 +99,7 @@
     <script>
         window.onload = function () {
             CKEDITOR.replace('content', {
-                "filebrowserBrowseUrl": "{!! url('filemanager/show') !!}"
+                "filebrowserBrowseUrl": filemanager.ckBrowseUrl
             });
         };
     </script>
