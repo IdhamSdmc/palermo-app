@@ -299,6 +299,7 @@ return array(
     'Collective\\Html\\HtmlServiceProvider' => $vendorDir . '/laravelcollective/html/src/HtmlServiceProvider.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'CreateArticlesTable' => $baseDir . '/database/migrations/2022_09_16_004623_create_articles_table.php',
+    'CreateFilemanagerTable' => $baseDir . '/database/migrations/2020_05_02_100001_create_filemanager_table.php',
     'CreateFooterTable' => $baseDir . '/database/migrations/2022_09_16_003743_create_footer_table.php',
     'CreateHistoriasTable' => $baseDir . '/database/migrations/2022_09_11_164834_create_historias_table.php',
     'CreateLineasTable' => $baseDir . '/database/migrations/2022_09_11_164854_create_lineas_table.php',

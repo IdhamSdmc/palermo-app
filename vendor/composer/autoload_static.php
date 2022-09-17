@@ -839,6 +839,7 @@ class ComposerStaticInit2cf056b510cec8bfddf3554692edf0a7
         'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'CreateArticlesTable' => __DIR__ . '/../..' . '/database/migrations/2022_09_16_004623_create_articles_table.php',
+        'CreateFilemanagerTable' => __DIR__ . '/../..' . '/database/migrations/2020_05_02_100001_create_filemanager_table.php',
         'CreateFooterTable' => __DIR__ . '/../..' . '/database/migrations/2022_09_16_003743_create_footer_table.php',
         'CreateHistoriasTable' => __DIR__ . '/../..' . '/database/migrations/2022_09_11_164834_create_historias_table.php',
         'CreateLineasTable' => __DIR__ . '/../..' . '/database/migrations/2022_09_11_164854_create_lineas_table.php',
