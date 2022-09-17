@@ -60,9 +60,8 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script><![endif]-->
 </head>
-admin/filemanager
 <script src="{!! url('filemanager/bundle/filemanager.min.js') !!}" type="text/javascript"></script>
-<script > filemanager.baseUrl = "{!! url('admin/filemanager') !!}";</script>
+<script >filemanager.baseUrl = '{{route('filemanager.base_route')}}';</script>
 <body class="skin-blue">
 <div class="wrapper">
     <header class="main-header">
