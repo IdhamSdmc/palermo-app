@@ -24,6 +24,8 @@
     <link href="{!! url('backend/css/style.css') !!}" rel="stylesheet" type="text/css"/>
     {{Html::style("assets/css/github-left.css") }}
     <!-- jQuery 2.1.3 -->
+    <script src="{{asset('filemanager/bundle/filemanager.min.js')}}"></script>"
+<script> filemanager.baseUrl = '{{route('filemanager.base_route')}}';</script>
     <script src="{!! url('backend/plugins/jQuery/jQuery-2.1.3.min.js') !!}"></script>
     <!-- Bootstrap 3.3.2 JS -->
     <script src="{!! url('backend/bootstrap/js/bootstrap.min.js') !!}" type="text/javascript"></script>
@@ -59,10 +61,7 @@
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script><![endif]-->
-<script src="{{asset('filemanager/bundle/filemanager.min.js')}}"></script>"
-<script> filemanager.baseUrl = '{{route('filemanager.base_route')}}';</script>
 </head>
-
 <body class="skin-blue">
 <div class="wrapper">
     <header class="main-header">
