@@ -28,7 +28,7 @@ class SentinelAdmin
             return redirect('admin/signin')->with('info', '¡Usted debe estar conectado!');
         }elseif(count($user)<>1){
             //return redirect('my-account');
-            echo "redireccion a my-accout";
+            //echo "redireccion a my-accout";
         }
 
         return $next($request);
