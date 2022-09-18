@@ -24,8 +24,8 @@
     <link href="{!! url('backend/css/style.css') !!}" rel="stylesheet" type="text/css"/>
     {{Html::style("assets/css/github-left.css") }}
     <!-- jQuery 2.1.3 -->
-    <script src="{{asset('filemanager/bundle/filemanager.min.js')}}"></script>"
-<script> filemanager.baseUrl = '{{route('filemanager.base_route')}}';</script>
+    <script src="{{asset('filemanager/bundle/filemanager.min.js')}}"></script>
+    <script> filemanager.baseUrl = '{{route('filemanager.base_route')}}';</script>
     <script src="{!! url('backend/plugins/jQuery/jQuery-2.1.3.min.js') !!}"></script>
     <!-- Bootstrap 3.3.2 JS -->
     <script src="{!! url('backend/bootstrap/js/bootstrap.min.js') !!}" type="text/javascript"></script>
