@@ -44,8 +44,7 @@ Route::post('mail', [MailController::class, 'sendMail']);
 Route::post('trabajo', [MailController::class, 'trabajo']);
 
 Route::get('/articulos', [ArticleController::class, 'mostrar'])->name('lista');
-Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show',
-'uses' => 'PhotoGalleryController@show', ));
+
         Route::group(['prefix' => 'admin', 'namespace'=>'Admin'], function () {
         Route::get('login', 'AuthController@getSignin')->name('login');
         Route::get('signin', 'AuthController@getSignin')->name('signin');
@@ -82,21 +81,10 @@ Route::get('/photo-gallery/{slug}', array('as' => 'dashboard.photo_gallery.show'
         Route::get('user/{id}/edit', 'Admin\UserController@edit')->name('user.edit')->where('id', '[0-9]+');
         Route::get('user/{id}/show','Admin\UserController@show')->name('user.show')->where('id', '[0-9]+');
 
-        Route::resource('user', 'Admin\RoleController');
-        Route::get('role/{id}/delete', 'Admin\RoleController@confirmDestroy', )->name('role.delete')->where('id', '[0-9]+');
-        Route::get('role/create',  'Admin\RoleController@create')->name('role.create')->where('id', '[0-9]+');
-        Route::get('role/{id}/edit', 'Admin\RoleController@edit')->name('role.edit')->where('id', '[0-9]+');
-        Route::get('/role', 'Admin\RoleController@index')->name('role.index');
-        Route::get('role/{id}/show','Admin\RoleController@show')->name('role.show')->where('id', '[0-9]+');
+      
 
-        Route::patch('role/{id}/update', array('as' => 'admin.role.update', 'uses' => 'RoleController@update', ))->where('id', '[0-9]+');
 
-        Route::resource('photo-gallery', 'Admin\PhotoGalleryController');
-        Route::get('photo-gallery/create','Admin\PhotoGalleryController@create')->name('photo-gallery.create')->where('id', '[0-9]+');
-        Route::get('photo-gallery/{id}/delete',  'Admin\PhotoGalleryController@confirmDestroy')->name('photo-gallery.delete')->where('id', '[0-9]+');
-        Route::get('photo-gallery/{id}/edit',  'Admin\PhotoGalleryController@edit')->name('photo-gallery.edit')->where('id', '[0-9]+');
-        Route::get('photo-gallery/{id}/show', 'Admin\PhotoGalleryController@show')->name('photo-gallery.show')->where('id', '[0-9]+');
-        Route::patch('photo-gallery/{id}/update',  'Admin\PhotoGalleryController@update',)->name('photo-gallery.update')->where('id', '[0-9]+');
+    
      // menu-managment
         Route::resource('menu', 'Admin\MenuController');
         Route::get('menu/create', 'Admin\MenuController@create')->name('menu.create')->where('id', '[0-9]+');
