@@ -1,6 +1,6 @@
 @extends('layouts.app2')
 @section('content')
-    <section class="banner" style="background-image: url('assets/imgs/recursos/reuniones4.jpg');">
+    <section class="banner" style="background-image: url('assets/imgs/recursos/IMG_9784_1.png');">
         <div class="wrapper">
             <div class="banner-container">
                 <div class="banner-content banner-main">
@@ -46,9 +46,12 @@
                                     <div class="content">
                                         <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
                                             Servicios & infraestructura de TI</h3>
-                                        <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde
-                                            el
-                                            dimensionamiento hasta la implementación.</p>
+                                        <p class="card-text">Optimiza y equipa tu organización con
+                                            nuevas tecnologías desde el
+                                            dimensionamiento, la implementación,
+                                            administración, monitoreo y mejora continua.
+                                            
+                                            </p>
                                     </div>
                                     <div class="action">
                                         <a href="/soluciones#infrastructura" class="btn btn-info">VER MÁS</a>
@@ -62,10 +65,11 @@
                                 <div class="body">
                                     <div class="content">
                                         <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
-                                            Colaboración & videoconferencia</h3>
-                                        <p class="card-text">Adáptate al trabajo híbrido y mantente conectado desde
-                                            cualquier
-                                            lugar y dispositivo.</p>
+                                            Colaboración Audiovisual</h3>
+                                        <p class="card-text">Adáptate al trabajo híbrido y mantente
+                                            conectado desde cualquier lugar y
+                                            dispositivo.
+                                            </p>
                                     </div>
                                     <div class="action">
                                         <a href="/soluciones#colaboracion" class="btn btn-info">VER MÁS</a>
@@ -79,10 +83,10 @@
                                 <div class="body">
                                     <div class="content">
                                         <h3 class="card-title " style="line-height: normal; font-size: 20px; font-weight: 600;">
-                                            Digitalización y Ge documental</h3>
-                                        <p class="card-text">Optimiza y equipa tu organización con nuevas tecnologías, desde
-                                            el
-                                            dimensionamiento hasta la implementación.</p>
+                                            Digitalización y Gestión Documental</h3>
+                                        <p class="card-text">Deja en el pasado el papel y los
+                                            archiveros. Ordena y clasifica tus
+                                            documentos de forma óptima y digital.</p>
                                     </div>
                                     <div class="action">
                                         <a href="/soluciones#gestion" class="btn btn-info">VER MÁS</a>
@@ -189,6 +193,8 @@
                                             {!! $historia->solucion !!}
                                             <h5>EL RESULTADO</h5>
                                             {!! $historia->resultado !!}
+                                            <br>
+                                            <br>
                                             <div class="button-he">
                                                 <a class="button" href="{{ url('/soluciones') }}">CONOCE NUESTRAS
                                                     SOLUCIONES</a>

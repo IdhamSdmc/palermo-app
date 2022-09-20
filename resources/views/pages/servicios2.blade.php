@@ -1,7 +1,7 @@
 @extends('layouts.app2')
 @section('content')
     <section class="banner mb-5" id="infrastructura"
-        style="background-image: url('assets/imgs/recursos/inicio 3.jpg'); background-position-y: 87%;">
+        style="background-image: url('assets/imgs/recursos/inicio 3.jpg');">
         <div class="wrapper">
             <div class="banner-container">
                 <div class="banner-content">
@@ -58,8 +58,7 @@
                                     </div>
                                     <div class="content">
                                         <h5>
-                                            Proyectos de centros de datos, Networking & Seguridad TI
-                                        </h5>
+                                            Proyecto de Centro de datos,Networking & Seguridad TI                                                                                    </h5>
                                         <p class="card-text">
                                             Aumente la agilidad y el control de TI y déjenos la administración del ciclo de
                                             vida a
@@ -95,11 +94,11 @@
         </section>
     </article>
     <section class="banner mb-5" id="colaboracion"
-        style="background-image: url('assets/imgs/recursos/digitalizacion.jpg'); background-position-y: 70%;">
+        style="background-image: url('assets/imgs/recursos/digitalizacion.jpg'); ">
         <div class="wrapper">
             <div class="banner-container">
                 <div class="banner-content">
-                    <h2 class="animate__animated animate__fadeInUp">Colaboración & Videoconferencia</h2>
+                    <h2 class="animate__animated animate__fadeInUp">Colaboración Audiovisual</h2>
                     <div style="max-width: 28rem">
                         <p>
                             Te ayudaremos a estar conectado desde cualquier lugar y dispositivo. La distancia ya no es un
@@ -177,7 +176,7 @@
         </section>
     </article>
     <section class="banner mb-5"
-        style="background-image: url('assets/imgs/recursos/colaboracion.jpg'); background-position-y: 70%;" id="gestion">
+        style="background-image: url('assets/imgs/recursos/IMG_9728_1.png'); " id="gestion">
         <div class="wrapper">
             <div class="banner-container">
                 <div class="banner-content">
@@ -202,7 +201,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide solution">
                                     <div class="image">
-                                        <img src="{{ asset('assets/imgs/recursos/dig-ejemplo04.jpg') }}" alt="...">
+                                        <img src="{{ asset('assets/imgs/recursos/dig-ejemplo10.jpg') }}" alt="...">
                                     </div>
                                     <div class="content">
                                         <h5>

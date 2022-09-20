@@ -27,7 +27,7 @@
     position: relative;
 }
 
-.solution .image img {
+.reuniones .solution .image img {
     width: 100%;
     height: calc(100% + 2.5rem);
     object-fit: cover;
@@ -92,7 +92,7 @@
 
 .reuniones .solution .image img {
     width: 100%;
-    height: calc(100% + 0.25rem);
+     /* height: calc(100% + 0.25rem); */
     object-fit: cover;
     object-position: top right;
     position: absolute;
@@ -105,8 +105,8 @@
 }
 
 #digitalizacion .solution .image img {
-    /* height: calc(100% + 8rem); */
-    height: 100%;
+   height: calc(100% + 8rem); 
+    /*height: 100%;*/
     top: 0;
     object-fit: cover;
     object-position: left;

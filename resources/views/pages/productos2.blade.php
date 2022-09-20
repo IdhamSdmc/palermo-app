@@ -6,7 +6,7 @@
                    
                     <div class="swiper-slide solution" >
 
-                        <div class="banner" style="background-image: url('assets/imgs/recursos/inicio impresoras.jpg'); background-position:top;"">
+                        <div class="banner" style="background-image: url('assets/imgs/recursos/IMPRESORA.png'); background-position:top;"">
                             <div class="banner-container wrapper">
                                 <div class="banner-content">
                             <h2 class="animate__animated animate__fadeInUp">IMPRESORAS</h2>
@@ -21,7 +21,7 @@
                     </div>
                     <div class="swiper-slide solution" >
 
-                        <div class="banner" style="background-image: url('assets/imgs/recursos/laptos,pantallas.png'); background-position:top;"">
+                        <div class="banner" style="background-image: url('assets/imgs/recursos/inicio_4.png'); background-position:top;"">
                             <div class="banner-container wrapper">
                                 <div class="banner-content">
                             <h2 class="animate__animated animate__fadeInUp">LAPTOPS,PANTALLAS Y VIDEOCONFERENCIA</h2>
