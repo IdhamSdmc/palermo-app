@@ -1,5 +1,5 @@
 var progressBar = document.querySelector(' #about .progress .progress-bar');
-let autoPlayDelay = 2000;
+let autoPlayDelay = 5000;
 var mySwiper = new Swiper("#soluciones .mySwiper", {
     loop: true,
     slidesPerView: 'auto',
