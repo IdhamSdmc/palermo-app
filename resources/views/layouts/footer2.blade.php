@@ -24,7 +24,7 @@
                 <div class="content">
                     <div class="redes">
                         <h5>REDES SOCIALES</h5>
-                        <div>  
+                        <div>
                             @foreach( $footers["redes"] as $red )
                             <a href="{{$red["url"]}}" ><img data-src="" {!! (($red["path"]) ? "src='".url($red["path"].$red["name"]) ."'" : null) !!} alt=""></a>
                             @endforeach
@@ -34,7 +34,7 @@
                         <h5>ENLACES DE INTERÉS</h5>
                         <div class="grupo-enlaces">
                             <div class="enlaces">
-                                <a href="/contactanos/#work" target="_blank">Oportunidad Laboral</a>                                
+                                <a href="/contactanos/#work" target="_blank">Oportunidad Laboral</a>
                                 <a href="">{!! $footers['correo']!!}</a>
                                 <a href="tel:016206025">{!! $footers['telefono']!!}</a>
                             </div>
