@@ -20,8 +20,7 @@ class BlogController extends Controller
     {
         //
         $categorias = DB::table('categories')->get();
-        $article =DB::table('articles')->where('id', $id)->get();
-        $article = $article[0];
+        $article =DB::table('articles')->find($id);
         return view('pages.blog', compact('categorias','article'));
     }
 
