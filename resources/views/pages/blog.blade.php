@@ -16,11 +16,11 @@
     </section>
     <section class="blog">
         <div class="container">
-          
+
             <div class="categorias">
-               
+
                 @foreach($categorias as $categoria)
-                <a href="">{{$categoria->title}}</a> 
+                <a href="">{{$categoria->title}}</a>
                 @endforeach
 
             </div>

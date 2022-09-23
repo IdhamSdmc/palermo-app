@@ -15,14 +15,15 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   
+
     public function blog($id)
     {
         //
         $categorias = DB::table('categories')->get();
-        $article =DB::table('articles')->find($id);
+        $article =DB::table('articles')->where('id', $id)->get();
+        $article = $article[0];
         return view('pages.blog', compact('categorias','article'));
     }
 
-    
+
 }
