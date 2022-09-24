@@ -119,7 +119,7 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide solution">
                                     <div class="image">
-                                        <img src="{{ asset('assets/imgs/recursos/reuniones5.jpg') }}" alt="...">
+                                        <img src="{{ asset('assets/imgs/recursos/reuniones5.png') }}" alt="...">
                                     </div>
                                     <div class="content">
                                         <h5>
