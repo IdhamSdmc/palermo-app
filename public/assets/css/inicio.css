@@ -252,7 +252,7 @@
 }
 
 .clients {
-    box-shadow: -5px 15px 24px 5px rgb(226 222 222);
+    /*box-shadow: -5px 15px 24px 5px rgb(226 222 222);*/
 }
 
 @media (max-width: 991px) {
@@ -398,7 +398,7 @@
 
 @media (max-width: 1000px) {
     #soluciones #solutions-tarjet {
-        
+
         width: 100%;
         display: flex;
     flex-direction: column;
@@ -408,7 +408,7 @@
         width: 100%;
         height: 100%;
     }
-    
+
     .swiper {
         margin-left: auto;
         margin-right: auto;
@@ -421,7 +421,7 @@
         align-items: center;
         justify-content: center;
     }
-  
+
     #soluciones .section > .content {
         justify-content: center;
     }
@@ -434,7 +434,7 @@
         text-align: center;
     }
 
-    
+
 #soluciones .about-text {
    display: none;
 }
