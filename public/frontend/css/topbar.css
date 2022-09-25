@@ -3,7 +3,7 @@
     z-index: 9;
     background-color: #fff;
     padding: 1rem 7.75rem;
-    /*box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);*/
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
 }
 
 .topbar {
@@ -103,7 +103,7 @@
         background-color: #fff;
         border-radius: 0.5rem;
         font-size: 1.5rem;
-        display: block;
+        display: grid;
         place-items: center;
     }
 
@@ -153,7 +153,7 @@
         display: block;
     }
 
-    /* .navbar.navbar-mobile .mobile-nav-toggle {
+     .navbar.navbar-mobile .mobile-nav-toggle {
         display: grid;
         position: absolute;
         right: 1.5rem;
@@ -162,7 +162,7 @@
         border-color: var(--bg-primary);
         background-color: var(--bg-primary);
         color: #fff;
-    } */
+    }
 }
 
 @media (max-width: 600px) {
