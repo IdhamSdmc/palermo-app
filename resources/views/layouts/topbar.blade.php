@@ -24,6 +24,9 @@
             </ul>
             {{-- <i class="bi bi-list mobile-nav-toggle"></i> --}}
         </div>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        {{-- <i class="bi bi-list mobile-nav-toggle"></i> --}}
+
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon mobile-nav-toggle" for="menu-btn"><span class="navicon">
     </nav>
 </header>
