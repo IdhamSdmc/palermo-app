@@ -183,7 +183,7 @@ body {
   
   /* header */
   
-  .header {
+.header-menu {
     background-color: #fff;
     box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     position: fixed;
@@ -191,7 +191,7 @@ body {
     z-index: 3;
   }
   
-  .header ul {
+.header-menu ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -199,19 +199,19 @@ body {
     background-color: #fff;
   }
   
-  .header li a {
+.header-menu li a {
     display: block;
     padding: 20px 20px;
     border-right: 1px solid #f4f4f4;
     text-decoration: none;
   }
   
-  .header li a:hover,
-  .header .menu-btn:hover {
+.header-menu li a:hover,
+.header-menu .menu-btn:hover {
     background-color: #f4f4f4;
   }
   
-  .header .logo {
+.header-menu .logo {
     display: block;
     float: left;
     font-size: 2em;
@@ -221,7 +221,7 @@ body {
   
   /* menu */
   
-  .header .menu {
+.header-menu .menu {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
@@ -229,7 +229,7 @@ body {
   
   /* menu icon */
   
-  .header .menu-icon {
+.header-menu .menu-icon {
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -238,7 +238,7 @@ body {
     user-select: none;
   }
   
-  .header .menu-icon .navicon {
+.header-menu .menu-icon .navicon {
     background: #333;
     display: block;
     height: 2px;
@@ -247,8 +247,8 @@ body {
     width: 18px;
   }
   
-  .header .menu-icon .navicon:before,
-  .header .menu-icon .navicon:after {
+.header-menu .menu-icon .navicon:before,
+.header-menu .menu-icon .navicon:after {
     background: #333;
     content: '';
     display: block;
@@ -258,56 +258,56 @@ body {
     width: 100%;
   }
   
-  .header .menu-icon .navicon:before {
+.header-menu .menu-icon .navicon:before {
     top: 5px;
   }
   
-  .header .menu-icon .navicon:after {
+.header-menu .menu-icon .navicon:after {
     top: -5px;
   }
   
   /* menu btn */
   
-  .header .menu-btn {
+.header-menu .menu-btn {
     display: none;
   }
   
-  .header .menu-btn:checked ~ .menu {
+.header-menu .menu-btn:checked ~ .menu {
     max-height: 240px;
   }
   
-  .header .menu-btn:checked ~ .menu-icon .navicon {
+.header-menu .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
   }
   
-  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+.header-menu .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
   
-  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+.header-menu .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
   }
   
-  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
   
   /* 48em = 768px */
   
   @media (min-width: 48em) {
-    .header li {
+  .header-menu li {
       float: left;
     }
-    .header li a {
+  .header-menu li a {
       padding: 20px 30px;
     }
-    .header .menu {
+  .header-menu .menu {
       clear: none;
       float: right;
       max-height: none;
     }
-    .header .menu-icon {
+  .header-menu .menu-icon {
       display: none;
     }
   }
