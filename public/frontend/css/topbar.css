@@ -183,11 +183,12 @@ body {
   /* header */
   
 .header-menu {
-    background-color: #fff;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     position: fixed;
     width: 100%;
-    z-index: 3;
+    height: 6rem;
+    z-index: 9;
+    background-color: #fff;
+    padding: 1rem 7.75rem;
   }
   
 .header-menu ul {
@@ -210,7 +211,7 @@ body {
     background-color: #f4f4f4;
   }
   
-.header-menu .logo {
+.header-menu .logo img {
     display: block;
     float: left;
     font-size: 2em;
