@@ -13,10 +13,9 @@
     justify-content: space-between;
 }
 
-.logo {
+/* .logo {
     display: flex;
-    height: 3rem;
-}
+} */
 
 .topbar-menu {
     list-style: none;
@@ -217,6 +216,8 @@ body {
     font-size: 2em;
     padding: 10px 20px;
     text-decoration: none;
+    height: 3rem;
+
   }
   
   /* menu */
