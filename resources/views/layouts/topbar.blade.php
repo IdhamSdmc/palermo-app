@@ -1,4 +1,4 @@
-<header id="header" class="fixed-top d-flex align-items-center topbar-container">
+{{-- <header id="header" class="fixed-top d-flex align-items-center topbar-container">
     <nav class="topbar">
         <a href="{{ url('/') }}" class="logo">
             <img src="{{ url($settings['path_logo'].$settings['file_name_logo']) }}" alt="palermo-logo">
@@ -20,13 +20,22 @@
                         <img src="{{ asset('assets/imgs/soporte técnico.svg') }}" alt="">
                     </a>
                 </li>
-                {{-- <i class="bi bi-x close"></i> --}}
+                {{-- <i class="bi bi-x close"></i> 
             </ul>
-            {{-- <i class="bi bi-list mobile-nav-toggle"></i> --}}
+            {{-- <i class="bi bi-list mobile-nav-toggle"></i> 
         </div>
-        {{-- <i class="bi bi-list mobile-nav-toggle"></i> --}}
-
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon mobile-nav-toggle" for="menu-btn"><span class="navicon">
+        <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
-</header>
+</header> --}}
+
+<header class="header">
+    <a href="" class="logo">CSS Nav</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#careers">Careers</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
