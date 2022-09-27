@@ -29,11 +29,13 @@
 </header> --}}
 
 <header class="header-menu">
+    <nav class="topbar">
     <a href="{{ url('/') }}" class="logo">
         <img src="{{ url($settings['path_logo'].$settings['file_name_logo']) }}" alt="palermo-logo">
     </a>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <div id="navbar" class="navbar">
     <ul class="menu">
         <li class="topbar-item"><a href="{{ url('/nosotros') }}" class="active">Nosotros</a></li>
         <li class="topbar-item"><a href="{{ url('/soluciones') }}">Soluciones</a></li>
@@ -50,4 +52,6 @@
             </a>
         </li>
     </ul>
+</div>
+</nav>
   </header>
