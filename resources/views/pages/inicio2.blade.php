@@ -50,7 +50,7 @@
                                             nuevas tecnologías desde el
                                             dimensionamiento, la implementación,
                                             administración, monitoreo y mejora continua.
-                                            
+
                                             </p>
                                     </div>
                                     <div class="action">
@@ -188,11 +188,11 @@
                                         <div class="detalle">
                                             <h3>{{$historia->titulo}}</h3>
                                             <h5>EL RETO</h5>
-                                            {!! $historia->reto !!}
+                                            <p>{!! $historia->reto !!}</p>
                                             <h5>LA SOLUCIÓN</h5>
-                                            {!! $historia->solucion !!}
+                                            <p>{!! $historia->solucion !!}</p>
                                             <h5>EL RESULTADO</h5>
-                                            {!! $historia->resultado !!}
+                                            <p>{!! $historia->resultado !!}</p>
                                             <br>
                                             <br>
                                             <div class="button-he">

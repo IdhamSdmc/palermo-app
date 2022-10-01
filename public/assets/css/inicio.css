@@ -448,3 +448,7 @@
 .soluciones-prueba{
     display: flex;
 }
+
+.detalle h5{
+    margin-bottom: 0;
+}
