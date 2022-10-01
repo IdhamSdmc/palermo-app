@@ -8,7 +8,7 @@
     height: 6rem;
     z-index: 9;
     background-color: #fff;
-    padding: 1rem 7.75rem;
+    padding: 1rem 4.75rem;
     align-items: center;
     justify-content: space-between;
   }
@@ -21,8 +21,8 @@
     font-family: var(--font-semibold), sans-serif;
 }
 .btn-soporte {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
     display: grid;
     place-items: center;
 }
@@ -44,7 +44,7 @@
     align-items: center;
     justify-content: space-between;
 }
-  
+
 .header-menu li a {
 
     text-decoration: none;
@@ -54,12 +54,12 @@
     display: block;
     width: 100%;
   }
-  
+
 .header-menu li a:hover,
 .header-menu .menu-btn:hover {
     background-color: #f4f4f4;
   }
-  
+
 .header-menu .logo img {
     display: block;
     float: left;
@@ -110,12 +110,12 @@
     color: #fff;
 }
 
-  
+
   /* menu */
 
-  
+
   /* menu icon */
-  
+
 .header-menu .menu-icon {
     cursor: pointer;
         flex-shrink: 0;
@@ -129,9 +129,9 @@
         display: grid;
         place-items: center;
         float: right;
-    
+
   }
-  
+
 .header-menu .menu-icon .navicon {
     background: #333;
     display: block;
@@ -140,7 +140,7 @@
     transition: background .2s ease-out;
     width: 18px;
   }
-  
+
 .header-menu .menu-icon .navicon:before,
 .header-menu .menu-icon .navicon:after {
     background: #333;
@@ -151,42 +151,42 @@
     transition: all .2s ease-out;
     width: 100%;
   }
-  
+
 .header-menu .menu-icon .navicon:before {
     top: 5px;
   }
-  
+
 .header-menu .menu-icon .navicon:after {
     top: -5px;
   }
-  
+
   /* menu btn */
-  
+
 .header-menu .menu-btn {
     display: none;
   }
-  
+
 .header-menu .menu-btn:checked ~ .menu {
     max-height: 240px;
   }
-  
+
 .header-menu .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
   }
-  
+
 .header-menu .menu-btn:checked ~ .menu-icon .navicon:before {
     transform: rotate(-45deg);
   }
-  
+
 .header-menu .menu-btn:checked ~ .menu-icon .navicon:after {
     transform: rotate(45deg);
   }
-  
+
 .header-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .header-menu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
   }
-  
+
   @media (max-width: 1052px) {
     .menu {
         gap: 1.5rem;
@@ -221,18 +221,18 @@
 }
 
   @media (min-width: 1000px) {
- 
+
   .header-menu li {
       float: left;
     }
   .header-menu li a {
-      padding: 20px 30px;
+      padding: 8px 15px;
     }
- 
+
   .header-menu .menu-icon {
       display: none;
     }
-    
+
   }
   .navbar{
     float: right;

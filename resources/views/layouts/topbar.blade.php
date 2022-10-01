@@ -20,9 +20,9 @@
                         <img src="{{ asset('assets/imgs/soporte técnico.svg') }}" alt="">
                     </a>
                 </li>
-                {{-- <i class="bi bi-x close"></i> 
+                {{-- <i class="bi bi-x close"></i>
             </ul>
-            {{-- <i class="bi bi-list mobile-nav-toggle"></i> 
+            {{-- <i class="bi bi-list mobile-nav-toggle"></i>
         </div>
         <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
@@ -32,6 +32,7 @@
     <nav class="topbar">
     <a href="{{ url('/') }}" class="logo">
         <img src="{{ url($settings['path_logo'].$settings['file_name_logo']) }}" alt="palermo-logo">
+
     </a>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
@@ -48,7 +49,7 @@
         <li class="topbar-item m-support"><a href="{{ url('https://soporte.grupopalermo.pe') }}" target="_blank">Soporte Técnico</a></li>
         <li class="topbar-item w-support">
             <a target="_blank" href="{{ url('https://soporte.grupopalermo.pe') }}" class="btn-soporte">
-                <img src="{{ asset('assets/imgs/soporte técnico.svg') }}" alt="">
+                <img src="{{ asset('assets/imgs/soporte técnico.svg') }}" class="w-75" alt="">
             </a>
         </li>
     </ul>
