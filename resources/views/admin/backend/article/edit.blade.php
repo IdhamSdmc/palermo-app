@@ -94,7 +94,7 @@
         </div>
     </div>
     <br>
-    {!! Form::submit('Update', array('class' => 'btn btn-success')) !!}
+    {!! Form::submit('Actualizar', array('class' => 'btn btn-success')) !!}
     {!! Form::close() !!}
     <script>
         window.onload = function () {
