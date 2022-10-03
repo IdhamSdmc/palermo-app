@@ -267,7 +267,6 @@ class ArticleRepository extends RepositoryAbstract implements ArticleInterface, 
     public function delete($id)
     {
         $article = $this->article->findOrFail($id);
-        $article->tags()->detach();
         $article->delete();
     }
 
