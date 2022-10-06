@@ -34,16 +34,18 @@
 
                         </form>
                     </div>
-                    <select name="categoria" id="categoria" class="select">
-                    @foreach($categorias as $categoria)
-               
-                            <option value="{{$categoria->id}}" selected>{{$categoria->title}}</option>
-                  
-                    @endforeach
-                    </select>
+                    <form action="{{route('lista')}}" method="get" id="form-categoria">
+                        <select name="categoria" id="categoria" class="select">
+                            <option value="0" selected disabled>Seleccionar</option>
+                            @foreach($categorias as $categoria)
+                                <option value="{{$categoria->id}}">{{$categoria->title}}</option>
+                            @endforeach
+                        </select>
+                    </form>
+
                 </div>
                 <div class="content" id="list">
-
+                    @if (count($articulos))
                     <div class="lista-articulos">
                         @foreach($articulos as $item)
                         @if(!$loop->first)
@@ -58,11 +60,11 @@
 
                                 <a href="{{url('/blog'.'/'.$item->id)}}">VER MÁS</a>
                             </div>
-                        
+
                         @endif
                         @endforeach
 
-
+                    @endif
                     </div>
                     {{--<div class="pagination mt-3">
                         {{ $articulos->onEachSide(2)->links() }}
@@ -108,6 +110,11 @@
                 }
 
             });
+            $("#categoria").on("change", function (e){
+                $("#form-categoria").submit();
+            })
+
         });
+
     </script>
 @endpush

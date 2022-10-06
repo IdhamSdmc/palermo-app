@@ -156,14 +156,26 @@ class ArticleController extends Controller
     public function mostrar(Request $request)
     {
         $texto = trim($request->get('texto'));
+        $idCategoria = $request->get('categoria');
         $articulos = DB::table('articles')
             ->select('id', 'title', 'content', 'path', 'file_name', 'created_at')
             ->where('title', 'LIKE', '%'.$texto.'%')
             ->orWhere('content', 'LIKE', '%'.$texto.'%')
             ->orderBy('title', 'asc')
             ->get();
+        if( $idCategoria!=0){
+            $articulos = DB::table('articles')
+                ->select('id', 'title', 'content', 'path', 'file_name', 'created_at')
+                ->where('category_id', '=', '"'.$idCategoria.'"')
+                ->orWhere('title', 'LIKE', '%'.$texto.'%')
+                ->orWhere('content', 'LIKE', '%'.$texto.'%')
+                ->orderBy('title', 'asc')
+                ->get();
+        }
+
         $categorias = DB::table('categories')->get();
 
         return view('pages.articulo', compact('articulos', 'texto', 'categorias'));
     }
+
 }
