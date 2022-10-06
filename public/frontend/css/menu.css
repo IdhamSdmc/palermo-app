@@ -241,3 +241,16 @@
   .navbar .close {
     display: none;
 }
+@media (max-width: 600px) {
+  .header-menu {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 1299px) {
+   .header-menu {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+  }
+}

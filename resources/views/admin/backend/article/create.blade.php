@@ -83,9 +83,9 @@
    
     <br>
 
-    {!! Form::submit('Create', array('class' => 'btn btn-success')) !!}
+    {!! Form::submit('Guardar', array('class' => 'btn btn-success')) !!}
     {!! Form::close() !!}
-    <script type="text/javascript">
+    <script>
         window.onload = function () {
             CKEDITOR.replace('content', {
                 "filebrowserBrowseUrl": filemanager.ckBrowseUrl
