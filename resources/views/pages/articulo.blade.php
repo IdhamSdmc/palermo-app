@@ -1,16 +1,20 @@
 @extends('layouts.app2')
 @section('content')
 @foreach($articulos as $item)
-@if($loop->first)
+@if($loop->last)
     <section class="banner" style="background-image: url('{{$item->path.$item->file_name}}'); background-position-y: 40%;">
         <div class="wrapper">
             <div class="banner-container">
                 <div class="banner-content">
                     <h2 class="animate__animated animate__fadeInUp">{{$item->title}}</h2>
                     <div style="max-width: 28rem">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                        </p>
+                        <div id="contenido-slider">
+                            {!! $item->content !!}
+                  </div>
+                  <div id="sumario">
+                      
+                  </div>
+                       
                         <a href="{{url('/blog'.'/'.$item->id)}}" class="btn-banner">VER MÁS</a>
                         <a href="https://wa.me/+5116206065?text=Hola Grupo Palermo, estoy interesad@ en sus soluciones y quisiera conversar con un asesor"
                             target="_blank" class="btn-whatsapp">
@@ -46,17 +50,20 @@
                 </div>
                 <div class="content" id="list">
                     @if (count($articulos))
-                    <div class="lista-articulos">
+                    <div class="lista-articulos" id="lista-articulos">
                         @foreach($articulos as $item)
-                        @if(!$loop->first)
+                        @if(!$loop->last)
                             <div class="articulo">
                                 <div class="image">
                                 <img src="{{ url($item->path.$item->file_name) }}" alt="">
                                 </div>
                                 <span>{{  $item->created_at}}</span>
                                 <h3>{{$item->title}}</h3>
-
-                                {!! $item->content !!}
+                                <div id="contenido">
+                                    {!! $item->content !!}
+                              </div>
+                              <div id="parrafo">
+                              </div>
 
                                 <a href="{{url('/blog'.'/'.$item->id)}}">VER MÁS</a>
                             </div>
@@ -112,9 +119,25 @@
             });
             $("#categoria").on("change", function (e){
                 $("#form-categoria").submit();
-            })
+            });
+            var body = $("#contenido-slider p");
+        $.each(body, function() {
+  $('#sumario').append(body[0]);
+});
+           
 
+$(".lista-articulos .articulo").each(function(index){
+        var element = $(this);
+        var contenido=$(this).children('div#contenido');
+            var parrafo=$(this).children('div#parrafo');
+           $.each(contenido, function() {
+                    var p=$(this).find('p');
+             parrafo.append(p[0]);
+            });
+    
+});
         });
+
 
     </script>
 @endpush

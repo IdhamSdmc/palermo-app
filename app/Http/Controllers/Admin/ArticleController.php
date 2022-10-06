@@ -161,7 +161,7 @@ class ArticleController extends Controller
             ->select('id', 'title', 'content', 'path', 'file_name', 'created_at')
             ->where('title', 'LIKE', '%'.$texto.'%')
             ->orWhere('content', 'LIKE', '%'.$texto.'%')
-            ->orderBy('title', 'asc')
+            ->orderBy('id', 'asc')
             ->get();
         if( $idCategoria!=0){
             $articulos = DB::table('articles')
@@ -169,7 +169,7 @@ class ArticleController extends Controller
                 ->where('category_id', '=', '"'.$idCategoria.'"')
                 ->orWhere('title', 'LIKE', '%'.$texto.'%')
                 ->orWhere('content', 'LIKE', '%'.$texto.'%')
-                ->orderBy('title', 'asc')
+                ->orderBy('id', 'asc')
                 ->get();
         }
 
